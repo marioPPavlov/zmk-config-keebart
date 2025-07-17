@@ -98,10 +98,10 @@
             //                    | GUI | LWR | SPC |               | ENT | RSE  | ALT |
 
             bindings = <
-&kp ESCAPE        &kp Q  &kp W  &kp E  &kp R        &kp T    &none  &none  &kp Z    &kp U          &kp I      &kp O    &kp P     &kp CAPSLOCK
-&mo 4             &kp A  &kp S  &kp D  &kp F        &kp G    &none  &none  &kp H    &kp J          &kp K      &kp L    &kp SEMI  &kp RIGHT_SHIFT
-&kp LEFT_CONTROL  &kp Y  &kp X  &kp C  &kp V        &kp B                  &kp N    &kp M          &kp COMMA  &kp DOT  &kp FSLH  &kp LGUI
-                                &mo 3  &lt 2 SPACE  &kp TAB                &kp RET  &kp BACKSPACE  &mo 1
+&kp ESCAPE        &kp Q  &kp W  &kp E  &kp R        &kp T    &studio_unlock  &none  &kp Z    &kp U          &kp I      &kp O    &kp P     &kp CAPSLOCK
+&mo 4             &kp A  &kp S  &kp D  &kp F        &kp G    &bootloader     &none  &kp H    &kp J          &kp K      &kp L    &kp SEMI  &kp RIGHT_SHIFT
+&kp LEFT_CONTROL  &kp Y  &kp X  &kp C  &kp V        &kp B                           &kp N    &kp M          &kp COMMA  &kp DOT  &kp FSLH  &kp LGUI
+                                &mo 3  &lt 2 SPACE  &kp TAB                         &kp RET  &kp BACKSPACE  &mo 1
             >;
         };
 
