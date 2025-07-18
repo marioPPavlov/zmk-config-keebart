@@ -91,7 +91,7 @@
         combo_lctrl {
             bindings = <&kp LCTRL>;
             key-positions = <18 4>;
-            layers = <0 1 2 4>;
+            layers = <0 1 2 3>;
         };
 
         combo_lgui {
@@ -108,7 +108,7 @@
         combo_rctrl {
             bindings = <&kp RCTRL>;
             key-positions = <23 9>;
-            layers = <0 1 2 4>;
+            layers = <0 1 2 3>;
         };
 
         combo_rgui {
@@ -123,7 +123,7 @@
         };
 
         combo_function_layer {
-            bindings = <&sl 5>;
+            bindings = <&sl 4>;
             key-positions = <18 19>;
         };
     };
@@ -142,9 +142,9 @@
 
             bindings = <
 &kp TAB                           &kp Q  &kp W  &kp E  &kp R             &kp T    &sys_reset  &kp C_VOLUME_UP    &kp Y        &kp U              &kp I          &kp O    &kp P     &kp TAB
-&mt LS(LA(LC(LG(LCTRL)))) ESCAPE  &kp A  &kp S  &kp D  &kp F             &kp G    &sl 4       &kp C_VOLUME_DOWN  &kp H        &kp J              &kp K          &kp L    &kp SEMI  &kp SQT
+&mt LS(LA(LC(LG(LCTRL)))) ESCAPE  &kp A  &kp S  &kp D  &kp F             &kp G    &sl 3       &kp C_VOLUME_DOWN  &kp H        &kp J              &kp K          &kp L    &kp SEMI  &kp SQT
 &kp LEFT_CONTROL                  &kp Z  &kp X  &kp C  &kp V             &kp B                                   &kp N        &kp M              &kp COMMA      &kp DOT  &kp FSLH  &key_repeat
-                                                &mo 1  &mt LSHIFT SPACE  &kp TAB                                 &lt 4 GRAVE  &mt LSHIFT RETURN  &kp BACKSPACE
+                                                &mo 1  &mt LSHIFT SPACE  &kp TAB                                 &lt 3 GRAVE  &mt LSHIFT RETURN  &kp BACKSPACE
             >;
         };
 
@@ -158,10 +158,10 @@
             //                    | GUI |     | SPC |               | ENT |     | ALT |
 
             bindings = <
-&trans  &none  &kp F9  &kp F10  &kp F11  &kp F12  &none  &none  &kp N0     &kp N7  &kp N8      &kp N9  &kp STAR  &trans
-&trans  &none  &kp F5  &kp F6   &kp F7   &kp F8   &none  &none  &kp MINUS  &kp N4  &kp N5      &kp N6  &kp FSLH  &trans
-&trans  &none  &kp F1  &kp F2   &kp F3   &kp F3                 &kp UNDER  &kp N1  &kp N2      &kp N3  &kp DOT   &trans
-                       &trans   &trans   &trans                 &trans     &trans  &kp DELETE
+&trans  &none  &kp F9  &kp F10  &kp F11  &kp F12  &none  &none  &kp UNDERSCORE  &kp N7  &kp N8      &kp N9  &kp STAR  &trans
+&trans  &none  &kp F5  &kp F6   &kp F7   &kp F8   &none  &none  &kp MINUS       &kp N4  &kp N5      &kp N6  &kp FSLH  &trans
+&trans  &none  &kp F1  &kp F2   &kp F3   &kp F3                 &kp N0          &kp N1  &kp N2      &kp N3  &kp DOT   &trans
+                       &trans   &trans   &trans                 &trans          &trans  &kp DELETE
             >;
         };
 
@@ -172,15 +172,6 @@
 &kp LSHFT  &ae    &none  &none   &none   &none    &none  &none  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW    &kp RIGHT_ARROW  &none  &trans
 &kp LCTRL  &none  &none  &none   &none   &none                  &none           &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &none  &trans
                          &trans  &trans  &kp TAB                &trans          &kp DEL         &trans
-            >;
-        };
-
-        layer_4 {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans                  &trans  &trans  &trans
             >;
         };
 
@@ -209,7 +200,7 @@
 
         System {
             if-layers = <1 2>;
-            then-layer = <4>;
+            then-layer = <3>;
         };
     };
 };
