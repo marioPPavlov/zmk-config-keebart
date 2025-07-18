@@ -109,7 +109,7 @@
 
         combo_lalt {
             bindings = <&kp LEFT_ALT>;
-            key-positions = <18 19>;
+            key-positions = <18 17>;
         };
 
         combo_rctrl {
@@ -126,7 +126,7 @@
 
         combo_ralt {
             bindings = <&kp RIGHT_ALT>;
-            key-positions = <23 22>;
+            key-positions = <23 24>;
         };
 
         combo_function_ls {
@@ -148,7 +148,7 @@
 
         combo_lalt_lshift {
             bindings = <&kp LS(LEFT_ALT)>;
-            key-positions = <32 33>;
+            key-positions = <32 31>;
         };
 
         combo_rctrl_rshift {
@@ -165,7 +165,7 @@
 
         combo_ralt_rctrl {
             bindings = <&kp RS(RIGHT_ALT)>;
-            key-positions = <35 34>;
+            key-positions = <35 36>;
         };
     };
 
@@ -209,10 +209,10 @@
         NAV {
             display-name = "Navigation";
             bindings = <
-&kp ESC    &none  &none  &none   &none   &none   &none  &none  &none           &ue             &trans          &oe              &none  &trans
-&kp LSHFT  &ae    &none  &none   &none   &none   &none  &none  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW    &kp RIGHT_ARROW  &none  &trans
-&kp LCTRL  &none  &none  &none   &none   &none                 &none           &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &none  &trans
-                         &trans  &trans  &trans                &trans          &kp DEL         &trans
+&kp ESC    &none  &none  &none   &none   &none   &none  &none  &none           &ue             &trans        &oe              &none  &trans
+&kp LSHFT  &ae    &none  &none   &none   &none   &none  &none  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &none  &trans
+&kp LCTRL  &none  &none  &none   &none   &none                 &none           &trans          &trans        &trans           &none  &trans
+                         &trans  &trans  &trans                &trans          &trans          &trans
             >;
         };
 
