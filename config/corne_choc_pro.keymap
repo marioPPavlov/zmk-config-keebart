@@ -136,10 +136,10 @@
             //                    | GUI | LWR | SPC |               | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB                           &kp Q  &kp W  &kp E  &kp R             &kp T    &studio_unlock  &kp C_VOLUME_UP    &kp Y        &kp U              &kp I          &kp O    &kp P     &kp TAB
-&mt LS(LA(LC(LG(LCTRL)))) ESCAPE  &kp A  &kp S  &kp D  &kp F             &kp G    &bootloader     &kp K_VOLUME_DOWN  &kp H        &kp J              &kp K          &kp L    &kp SEMI  &kp SQT
-&kp LEFT_CONTROL                  &kp Z  &kp X  &kp C  &kp V             &kp B                                       &kp N        &kp M              &kp COMMA      &kp DOT  &kp FSLH  &kp LGUI
-                                                &mo 1  &mt LSHIFT SPACE  &kp TAB                                     &lt 4 GRAVE  &mt LSHIFT RETURN  &kp BACKSPACE
+&kp TAB                           &kp Q  &kp W  &kp E  &kp R             &kp T    &sys_reset  &kp C_VOLUME_UP    &kp Y        &kp U              &kp I          &kp O    &kp P     &kp TAB
+&mt LS(LA(LC(LG(LCTRL)))) ESCAPE  &kp A  &kp S  &kp D  &kp F             &kp G    &sl 4       &kp C_VOLUME_DOWN  &kp H        &kp J              &kp K          &kp L    &kp SEMI  &kp SQT
+&kp LEFT_CONTROL                  &kp Z  &kp X  &kp C  &kp V             &kp B                                   &kp N        &kp M              &kp COMMA      &kp DOT  &kp FSLH  &kp LGUI
+                                                &mo 1  &mt LSHIFT SPACE  &kp TAB                                 &lt 4 GRAVE  &mt LSHIFT RETURN  &kp BACKSPACE
             >;
         };
 
@@ -182,10 +182,19 @@
         SYS {
             display-name = "System";
             bindings = <
-&trans  &trans        &trans        &trans        &trans      &trans          &trans  &trans  &trans  &trans  &trans  &trans  &trans       &trans
-&trans  &trans        &trans        &trans        &sys_reset  &studio_unlock  &trans  &trans  &trans  &trans  &trans  &trans  &trans       &trans
-&trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_CLR  &bt BT_CLR_ALL                  &trans  &trans  &trans  &trans  &bootloader  &trans
-                                    &trans        &trans      &trans                          &trans  &trans  &trans
+&trans  &trans        &trans        &trans        &trans          &trans          &trans  &trans  &trans  &trans  &trans  &trans  &trans       &trans
+&trans  &trans        &trans        &trans        &sys_reset      &studio_unlock  &trans  &trans  &trans  &trans  &trans  &trans  &trans       &trans
+&trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_CLR      &bt BT_CLR_ALL                  &trans  &trans  &trans  &trans  &bootloader  &trans
+                                    &trans        &studio_unlock  &sys_reset                      &trans  &trans  &trans
+            >;
+        };
+
+        layer_5 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans                  &trans  &trans  &trans
             >;
         };
     };
