@@ -91,7 +91,7 @@
         combo_lctrl {
             bindings = <&kp LCTRL>;
             key-positions = <17 18>;
-            layers = <0 1 2 3>;
+            layers = <0 1 2 4>;
         };
 
         combo_lgui {
@@ -108,7 +108,7 @@
         combo_rctrl {
             bindings = <&kp RCTRL>;
             key-positions = <23 24>;
-            layers = <0 1 2 3>;
+            layers = <0 1 2 4>;
         };
 
         combo_rgui {
@@ -136,10 +136,10 @@
             //                    | GUI | LWR | SPC |               | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB                           &kp Q  &kp W  &kp E  &kp R             &kp T    &studio_unlock  &kp C_VOLUME_UP    &kp Z        &kp U              &kp I          &kp O    &kp P     &kp TAB
+&kp TAB                           &kp Q  &kp W  &kp E  &kp R             &kp T    &studio_unlock  &kp C_VOLUME_UP    &kp Y        &kp U              &kp I          &kp O    &kp P     &kp TAB
 &mt LS(LA(LC(LG(LCTRL)))) ESCAPE  &kp A  &kp S  &kp D  &kp F             &kp G    &bootloader     &kp K_VOLUME_DOWN  &kp H        &kp J              &kp K          &kp L    &kp SEMI  &kp SQT
-&kp LEFT_CONTROL                  &kp Y  &kp X  &kp C  &kp V             &kp B                                       &kp N        &kp M              &kp COMMA      &kp DOT  &kp FSLH  &kp LGUI
-                                                &mo 1  &mt LSHIFT SPACE  &kp TAB                                     &lt 3 GRAVE  &mt LSHIFT RETURN  &kp BACKSPACE
+&kp LEFT_CONTROL                  &kp Z  &kp X  &kp C  &kp V             &kp B                                       &kp N        &kp M              &kp COMMA      &kp DOT  &kp FSLH  &kp LGUI
+                                                &mo 1  &mt LSHIFT SPACE  &kp TAB                                     &lt 4 GRAVE  &mt LSHIFT RETURN  &kp BACKSPACE
             >;
         };
 
@@ -170,6 +170,15 @@
             >;
         };
 
+        layer_4 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans                  &trans  &trans  &trans
+            >;
+        };
+
         SYS {
             display-name = "System";
             bindings = <
@@ -186,7 +195,7 @@
 
         System {
             if-layers = <1 2>;
-            then-layer = <3>;
+            then-layer = <4>;
         };
     };
 };
