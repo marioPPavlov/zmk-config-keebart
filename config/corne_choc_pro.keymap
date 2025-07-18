@@ -109,7 +109,7 @@
 
         combo_lalt {
             bindings = <&kp LEFT_ALT>;
-            key-positions = <16 2>;
+            key-positions = <18 19>;
         };
 
         combo_rctrl {
@@ -126,12 +126,46 @@
 
         combo_ralt {
             bindings = <&kp RIGHT_ALT>;
-            key-positions = <26 12>;
+            key-positions = <23 22>;
         };
 
-        combo_function_layer {
+        combo_function_ls {
             bindings = <&sl 4>;
-            key-positions = <18 19>;
+            key-positions = <17 32>;
+        };
+
+        combo_lctrl_shift {
+            bindings = <&kp LS(LCTRL)>;
+            key-positions = <18 32>;
+            layers = <0 1 2 5>;
+        };
+
+        combo_lgui_lshift {
+            bindings = <&kp LS(LGUI)>;
+            key-positions = <17 31>;
+            layers = <0 1 2>;
+        };
+
+        combo_lalt_lshift {
+            bindings = <&kp LS(LEFT_ALT)>;
+            key-positions = <32 33>;
+        };
+
+        combo_rctrl_rshift {
+            bindings = <&kp RS(RCTRL)>;
+            key-positions = <23 35>;
+            layers = <0 1 2 5>;
+        };
+
+        combo_rgui_rctrl {
+            bindings = <&kp RS(RGUI)>;
+            key-positions = <24 36>;
+            layers = <0 1 2>;
+        };
+
+        combo_ralt_rctrl {
+            bindings = <&kp RS(RIGHT_ALT)>;
+            key-positions = <35 34>;
         };
     };
 
