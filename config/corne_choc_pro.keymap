@@ -91,18 +91,35 @@
         combo_lctrl {
             bindings = <&kp LCTRL>;
             key-positions = <17 18>;
-            layers = <0 2 1 3 4>;
+            layers = <0 1 2 3>;
         };
 
         combo_lgui {
             bindings = <&kp LGUI>;
             key-positions = <16 17>;
-            layers = <0 2 1 3>;
+            layers = <0 1 2>;
         };
 
         combo_lalt {
             bindings = <&kp LEFT_ALT>;
             key-positions = <15 16>;
+        };
+
+        combo_rctrl {
+            bindings = <&kp RCTRL>;
+            key-positions = <23 24>;
+            layers = <0 1 2 3>;
+        };
+
+        combo_rgui {
+            bindings = <&kp RGUI>;
+            key-positions = <24 23>;
+            layers = <0 1 2>;
+        };
+
+        combo_ralt {
+            bindings = <&kp RIGHT_ALT>;
+            key-positions = <25 26>;
         };
     };
 
@@ -119,27 +136,10 @@
             //                    | GUI | LWR | SPC |               | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB                           &kp Q  &kp W  &kp E  &kp R        &kp T  &studio_unlock  &none  &kp Z    &kp U          &kp I      &kp O    &kp P     &kp TAB
-&mt LS(LA(LC(LG(LCTRL)))) ESCAPE  &kp A  &kp S  &kp D  &kp F        &kp G  &bootloader     &none  &kp H    &kp J          &kp K      &kp L    &kp SEMI  &kp RIGHT_SHIFT
-&kp LEFT_CONTROL                  &kp Y  &kp X  &kp C  &kp V        &kp B                         &kp N    &kp M          &kp COMMA  &kp DOT  &kp FSLH  &kp LGUI
-                                                &mo 3  &lt 2 SPACE  &kp B                         &kp RET  &kp BACKSPACE  &mo 1
-            >;
-        };
-
-        SYM {
-            display-name = "Symbols";
-
-            // -----------------------------------------------------------------------------------------
-            // |  TAB |  1  |  2  |  3  |  4  |  5    |  LCTRL | RCTRL |  6  |  7  |  8  |  9  |  0  | BSPC |
-            // | CTRL | BT1 | BT2 | BT3 | BT4 | BT5   |  LALT  | RALT  | LFT | DWN |  UP | RGT |     |      |
-            // | SHFT | BTCR| RGB | RST | BOOT| Unlock|        |       |     |     |     |     |     |      |
-            //                    | GUI |     | SPC   |        | ENT   |     | ALT |
-
-            bindings = <
-&trans  &kp CARET         &kp SINGLE_QUOTE       &kp DOUBLE_QUOTES  &kp GRAVE          &kp TILDE      &none  &none  &kp AT_SIGN   &kp PLUS         &kp ASTERISK   &kp EQUAL  &kp UNDERSCORE  &trans
-&trans  &kp LESS_THAN     &kp LEFT_PARENTHESIS   &kp LEFT_BRACE     &kp LEFT_BRACKET   &kp BACKSLASH  &none  &none  &kp QUESTION  &kp EXCLAMATION  &kp AMPERSAND  &kp PIPE   &kp MINUS       &trans
-&trans  &kp GREATER_THAN  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE    &kp RIGHT_BRACKET  &kp SLASH                    &kp DOLLAR    &kp PERCENT      &kp COLON      &kp HASH   &kp SLASH       &trans
-                                                 &trans             &spotlight         &windowtab                   &trans        &trans           &trans
+&kp TAB                           &kp Q  &kp W  &kp E  &kp R        &kp T    &studio_unlock  &none  &kp Z      &kp U          &kp I      &kp O    &kp P     &kp TAB
+&mt LS(LA(LC(LG(LCTRL)))) ESCAPE  &kp A  &kp S  &kp D  &kp F        &kp G    &bootloader     &none  &kp H      &kp J          &kp K      &kp L    &kp SEMI  &kp SQT
+&kp LEFT_CONTROL                  &kp Y  &kp X  &kp C  &kp V        &kp B                           &kp N      &kp M          &kp COMMA  &kp DOT  &kp FSLH  &kp LGUI
+                                                &mo 1  &lt 1 SPACE  &kp TAB                         &kp GRAVE  &kp BACKSPACE  &mo 0
             >;
         };
 
@@ -163,10 +163,10 @@
         NAV {
             display-name = "Navigation";
             bindings = <
-&kp ESC    &none  &none  &none   &none   &none    &none  &none  &none   &ue             &trans          &oe              &none  &trans
-&kp LSHFT  &ae    &none  &none   &none   &none    &none  &none  &none   &kp HOME        &kp UP_ARROW    &kp END          &none  &trans
-&kp LCTRL  &none  &none  &none   &none   &none                  &none   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &none  &trans
-                         &trans  &trans  &kp TAB                &trans  &kp DEL         &trans
+&kp ESC    &none  &none  &none   &none   &none    &none  &none  &none           &ue             &trans          &oe              &none  &trans
+&kp LSHFT  &ae    &none  &none   &none   &none    &none  &none  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW    &kp RIGHT_ARROW  &none  &trans
+&kp LCTRL  &none  &none  &none   &none   &none                  &none           &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &none  &trans
+                         &trans  &trans  &kp TAB                &trans          &kp DEL         &trans
             >;
         };
 
@@ -185,8 +185,8 @@
         compatible = "zmk,conditional-layers";
 
         System {
-            if-layers = <1 3>;
-            then-layer = <4>;
+            if-layers = <1 2>;
+            then-layer = <3>;
         };
     };
 };
