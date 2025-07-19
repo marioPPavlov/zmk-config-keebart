@@ -119,7 +119,7 @@
         };
 
         combo_rgui {
-            bindings = <&kp RGUI>;
+            bindings = <&kp LGUI>;
             key-positions = <24 10>;
             layers = <0 1 2>;
         };
@@ -158,7 +158,7 @@
         };
 
         combo_rgui_rctrl {
-            bindings = <&kp RS(RGUI)>;
+            bindings = <&kp RS(LGUI)>;
             key-positions = <24 36>;
             layers = <0 1 2>;
         };
