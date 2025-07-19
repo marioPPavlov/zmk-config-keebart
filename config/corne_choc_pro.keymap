@@ -221,7 +221,7 @@
         NAV {
             display-name = "Navigation";
             bindings = <
-&kp ESC    &none  &none         &none     &none      &none   &sys_reset      &bt BT_SEL 0  &none           &ue             &trans        &oe              &none  &trans
+&kp ESC    &none  &none         &none     &none      &none   &bootloader     &bt BT_SEL 0  &none           &ue             &trans        &oe              &none  &trans
 &kp LSHFT  &ae    &kp LEFT_ALT  &kp LCMD  &kp LCTRL  &none   &studio_unlock  &bt BT_SEL 1  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &none  &trans
 &kp LCTRL  &none  &none         &none     &none      &none                                 &none           &trans          &trans        &trans           &none  &trans
                                 &trans    &trans     &trans                                &key_repeat     &trans          &kp DELETE
