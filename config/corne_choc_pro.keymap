@@ -7,6 +7,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/rgb.h>
 
 / {
     chosen { zmk,physical-layout = &default_layout; };
@@ -97,75 +98,41 @@
 
         combo_lctrl {
             bindings = <&kp LCTRL>;
-            key-positions = <18 4>;
+            key-positions = <18 17>;
             layers = <0 1 2 5>;
         };
 
         combo_lgui {
             bindings = <&kp LGUI>;
-            key-positions = <17 3>;
+            key-positions = <16 17>;
             layers = <0 1 2>;
         };
 
         combo_lalt {
             bindings = <&kp LEFT_ALT>;
-            key-positions = <18 17>;
+            key-positions = <18 16>;
         };
 
         combo_rctrl {
             bindings = <&kp RCTRL>;
-            key-positions = <23 9>;
+            key-positions = <23 24>;
             layers = <0 1 2 5>;
         };
 
         combo_rgui {
             bindings = <&kp LGUI>;
-            key-positions = <24 10>;
+            key-positions = <24 25>;
             layers = <0 1 2>;
         };
 
         combo_ralt {
             bindings = <&kp RIGHT_ALT>;
-            key-positions = <23 24>;
+            key-positions = <23 25>;
         };
 
         combo_function_ls {
             bindings = <&sl 4>;
-            key-positions = <17 32>;
-        };
-
-        combo_lctrl_shift {
-            bindings = <&kp LS(LCTRL)>;
-            key-positions = <18 32>;
-            layers = <0 1 2 5>;
-        };
-
-        combo_lgui_lshift {
-            bindings = <&kp LS(LGUI)>;
-            key-positions = <17 31>;
-            layers = <0 1 2>;
-        };
-
-        combo_lalt_lshift {
-            bindings = <&kp LS(LEFT_ALT)>;
-            key-positions = <32 31>;
-        };
-
-        combo_rctrl_rshift {
-            bindings = <&kp RS(RCTRL)>;
-            key-positions = <23 35>;
-            layers = <0 1 2 5>;
-        };
-
-        combo_rgui_rctrl {
-            bindings = <&kp RS(LGUI)>;
-            key-positions = <24 36>;
-            layers = <0 1 2>;
-        };
-
-        combo_ralt_rctrl {
-            bindings = <&kp RS(RIGHT_ALT)>;
-            key-positions = <35 36>;
+            key-positions = <4 18>;
         };
     };
 
@@ -194,10 +161,10 @@
             //                    | GUI | LWR | SPC |               | ENT | RSE  | ALT |
 
             bindings = <
-&tripple_dash                     &kp Q  &kp W  &kp E  &kp R             &kp T              &kp C_BACKLIGHT_TOGGLE  &kp C_VOLUME_UP    &kp Y        &kp U              &kp I          &kp O    &kp P     &mo 5
-&mt LS(LA(LC(LG(LCTRL)))) ESCAPE  &kp A  &kp S  &kp D  &kp F             &kp G              &sl 5                   &kp C_VOLUME_DOWN  &kp H        &kp J              &kp K          &kp L    &kp SEMI  &kp SQT
-&mo 5                             &kp Z  &kp X  &kp C  &kp V             &kp B                                                         &kp N        &kp M              &kp COMMA      &kp DOT  &kp FSLH  &key_repeat
-                                                &mo 1  &mt LSHIFT SPACE  &tab_mod_behavior                                             &lt 3 GRAVE  &mt LSHIFT RETURN  &kp BACKSPACE
+&tripple_dash                     &kp Q  &kp W  &kp E  &kp R             &kp T              &rgb_ug RGB_ON   &kp C_VOLUME_UP    &kp Y        &kp U              &kp I          &kp O    &kp P     &mo 5
+&mt LS(LA(LC(LG(LCTRL)))) ESCAPE  &kp A  &kp S  &kp D  &kp F             &kp G              &rgb_ug RGB_EFF  &kp C_VOLUME_DOWN  &kp H        &kp J              &kp K          &kp L    &kp SEMI  &kp SQT
+&mo 5                             &kp Z  &kp X  &kp C  &kp V             &kp B                                                  &kp N        &kp M              &kp COMMA      &kp DOT  &kp FSLH  &key_repeat
+                                                &mo 1  &mt LSHIFT SPACE  &tab_mod_behavior                                      &lt 3 GRAVE  &mt LSHIFT RETURN  &kp BACKSPACE
             >;
         };
 
@@ -221,9 +188,9 @@
         NAV {
             display-name = "Navigation";
             bindings = <
-&kp ESC    &none  &none         &none     &none      &none   &bootloader     &bt BT_SEL 0  &none           &ue             &trans        &oe              &none  &trans
-&kp LSHFT  &ae    &kp LEFT_ALT  &kp LCMD  &kp LCTRL  &none   &studio_unlock  &bt BT_SEL 1  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &none  &trans
-&kp LCTRL  &none  &none         &none     &none      &none                                 &none           &trans          &trans        &trans           &none  &trans
+&kp ESC    &none  &none         &none     &none      &none   &bootloader     &bt BT_SEL 0  &none           &ue             &trans        &oe              &none          &trans
+&kp LSHFT  &ae    &kp LEFT_ALT  &kp LCMD  &kp LCTRL  &none   &studio_unlock  &bt BT_SEL 1  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &kp BACKSPACE  &trans
+&kp LCTRL  &none  &none         &none     &none      &none                                 &none           &trans          &trans        &trans           &none          &trans
                                 &trans    &trans     &trans                                &key_repeat     &trans          &kp DELETE
             >;
         };
