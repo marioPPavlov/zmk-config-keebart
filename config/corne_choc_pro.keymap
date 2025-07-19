@@ -91,6 +91,20 @@
             bindings = <&kp GRAVE &kp GRAVE &kp GRAVE>;
             label = "TRIPPLE_DASH";
         };
+
+        window_tab_mav: window_tab_mav {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp RGUI>,
+                <&macro_tap>,
+                <&kp TAB>,
+                <&macro_release>,
+                <&kp RGUI>;
+
+            label = "WINDOW_TAB_MAV";
+        };
     };
 
     combos {
@@ -134,23 +148,13 @@
             bindings = <&sl 4>;
             key-positions = <4 18>;
         };
-
-        combo_lctrl_lgui {
-            bindings = <&kp LC(LGUI)>;
-            key-positions = <18 17 16>;
-        };
-
-        combo_rgui_lctrl {
-            bindings = <&kp LC(LGUI)>;
-            key-positions = <23 24 25>;
-        };
     };
 
     behaviors {
         tab_mod_behavior: tab_mod_behavior {
             compatible = "zmk,behavior-mod-morph";
             label = "TAB_MOD_BEHAVIOR";
-            bindings = <&lt 2 TAB>, <&kp TAB>;
+            bindings = <&lt 1 TAB>, <&kp TAB>;
 
             #binding-cells = <0>;
             keep-mods = <(MOD_RALT|MOD_RCTL)>;
@@ -171,10 +175,10 @@
             //                    | GUI | LWR | SPC |               | ENT | RSE  | ALT |
 
             bindings = <
-&tripple_dash                     &kp Q  &kp W  &kp E  &kp R             &kp T              &rgb_ug RGB_ON   &kp C_VOLUME_UP    &kp Y        &kp U              &kp I          &kp O    &kp P     &mo 5
+&tripple_dash                     &kp Q  &kp W  &kp E  &kp R             &kp T              &rgb_ug RGB_TOG  &kp C_VOLUME_UP    &kp Y        &kp U              &kp I          &kp O    &kp P     &mo 5
 &mt LS(LA(LC(LG(LCTRL)))) ESCAPE  &kp A  &kp S  &kp D  &kp F             &kp G              &rgb_ug RGB_EFF  &kp C_VOLUME_DOWN  &kp H        &kp J              &kp K          &kp L    &kp SEMI  &kp SQT
 &mo 5                             &kp Z  &kp X  &kp C  &kp V             &kp B                                                  &kp N        &kp M              &kp COMMA      &kp DOT  &kp FSLH  &key_repeat
-                                                &mo 1  &mt LSHIFT SPACE  &tab_mod_behavior                                      &lt 3 GRAVE  &mt LSHIFT RETURN  &kp BACKSPACE
+                                                &mo 2  &mt LSHIFT SPACE  &tab_mod_behavior                                      &lt 3 GRAVE  &mt LSHIFT RETURN  &kp BACKSPACE
             >;
         };
 
@@ -198,10 +202,10 @@
         NAV {
             display-name = "Navigation";
             bindings = <
-&kp ESC    &none       &none         &none     &none      &none       &bootloader     &bt BT_SEL 0  &none           &ue             &trans        &oe              &none          &trans
-&kp LSHFT  &kp LSHIFT  &kp LEFT_ALT  &kp LCMD  &kp LCTRL  &kp LSHIFT  &studio_unlock  &bt BT_SEL 1  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &kp BACKSPACE  &trans
-&kp LCTRL  &none       &none         &none     &none      &none                                     &none           &trans          &trans        &trans           &none          &trans
-                                     &trans    &trans     &trans                                    &key_repeat     &trans          &kp DELETE
+&kp ESC    &none  &none         &none     &none      &none   &bootloader     &bt BT_SEL 0  &none           &windowtab      &window_tab_mav  &oe              &none          &trans
+&kp LSHFT  &ae    &kp LEFT_ALT  &kp LCMD  &kp LCTRL  &none   &studio_unlock  &bt BT_SEL 1  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW     &kp RIGHT_ARROW  &kp BACKSPACE  &trans
+&kp LCTRL  &none  &none         &none     &none      &none                                 &none           &trans          &trans           &trans           &none          &trans
+                                &trans    &trans     &trans                                &key_repeat     &trans          &kp DELETE
             >;
         };
 
@@ -234,12 +238,5 @@
         };
     };
 
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-
-        System {
-            if-layers = <1 2>;
-            then-layer = <5>;
-        };
-    };
+    conditional_layers { compatible = "zmk,conditional-layers"; };
 };
