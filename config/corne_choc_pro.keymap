@@ -236,7 +236,7 @@
 
         mouse1 {
             bindings = <
-&tog 0  &trans  &trans  &trans            &trans     &trans    &trans  &trans  &trans  &msc MOVE_Y(15)    &mmv MOVE_Y(400)   &trans            &trans  &trans
+&tog 6  &trans  &trans  &trans            &trans     &trans    &trans  &trans  &trans  &msc MOVE_Y(15)    &mmv MOVE_Y(400)   &trans            &trans  &trans
 &trans  &trans  &trans  &msc MOVE_Y(-15)  &trans     &trans    &trans  &trans  &trans  &mmv MOVE_X(-400)  &mmv MOVE_Y(-400)  &mmv MOVE_X(400)  &trans  &trans
 &trans  &trans  &trans  &trans            &trans     &trans                    &trans  &trans             &trans             &trans            &trans  &trans
                         &trans            &mkp LCLK  &mkp MB2                  &trans  &trans             &trans
