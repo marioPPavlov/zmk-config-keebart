@@ -148,6 +148,11 @@
             bindings = <&sl 4>;
             key-positions = <4 18>;
         };
+
+        combo_mouse_layer {
+            bindings = <&to 6>;
+            key-positions = <41 44>;
+        };
     };
 
     behaviors {
@@ -239,10 +244,10 @@
 
         mouse1 {
             bindings = <
-&to 0   &trans  &trans  &trans          &mmv MOVE_DOWN  &trans    &trans  &trans  &trans  &msc SCRL_UP       &mmv MOVE_Y(-600)  &mmv MOVE_UP      &trans  &trans
-&trans  &trans  &trans  &msc SCRL_DOWN  &trans          &trans    &trans  &trans  &trans  &mmv MOVE_X(-600)  &mmv MOVE_Y(600)   &mmv MOVE_X(600)  &trans  &trans
-&trans  &trans  &trans  &trans          &trans          &trans                    &trans  &trans             &trans             &trans            &trans  &trans
-                        &trans          &mkp LCLK       &mkp MB2                  &trans  &trans             &trans
+&to 0   &trans  &trans             &mmv MOVE_Y(-500)  &mmv MOVE_DOWN    &trans    &trans  &trans  &trans    &msc SCRL_UP       &mmv MOVE_Y(-600)  &mmv MOVE_UP      &trans  &mmv MOVE_X(500)
+&trans  &trans  &mmv MOVE_X(-500)  &mmv MOVE_Y(500)   &mmv MOVE_X(500)  &trans    &trans  &trans  &trans    &mmv MOVE_X(-600)  &mmv MOVE_Y(600)   &mmv MOVE_X(600)  &trans  &trans
+&trans  &trans  &trans             &trans             &trans            &trans                    &trans    &trans             &trans             &trans            &trans  &trans
+                                   &trans             &mkp LCLK         &mkp MB2                  &mkp MB3  &mkp MB1           &mkp MB2
             >;
         };
     };
