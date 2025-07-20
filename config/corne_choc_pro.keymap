@@ -172,7 +172,7 @@
             //                    | GUI | LWR | SPC |               | ENT | RSE  | ALT |
 
             bindings = <
-&mmv MOVE_UP                      &kp Q  &kp W  &kp E  &kp R             &kp T              &rgb_ug RGB_TOG  &kp C_VOLUME_UP    &kp Y        &kp U              &kp I          &kp O    &kp P     &mo 5
+&tog 6                            &kp Q  &kp W  &kp E  &kp R             &kp T              &rgb_ug RGB_TOG  &kp C_VOLUME_UP    &kp Y        &kp U              &kp I          &kp O    &kp P     &mo 5
 &mt LS(LA(LC(LG(LCTRL)))) ESCAPE  &kp A  &kp S  &kp D  &kp F             &kp G              &rgb_ug RGB_EFF  &kp C_VOLUME_DOWN  &kp H        &kp J              &kp K          &kp L    &kp SEMI  &kp SQT
 &mo 6                             &kp Z  &kp X  &kp C  &kp V             &kp B                                                  &kp N        &kp M              &kp COMMA      &kp DOT  &kp FSLH  &key_repeat
                                                 &mo 2  &mt LSHIFT SPACE  &tab_mod_behavior                                      &lt 3 GRAVE  &mt LSHIFT RETURN  &kp BACKSPACE
@@ -236,10 +236,10 @@
 
         mouse1 {
             bindings = <
-&tog 6  &trans  &trans  &trans            &trans     &trans    &trans  &trans  &trans  &msc MOVE_Y(15)    &mmv MOVE_Y(400)   &trans            &trans  &trans
-&trans  &trans  &trans  &msc MOVE_Y(-15)  &trans     &trans    &trans  &trans  &trans  &mmv MOVE_X(-400)  &mmv MOVE_Y(-400)  &mmv MOVE_X(400)  &trans  &trans
-&trans  &trans  &trans  &trans            &trans     &trans                    &trans  &trans             &trans             &trans            &trans  &trans
-                        &trans            &mkp LCLK  &mkp MB2                  &trans  &trans             &trans
+&tog 6  &trans  &trans  &trans          &trans     &trans    &trans  &trans  &trans  &msc SCRL_UP      &mmv MOVE_Y(-600)  &trans             &trans  &trans
+&trans  &trans  &trans  &msc SCRL_DOWN  &trans     &trans    &trans  &trans  &trans  &mmv MOVE_X(600)  &mmv MOVE_Y(600)   &mmv MOVE_X(-600)  &trans  &trans
+&trans  &trans  &trans  &trans          &trans     &trans                    &trans  &trans            &trans             &trans             &trans  &trans
+                        &trans          &mkp LCLK  &mkp MB2                  &trans  &trans            &trans
             >;
         };
     };
