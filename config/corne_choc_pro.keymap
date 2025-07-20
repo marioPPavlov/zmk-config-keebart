@@ -109,6 +109,14 @@
 
             label = "WINDOW_TAB_MAV";
         };
+
+        smart_tab: smart_tab {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press>, <&mo 7 &kp LEFT_ALT>;
+
+            label = "SMART_TAB";
+        };
     };
 
     combos {
@@ -224,10 +232,10 @@
         NAV {
             display-name = "Navigation";
             bindings = <
-&kp ESC    &none  &none         &none     &none      &none   &bootloader     &bt BT_SEL 0  &none           &kp LEFT_ALT    &windowtab    &kp GRAVE        &none          &trans
-&kp LSHFT  &ae    &kp LEFT_ALT  &kp LCMD  &kp LCTRL  &none   &studio_unlock  &bt BT_SEL 1  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &kp BACKSPACE  &trans
-&kp LCTRL  &none  &none         &none     &none      &none                                 &none           &kp LCMD        &kp TAB       &kp GRAVE        &none          &trans
-                                &trans    &trans     &trans                                &key_repeat     &trans          &kp DELETE
+&kp ESC    &none  &none         &none     &none       &none   &bootloader     &bt BT_SEL 0  &none           &kp LEFT_ALT    &windowtab    &kp GRAVE        &none          &trans
+&kp LSHFT  &ae    &kp LEFT_ALT  &kp LCMD  &smart_tab  &none   &studio_unlock  &bt BT_SEL 1  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &kp BACKSPACE  &trans
+&kp LCTRL  &none  &none         &none     &none       &none                                 &none           &kp LCMD        &kp TAB       &kp GRAVE        &none          &trans
+                                &trans    &trans      &trans                                &key_repeat     &trans          &kp DELETE
             >;
         };
 
@@ -265,6 +273,15 @@
 &trans  &trans  &mmv MOVE_X(-600)  &mmv MOVE_Y(600)   &mmv MOVE_X(600)  &trans    &trans  &trans  &trans    &mmv MOVE_DOWN  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans  &trans
 &trans  &trans  &trans             &trans             &trans            &trans                    &trans    &trans          &trans          &trans           &trans  &trans
                                    &to 0              &kp LCTRL         &kp LGUI                  &mkp MB3  &mkp MB1        &mkp MB2
+            >;
+        };
+
+        tab {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans         &trans       &trans   &trans     &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp LS(GRAVE)  &kp LS(TAB)  &kp TAB  &kp GRAVE  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans         &trans       &trans   &trans     &trans  &trans
+                        &trans  &trans  &trans                  &trans         &trans       &trans
             >;
         };
     };
