@@ -251,9 +251,9 @@
 
         mouse1 {
             bindings = <
-&trans  &trans  &msc SCRL_LEFT     &mmv MOVE_Y(-600)  &msc SCRL_RIGHT   &trans    &trans  &trans  &trans    &msc SCRL_UP    &mmv MOVE_UP    &msc SCRL_DOWN  &trans  &trans
-&trans  &trans  &mmv MOVE_X(-600)  &mmv MOVE_Y(600)   &mmv MOVE_X(600)  &trans    &trans  &trans  &trans    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_LEFT  &trans  &trans
-&trans  &trans  &trans             &trans             &trans            &trans                    &trans    &trans          &trans          &trans          &trans  &trans
+&trans  &trans  &msc SCRL_LEFT     &mmv MOVE_Y(-600)  &msc SCRL_RIGHT   &trans    &trans  &trans  &trans    &msc SCRL_UP    &mmv MOVE_UP    &msc SCRL_DOWN   &trans  &trans
+&trans  &trans  &mmv MOVE_X(-600)  &mmv MOVE_Y(600)   &mmv MOVE_X(600)  &trans    &trans  &trans  &trans    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans  &trans
+&trans  &trans  &trans             &trans             &trans            &trans                    &trans    &trans          &trans          &trans           &trans  &trans
                                    &kp LCTRL          &to 0             &kp LGUI                  &mkp MB3  &mkp MB1        &mkp MB2
             >;
         };
