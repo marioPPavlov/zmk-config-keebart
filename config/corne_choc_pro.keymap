@@ -117,36 +117,43 @@
         combo_lctrl {
             bindings = <&kp LCTRL>;
             key-positions = <18 17>;
+            layers = <0 1 2 3 4 5>;
         };
 
         combo_lgui {
             bindings = <&kp LGUI>;
             key-positions = <16 17>;
+            layers = <0 2 1 3 4 5>;
         };
 
         combo_lalt {
             bindings = <&kp LEFT_ALT>;
             key-positions = <18 16>;
+            layers = <1 0 3 2 4 5>;
         };
 
         combo_rctrl {
             bindings = <&kp RCTRL>;
             key-positions = <23 24>;
+            layers = <0 1 2 3 4 5>;
         };
 
         combo_rgui {
             bindings = <&kp LGUI>;
             key-positions = <24 25>;
+            layers = <0 1 2 3 4 5>;
         };
 
         combo_ralt {
             bindings = <&kp RIGHT_ALT>;
             key-positions = <23 25>;
+            layers = <1 0 2 3 4 5>;
         };
 
         combo_function_ls {
             bindings = <&sl 4>;
             key-positions = <4 18>;
+            layers = <0 1 2 3 4 5>;
         };
 
         combo_mouse_layer {
