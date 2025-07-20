@@ -117,7 +117,7 @@
                 <&macro_press>,
                 <&mo 7 &kp LEFT_ALT>,
                 <&macro_release>,
-                <&kp LEFT_ALT &to 0>;
+                <&kp LEFT_ALT &mo 7>;
 
             label = "SMART_TAB";
         };
