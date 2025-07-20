@@ -113,7 +113,11 @@
         smart_tab: smart_tab {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press>, <&mo 7 &kp LEFT_ALT>, <&macro_release>;
+            bindings =
+                <&macro_press>,
+                <&mo 7 &kp LEFT_ALT>,
+                <&macro_release>,
+                <&kp LEFT_ALT &to 0>;
 
             label = "SMART_TAB";
         };
