@@ -7,6 +7,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/rgb.h>
 
 / {
@@ -175,7 +176,7 @@
             //                    | GUI | LWR | SPC |               | ENT | RSE  | ALT |
 
             bindings = <
-&tripple_dash                     &kp Q  &kp W  &kp E  &kp R             &kp T              &rgb_ug RGB_TOG  &kp C_VOLUME_UP    &kp Y        &kp U              &kp I          &kp O    &kp P     &mo 5
+&tog 6                            &kp Q  &kp W  &kp E  &kp R             &kp T              &rgb_ug RGB_TOG  &kp C_VOLUME_UP    &kp Y        &kp U              &kp I          &kp O    &kp P     &mo 5
 &mt LS(LA(LC(LG(LCTRL)))) ESCAPE  &kp A  &kp S  &kp D  &kp F             &kp G              &rgb_ug RGB_EFF  &kp C_VOLUME_DOWN  &kp H        &kp J              &kp K          &kp L    &kp SEMI  &kp SQT
 &mo 5                             &kp Z  &kp X  &kp C  &kp V             &kp B                                                  &kp N        &kp M              &kp COMMA      &kp DOT  &kp FSLH  &key_repeat
                                                 &mo 2  &mt LSHIFT SPACE  &tab_mod_behavior                                      &lt 3 GRAVE  &mt LSHIFT RETURN  &kp BACKSPACE
@@ -234,6 +235,15 @@
 &trans  &trans        &trans        &trans        &sys_reset      &studio_unlock  &trans  &trans  &trans  &trans  &trans  &trans  &trans       &trans
 &trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_CLR      &bt BT_CLR_ALL                  &trans  &trans  &trans  &trans  &bootloader  &trans
                                     &trans        &studio_unlock  &sys_reset                      &trans  &trans  &trans
+            >;
+        };
+
+        mouse1 {
+            bindings = <
+&tog 0  &trans  &trans  &trans            &trans     &trans    &trans  &trans  &trans  &msc MOVE_Y(15)    &mmv MOVE_Y(400)   &trans            &trans  &trans
+&trans  &trans  &trans  &msc MOVE_Y(-15)  &trans     &trans    &trans  &trans  &trans  &mmv MOVE_X(-400)  &mmv MOVE_Y(-400)  &mmv MOVE_X(400)  &trans  &trans
+&trans  &trans  &trans  &trans            &trans     &trans                    &trans  &trans             &trans             &trans            &trans  &trans
+                        &trans            &mkp LCLK  &mkp MB2                  &trans  &trans             &trans
             >;
         };
     };
