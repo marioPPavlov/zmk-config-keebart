@@ -101,11 +101,11 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&kp RGUI>,
+                <&kp LCMD>,
                 <&macro_tap>,
                 <&kp TAB>,
                 <&macro_release>,
-                <&kp RGUI>;
+                <&kp LEFT_GUI>;
 
             label = "WINDOW_TAB_MAV";
         };
@@ -224,9 +224,9 @@
         NAV {
             display-name = "Navigation";
             bindings = <
-&kp ESC    &none  &none         &none     &none      &none   &bootloader     &bt BT_SEL 0  &none           &windowtab      &window_tab_mav  &oe              &none          &trans
-&kp LSHFT  &ae    &kp LEFT_ALT  &kp LCMD  &kp LCTRL  &none   &studio_unlock  &bt BT_SEL 1  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW     &kp RIGHT_ARROW  &kp BACKSPACE  &trans
-&kp LCTRL  &none  &none         &none     &none      &none                                 &none           &trans          &trans           &trans           &none          &trans
+&kp ESC    &none  &none         &none     &none      &none   &bootloader     &bt BT_SEL 0  &none           &kp LEFT_ALT    &windowtab    &kp GRAVE        &none          &trans
+&kp LSHFT  &ae    &kp LEFT_ALT  &kp LCMD  &kp LCTRL  &none   &studio_unlock  &bt BT_SEL 1  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &kp BACKSPACE  &trans
+&kp LCTRL  &none  &none         &none     &none      &none                                 &none           &kp LCMD        &kp TAB       &kp GRAVE        &none          &trans
                                 &trans    &trans     &trans                                &key_repeat     &trans          &kp DELETE
             >;
         };
