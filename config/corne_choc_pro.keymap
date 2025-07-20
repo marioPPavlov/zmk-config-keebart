@@ -114,13 +114,11 @@
         combo_lctrl {
             bindings = <&kp LCTRL>;
             key-positions = <18 17>;
-            layers = <0 1 2 5>;
         };
 
         combo_lgui {
             bindings = <&kp LGUI>;
             key-positions = <16 17>;
-            layers = <0 1 2>;
         };
 
         combo_lalt {
@@ -131,13 +129,11 @@
         combo_rctrl {
             bindings = <&kp RCTRL>;
             key-positions = <23 24>;
-            layers = <0 1 2 5>;
         };
 
         combo_rgui {
             bindings = <&kp LGUI>;
             key-positions = <24 25>;
-            layers = <0 1 2>;
         };
 
         combo_ralt {
