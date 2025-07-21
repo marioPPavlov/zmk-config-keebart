@@ -235,7 +235,7 @@
             bindings = <
 &caps_word                        &kp Q  &kp W  &kp E              &kp R                      &kp T              &rgb_ug RGB_TOG  &kp C_VOLUME_UP    &kp Y        &kp U              &kp I          &kp O    &kp P     &kp DELETE
 &mt LS(LA(LC(LG(LCTRL)))) ESCAPE  &kp A  &kp S  &kp D              &kp F                      &mt LEFT_SHIFT G   &rgb_ug RGB_EFF  &kp C_VOLUME_DOWN  &kp H        &kp J              &kp K          &kp L    &kp SEMI  &kp SQT
-&smart_tab                        &kp Z  &kp X  &kp C              &kp V                      &kp B                                                  &kp N        &kp M              &kp COMMA      &kp DOT  &kp FSLH  &key_repeat
+&smart_tab                        &kp Z  &kp X  &kp C              &kp V                      &kp B                                                  &kp N        &kp M              &kp COMMA      &kp DOT  &kp FSLH  &caps_word
                                                 &my_layer_tap 2 5  &my_smart_mod_tab 0 SPACE  &tab_mod_behavior                                      &lt 3 GRAVE  &mt LSHIFT RETURN  &kp BACKSPACE
             >;
         };
@@ -287,10 +287,10 @@
 
         mouse1 {
             bindings = <
-&trans  &trans  &msc SCRL_LEFT     &mmv MOVE_Y(-600)  &msc SCRL_RIGHT   &trans    &trans  &trans  &trans    &msc SCRL_UP    &mmv MOVE_UP    &msc SCRL_DOWN   &trans  &trans
-&tog 5  &trans  &mmv MOVE_X(-600)  &mmv MOVE_Y(600)   &mmv MOVE_X(600)  &trans    &trans  &trans  &trans    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans  &trans
-&trans  &trans  &trans             &trans             &trans            &trans                    &trans    &trans          &trans          &trans           &trans  &trans
-                                   &tog 5             &kp LCTRL         &kp LGUI                  &mkp MB3  &mkp MB1        &mkp MB2
+&none   &none  &msc SCRL_LEFT     &mmv MOVE_Y(-600)  &msc SCRL_RIGHT   &none     &none  &none  &none     &msc SCRL_UP    &mmv MOVE_UP    &msc SCRL_DOWN   &none  &none
+&tog 5  &none  &mmv MOVE_X(-600)  &mmv MOVE_Y(600)   &mmv MOVE_X(600)  &none     &none  &none  &none     &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none  &none
+&none   &none  &none              &none              &none             &none                   &none     &none           &none           &none            &none  &none
+                                  &tog 5             &kp LCTRL         &kp LGUI                &mkp MB3  &mkp MB1        &mkp MB2
             >;
         };
 
