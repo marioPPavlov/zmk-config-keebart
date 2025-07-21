@@ -19,20 +19,6 @@
 
 / {
     macros {
-        spotlight: spotlight {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LEFT_ALT>,
-                <&macro_tap>,
-                <&kp SPACE>,
-                <&macro_release>,
-                <&kp LEFT_ALT>;
-
-            label = "SPOTLIGHT";
-        };
-
         ue: ue {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -102,10 +88,10 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&mo 7 &kp LEFT_ALT>,
+                <&mo 6 &kp LEFT_ALT>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
-                <&kp LEFT_ALT &mo 7>;
+                <&kp LEFT_ALT &mo 6>;
 
             label = "SMART_TAB";
         };
@@ -115,10 +101,10 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&mo 7 &kp LGUI>,
+                <&mo 6 &kp LGUI>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
-                <&kp LGUI &mo 7>;
+                <&kp LGUI &mo 6>;
 
             label = "SMART_TAB_MAC";
         };
@@ -128,10 +114,10 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&mo 7 &kp LEFT_CONTROL>,
+                <&mo 6 &kp LEFT_CONTROL>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
-                <&kp LEFT_CONTROL &mo 7>;
+                <&kp LEFT_CONTROL &mo 6>;
 
             label = "SMART_CTRL_TAB";
         };
@@ -143,47 +129,47 @@
         combo_lctrl {
             bindings = <&kp LCTRL>;
             key-positions = <18 17>;
-            layers = <0 2 3 4 5>;
+            layers = <0 2 3 4>;
         };
 
         combo_lgui {
             bindings = <&kp LGUI>;
             key-positions = <16 17>;
-            layers = <0 3 2 4 5>;
+            layers = <0 3 2 4>;
         };
 
         combo_lalt {
             bindings = <&kp LEFT_ALT>;
             key-positions = <18 16>;
-            layers = <2 0 4 3 5>;
+            layers = <2 0 3 4>;
         };
 
         combo_rctrl {
             bindings = <&kp RCTRL>;
             key-positions = <23 24>;
-            layers = <0 2 3 4 5>;
+            layers = <0 2 3 4>;
         };
 
         combo_rgui {
             bindings = <&kp LGUI>;
             key-positions = <24 25>;
-            layers = <0 2 3 4 5>;
+            layers = <0 2 3 4>;
         };
 
         combo_ralt {
             bindings = <&kp RIGHT_ALT>;
             key-positions = <23 25>;
-            layers = <2 0 3 4 5>;
+            layers = <2 0 3 4>;
         };
 
         combo_function_ls {
-            bindings = <&sl 5>;
+            bindings = <&sl 4>;
             key-positions = <4 18>;
-            layers = <0 2 3 4 5>;
+            layers = <0 2 3 4>;
         };
 
         combo_mouse_layer {
-            bindings = <&to 6>;
+            bindings = <&to 5>;
             key-positions = <41 44>;
         };
     };
@@ -252,10 +238,10 @@
             //                    | GUI | LWR | SPC |               | ENT | RSE  | ALT |
 
             bindings = <
-&kp GRAVE                         &kp Q  &kp W  &kp E              &kp R                       &kp T              &rgb_ug RGB_TOG  &kp C_VOLUME_UP    &kp Y        &kp U              &kp I          &kp O    &kp P     &kp DELETE
-&mt LS(LA(LC(LG(LCTRL)))) ESCAPE  &kp A  &kp S  &kp D              &kp F                       &mt LEFT_SHIFT G   &rgb_ug RGB_EFF  &kp C_VOLUME_DOWN  &kp H        &kp J              &kp K          &kp L    &kp SEMI  &kp SQT
-&smart_tab_lalt                   &kp Z  &kp X  &kp C              &kp V                       &kp B                                                  &kp N        &kp M              &kp COMMA      &kp DOT  &kp FSLH  &caps_word
-                                                &my_layer_tap 3 6  &my_smart_mod_lalt 0 SPACE  &tab_mod_behavior                                      &lt 4 GRAVE  &mt LSHIFT RETURN  &kp BACKSPACE
+&kp A                             &kp Q  &kp W  &kp E              &kp R                       &kp T              &rgb_ug RGB_TOG  &kp C_VOLUME_UP    &kp Y      &kp U              &kp I          &kp O    &kp P     &kp DELETE
+&mt LS(LA(LC(LG(LCTRL)))) ESCAPE  &kp A  &kp S  &kp D              &kp F                       &mt LEFT_SHIFT G   &rgb_ug RGB_EFF  &kp C_VOLUME_DOWN  &kp H      &kp J              &kp K          &kp L    &kp SEMI  &kp SQT
+&smart_tab_lalt                   &kp Z  &kp X  &kp C              &kp V                       &kp B                                                  &kp N      &kp M              &kp COMMA      &kp DOT  &kp FSLH  &caps_word
+                                                &my_layer_tap 3 5  &my_smart_mod_lalt 0 SPACE  &tab_mod_behavior                                      &kp GRAVE  &mt LSHIFT RETURN  &kp BACKSPACE
             >;
         };
 
@@ -288,19 +274,10 @@
         NAV {
             display-name = "Navigation";
             bindings = <
-&trans  &trans          &trans        &trans    &smart_tab_ctrl  &trans  &bootloader     &bt BT_SEL 0  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans         &trans
-&trans  &kp LEFT_SHIFT  &kp LEFT_ALT  &kp LCMD  &kp LCTRL        &trans  &studio_unlock  &bt BT_SEL 1  &kp LEFT_ARROW        &kp DOWN_ARROW         &kp UP_ARROW      &kp RIGHT_ARROW    &kp BACKSLASH  &trans
-&trans  &trans          &trans        &trans    &trans           &trans                                &trans                &trans                 &trans            &trans             &trans         &trans
-                                      &trans    &trans           &trans                                &trans                &trans                 &trans
-            >;
-        };
-
-        symbols {
-            bindings = <
-&trans  &trans  &trans         &kp LS(LEFT_PARENTHESIS)  &kp RIGHT_PARENTHESIS  &trans  &trans  &trans  &trans  &trans     &trans    &trans         &trans      &trans
-&trans  &trans  &kp BACKSLASH  &kp LEFT_BRACE            &kp RIGHT_BRACE        &trans  &trans  &trans  &trans  &kp RCTRL  &kp LGUI  &kp RIGHT_ALT  &kp LSHIFT  &trans
-&trans  &trans  &trans         &kp LEFT_BRACKET          &kp RIGHT_BRACKET      &trans                  &trans  &trans     &trans    &trans         &trans      &trans
-                               &trans                    &trans                 &trans                  &trans  &trans     &trans
+&trans  &trans          &trans        &trans    &smart_tab_ctrl  &trans  &bootloader     &bt BT_SEL 0  &kp LC(C)       &trans          &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LC(P)      &trans
+&trans  &kp LEFT_SHIFT  &kp LEFT_ALT  &kp LCMD  &kp LCTRL        &trans  &studio_unlock  &bt BT_SEL 1  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW      &kp RIGHT_ARROW    &kp BACKSLASH  &trans
+&trans  &trans          &trans        &trans    &trans           &trans                                &trans          &trans          &kp LS(N9)        &kp LS(N0)         &trans         &trans
+                                      &trans    &trans           &trans                                &trans          &trans          &trans
             >;
         };
 
@@ -316,9 +293,9 @@
         mouse1 {
             bindings = <
 &none   &none  &msc SCRL_LEFT     &mmv MOVE_Y(-600)  &msc SCRL_RIGHT   &none     &none  &none  &none     &msc SCRL_UP    &mmv MOVE_UP    &msc SCRL_DOWN   &none  &none
-&tog 6  &none  &mmv MOVE_X(-600)  &mmv MOVE_Y(600)   &mmv MOVE_X(600)  &none     &none  &none  &none     &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none  &none
+&tog 5  &none  &mmv MOVE_X(-600)  &mmv MOVE_Y(600)   &mmv MOVE_X(600)  &none     &none  &none  &none     &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none  &none
 &none   &none  &none              &none              &none             &none                   &none     &none           &none           &none            &none  &none
-                                  &tog 6             &kp LCTRL         &kp LGUI                &mkp MB3  &mkp MB1        &mkp MB2
+                                  &tog 5             &kp LCTRL         &kp LGUI                &mkp MB3  &mkp MB1        &mkp MB2
             >;
         };
 
