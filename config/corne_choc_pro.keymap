@@ -236,10 +236,10 @@
 
         NAV_MAC {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp LG(C)      &kp LC(SPACE)  &trans  &trans  &kp LG(V)  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans         &trans         &trans  &trans  &trans     &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans         &trans         &trans  &trans  &trans     &trans
-                        &trans  &trans  &trans                  &kp LG(SPACE)  &trans         &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp LG(C)      &kp LC(SPACE)  &trans         &trans  &kp LG(V)  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans         &trans         &trans         &trans  &trans     &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans         &trans         &trans         &trans  &trans     &trans
+                        &trans  &trans  &trans                  &kp LG(SPACE)  &kp LG(Z)      &kp LS(LG(Z))
             >;
         };
 
