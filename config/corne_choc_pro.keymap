@@ -87,43 +87,43 @@
         combo_lctrl {
             bindings = <&kp LCTRL>;
             key-positions = <18 17>;
-            layers = <0 2 3 5>;
+            layers = <0 2 3 5 1 4 7>;
         };
 
         combo_lgui {
             bindings = <&kp LGUI>;
             key-positions = <16 17>;
-            layers = <0 3 2 5>;
+            layers = <0 3 2 5 1 4 7>;
         };
 
         combo_lalt {
             bindings = <&kp LEFT_ALT>;
             key-positions = <18 16>;
-            layers = <2 0 3 5>;
+            layers = <2 0 3 5 4 1 7>;
         };
 
         combo_rctrl {
             bindings = <&kp RCTRL>;
             key-positions = <23 24>;
-            layers = <0 2 3 5>;
+            layers = <0 2 3 5 1 4 7>;
         };
 
         combo_rgui {
             bindings = <&kp LGUI>;
             key-positions = <24 25>;
-            layers = <0 2 3 5>;
+            layers = <0 2 3 5 1 4 7>;
         };
 
         combo_ralt {
             bindings = <&kp RIGHT_ALT>;
             key-positions = <23 25>;
-            layers = <2 0 3 5>;
+            layers = <2 0 3 5 1 4 7>;
         };
 
         combo_function_ls {
             bindings = <&sl 5>;
             key-positions = <4 18>;
-            layers = <0 2 3 5>;
+            layers = <0 2 3 5 1 4 7>;
         };
     };
 
@@ -229,7 +229,7 @@
             bindings = <
 &trans  &trans  &trans        &trans    &trans     &trans  &bootloader     &bt BT_SEL 0  &kp LC(C)       &trans          &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LC(V)      &trans
 &trans  &trans  &kp LEFT_ALT  &kp LCMD  &kp LCTRL  &trans  &studio_unlock  &bt BT_SEL 1  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW      &kp RIGHT_ARROW    &kp BACKSLASH  &trans
-&trans  &trans  &trans        &trans    &trans     &trans                                &trans          &trans          &kp LS(N9)        &kp LS(N0)         &trans         &trans
+&trans  &trans  &trans        &trans    &trans     &trans                                &kp LC(J)       &kp LC(K)       &kp LS(N9)        &kp LS(N0)         &trans         &trans
                               &trans    &trans     &trans                                &trans          &trans          &trans
             >;
         };
