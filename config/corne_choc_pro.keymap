@@ -247,10 +247,10 @@
 
         mac_base {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                          &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans                          &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans                          &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &my_smart_mod_tab_lgui 0 SPACE  &trans                  &trans  &trans  &trans
+&trans  &trans  &trans  &trans             &trans                          &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans             &trans                          &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans             &trans                          &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+                        &my_layer_tap 4 6  &my_smart_mod_tab_lgui 0 SPACE  &trans                  &trans  &trans  &trans
             >;
         };
 
@@ -274,10 +274,10 @@
         NAV {
             display-name = "Navigation";
             bindings = <
-&trans  &trans  &trans        &trans    &smart_tab_ctrl  &trans  &bootloader     &bt BT_SEL 0  &kp LC(C)       &trans          &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LC(V)      &trans
-&trans  &trans  &kp LEFT_ALT  &kp LCMD  &kp LCTRL        &trans  &studio_unlock  &bt BT_SEL 1  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW      &kp RIGHT_ARROW    &kp BACKSLASH  &trans
-&trans  &trans  &trans        &trans    &trans           &trans                                &trans          &trans          &kp LS(N9)        &kp LS(N0)         &trans         &trans
-                              &trans    &trans           &trans                                &trans          &trans          &trans
+&trans  &trans  &trans        &trans    &trans     &trans  &bootloader     &bt BT_SEL 0  &kp LC(C)       &trans          &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LC(V)      &trans
+&trans  &trans  &kp LEFT_ALT  &kp LCMD  &kp LCTRL  &trans  &studio_unlock  &bt BT_SEL 1  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW      &kp RIGHT_ARROW    &kp BACKSLASH  &trans
+&trans  &trans  &trans        &trans    &trans     &trans                                &trans          &trans          &kp LS(N9)        &kp LS(N0)         &trans         &trans
+                              &trans    &trans     &trans                                &trans          &trans          &trans
             >;
         };
 
@@ -304,13 +304,13 @@
 &none   &none  &msc SCRL_LEFT     &mmv MOVE_Y(-600)  &msc SCRL_RIGHT   &none     &none  &none  &none     &msc SCRL_UP    &mmv MOVE_UP    &msc SCRL_DOWN   &none  &none
 &tog 6  &none  &mmv MOVE_X(-600)  &mmv MOVE_Y(600)   &mmv MOVE_X(600)  &none     &none  &none  &none     &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none  &none
 &none   &none  &none              &none              &none             &none                   &none     &none           &none           &none            &none  &none
-                                  &tog 6             &kp LCTRL         &kp LGUI                &mkp MB3  &mkp MB1        &mkp MB2
+                                  &tog 6             &mkp MB4          &mkp MB5                &mkp MB3  &mkp MB1        &mkp MB2
             >;
         };
 
         tab {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp C          &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp V      &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans         &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans     &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp LS(GRAVE)  &kp LS(TAB)       &kp TAB            &kp GRAVE  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                  &trans         &trans            &trans             &trans     &trans  &trans
                         &trans  &trans  &trans                  &trans         &trans            &trans
