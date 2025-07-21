@@ -208,6 +208,16 @@
             tapping-term-ms = <200>;
             hold-while-undecided;
         };
+
+        my_smart_mod_tab: my_smart_mod_tab {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MY_SMART_MOD_TAB";
+            bindings = <&smart_tab>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            hold-while-undecided;
+        };
     };
 
     keymap {
@@ -223,10 +233,10 @@
             //                    | GUI | LWR | SPC |               | ENT | RSE  | ALT |
 
             bindings = <
-&caps_word                        &kp Q  &kp W  &kp E              &kp R             &kp T              &rgb_ug RGB_TOG  &kp C_VOLUME_UP    &kp Y        &kp U              &kp I          &kp O    &kp P     &kp DELETE
-&mt LS(LA(LC(LG(LCTRL)))) ESCAPE  &kp A  &kp S  &kp D              &kp F             &mt LEFT_SHIFT G   &rgb_ug RGB_EFF  &kp C_VOLUME_DOWN  &kp H        &kp J              &kp K          &kp L    &kp SEMI  &kp SQT
-&smart_tab                        &kp Z  &kp X  &kp C              &kp V             &kp B                                                  &kp N        &kp M              &kp COMMA      &kp DOT  &kp FSLH  &key_repeat
-                                                &my_layer_tap 2 5  &mt LSHIFT SPACE  &tab_mod_behavior                                      &lt 3 GRAVE  &mt LSHIFT RETURN  &kp BACKSPACE
+&caps_word                        &kp Q  &kp W  &kp E              &kp R                      &kp T              &rgb_ug RGB_TOG  &kp C_VOLUME_UP    &kp Y        &kp U              &kp I          &kp O    &kp P     &kp DELETE
+&mt LS(LA(LC(LG(LCTRL)))) ESCAPE  &kp A  &kp S  &kp D              &kp F                      &mt LEFT_SHIFT G   &rgb_ug RGB_EFF  &kp C_VOLUME_DOWN  &kp H        &kp J              &kp K          &kp L    &kp SEMI  &kp SQT
+&smart_tab                        &kp Z  &kp X  &kp C              &kp V                      &kp B                                                  &kp N        &kp M              &kp COMMA      &kp DOT  &kp FSLH  &key_repeat
+                                                &my_layer_tap 2 5  &my_smart_mod_tab 0 SPACE  &tab_mod_behavior                                      &lt 3 GRAVE  &mt LSHIFT RETURN  &kp BACKSPACE
             >;
         };
 
