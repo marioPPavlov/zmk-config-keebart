@@ -116,10 +116,10 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&mo 7 &kp LEFT_ALT>,
+                <&mo 7 &kp LEFT_ALT &rgb_ug RGB_EFF>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
-                <&kp LEFT_ALT &mo 7>;
+                <&kp LEFT_ALT &mo 7 &rgb_ug RGB_EFR>;
 
             label = "SMART_TAB";
         };
@@ -273,10 +273,10 @@
 
         symbols {
             bindings = <
-&trans  &kp EXCL  &kp AT_SIGN    &kp LS(LEFT_PARENTHESIS)  &kp RIGHT_PARENTHESIS  &trans  &trans  &trans  &trans      &trans     &trans    &trans         &trans      &trans
-&trans  &trans    &kp BACKSLASH  &kp LEFT_BRACE            &kp RIGHT_BRACE        &trans  &trans  &trans  &kp RSHIFT  &kp RCTRL  &kp LGUI  &kp RIGHT_ALT  &kp LSHIFT  &trans
-&trans  &trans    &trans         &kp LEFT_BRACKET          &kp RIGHT_BRACKET      &trans                  &trans      &trans     &trans    &trans         &trans      &trans
-                                 &trans                    &trans                 &trans                  &trans      &trans     &trans
+&trans  &trans  &trans         &kp LS(LEFT_PARENTHESIS)  &kp RIGHT_PARENTHESIS  &trans  &trans  &trans  &trans      &trans     &trans    &trans         &trans      &trans
+&trans  &trans  &kp BACKSLASH  &kp LEFT_BRACE            &kp RIGHT_BRACE        &trans  &trans  &trans  &kp RSHIFT  &kp RCTRL  &kp LGUI  &kp RIGHT_ALT  &kp LSHIFT  &trans
+&trans  &trans  &trans         &kp LEFT_BRACKET          &kp RIGHT_BRACKET      &trans                  &trans      &trans     &trans    &trans         &trans      &trans
+                               &trans                    &trans                 &trans                  &trans      &trans     &trans
             >;
         };
 
