@@ -19,48 +19,6 @@
 
 / {
     macros {
-        ue: ue {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp RIGHT_ALT>,
-                <&macro_tap>,
-                <&kp Y>,
-                <&macro_release>,
-                <&kp RALT>;
-
-            label = "UE";
-        };
-
-        oe: oe {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp RIGHT_ALT>,
-                <&macro_tap>,
-                <&kp P>,
-                <&macro_release>,
-                <&kp RALT>;
-
-            label = "OE";
-        };
-
-        ae: ae {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp RIGHT_ALT>,
-                <&macro_tap>,
-                <&kp Q>,
-                <&macro_release>,
-                <&kp RALT>;
-
-            label = "AE";
-        };
-
         tripple_dash: tripple_dash {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -166,11 +124,6 @@
             bindings = <&sl 5>;
             key-positions = <4 18>;
             layers = <0 2 3 5>;
-        };
-
-        combo_mouse_layer {
-            bindings = <&to 6>;
-            key-positions = <41 44>;
         };
     };
 
