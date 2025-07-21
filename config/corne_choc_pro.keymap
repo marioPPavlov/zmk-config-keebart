@@ -214,8 +214,18 @@
             bindings = <&smart_tab>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            hold-while-undecided;
+            tapping-term-ms = <150>;
+            flavor = "tap-preferred";
+        };
+
+        my_smart_mod_tab_mac: my_smart_mod_tab_mac {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MY_SMART_MOD_TAB_MAC";
+            bindings = <&smart_tab_mac>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            flavor = "tap-preferred";
         };
     };
 
@@ -232,19 +242,19 @@
             //                    | GUI | LWR | SPC |               | ENT | RSE  | ALT |
 
             bindings = <
-&caps_word                        &kp Q  &kp W  &kp E              &kp R                      &kp T              &rgb_ug RGB_TOG  &kp C_VOLUME_UP    &kp Y        &kp U              &kp I          &kp O    &kp P     &kp DELETE
-&mt LS(LA(LC(LG(LCTRL)))) ESCAPE  &kp A  &kp S  &kp D              &kp F                      &mt LEFT_SHIFT G   &rgb_ug RGB_EFF  &kp C_VOLUME_DOWN  &kp H        &kp J              &kp K          &kp L    &kp SEMI  &kp SQT
-&smart_tab                        &kp Z  &kp X  &kp C              &kp V                      &kp B                                                  &kp N        &kp M              &kp COMMA      &kp DOT  &kp FSLH  &caps_word
-                                                &my_layer_tap 3 6  &my_smart_mod_tab 0 SPACE  &tab_mod_behavior                                      &lt 4 GRAVE  &mt LSHIFT RETURN  &kp BACKSPACE
+&caps_word                        &kp Q  &kp W  &kp E              &kp R       &kp T              &rgb_ug RGB_TOG  &kp C_VOLUME_UP    &kp Y        &kp U              &kp I          &kp O    &kp P     &kp DELETE
+&mt LS(LA(LC(LG(LCTRL)))) ESCAPE  &kp A  &kp S  &kp D              &kp F       &mt LEFT_SHIFT G   &rgb_ug RGB_EFF  &kp C_VOLUME_DOWN  &kp H        &kp J              &kp K          &kp L    &kp SEMI  &kp SQT
+&smart_tab                        &kp Z  &kp X  &kp C              &kp V       &kp B                                                  &kp N        &kp M              &kp COMMA      &kp DOT  &kp FSLH  &caps_word
+                                                &my_layer_tap 3 6  &smart_tab  &tab_mod_behavior                                      &lt 4 GRAVE  &mt LSHIFT RETURN  &kp BACKSPACE
             >;
         };
 
         mac_layer {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans                  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans          &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &smart_tab_mac  &trans                  &trans  &trans  &trans
             >;
         };
 
@@ -258,10 +268,10 @@
             //                    | GUI |     | SPC |               | ENT |     | ALT |
 
             bindings = <
-&trans  &trans  &trans        &kp LEFT_SHIFT  &trans     &trans          &rgb_ug RGB_ON   &none  &kp UNDERSCORE  &kp N7  &kp N8  &kp N9  &kp STAR  &trans
-&trans  &trans  &sk LEFT_ALT  &sk LCMD        &sk LCTRL  &kp LEFT_SHIFT  &rgb_ug RGB_OFF  &none  &kp MINUS       &kp N4  &kp N5  &kp N6  &kp PLUS  &trans
-&trans  &trans  &trans        &trans          &trans     &trans                                  &kp PLUS        &kp N1  &kp N2  &kp N3  &kp DOT   &trans
-                              &trans          &trans     &trans                                  &kp EQUAL       &trans  &kp N0
+&trans  &trans  &trans        &kp LEFT_SHIFT  &trans     &trans          &rgb_ug RGB_ON   &none   &kp UNDERSCORE  &kp N7  &kp N8  &kp N9  &kp STAR  &trans
+&trans  &trans  &sk LEFT_ALT  &sk LCMD        &sk LCTRL  &kp LEFT_SHIFT  &rgb_ug RGB_OFF  &tog 1  &kp MINUS       &kp N4  &kp N5  &kp N6  &kp PLUS  &trans
+&trans  &trans  &trans        &trans          &trans     &trans                                   &kp PLUS        &kp N1  &kp N2  &kp N3  &kp DOT   &trans
+                              &trans          &trans     &trans                                   &kp EQUAL       &trans  &kp N0
             >;
         };
 
