@@ -97,7 +97,7 @@
             label = "WINDOW_TAB_MAV";
         };
 
-        smart_tab: smart_tab {
+        smart_tab_lalt: smart_tab {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -110,7 +110,7 @@
             label = "SMART_TAB";
         };
 
-        smart_tab_mac: smart_tab_mac {
+        smart_tab_lgui: smart_tab_mac {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -123,7 +123,7 @@
             label = "SMART_TAB_MAC";
         };
 
-        smart_ctrl_tab: smart_ctrl_tab {
+        smart_tab_ctrl: smart_ctrl_tab {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -208,20 +208,30 @@
             tapping-term-ms = <150>;
         };
 
-        my_smart_mod_tab: my_smart_mod_tab {
+        my_smart_mod_lalt: my_smart_mod_lalt {
             compatible = "zmk,behavior-hold-tap";
-            label = "MY_SMART_MOD_TAB";
-            bindings = <&smart_tab>, <&kp>;
+            label = "MY_SMART_MOD_LALT";
+            bindings = <&smart_tab_lalt>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <150>;
             flavor = "tap-preferred";
         };
 
-        my_smart_mod_tab_mac: my_smart_mod_tab_mac {
+        my_smart_mod_tab_lgui: my_smart_mod_tab_lgui {
             compatible = "zmk,behavior-hold-tap";
-            label = "MY_SMART_MOD_TAB_MAC";
-            bindings = <&smart_tab_mac>, <&kp>;
+            label = "MY_SMART_MOD_TAB_LGUI";
+            bindings = <&smart_tab_lgui>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            flavor = "tap-preferred";
+        };
+
+        caps_word_mod_tap: caps_word_mod_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "CAPS_WORD_MOD_TAP";
+            bindings = <&caps_word>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <150>;
@@ -242,19 +252,19 @@
             //                    | GUI | LWR | SPC |               | ENT | RSE  | ALT |
 
             bindings = <
-&kp GRAVE                         &kp Q  &kp W  &kp E              &kp R                      &kp T              &rgb_ug RGB_TOG  &kp C_VOLUME_UP    &kp Y        &kp U              &kp I          &kp O    &kp P     &kp DELETE
-&mt LS(LA(LC(LG(LCTRL)))) ESCAPE  &kp A  &kp S  &kp D              &kp F                      &mt LEFT_SHIFT G   &rgb_ug RGB_EFF  &kp C_VOLUME_DOWN  &kp H        &kp J              &kp K          &kp L    &kp SEMI  &kp SQT
-&smart_tab                        &kp Z  &kp X  &kp C              &kp V                      &kp B                                                  &kp N        &kp M              &kp COMMA      &kp DOT  &kp FSLH  &caps_word
-                                                &my_layer_tap 3 6  &my_smart_mod_tab 0 SPACE  &tab_mod_behavior                                      &lt 4 GRAVE  &mt LSHIFT RETURN  &kp BACKSPACE
+&kp GRAVE                         &kp Q  &kp W  &kp E              &kp R                       &kp T              &rgb_ug RGB_TOG  &kp C_VOLUME_UP    &kp Y        &kp U              &kp I          &kp O    &kp P     &kp DELETE
+&mt LS(LA(LC(LG(LCTRL)))) ESCAPE  &kp A  &kp S  &kp D              &kp F                       &mt LEFT_SHIFT G   &rgb_ug RGB_EFF  &kp C_VOLUME_DOWN  &kp H        &kp J              &kp K          &kp L    &kp SEMI  &kp SQT
+&smart_tab_lalt                   &kp Z  &kp X  &kp C              &kp V                       &kp B                                                  &kp N        &kp M              &kp COMMA      &kp DOT  &kp FSLH  &caps_word
+                                                &my_layer_tap 3 6  &my_smart_mod_lalt 0 SPACE  &tab_mod_behavior                                      &lt 4 GRAVE  &mt LSHIFT RETURN  &kp BACKSPACE
             >;
         };
 
         mac_base {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                         &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans                         &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans                         &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &my_smart_mod_tab_mac 0 SPACE  &trans                  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans                          &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans                          &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans                          &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &my_smart_mod_tab_lgui 0 SPACE  &trans                  &trans  &trans  &trans
             >;
         };
 
@@ -268,17 +278,17 @@
             //                    | GUI |     | SPC |               | ENT |     | ALT |
 
             bindings = <
-&trans  &trans  &trans        &kp LEFT_SHIFT  &trans     &trans          &rgb_ug RGB_ON   &none   &kp UNDERSCORE  &kp N7  &kp N8  &kp N9  &kp STAR  &trans
-&trans  &trans  &sk LEFT_ALT  &sk LCMD        &sk LCTRL  &kp LEFT_SHIFT  &rgb_ug RGB_OFF  &tog 1  &kp MINUS       &kp N4  &kp N5  &kp N6  &kp PLUS  &trans
-&trans  &trans  &trans        &trans          &trans     &trans                                   &kp UNDERSCORE  &kp N1  &kp N2  &kp N3  &kp DOT   &trans
-                              &trans          &trans     &trans                                   &kp EQUAL       &trans  &kp N0
+&trans  &trans  &trans        &trans    &trans     &trans          &rgb_ug RGB_ON   &none   &kp UNDERSCORE  &kp N7  &kp N8  &kp N9  &kp STAR  &trans
+&trans  &trans  &sk LEFT_ALT  &sk LCMD  &sk LCTRL  &kp LEFT_SHIFT  &rgb_ug RGB_OFF  &tog 1  &kp MINUS       &kp N4  &kp N5  &kp N6  &kp PLUS  &trans
+&trans  &trans  &trans        &trans    &trans     &trans                                   &kp UNDERSCORE  &kp N1  &kp N2  &kp N3  &kp DOT   &trans
+                              &trans    &trans     &trans                                   &kp EQUAL       &trans  &kp N0
             >;
         };
 
         NAV {
             display-name = "Navigation";
             bindings = <
-&trans  &trans          &trans        &trans    &smart_ctrl_tab  &trans  &bootloader     &bt BT_SEL 0  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans         &trans
+&trans  &trans          &trans        &trans    &smart_tab_ctrl  &trans  &bootloader     &bt BT_SEL 0  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans         &trans
 &trans  &kp LEFT_SHIFT  &kp LEFT_ALT  &kp LCMD  &kp LCTRL        &trans  &studio_unlock  &bt BT_SEL 1  &kp LEFT_ARROW        &kp DOWN_ARROW         &kp UP_ARROW      &kp RIGHT_ARROW    &kp BACKSLASH  &trans
 &trans  &trans          &trans        &trans    &trans           &trans                                &trans                &trans                 &trans            &trans             &trans         &trans
                                       &trans    &trans           &trans                                &trans                &trans                 &trans
