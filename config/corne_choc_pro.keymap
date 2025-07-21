@@ -273,10 +273,10 @@
 
         symbols {
             bindings = <
-&trans  &trans  &trans         &kp LS(LEFT_PARENTHESIS)  &kp RIGHT_PARENTHESIS  &trans  &trans  &trans  &trans      &trans     &trans    &trans         &trans      &trans
-&trans  &trans  &kp BACKSLASH  &kp LEFT_BRACE            &kp RIGHT_BRACE        &trans  &trans  &trans  &kp RSHIFT  &kp RCTRL  &kp LGUI  &kp RIGHT_ALT  &kp LSHIFT  &trans
-&trans  &trans  &trans         &kp LEFT_BRACKET          &kp RIGHT_BRACKET      &trans                  &trans      &trans     &trans    &trans         &trans      &trans
-                               &trans                    &trans                 &trans                  &trans      &trans     &trans
+&trans  &trans  &trans         &kp LS(LEFT_PARENTHESIS)  &kp RIGHT_PARENTHESIS  &trans  &trans  &trans  &trans  &trans     &trans    &trans         &trans      &trans
+&trans  &trans  &kp BACKSLASH  &kp LEFT_BRACE            &kp RIGHT_BRACE        &trans  &trans  &trans  &trans  &kp RCTRL  &kp LGUI  &kp RIGHT_ALT  &kp LSHIFT  &trans
+&trans  &trans  &trans         &kp LEFT_BRACKET          &kp RIGHT_BRACKET      &trans                  &trans  &trans     &trans    &trans         &trans      &trans
+                               &trans                    &trans                 &trans                  &trans  &trans     &trans
             >;
         };
 
