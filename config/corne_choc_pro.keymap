@@ -19,20 +19,6 @@
 
 / {
     macros {
-        windowtab: windowtab {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp RALT>,
-                <&macro_tap>,
-                <&kp TAB>,
-                <&macro_release>,
-                <&kp RALT>;
-
-            label = "WINDOWTAB";
-        };
-
         spotlight: spotlight {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -265,7 +251,7 @@
             display-name = "Navigation";
             bindings = <
 &trans  &trans          &trans        &trans    &smart_ctrl_tab  &trans  &bootloader     &bt BT_SEL 0  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans         &trans
-&trans  &kp LEFT_SHIFT  &kp LEFT_ALT  &kp LCMD  &kp LCTRL        &none   &studio_unlock  &bt BT_SEL 1  &kp LEFT_ARROW        &kp DOWN_ARROW         &kp UP_ARROW      &kp RIGHT_ARROW    &kp BACKSLASH  &trans
+&trans  &kp LEFT_SHIFT  &kp LEFT_ALT  &kp LCMD  &kp LCTRL        &trans  &studio_unlock  &bt BT_SEL 1  &kp LEFT_ARROW        &kp DOWN_ARROW         &kp UP_ARROW      &kp RIGHT_ARROW    &kp BACKSLASH  &trans
 &trans  &trans          &trans        &trans    &trans           &trans                                &trans                &trans                 &trans            &trans             &trans         &trans
                                       &trans    &trans           &trans                                &trans                &trans                 &trans
             >;
@@ -300,10 +286,10 @@
 
         tab {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans         &trans       &trans   &trans     &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp LS(GRAVE)  &kp LS(TAB)  &kp TAB  &kp GRAVE  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans         &trans       &trans   &trans     &trans  &trans
-                        &trans  &trans  &trans                  &trans         &trans       &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp C          &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp V      &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp LS(GRAVE)  &kp LS(TAB)       &kp TAB            &kp GRAVE  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans         &trans            &trans             &trans     &trans  &trans
+                        &trans  &trans  &trans                  &trans         &trans            &trans
             >;
         };
     };
