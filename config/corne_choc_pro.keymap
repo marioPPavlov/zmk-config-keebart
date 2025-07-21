@@ -92,7 +92,8 @@
         tripple_dash: tripple_dash {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp GRAVE &kp GRAVE &kp GRAVE>;
+            bindings = <&kp GRAVE &kp GRAVE &kp GRAVE>, <&macro_press>;
+
             label = "TRIPPLE_DASH";
         };
 
@@ -215,7 +216,7 @@
         my_layer_tap: my_layer_tap {
             compatible = "zmk,behavior-hold-tap";
             label = "MY_LAYER_TAP";
-            bindings = <&mo>, <&to>;
+            bindings = <&mo>, <&tog>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -301,9 +302,9 @@
         mouse1 {
             bindings = <
 &trans  &trans  &msc SCRL_LEFT     &mmv MOVE_Y(-600)  &msc SCRL_RIGHT   &trans    &trans  &trans  &trans    &msc SCRL_UP    &mmv MOVE_UP    &msc SCRL_DOWN   &trans  &trans
-&to 0   &trans  &mmv MOVE_X(-600)  &mmv MOVE_Y(600)   &mmv MOVE_X(600)  &trans    &trans  &trans  &trans    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans  &trans
+&tog 6  &trans  &mmv MOVE_X(-600)  &mmv MOVE_Y(600)   &mmv MOVE_X(600)  &trans    &trans  &trans  &trans    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans  &trans
 &trans  &trans  &trans             &trans             &trans            &trans                    &trans    &trans          &trans          &trans           &trans  &trans
-                                   &to 0              &kp LCTRL         &kp LGUI                  &mkp MB3  &mkp MB1        &mkp MB2
+                                   &tog 6             &kp LCTRL         &kp LGUI                  &mkp MB3  &mkp MB1        &mkp MB2
             >;
         };
 
