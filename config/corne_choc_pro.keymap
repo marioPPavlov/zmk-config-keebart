@@ -297,10 +297,10 @@
 
         tab {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans         &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans     &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp LS(GRAVE)  &kp LS(TAB)       &kp TAB            &kp GRAVE  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans         &trans            &trans             &trans     &trans  &trans
-                        &trans  &trans  &trans                  &trans         &trans            &trans
+&trans  &trans  &trans         &kp LBKT     &kp RBKT  &trans         &trans  &trans  &trans         &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans     &trans  &trans
+&trans  &trans  &kp LS(GRAVE)  &kp LS(TAB)  &kp TAB   &kp GRAVE      &trans  &trans  &kp LS(GRAVE)  &kp LS(TAB)       &kp TAB            &kp GRAVE  &trans  &trans
+&trans  &trans  &trans         &trans       &trans    &trans                         &trans         &trans            &trans             &trans     &trans  &trans
+                               &trans       &trans    &kp LC(SPACE)                  &trans         &trans            &trans
             >;
         };
     };
