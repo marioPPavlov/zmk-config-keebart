@@ -119,6 +119,16 @@
             bindings = <&rgb_ug RGB_COLOR_HSB(0,94,48)>;
             key-positions = <13 27>;
         };
+
+        color_on {
+            bindings = <&rgb_ug RGB_ON>;
+            key-positions = <26 12>;
+        };
+
+        color_off {
+            bindings = <&rgb_ug RGB_OFF>;
+            key-positions = <11 25>;
+        };
     };
 
     behaviors {
