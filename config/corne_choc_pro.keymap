@@ -65,6 +65,19 @@
 
             label = "MOUSE_MODE_COLOR";
         };
+
+        smart_tab_alt: smart_tab_alt {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&sl 4 &kp LSHIFT>,
+                <&macro_pause_for_release>,
+                <&macro_release>,
+                <&kp LSHIFT>;
+
+            label = "SMART_TAB_ALT";
+        };
     };
 
     combos {
@@ -210,6 +223,18 @@
             tapping-term-ms = <200>;
             hold-trigger-key-positions = <0 1 2 4 5 14 15 16 17 18 19 28 29 30 31 32 33 3 6 20>;
         };
+
+        smart_tab_shift: smart_tab_shift {
+            compatible = "zmk,behavior-hold-tap";
+            label = "SMART_TAB_SHIFT";
+            bindings = <&mo>, <&smart_tab_alt>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            flavor = "hold-preferred";
+            hold-trigger-key-positions = <34 35 36 37 38 39 27 26 12 13 11 25 24 10 9 23 22 7 21 8>;
+            hold-while-undecided;
+        };
     };
 
     keymap {
@@ -234,10 +259,10 @@
 
         mac_base {
             bindings = <
-&kp GRAVE  &trans  &trans                                   &trans                                    &trans                                   &trans  &trans  &trans  &trans  &trans                                  &trans                                   &trans                                  &trans  &trans
-&trans     &trans  &tap_unless_interrupted_by_right LALT S  &tap_unless_interrupted_by_right LCTRL D  &tap_unless_interrupted_by_right LGUI F  &trans  &trans  &trans  &trans  &tap_unless_interrupted_by_left LGUI J  &tap_unless_interrupted_by_left LCTRL K  &tap_unless_interrupted_by_left LALT L  &trans  &trans
-&trans     &trans  &trans                                   &trans                                    &trans                                   &trans                  &trans  &trans                                  &trans                                   &trans                                  &trans  &trans
-                                                            &trans                                    &my_smart_mod_tab_lgui 0 SPACE           &trans                  &trans  &trans                                  &trans
+&kp GRAVE  &trans  &trans                                   &trans                                    &trans                                   &trans  &trans  &trans  &trans                        &trans                                  &trans                                   &trans                                  &trans  &trans
+&trans     &trans  &tap_unless_interrupted_by_right LALT S  &tap_unless_interrupted_by_right LCTRL D  &tap_unless_interrupted_by_right LGUI F  &trans  &trans  &trans  &trans                        &tap_unless_interrupted_by_left LGUI J  &tap_unless_interrupted_by_left LCTRL K  &tap_unless_interrupted_by_left LALT L  &trans  &trans
+&trans     &trans  &trans                                   &trans                                    &trans                                   &trans                  &trans                        &trans                                  &trans                                   &trans                                  &trans  &trans
+                                                            &trans                                    &trans                                   &trans                  &my_smart_mod_tab_lgui 0 TAB  &trans                                  &trans
             >;
         };
 
