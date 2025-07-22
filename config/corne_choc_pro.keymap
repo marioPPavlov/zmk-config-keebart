@@ -233,6 +233,18 @@
             flavor = "hold-preferred";
             hold-trigger-key-positions = <34 35 36 37 38 39 27 26 12 13 11 25 24 10 9 23 22 7 21 8>;
         };
+
+        new_behavior: new_behavior {
+            compatible = "zmk,behavior-hold-tap";
+            label = "NEW_BEHAVIOR";
+            bindings = <&mo>, <&smart_tab_shifttt>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "hold-preferred";
+            hold-trigger-key-positions = <34 35 36 37 38 39 27 26 12 13 11 25 24 10 9 23 22 7 21 8>;
+            hold-while-undecided;
+        };
     };
 
     keymap {
