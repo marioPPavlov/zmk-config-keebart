@@ -187,6 +187,17 @@
             flavor = "tap-unless-interrupted";
             tapping-term-ms = <300>;
         };
+
+        tap_unless_interrupted_by_left: tap_unless_interrupted_by_left {
+            compatible = "zmk,behavior-hold-tap";
+            label = "TAP_UNLESS_INTERRUPTED_BY_LEFT";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            flavor = "tap-unless-interrupted";
+            tapping-term-ms = <150>;
+            hold-trigger-key-positions = <0 1 2 4 5 14 15 16 17 18 19 28 29 30 31 32 33 3 6 20 40 41 42 43 44 45>;
+        };
     };
 
     keymap {
@@ -202,19 +213,19 @@
             //                    | GUI | LWR | SPC |               | ENT | RSE  | ALT |
 
             bindings = <
-&kp A                             &kp Q  &kp W  &kp E              &kp R                                     &kp T                                          &rgb_ug RGB_TOG  &kp C_VOLUME_UP    &kp Y      &kp U              &kp I          &kp O    &kp P     &kp DELETE
-&mt LS(LA(LC(LG(LCTRL)))) ESCAPE  &kp A  &kp S  &kp D              &tap_unless_interrupted_by_right LCTRL F  &tap_unless_interrupted_by_right LEFT_SHIFT G  &rgb_ug RGB_EFF  &kp C_VOLUME_DOWN  &kp H      &kp J              &kp K          &kp L    &kp SEMI  &kp SQT
-&sl 5                             &kp Z  &kp X  &kp C              &kp V                                     &kp B                                                                              &kp N      &kp M              &kp COMMA      &kp DOT  &kp FSLH  &caps_word
-                                                &my_layer_tap 3 6  &my_smart_mod_lalt 0 SPACE                &tab_mod_behavior                                                                  &kp GRAVE  &mt LSHIFT RETURN  &kp BACKSPACE
+&kp A                             &kp Q  &kp W  &kp E              &kp R                                     &kp T                                          &rgb_ug RGB_TOG  &kp C_VOLUME_UP    &kp Y                                     &kp U              &kp I          &kp O    &kp P     &kp DELETE
+&mt LS(LA(LC(LG(LCTRL)))) ESCAPE  &kp A  &kp S  &kp D              &tap_unless_interrupted_by_right LCTRL F  &tap_unless_interrupted_by_right LEFT_SHIFT G  &rgb_ug RGB_EFF  &kp C_VOLUME_DOWN  &tap_unless_interrupted_by_left LSHIFT H  &kp J              &kp K          &kp L    &kp SEMI  &kp SQT
+&sl 5                             &kp Z  &kp X  &kp C              &kp V                                     &kp B                                                                              &kp N                                     &kp M              &kp COMMA      &kp DOT  &kp FSLH  &caps_word
+                                                &my_layer_tap 3 6  &my_smart_mod_lalt 0 SPACE                &tab_mod_behavior                                                                  &kp GRAVE                                 &mt LSHIFT RETURN  &kp BACKSPACE
             >;
         };
 
         mac_base {
             bindings = <
-&trans  &trans  &trans  &trans             &trans                                   &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans             &tap_unless_interrupted_by_right LGUI F  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans             &trans                                   &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-                        &my_layer_tap 4 6  &my_smart_mod_tab_lgui 0 SPACE           &trans                  &trans  &trans  &trans
+&trans  &trans  &trans                                   &trans                                    &trans                                   &trans  &trans  &trans  &trans  &trans                                  &trans                                   &trans                                  &trans  &trans
+&trans  &trans  &tap_unless_interrupted_by_right LALT S  &tap_unless_interrupted_by_right LCTRL D  &tap_unless_interrupted_by_right LGUI F  &trans  &trans  &trans  &trans  &tap_unless_interrupted_by_left LGUI J  &tap_unless_interrupted_by_left LCTRL K  &tap_unless_interrupted_by_left LALT L  &trans  &trans
+&trans  &trans  &trans                                   &trans                                    &trans                                   &trans                  &trans  &trans                                  &trans                                   &trans                                  &trans  &trans
+                                                         &my_layer_tap 4 6                         &my_smart_mod_tab_lgui 0 SPACE           &trans                  &trans  &trans                                  &trans
             >;
         };
 
