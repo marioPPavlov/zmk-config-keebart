@@ -109,6 +109,11 @@
             key-positions = <7 21>;
             layers = <0 2 3 6 1 3 7>;
         };
+
+        test_combo {
+            bindings = <&kp B>;
+            key-positions = <0 1>;
+        };
     };
 
     behaviors {
@@ -206,10 +211,10 @@
 
         mac_base {
             bindings = <
-&trans  &trans  &trans                                   &trans                                    &trans                                   &trans  &trans  &trans  &trans  &trans                                  &trans                                   &trans                                  &trans  &trans
-&trans  &trans  &tap_unless_interrupted_by_right LALT S  &tap_unless_interrupted_by_right LCTRL D  &tap_unless_interrupted_by_right LGUI F  &trans  &trans  &trans  &trans  &tap_unless_interrupted_by_left LGUI J  &tap_unless_interrupted_by_left LCTRL K  &tap_unless_interrupted_by_left LALT L  &trans  &trans
-&trans  &trans  &trans                                   &trans                                    &trans                                   &trans                  &trans  &trans                                  &trans                                   &trans                                  &trans  &trans
-                                                         &trans                                    &my_smart_mod_tab_lgui 0 SPACE           &trans                  &trans  &trans                                  &trans
+&kp GRAVE  &trans  &trans                                   &trans                                    &trans                                   &trans  &trans  &trans  &trans  &trans                                  &trans                                   &trans                                  &trans  &trans
+&trans     &trans  &tap_unless_interrupted_by_right LALT S  &tap_unless_interrupted_by_right LCTRL D  &tap_unless_interrupted_by_right LGUI F  &trans  &trans  &trans  &trans  &tap_unless_interrupted_by_left LGUI J  &tap_unless_interrupted_by_left LCTRL K  &tap_unless_interrupted_by_left LALT L  &trans  &trans
+&trans     &trans  &trans                                   &trans                                    &trans                                   &trans                  &trans  &trans                                  &trans                                   &trans                                  &trans  &trans
+                                                            &trans                                    &my_smart_mod_tab_lgui 0 SPACE           &trans                  &trans  &trans                                  &trans
             >;
         };
 
