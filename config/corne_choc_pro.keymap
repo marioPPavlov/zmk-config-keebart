@@ -161,7 +161,7 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            hold-trigger-key-positions = <8 9 10 11 12 22 23 24 25 26 34 35 36 37 38 43 44 45 7 21 27 39 13 42 41 40>;
+            hold-trigger-key-positions = <8 9 10 11 12 22 23 24 25 26 34 35 36 37 38 7 21 27 39 13>;
             flavor = "tap-unless-interrupted";
             tapping-term-ms = <300>;
         };
@@ -173,8 +173,8 @@
 
             #binding-cells = <2>;
             flavor = "tap-unless-interrupted";
-            tapping-term-ms = <150>;
-            hold-trigger-key-positions = <0 1 2 4 5 14 15 16 17 18 19 28 29 30 31 32 33 3 6 20 40 41 42 43 44 45>;
+            tapping-term-ms = <200>;
+            hold-trigger-key-positions = <0 1 2 4 5 14 15 16 17 18 19 28 29 30 31 32 33 3 6 20>;
         };
     };
 
