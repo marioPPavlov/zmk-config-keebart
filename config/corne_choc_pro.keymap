@@ -202,10 +202,10 @@
             //                    | GUI | LWR | SPC |               | ENT | RSE  | ALT |
 
             bindings = <
-&kp A                             &kp Q  &kp W  &kp E              &kp R                                     &kp T                                          &rgb_ug RGB_TOG  &kp C_VOLUME_UP    &kp Y                                     &kp U              &kp I          &kp O    &kp P     &kp DELETE
-&mt LS(LA(LC(LG(LCTRL)))) ESCAPE  &kp A  &kp S  &kp D              &tap_unless_interrupted_by_right LCTRL F  &tap_unless_interrupted_by_right LEFT_SHIFT G  &rgb_ug RGB_EFF  &kp C_VOLUME_DOWN  &tap_unless_interrupted_by_left LSHIFT H  &kp J              &kp K          &kp L    &kp SEMI  &kp SQT
-&sl 6                             &kp Z  &kp X  &kp C              &kp V                                     &kp B                                                                              &kp N                                     &kp M              &kp COMMA      &kp DOT  &kp FSLH  &caps_word
-                                                &my_layer_tap 2 6  &my_smart_mod_lalt 0 SPACE                &tab_mod_behavior                                                                  &kp GRAVE                                 &mt LSHIFT RETURN  &kp BACKSPACE
+&kp A                             &kp Q  &kp W  &kp E              &kp R                                     &kp T              &rgb_ug RGB_TOG  &kp C_VOLUME_UP    &kp Y      &kp U              &kp I          &kp O    &kp P     &kp DELETE
+&mt LS(LA(LC(LG(LCTRL)))) ESCAPE  &kp A  &kp S  &kp D              &tap_unless_interrupted_by_right LCTRL F  &kp G              &rgb_ug RGB_EFF  &kp C_VOLUME_DOWN  &kp H      &kp J              &kp K          &kp L    &kp SEMI  &kp SQT
+&sl 5                             &kp Z  &kp X  &kp C              &kp V                                     &kp B                                                  &kp N      &kp M              &kp COMMA      &kp DOT  &kp FSLH  &caps_word
+                                                &my_layer_tap 2 6  &my_smart_mod_lalt 0 SPACE                &tab_mod_behavior                                      &kp GRAVE  &mt LSHIFT RETURN  &kp BACKSPACE
             >;
         };
 
@@ -223,16 +223,16 @@
             bindings = <
 &trans  &trans  &trans        &trans    &trans     &trans  &bootloader     &bt BT_SEL 0  &kp LC(C)       &trans          &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LC(V)      &trans
 &trans  &trans  &kp LEFT_ALT  &kp LCMD  &kp LCTRL  &trans  &studio_unlock  &bt BT_SEL 1  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW      &kp RIGHT_ARROW    &kp BACKSLASH  &trans
-&trans  &trans  &trans        &trans    &trans     &trans                                &kp LC(Z)       &kp LC(LS(Z))   &kp LS(N9)        &kp LS(N0)         &kp BACKSLASH  &trans
+&trans  &trans  &trans        &trans    &trans     &trans                                &kp LC(Z)       &kp LC(LS(Z))   &kp LS(N9)        &kp LS(N0)         &trans         &trans
                               &trans    &trans     &trans                                &trans          &trans          &trans
             >;
         };
 
         NAV_MAC {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp LG(C)  &kp LC(SPACE)  &trans  &trans  &kp LG(V)      &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans         &trans  &trans  &kp LC(SPACE)  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &kp LG(Z)  &kp LS(LG(Z))  &trans  &trans  &trans         &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp LG(C)  &kp LC(SPACE)  &trans  &trans  &kp LG(V)  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans         &trans  &trans  &trans     &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &kp LG(Z)  &kp LS(LG(Z))  &trans  &trans  &trans     &trans
                         &trans  &trans  &trans                  &trans     &trans         &trans
             >;
         };
