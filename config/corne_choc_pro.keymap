@@ -19,28 +19,6 @@
 
 / {
     macros {
-        tripple_dash: tripple_dash {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp GRAVE &kp GRAVE &kp GRAVE>, <&macro_press>;
-
-            label = "TRIPPLE_DASH";
-        };
-
-        window_tab_mav: window_tab_mav {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LCMD>,
-                <&macro_tap>,
-                <&kp TAB>,
-                <&macro_release>,
-                <&kp LEFT_GUI>;
-
-            label = "WINDOW_TAB_MAV";
-        };
-
         smart_tab_lalt: smart_tab {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -225,7 +203,7 @@
 &trans  &trans  &trans                                   &trans                                    &trans                                   &trans  &trans  &trans  &trans  &trans                                  &trans                                   &trans                                  &trans  &trans
 &trans  &trans  &tap_unless_interrupted_by_right LALT S  &tap_unless_interrupted_by_right LCTRL D  &tap_unless_interrupted_by_right LGUI F  &trans  &trans  &trans  &trans  &tap_unless_interrupted_by_left LGUI J  &tap_unless_interrupted_by_left LCTRL K  &tap_unless_interrupted_by_left LALT L  &trans  &trans
 &trans  &trans  &trans                                   &trans                                    &trans                                   &trans                  &trans  &trans                                  &trans                                   &trans                                  &trans  &trans
-                                                         &my_layer_tap 4 6                         &my_smart_mod_tab_lgui 0 SPACE           &trans                  &trans  &trans                                  &trans
+                                                         &trans                                    &my_smart_mod_tab_lgui 0 SPACE           &trans                  &trans  &trans                                  &trans
             >;
         };
 
@@ -293,5 +271,12 @@
         };
     };
 
-    conditional_layers { compatible = "zmk,conditional-layers"; };
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+
+        nav_mac_activate_nav {
+            if-layers = <1 3>;
+            then-layer = <4>;
+        };
+    };
 };
