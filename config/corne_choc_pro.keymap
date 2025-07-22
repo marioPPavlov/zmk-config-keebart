@@ -69,7 +69,11 @@
         smart_tab_shifttt: smart_tab_shift {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press>, <&sl 4 &sk LSHIFT>, <&macro_release>;
+            bindings =
+                <&macro_press>,
+                <&sl 4 &sk LSHIFT>,
+                <&macro_release>,
+                <&sk LEFT_SHIFT &sl 4>;
 
             label = "SMART_TAB_SHIFT";
         };
