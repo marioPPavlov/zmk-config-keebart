@@ -69,11 +69,7 @@
         smart_tab_shifttt: smart_tab_shift {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&sl 4 &sk LSHIFT>,
-                <&macro_release>,
-                <&sk LEFT_SHIFT>;
+            bindings = <&macro_press>, <&sl 4 &sk LSHIFT>, <&macro_release>;
 
             label = "SMART_TAB_SHIFT";
         };
@@ -231,7 +227,6 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             flavor = "hold-preferred";
-            hold-trigger-key-positions = <34 35 36 37 38 39 27 26 12 13 11 25 24 10 9 23 22 7 21 8>;
             hold-while-undecided;
             hold-while-undecided-linger;
         };
