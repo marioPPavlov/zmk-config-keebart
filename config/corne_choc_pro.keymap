@@ -223,17 +223,17 @@
             bindings = <
 &trans  &trans  &trans        &trans    &trans     &trans  &bootloader     &bt BT_SEL 0  &kp LC(C)       &trans          &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LC(V)      &trans
 &trans  &trans  &kp LEFT_ALT  &kp LCMD  &kp LCTRL  &trans  &studio_unlock  &bt BT_SEL 1  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW      &kp RIGHT_ARROW    &kp BACKSLASH  &trans
-&trans  &trans  &trans        &trans    &trans     &trans                                &kp LC(J)       &kp LC(K)       &kp LS(N9)        &kp LS(N0)         &trans         &trans
+&trans  &trans  &trans        &trans    &trans     &trans                                &kp LC(Z)       &kp LC(LS(Z))   &kp LS(N9)        &kp LS(N0)         &kp BACKSLASH  &trans
                               &trans    &trans     &trans                                &trans          &trans          &trans
             >;
         };
 
         NAV_MAC {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp LG(C)      &kp LC(SPACE)  &trans         &trans  &kp LG(V)  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans         &trans         &trans         &trans  &trans     &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans         &trans         &trans         &trans  &trans     &trans
-                        &trans  &trans  &trans                  &kp LG(SPACE)  &kp LG(Z)      &kp LS(LG(Z))
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp LG(C)  &kp LC(SPACE)  &trans  &trans  &kp LG(V)      &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans         &trans  &trans  &kp LC(SPACE)  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &kp LG(Z)  &kp LS(LG(Z))  &trans  &trans  &trans         &trans
+                        &trans  &trans  &trans                  &trans     &trans         &trans
             >;
         };
 
