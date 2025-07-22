@@ -65,43 +65,49 @@
         combo_lctrl {
             bindings = <&kp LCTRL>;
             key-positions = <18 17>;
-            layers = <0 2 3 5 1 4 7>;
+            layers = <0 2 3 6 1 3 7>;
         };
 
         combo_lgui {
             bindings = <&kp LGUI>;
             key-positions = <16 17>;
-            layers = <0 3 2 5 1 4 7>;
+            layers = <0 3 2 6 1 3 7>;
         };
 
         combo_lalt {
             bindings = <&kp LEFT_ALT>;
             key-positions = <18 16>;
-            layers = <2 0 3 5 4 1 7>;
+            layers = <2 0 3 6 3 1 7>;
         };
 
         combo_rctrl {
             bindings = <&kp RCTRL>;
             key-positions = <23 24>;
-            layers = <0 2 3 5 1 4 7>;
+            layers = <0 2 3 6 1 3 7>;
         };
 
         combo_rgui {
             bindings = <&kp LGUI>;
             key-positions = <24 25>;
-            layers = <0 2 3 5 1 4 7>;
+            layers = <0 2 3 6 1 3 7>;
         };
 
         combo_ralt {
             bindings = <&kp RIGHT_ALT>;
             key-positions = <23 25>;
-            layers = <2 0 3 5 1 4 7>;
+            layers = <2 0 3 6 1 3 7>;
         };
 
         combo_function_ls {
-            bindings = <&sl 5>;
+            bindings = <&sl 6>;
             key-positions = <4 18>;
-            layers = <0 2 3 5 1 4 7>;
+            layers = <0 2 3 6 1 3 7>;
+        };
+
+        combo_toggle_base_mac {
+            bindings = <&to 1>;
+            key-positions = <7 21>;
+            layers = <0 2 3 6 1 3 7>;
         };
     };
 
@@ -193,7 +199,7 @@
             bindings = <
 &kp A                             &kp Q  &kp W  &kp E              &kp R                                     &kp T                                          &rgb_ug RGB_TOG  &kp C_VOLUME_UP    &kp Y                                     &kp U              &kp I          &kp O    &kp P     &kp DELETE
 &mt LS(LA(LC(LG(LCTRL)))) ESCAPE  &kp A  &kp S  &kp D              &tap_unless_interrupted_by_right LCTRL F  &tap_unless_interrupted_by_right LEFT_SHIFT G  &rgb_ug RGB_EFF  &kp C_VOLUME_DOWN  &tap_unless_interrupted_by_left LSHIFT H  &kp J              &kp K          &kp L    &kp SEMI  &kp SQT
-&sl 5                             &kp Z  &kp X  &kp C              &kp V                                     &kp B                                                                              &kp N                                     &kp M              &kp COMMA      &kp DOT  &kp FSLH  &caps_word
+&sl 6                             &kp Z  &kp X  &kp C              &kp V                                     &kp B                                                                              &kp N                                     &kp M              &kp COMMA      &kp DOT  &kp FSLH  &caps_word
                                                 &my_layer_tap 3 6  &my_smart_mod_lalt 0 SPACE                &tab_mod_behavior                                                                  &kp GRAVE                                 &mt LSHIFT RETURN  &kp BACKSPACE
             >;
         };
@@ -204,23 +210,6 @@
 &trans  &trans  &tap_unless_interrupted_by_right LALT S  &tap_unless_interrupted_by_right LCTRL D  &tap_unless_interrupted_by_right LGUI F  &trans  &trans  &trans  &trans  &tap_unless_interrupted_by_left LGUI J  &tap_unless_interrupted_by_left LCTRL K  &tap_unless_interrupted_by_left LALT L  &trans  &trans
 &trans  &trans  &trans                                   &trans                                    &trans                                   &trans                  &trans  &trans                                  &trans                                   &trans                                  &trans  &trans
                                                          &trans                                    &my_smart_mod_tab_lgui 0 SPACE           &trans                  &trans  &trans                                  &trans
-            >;
-        };
-
-        NUM {
-            display-name = "Numbers";
-
-            // -----------------------------------------------------------------------------------------
-            // |  TAB |  !  |  @  |  #  |  $  |  %  | LCTRL | RCTRL |  ^  |  &  |  *  |  (  |  )  | BSPC |
-            // | CTRL |     |     |     |     |     |  LALT | RALT  |  -  |  =  |  [  |  ]  |  \  |  `   |
-            // | SHFT |     |     |     |     |     |               |  _  |  +  |  {  |  }  | "|" |  ~   |
-            //                    | GUI |     | SPC |               | ENT |     | ALT |
-
-            bindings = <
-&trans  &trans  &trans        &trans    &trans     &trans          &rgb_ug RGB_ON   &none   &kp UNDERSCORE  &kp N7    &kp N8  &kp N9  &kp STAR  &trans
-&trans  &trans  &sk LEFT_ALT  &sk LCMD  &sk LCTRL  &kp LEFT_SHIFT  &rgb_ug RGB_OFF  &tog 1  &kp MINUS       &kp N4    &kp N5  &kp N6  &kp PLUS  &trans
-&trans  &trans  &trans        &trans    &trans     &trans                                   &kp UNDERSCORE  &kp N1    &kp N2  &kp N3  &kp DOT   &trans
-                              &trans    &trans     &trans                                   &kp EQUAL       &kp PLUS  &kp N0
             >;
         };
 
@@ -243,12 +232,29 @@
             >;
         };
 
+        NUM {
+            display-name = "Numbers";
+
+            // -----------------------------------------------------------------------------------------
+            // |  TAB |  !  |  @  |  #  |  $  |  %  | LCTRL | RCTRL |  ^  |  &  |  *  |  (  |  )  | BSPC |
+            // | CTRL |     |     |     |     |     |  LALT | RALT  |  -  |  =  |  [  |  ]  |  \  |  `   |
+            // | SHFT |     |     |     |     |     |               |  _  |  +  |  {  |  }  | "|" |  ~   |
+            //                    | GUI |     | SPC |               | ENT |     | ALT |
+
+            bindings = <
+&trans  &trans  &trans        &trans    &trans     &trans          &rgb_ug RGB_ON   &none   &kp N0     &kp N7  &kp N8  &kp N9  &kp STAR  &trans
+&trans  &trans  &sk LEFT_ALT  &sk LCMD  &sk LCTRL  &kp LEFT_SHIFT  &rgb_ug RGB_OFF  &tog 1  &kp EQUAL  &kp N4  &kp N5  &kp N6  &kp PLUS  &trans
+&trans  &trans  &trans        &trans    &trans     &trans                                   &kp MINUS  &kp N1  &kp N2  &kp N3  &kp N0    &trans
+                              &trans    &trans     &trans                                   &trans     &trans  &trans
+            >;
+        };
+
         Function {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp F7  &kp F8  &kp F9  &kp F12  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp F4  &kp F5  &kp F6  &kp F11  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &kp F1  &kp F2  &kp F3  &kp F10  &trans
-                        &trans  &trans  &trans                  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp F10  &kp F7  &kp F8  &kp F9  &kp F12  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp F11  &kp F4  &kp F5  &kp F6  &kp F11  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &kp F12  &kp F1  &kp F2  &kp F3  &kp F10  &trans
+                        &trans  &trans  &trans                  &trans   &trans  &trans
             >;
         };
 
@@ -276,7 +282,7 @@
 
         nav_mac_activate_nav {
             if-layers = <1 3>;
-            then-layer = <4>;
+            then-layer = <3>;
         };
     };
 };
