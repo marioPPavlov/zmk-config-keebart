@@ -78,10 +78,10 @@
     combos {
         compatible = "zmk,combos";
 
-        combo_lctrl {
+        combo_lctrl_linux {
             bindings = <&kp LCTRL>;
             key-positions = <18 17>;
-            layers = <0 2 3 6 1 3 7>;
+            layers = <0 2 6 7>;
         };
 
         combo_lgui {
@@ -143,7 +143,7 @@
 
         color_off {
             bindings = <&rgb_ug RGB_OFF>;
-            key-positions = <11 25>;
+            key-positions = <38 39>;
         };
     };
 
