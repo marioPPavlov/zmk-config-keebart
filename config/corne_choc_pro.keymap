@@ -110,9 +110,14 @@
             layers = <0 2 3 6 1 3 7>;
         };
 
-        test_combo {
+        grave_combo {
             bindings = <&kp GRAVE>;
             key-positions = <0>;
+        };
+
+        color {
+            bindings = <&rgb_ug RGB_COLOR_HSB(0,94,48)>;
+            key-positions = <13 27>;
         };
     };
 
@@ -120,7 +125,7 @@
         tab_mod_behavior: tab_mod_behavior {
             compatible = "zmk,behavior-mod-morph";
             label = "TAB_MOD_BEHAVIOR";
-            bindings = <&lt 2 TAB>, <&kp TAB>;
+            bindings = <&lt 4 TAB>, <&kp TAB>;
 
             #binding-cells = <0>;
             keep-mods = <(MOD_RALT|MOD_RCTL)>;
