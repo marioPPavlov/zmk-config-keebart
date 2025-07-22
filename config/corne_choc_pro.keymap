@@ -111,8 +111,8 @@
         };
 
         test_combo {
-            bindings = <&kp B>;
-            key-positions = <0 1>;
+            bindings = <&kp GRAVE>;
+            key-positions = <0>;
         };
     };
 
