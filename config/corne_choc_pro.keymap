@@ -69,7 +69,11 @@
         smart_tab_shifttt: smart_tab_shift {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press>, <&sl 4 &sk LSHIFT>, <&macro_release>;
+            bindings =
+                <&macro_press>,
+                <&sl 4 &sk LSHIFT>,
+                <&macro_release>,
+                <&sl 4 &sk LEFT_SHIFT>;
 
             label = "SMART_TAB_SHIFT";
         };
@@ -230,6 +234,13 @@
             hold-while-undecided;
             hold-while-undecided-linger;
         };
+
+        tap_dance_layer: tap_dance_layer {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_LAYER";
+            #binding-cells = <0>;
+            bindings = <&mo 4>, <&smart_tab_shifttt>;
+        };
     };
 
     keymap {
@@ -245,10 +256,10 @@
             //                    | GUI | LWR | SPC |               | ENT | RSE  | ALT |
 
             bindings = <
-&kp GRAVE                         &kp Q  &kp W  &kp E                    &kp R                 &kp T                 &rgb_ug RGB_TOG  &kp C_VOLUME_UP    &kp Y                     &kp U              &kp I          &kp O    &kp P     &kp DELETE
-&mt LS(LA(LC(LG(LCTRL)))) ESCAPE  &kp A  &kp S  &kp D                    &kp F                 &kp G                 &rgb_ug RGB_EFF  &kp C_VOLUME_DOWN  &kp H                     &kp J              &kp K          &kp L    &kp SEMI  &kp SQT
-&sl 5                             &kp Z  &kp X  &kp C                    &kp V                 &kp B                                                     &kp N                     &kp M              &kp COMMA      &kp DOT  &kp FSLH  &caps_word
-                                                &my_mouse_color_tab 2 6  &mt LEFT_SHIFT SPACE  &smart_tab_shift 4 0                                      &my_smart_mod_lalt 0 TAB  &mt LSHIFT RETURN  &kp BACKSPACE
+&kp GRAVE                         &kp Q  &kp W  &kp E                    &kp R                 &kp T             &rgb_ug RGB_TOG  &kp C_VOLUME_UP    &kp Y                     &kp U              &kp I          &kp O    &kp P     &kp DELETE
+&mt LS(LA(LC(LG(LCTRL)))) ESCAPE  &kp A  &kp S  &kp D                    &kp F                 &kp G             &rgb_ug RGB_EFF  &kp C_VOLUME_DOWN  &kp H                     &kp J              &kp K          &kp L    &kp SEMI  &kp SQT
+&sl 5                             &kp Z  &kp X  &kp C                    &kp V                 &kp B                                                 &kp N                     &kp M              &kp COMMA      &kp DOT  &kp FSLH  &caps_word
+                                                &my_mouse_color_tab 2 6  &mt LEFT_SHIFT SPACE  &tap_dance_layer                                      &my_smart_mod_lalt 0 TAB  &mt LSHIFT RETURN  &kp BACKSPACE
             >;
         };
 
