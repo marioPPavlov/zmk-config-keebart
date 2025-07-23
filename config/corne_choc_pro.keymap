@@ -162,10 +162,15 @@
             layers = <1 3>;
         };
 
-        combo_loader {
+        combo_bootloader {
             bindings = <&bootloader>;
             key-positions = <6 20>;
             layers = <1 3>;
+        };
+
+        mac_screenshot {
+            bindings = <&kp LS(LC(LG(NUMBER_4)))>;
+            key-positions = <29 30 31 32>;
         };
     };
 
