@@ -61,7 +61,7 @@
         mouse_mode_color: mouse_mode_color {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press>, <&sl 6 &rgb_ug RGB_EFF>;
+            bindings = <&macro_press>, <&tog 6 &rgb_ug RGB_EFF>;
 
             label = "MOUSE_MODE_COLOR";
         };
@@ -159,6 +159,12 @@
         combo_rctrl_mac {
             bindings = <&kp LCTRL>;
             key-positions = <25 24>;
+            layers = <1 3>;
+        };
+
+        combo_loader {
+            bindings = <&bootloader>;
+            key-positions = <6 20>;
             layers = <1 3>;
         };
     };
@@ -292,9 +298,9 @@
         NAV {
             display-name = "Navigation";
             bindings = <
-&trans  &trans      &trans        &trans    &trans     &trans  &bootloader     &bt BT_SEL 0  &kp LC(C)       &trans          &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LC(V)      &trans
-&trans  &kp LSHIFT  &sk LEFT_ALT  &sk LCMD  &sk LCTRL  &trans  &studio_unlock  &bt BT_SEL 1  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW      &kp RIGHT_ARROW    &kp BACKSLASH  &trans
-&trans  &trans      &trans        &trans    &trans     &trans                                &kp LC(Z)       &kp LC(LS(Z))   &kp LS(N9)        &kp LS(N0)         &trans         &trans
+&trans  &trans      &trans        &trans    &trans     &trans  &bootloader     &bt BT_SEL 0  &kp LC(C)       &trans          &trans        &trans           &kp LC(V)  &trans
+&trans  &kp LSHIFT  &sk LEFT_ALT  &sk LCMD  &sk LCTRL  &trans  &studio_unlock  &bt BT_SEL 1  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &trans     &trans
+&trans  &trans      &trans        &trans    &trans     &trans                                &kp LC(Z)       &kp LC(LS(Z))   &trans        &trans           &trans     &trans
                                   &trans    &trans     &trans                                &trans          &trans          &trans
             >;
         };
@@ -345,10 +351,10 @@
 
         tab {
             bindings = <
-&trans  &trans  &trans         &kp LBKT     &kp RBKT  &trans         &trans  &trans  &trans         &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans     &trans  &trans
-&trans  &trans  &kp LS(GRAVE)  &kp LS(TAB)  &kp TAB   &kp GRAVE      &trans  &trans  &kp LS(GRAVE)  &kp LS(TAB)       &kp TAB            &kp GRAVE  &trans  &trans
-&trans  &trans  &trans         &trans       &trans    &trans                         &trans         &trans            &trans             &trans     &trans  &trans
-                               &trans       &trans    &kp LC(SPACE)                  &trans         &trans            &trans
+&trans  &trans  &trans         &kp LBKT     &kp RBKT  &trans         &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &kp LS(GRAVE)  &kp LS(TAB)  &kp TAB   &kp GRAVE      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans         &trans       &trans    &trans                         &trans  &trans  &trans  &trans  &trans  &trans
+                               &trans       &trans    &kp LC(SPACE)                  &trans  &trans  &trans
             >;
         };
     };
