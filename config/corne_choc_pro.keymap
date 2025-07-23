@@ -298,19 +298,19 @@
         NAV {
             display-name = "Navigation";
             bindings = <
-&trans  &trans      &trans        &trans    &trans     &trans  &bootloader     &bt BT_SEL 0  &kp LC(C)       &trans          &trans        &trans           &kp LC(V)  &trans
-&trans  &kp LSHIFT  &sk LEFT_ALT  &sk LCMD  &sk LCTRL  &trans  &studio_unlock  &bt BT_SEL 1  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &trans     &trans
-&trans  &trans      &trans        &trans    &trans     &trans                                &kp LC(Z)       &kp LC(LS(Z))   &trans        &trans           &trans     &trans
-                                  &trans    &trans     &trans                                &trans          &trans          &trans
+&none  &none       &none         &none     &none      &none  &bootloader     &bt BT_SEL 0  &kp LC(C)       &none           &none         &none            &kp LC(V)  &none
+&none  &kp LSHIFT  &sk LEFT_ALT  &sk LCMD  &sk LCTRL  &none  &studio_unlock  &bt BT_SEL 1  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &none      &none
+&none  &none       &none         &none     &none      &none                                &kp LC(Z)       &kp LC(LS(Z))   &none         &none            &none      &none
+                                 &none     &none      &none                                &none           &none           &none
             >;
         };
 
         NAV_MAC {
             bindings = <
-&trans  &trans  &trans    &trans     &trans    &trans  &trans  &trans  &kp LG(C)  &kp LC(SPACE)  &trans  &trans  &kp LG(V)  &trans
-&trans  &trans  &kp LALT  &sk LCTRL  &sk LGUI  &trans  &trans  &trans  &trans     &trans         &trans  &trans  &trans     &trans
-&trans  &trans  &trans    &trans     &trans    &trans                  &kp LG(Z)  &kp LS(LG(Z))  &trans  &trans  &trans     &trans
-                          &trans     &trans    &trans                  &trans     &trans         &trans
+&none  &none  &none     &none      &none     &none  &none  &none  &kp LG(C)  &kp LC(SPACE)  &none  &none  &kp LG(V)  &none
+&none  &none  &kp LALT  &sk LCTRL  &sk LGUI  &none  &none  &none  &none      &none          &none  &none  &none      &none
+&none  &none  &none     &none      &none     &none                &kp LG(Z)  &kp LS(LG(Z))  &none  &none  &none      &none
+                        &none      &none     &none                &none      &none          &none
             >;
         };
 
