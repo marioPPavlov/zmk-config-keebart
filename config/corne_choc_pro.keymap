@@ -342,10 +342,10 @@
 
         mouse1 {
             bindings = <
-&none   &none  &msc SCRL_LEFT     &mmv MOVE_Y(-600)  &msc SCRL_RIGHT   &none     &none  &none  &none     &msc SCRL_UP    &mmv MOVE_UP    &msc SCRL_DOWN   &none  &none
-&tog 6  &none  &mmv MOVE_X(-600)  &mmv MOVE_Y(600)   &mmv MOVE_X(600)  &none     &none  &none  &none     &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none  &none
-&none   &none  &none              &mkp MB4           &mkp MB5          &none                   &none     &mkp MB1        &mkp MB2        &mkp MB3         &none  &none
-                                  &tog 6             &mkp MB4          &mkp MB5                &mkp MB3  &mkp MB1        &mkp MB2
+&none   &none  &msc SCRL_LEFT     &mmv MOVE_Y(-600)  &msc SCRL_RIGHT   &none   &none  &none  &none   &msc SCRL_UP    &mmv MOVE_UP    &msc SCRL_DOWN   &none  &none
+&tog 6  &none  &mmv MOVE_X(-600)  &mmv MOVE_Y(600)   &mmv MOVE_X(600)  &none   &none  &none  &none   &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none  &none
+&none   &none  &none              &mkp MB4           &mkp MB5          &none                 &none   &mkp MB1        &mkp MB2        &mkp MB3         &none  &none
+                                  &tog 6             &tog 6            &tog 6                &tog 6  &tog 6          &tog 6
             >;
         };
 
