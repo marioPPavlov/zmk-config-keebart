@@ -170,7 +170,7 @@
 
         mac_screenshot {
             bindings = <&kp LS(LC(LG(NUMBER_4)))>;
-            key-positions = <29 30 31 32>;
+            key-positions = <29 30>;
         };
     };
 
@@ -312,10 +312,10 @@
 
         NAV_MAC {
             bindings = <
-&none  &none   &none     &none      &none     &none  &none  &none  &kp LG(C)  &kp LC(SPACE)  &none  &none  &kp LG(V)  &none
-&none  &trans  &kp LALT  &sk LCTRL  &sk LGUI  &none  &none  &none  &none      &none          &none  &none  &none      &none
-&none  &none   &none     &none      &none     &none                &kp LG(Z)  &kp LS(LG(Z))  &none  &none  &none      &none
-                         &none      &none     &none                &none      &none          &none
+&trans  &trans  &trans    &trans     &trans    &trans  &trans  &trans  &kp LG(C)  &kp LC(SPACE)  &trans  &trans  &kp LG(V)  &trans
+&trans  &trans  &kp LALT  &sk LCTRL  &sk LGUI  &trans  &trans  &trans  &trans     &trans         &trans  &trans  &trans     &trans
+&trans  &trans  &trans    &trans     &trans    &trans                  &kp LG(Z)  &kp LS(LG(Z))  &trans  &trans  &trans     &trans
+                          &trans     &trans    &trans                  &trans     &trans         &trans
             >;
         };
 
@@ -356,10 +356,10 @@
 
         tab {
             bindings = <
-&trans  &trans  &trans         &kp LBKT     &kp RBKT  &trans         &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &kp LS(GRAVE)  &kp LS(TAB)  &kp TAB   &kp GRAVE      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans         &trans       &trans    &trans                         &trans  &trans  &trans  &trans  &trans  &trans
-                               &trans       &trans    &kp LC(SPACE)                  &trans  &trans  &trans
+&trans  &trans  &trans         &kp LBKT     &kp RBKT   &trans         &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &kp LS(GRAVE)  &kp LS(TAB)  &kp TAB    &kp GRAVE      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans         &kp LC(K)    &kp LC(J)  &trans                         &trans  &trans  &trans  &trans  &trans  &trans
+                               &trans       &trans     &kp LC(SPACE)                  &trans  &trans  &trans
             >;
         };
     };
