@@ -246,6 +246,18 @@
             hold-while-undecided;
             hold-while-undecided-linger;
         };
+
+        mo_sk: mo_sk {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MO_SK";
+            bindings = <&mo>, <&sk>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            hold-while-undecided;
+            hold-while-undecided-linger;
+            hold-trigger-key-positions = <7 8 9 10 11 12 13 21 22 23 24 25 26 27 34 35 36 37 38 39 43 44 45>;
+        };
     };
 
     keymap {
@@ -261,10 +273,10 @@
             //                    | GUI | LWR | SPC |               | ENT | RSE  | ALT |
 
             bindings = <
-&kp GRAVE                         &kp Q  &kp W  &kp E                    &kp R                 &kp T                         &rgb_ug RGB_TOG  &kp C_VOLUME_UP    &kp Y                     &kp U              &kp I          &kp O    &kp P     &kp DELETE
-&mt LS(LA(LC(LG(LCTRL)))) ESCAPE  &kp A  &kp S  &kp D                    &kp F                 &kp G                         &rgb_ug RGB_EFF  &kp C_VOLUME_DOWN  &kp H                     &kp J              &kp K          &kp L    &kp SEMI  &kp SQT
-&sl 5                             &kp Z  &kp X  &kp C                    &kp V                 &kp B                                                             &kp N                     &kp M              &kp COMMA      &kp DOT  &kp FSLH  &caps_word
-                                                &my_mouse_color_tab 2 6  &mt LEFT_SHIFT SPACE  &lt_sk_tap_hold 4 LEFT_SHIFT                                      &my_smart_mod_lalt 0 TAB  &mt LSHIFT RETURN  &kp BACKSPACE
+&kp GRAVE                         &kp Q  &kp W  &kp E                    &kp R                 &kp T                &rgb_ug RGB_TOG  &kp C_VOLUME_UP    &kp Y                     &kp U              &kp I          &kp O    &kp P     &kp DELETE
+&mt LS(LA(LC(LG(LCTRL)))) ESCAPE  &kp A  &kp S  &kp D                    &kp F                 &kp G                &rgb_ug RGB_EFF  &kp C_VOLUME_DOWN  &kp H                     &kp J              &kp K          &kp L    &kp SEMI  &kp SQT
+&sl 5                             &kp Z  &kp X  &kp C                    &kp V                 &kp B                                                    &kp N                     &kp M              &kp COMMA      &kp DOT  &kp FSLH  &caps_word
+                                                &my_mouse_color_tab 2 6  &mt LEFT_SHIFT SPACE  &mo_sk 4 LEFT_SHIFT                                      &my_smart_mod_lalt 0 TAB  &mt LSHIFT RETURN  &kp BACKSPACE
             >;
         };
 
