@@ -214,7 +214,7 @@
         my_mouse_color_tab: my_mouse_color_tab {
             compatible = "zmk,behavior-hold-tap";
             label = "MY_MOUSE_COLOR_TAB";
-            bindings = <&mo>, <&mouse_mode_color_off>;
+            bindings = <&mo>, <&mouse_mode_color>;
 
             #binding-cells = <2>;
             tapping-term-ms = <150>;
@@ -307,6 +307,15 @@
             hold-while-undecided-linger;
             hold-trigger-key-positions = <7 8 9 10 11 12 13 21 22 23 24 25 26 27 34 35 36 37 38 39 43 44 45>;
         };
+
+        my_mouse_color_tab_off: my_mouse_color_tab_off {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MY_MOUSE_COLOR_TAB_OFF";
+            bindings = <&mo>, <&mouse_mode_color_off>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+        };
     };
 
     keymap {
@@ -385,10 +394,10 @@
 
         mouse1 {
             bindings = <
-&none                    &none  &msc SCRL_LEFT     &mmv MOVE_Y(-600)        &msc SCRL_RIGHT          &none                    &none  &none  &none                    &msc SCRL_UP             &mmv MOVE_UP             &msc SCRL_DOWN   &none  &none
-&my_mouse_color_tab 6 0  &none  &mmv MOVE_X(-600)  &mmv MOVE_Y(600)         &mmv MOVE_X(600)         &none                    &none  &none  &none                    &mmv MOVE_LEFT           &mmv MOVE_DOWN           &mmv MOVE_RIGHT  &none  &none
-&none                    &none  &none              &mkp MB4                 &mkp MB5                 &none                                  &none                    &mkp MB1                 &mkp MB2                 &mkp MB3         &none  &none
-                                                   &my_mouse_color_tab 6 0  &my_mouse_color_tab 6 0  &my_mouse_color_tab 6 0                &my_mouse_color_tab 6 0  &my_mouse_color_tab 6 0  &my_mouse_color_tab 6 0
+&none                        &none  &msc SCRL_LEFT     &mmv MOVE_Y(-600)            &msc SCRL_RIGHT              &none                        &none  &none  &none                        &msc SCRL_UP                 &mmv MOVE_UP                 &msc SCRL_DOWN   &none  &none
+&my_mouse_color_tab_off 6 0  &none  &mmv MOVE_X(-600)  &mmv MOVE_Y(600)             &mmv MOVE_X(600)             &none                        &none  &none  &none                        &mmv MOVE_LEFT               &mmv MOVE_DOWN               &mmv MOVE_RIGHT  &none  &none
+&none                        &none  &none              &mkp MB4                     &mkp MB5                     &none                                      &none                        &mkp MB1                     &mkp MB2                     &mkp MB3         &none  &none
+                                                       &my_mouse_color_tab_off 6 0  &my_mouse_color_tab_off 6 0  &my_mouse_color_tab_off 6 0                &my_mouse_color_tab_off 6 0  &my_mouse_color_tab_off 6 0  &my_mouse_color_tab_off 6 0
             >;
         };
 
