@@ -106,13 +106,13 @@
 
         combo_lctrl_mac {
             bindings = <&sk LGUI>;
-            key-positions = <17 3>;
+            key-positions = <18 4>;
             layers = <1 3>;
         };
 
         combo_rctrl_mac {
             bindings = <&sk LGUI>;
-            key-positions = <24 10>;
+            key-positions = <9 23>;
             layers = <1 3>;
         };
 
@@ -130,7 +130,7 @@
 
         combo_lalt_mac {
             bindings = <&sk LCTRL>;
-            key-positions = <3 17>;
+            key-positions = <17 3>;
             layers = <1 3>;
         };
 
