@@ -106,15 +106,13 @@
             layers = <1 3>;
         };
 
-
-
         combo_lalt_linux {
             bindings = <&kp LALT>;
             key-positions = <17 16>;
             layers = <0 2 6 7>;
         };
 
-        combo_lalt_linux {
+        combo_ralt_linux {
             bindings = <&kp LALT>;
             key-positions = <25 24>;
             layers = <0 2 6 7>;
@@ -126,12 +124,11 @@
             layers = <1 3>;
         };
 
-        combo_lalt_mac {
+        combo_ralt_mac {
             bindings = <&kp LCTRL>;
             key-positions = <25 24>;
             layers = <1 3>;
         };
-
 
         combo_lgui_linux {
             bindings = <&kp LGUI>;
@@ -139,7 +136,7 @@
             layers = <0 2 6 7>;
         };
 
-        combo_lgui_linux {
+        combo_rgui_linux {
             bindings = <&kp LGUI>;
             key-positions = <25 23>;
             layers = <0 2 6 7>;
@@ -151,7 +148,7 @@
             layers = <1 3>;
         };
 
-        combo_lgui_mac {
+        combo_rgui_mac {
             bindings = <&kp LALT>;
             key-positions = <25 23>;
             layers = <1 3>;
