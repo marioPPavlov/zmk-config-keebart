@@ -81,7 +81,11 @@
         mouse_mode_color_off: mouse_mode_color_off {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press>, <&tog 6 &rgb_ug RGB_EFR>;
+            bindings =
+                <&macro_press>,
+                <&tog 6 &rgb_ug RGB_EFR>,
+                <&macro_release>,
+                <&tog 6 &rgb_ug RGB_EFR>;
 
             label = "MOUSE_MODE_COLOR";
         };
