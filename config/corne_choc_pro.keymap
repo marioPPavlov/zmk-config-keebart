@@ -77,6 +77,14 @@
 
             label = "SMART_TAB_SHIFT";
         };
+
+        mouse_mode_color_off: mouse_mode_color {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press>, <&tog 6 &rgb_ug RGB_EFR>;
+
+            label = "MOUSE_MODE_COLOR";
+        };
     };
 
     combos {
@@ -154,12 +162,6 @@
             layers = <1 3>;
         };
 
-        combo_function_ls {
-            bindings = <&sl 5>;
-            key-positions = <4 18>;
-            layers = <0 2 3 6 1 3 7>;
-        };
-
         combo_toggle_base_mac {
             bindings = <&tog 1>;
             key-positions = <7 21>;
@@ -212,7 +214,7 @@
         my_mouse_color_tab: my_mouse_color_tab {
             compatible = "zmk,behavior-hold-tap";
             label = "MY_MOUSE_COLOR_TAB";
-            bindings = <&mo>, <&mouse_mode_color>;
+            bindings = <&mo>, <&mouse_mode_color_off>;
 
             #binding-cells = <2>;
             tapping-term-ms = <150>;
@@ -339,7 +341,7 @@
         NAV {
             display-name = "Navigation";
             bindings = <
-&none  &none       &none         &none     &none      &none  &bootloader     &bt BT_SEL 0  &kp LC(C)       &none           &none         &none            &kp LC(V)  &none
+&none  &none       &none         &none     &none      &none  &bootloader     &bt BT_SEL 0  &kp LC(C)       &kp LC(J)       &kp LC(K)     &none            &kp LC(V)  &none
 &none  &kp LSHIFT  &sk LEFT_ALT  &sk LCMD  &sk LCTRL  &none  &studio_unlock  &bt BT_SEL 1  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &none      &none
 &none  &none       &none         &none     &none      &none                                &kp LC(Z)       &kp LC(LS(Z))   &none         &none            &none      &none
                                  &none     &none      &none                                &none           &none           &none
@@ -348,7 +350,7 @@
 
         NAV_MAC {
             bindings = <
-&trans  &trans  &trans    &trans     &trans    &trans  &trans  &trans  &kp LG(C)  &kp LC(SPACE)  &trans  &trans  &kp LG(V)  &trans
+&trans  &trans  &trans    &trans     &trans    &trans  &trans  &trans  &kp LG(C)  &trans         &trans  &trans  &kp LG(V)  &trans
 &trans  &trans  &kp LALT  &sk LCTRL  &sk LGUI  &trans  &trans  &trans  &trans     &trans         &trans  &trans  &trans     &trans
 &trans  &trans  &trans    &trans     &trans    &trans                  &kp LG(Z)  &kp LS(LG(Z))  &trans  &trans  &trans     &trans
                           &trans     &trans    &trans                  &trans     &trans         &trans
