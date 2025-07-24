@@ -92,73 +92,73 @@
 
         combo_lctrl_linux {
             bindings = <&sk LCTRL>;
-            key-positions = <18 17>;
+            key-positions = <18 4>;
             layers = <0 2 6 7>;
         };
 
         combo_rctrl_linux {
             bindings = <&sk LCTRL>;
-            key-positions = <23 24>;
+            key-positions = <23 9>;
             layers = <0 2 6 7>;
         };
 
         combo_lctrl_mac {
             bindings = <&sk LGUI>;
-            key-positions = <18 17>;
+            key-positions = <17 3>;
             layers = <1 3>;
         };
 
         combo_rctrl_mac {
             bindings = <&sk LGUI>;
-            key-positions = <23 24>;
+            key-positions = <24 10>;
             layers = <1 3>;
         };
 
         combo_lalt_linux {
             bindings = <&sk LALT>;
-            key-positions = <17 16>;
+            key-positions = <17 3>;
             layers = <0 2 6 7>;
         };
 
         combo_ralt_linux {
             bindings = <&sk LALT>;
-            key-positions = <25 24>;
+            key-positions = <24 10>;
             layers = <0 2 6 7>;
         };
 
         combo_lalt_mac {
             bindings = <&sk LCTRL>;
-            key-positions = <17 16>;
+            key-positions = <3 17>;
             layers = <1 3>;
         };
 
         combo_ralt_mac {
             bindings = <&sk LCTRL>;
-            key-positions = <25 24>;
+            key-positions = <10 24>;
             layers = <1 3>;
         };
 
         combo_lgui_linux {
             bindings = <&sk LGUI>;
-            key-positions = <18 16>;
+            key-positions = <16 2>;
             layers = <0 2 6 7>;
         };
 
         combo_rgui_linux {
             bindings = <&sk LGUI>;
-            key-positions = <25 23>;
+            key-positions = <25 11>;
             layers = <0 2 6 7>;
         };
 
         combo_lgui_mac {
             bindings = <&sk LALT>;
-            key-positions = <18 16>;
+            key-positions = <16 2>;
             layers = <1 3>;
         };
 
         combo_rgui_mac {
             bindings = <&sk LALT>;
-            key-positions = <25 23>;
+            key-positions = <25 11>;
             layers = <1 3>;
         };
 
