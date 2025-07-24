@@ -81,11 +81,7 @@
         mouse_mode_color_off: mouse_mode_color_off {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&tog 6 &rgb_ug RGB_EFR>,
-                <&macro_release>,
-                <&tog 6 &rgb_ug RGB_EFR>;
+            bindings = <&macro_tap>, <&tog 6 &rgb_ug RGB_EFR>;
 
             label = "MOUSE_MODE_COLOR";
         };
@@ -363,10 +359,10 @@
 
         NAV_MAC {
             bindings = <
-&trans  &trans  &trans    &trans     &trans    &trans  &trans  &trans  &kp LG(C)  &trans         &trans  &trans  &kp LG(V)  &trans
-&trans  &trans  &kp LALT  &sk LCTRL  &sk LGUI  &trans  &trans  &trans  &trans     &trans         &trans  &trans  &trans     &trans
-&trans  &trans  &trans    &trans     &trans    &trans                  &kp LG(Z)  &kp LS(LG(Z))  &trans  &trans  &trans     &trans
-                          &trans     &trans    &trans                  &trans     &trans         &trans
+&trans  &trans  &trans     &trans     &trans     &trans  &trans  &trans  &kp LC(H)    &trans         &trans  &kp LC(L)  &trans  &trans
+&trans  &trans  &kp LALT   &sk LCTRL  &sk LGUI   &trans  &trans  &trans  &trans       &trans         &trans  &trans     &trans  &trans
+&trans  &trans  &kp LG(X)  &kp LG(C)  &kp LG(V)  &trans                  &kp LG(Z)    &kp LS(LG(Z))  &trans  &trans     &trans  &trans
+                           &trans     &trans     &trans                  &kp LG(TAB)  &trans         &trans
             >;
         };
 
