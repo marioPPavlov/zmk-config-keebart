@@ -61,7 +61,7 @@
         mouse_mode_color: mouse_mode_color {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press>, <&tog 6 &rgb_ug RGB_EFF>;
+            bindings = <&macro_tap>, <&tog 6 &rgb_ug RGB_EFF>;
 
             label = "MOUSE_MODE_COLOR";
         };
