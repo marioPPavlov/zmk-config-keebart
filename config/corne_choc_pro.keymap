@@ -198,7 +198,17 @@
 
         mac_screenshot {
             bindings = <&kp LS(LC(LG(NUMBER_4)))>;
-            key-positions = <29 30>;
+            key-positions = <28 14>;
+        };
+
+        combo_left_bracket {
+            bindings = <&kp LEFT_BRACKET>;
+            key-positions = <0 14>;
+        };
+
+        combo_right_bracket {
+            bindings = <&kp RIGHT_BRACKET>;
+            key-positions = <13 27>;
         };
     };
 
