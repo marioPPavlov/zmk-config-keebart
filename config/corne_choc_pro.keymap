@@ -363,7 +363,7 @@
         tap_hold_dancb: tap_hold_dancb {
             compatible = "zmk,behavior-hold-tap";
             label = "TAP_HOLD_DANCB";
-            bindings = <&sl>, <&tap_gr_gr>;
+            bindings = <&sl>, <&sl_tog_5_2>;
 
             #binding-cells = <2>;
             tapping-term-ms = <300>;
