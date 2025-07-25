@@ -349,17 +349,6 @@
             tapping-term-ms = <150>;
         };
 
-        td_esc_tilde_ctrl: tap_dance_esc_tilde_ctrl {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            bindings = <
-                &kp ESC        // single tap
-                &kp GRAVE      // double tap
-            >;
-
-            tapping-term-ms = <201>; // adjust as needed
-        };
-
         tfdt_binding: tfdt_binding {
             compatible = "zmk,behavior-tap-dance";
             label = "TFDT_BINDING";
