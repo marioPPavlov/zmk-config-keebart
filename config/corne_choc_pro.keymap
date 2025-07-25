@@ -370,6 +370,15 @@
             retro-tap;
             flavor = "tap-preferred";
         };
+
+        sl_tog_5_2: sl_tog_5_2 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "SL_TOG_5_2";
+            #binding-cells = <0>;
+            bindings = <&sl 5>, <&tog 2>;
+
+            tapping-term-ms = <300>;
+        };
     };
 
     keymap {
@@ -378,10 +387,10 @@
         BASE {
             display-name = "Base";
             bindings = <
-&kp GRAVE                         &kp Q  &kp W  &kp E       &kp R                 &kp T                &rgb_ug RGB_TOG  &kp C_VOLUME_UP    &kp Y                     &kp U              &kp I          &kp O    &kp P     &kp DELETE
-&mt LS(LA(LC(LG(LCTRL)))) ESCAPE  &kp A  &kp S  &kp D       &kp F                 &kp G                &rgb_ug RGB_EFF  &kp C_VOLUME_DOWN  &kp H                     &kp J              &kp K          &kp L    &kp SEMI  &kp SQT
-&my_mouse_color_tab 6 0           &kp Z  &kp X  &kp C       &kp V                 &kp B                                                    &kp N                     &kp M              &kp COMMA      &kp DOT  &kp FSLH  &key_repeat
-                                                &mo_sl 2 5  &mt LEFT_SHIFT SPACE  &mo_sk 4 LEFT_SHIFT                                      &my_smart_mod_lalt 0 TAB  &mt LSHIFT RETURN  &kp BACKSPACE
+&kp GRAVE                         &kp Q  &kp W  &kp E                &kp R                 &kp T                &rgb_ug RGB_TOG  &kp C_VOLUME_UP    &kp Y                     &kp U              &kp I          &kp O    &kp P     &kp DELETE
+&mt LS(LA(LC(LG(LCTRL)))) ESCAPE  &kp A  &kp S  &kp D                &kp F                 &kp G                &rgb_ug RGB_EFF  &kp C_VOLUME_DOWN  &kp H                     &kp J              &kp K          &kp L    &kp SEMI  &kp SQT
+&my_mouse_color_tab 6 0           &kp Z  &kp X  &kp C                &kp V                 &kp B                                                    &kp N                     &kp M              &kp COMMA      &kp DOT  &kp FSLH  &key_repeat
+                                                &tap_hold_dancb 2 0  &mt LEFT_SHIFT SPACE  &mo_sk 4 LEFT_SHIFT                                      &my_smart_mod_lalt 0 TAB  &mt LSHIFT RETURN  &kp BACKSPACE
             >;
         };
 
@@ -397,10 +406,10 @@
         NAV {
             display-name = "Navigation";
             bindings = <
-&none  &none       &none         &none      &none      &none  &bootloader     &bt BT_SEL 0  &kp LC(H)       &kp LC(J)       &kp LC(K)     &kp LC(L)        &none  &none
-&none  &kp LSHIFT  &sk LEFT_ALT  &sk LCMD   &sk LCTRL  &none  &studio_unlock  &bt BT_SEL 1  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &none  &none
-&none  &kp LC(X)   &kp LC(C)     &kp LC(V)  &none      &none                                &kp LC(Z)       &kp LC(LS(Z))   &none         &none            &none  &none
-                                 &none      &none      &none                                &none           &none           &none
+&none   &none       &none         &none      &none      &none  &bootloader     &bt BT_SEL 0  &kp LC(H)       &kp LC(J)       &kp LC(K)     &kp LC(L)        &none  &none
+&tog 2  &kp LSHIFT  &sk LEFT_ALT  &sk LCMD   &sk LCTRL  &none  &studio_unlock  &bt BT_SEL 1  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &none  &none
+&none   &kp LC(X)   &kp LC(C)     &kp LC(V)  &none      &none                                &kp LC(Z)       &kp LC(LS(Z))   &none         &none            &none  &none
+                                  &none      &none      &none                                &none           &none           &none
             >;
         };
 
