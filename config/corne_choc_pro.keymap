@@ -352,10 +352,6 @@
                 &kp GRAVE      // double tap
             >;
 
-            hold-bindings = <
-                &kp LCTRL      // hold action
-            >;
-
             tapping-term-ms = <201>; // adjust as needed
         };
     };
