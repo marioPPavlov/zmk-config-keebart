@@ -225,6 +225,11 @@
             bindings = <&kp RIGHT_PARENTHESIS>;
             key-positions = <22 23>;
         };
+
+        combo_sticky_layer {
+            bindings = <&sl 4>;
+            key-positions = <3>;
+        };
     };
 
     behaviors {
