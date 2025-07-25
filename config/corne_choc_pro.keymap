@@ -228,7 +228,7 @@
 
         combo_sticky_layer {
             bindings = <&sl 4>;
-            key-positions = <3>;
+            key-positions = <2>;
         };
     };
 
