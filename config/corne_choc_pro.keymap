@@ -356,6 +356,8 @@
             label = "TAP_GR_GR";
             #binding-cells = <0>;
             bindings = <&kp R>, <&kp G>;
+
+            tapping-term-ms = <300>;
         };
 
         tap_hold_dancb: tap_hold_dancb {
