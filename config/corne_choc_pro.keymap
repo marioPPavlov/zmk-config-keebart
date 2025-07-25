@@ -356,7 +356,6 @@
             >;
             tapping-term-ms = <200>; // adjust as needed
         };
-
     };
 
     keymap {
@@ -365,10 +364,10 @@
         BASE {
             display-name = "Base";
             bindings = <
-&kp GRAVE                         &kp Q  &kp W  &kp td_esc_tilde_ctrl      &kp R                 &kp T                &rgb_ug RGB_TOG  &kp C_VOLUME_UP    &kp Y                     &kp U              &kp I          &kp O    &kp P     &kp DELETE
-&mt LS(LA(LC(LG(LCTRL)))) ESCAPE  &kp A  &kp S  &kp D       &kp F                 &kp G                &rgb_ug RGB_EFF  &kp C_VOLUME_DOWN  &kp H                     &kp J              &kp K          &kp L    &kp SEMI  &kp SQT
-&my_mouse_color_tab 6 0           &kp Z  &kp X  &kp C       &kp V                 &kp B                                                    &kp N                     &kp M              &kp COMMA      &kp DOT  &kp FSLH  &key_repeat
-                                                &mo_sl 2 5  &mt LEFT_SHIFT SPACE  &mo_sk 4 LEFT_SHIFT                                      &my_smart_mod_lalt 0 TAB  &mt LSHIFT RETURN  &kp BACKSPACE
+&kp GRAVE                         &kp Q  &kp W  &td_esc_tilde_ctrl         &kp R                 &kp T                &rgb_ug RGB_TOG  &kp C_VOLUME_UP    &kp Y                     &kp U              &kp I          &kp O    &kp P     &kp DELETE
+&mt LS(LA(LC(LG(LCTRL)))) ESCAPE  &kp A  &kp S  &kp D                      &kp F                 &kp G                &rgb_ug RGB_EFF  &kp C_VOLUME_DOWN  &kp H                     &kp J              &kp K          &kp L    &kp SEMI  &kp SQT
+&my_mouse_color_tab 6 0           &kp Z  &kp X  &kp C                      &kp V                 &kp B                                                    &kp N                     &kp M              &kp COMMA      &kp DOT  &kp FSLH  &key_repeat
+                                                &mo_sl 2 5                 &mt LEFT_SHIFT SPACE  &mo_sk 4 LEFT_SHIFT                                      &my_smart_mod_lalt 0 TAB  &mt LSHIFT RETURN  &kp BACKSPACE
             >;
         };
 
