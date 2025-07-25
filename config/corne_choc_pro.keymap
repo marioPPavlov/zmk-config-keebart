@@ -203,12 +203,12 @@
 
         combo_left_bracket {
             bindings = <&kp LEFT_BRACKET>;
-            key-positions = <41 18>;
+            key-positions = <18 17>;
         };
 
         combo_right_bracket {
             bindings = <&kp RIGHT_BRACKET>;
-            key-positions = <44 23>;
+            key-positions = <23 24>;
         };
 
         combo_underscore {
@@ -218,12 +218,12 @@
 
         combo_paren_left {
             bindings = <&kp LEFT_PARENTHESIS>;
-            key-positions = <41 19>;
+            key-positions = <19 18>;
         };
 
         combo_parent_right {
             bindings = <&kp RIGHT_PARENTHESIS>;
-            key-positions = <44 22>;
+            key-positions = <22 23>;
         };
     };
 
