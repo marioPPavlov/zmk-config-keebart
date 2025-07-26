@@ -213,7 +213,7 @@
 
         combo_underscore {
             bindings = <&kp UNDER>;
-            key-positions = <35 34>;
+            key-positions = <35 36>;
         };
 
         combo_paren_left {
@@ -227,8 +227,13 @@
         };
 
         combo_tog_mouse {
-            bindings = <&none>;
+            bindings = <&my_mouse_color_tab UNDER 0>;
             key-positions = <16 3>;
+        };
+
+        combo_minus {
+            bindings = <&kp MINUS>;
+            key-positions = <32 31>;
         };
     };
 
