@@ -389,10 +389,10 @@
         NAV {
             display-name = "Navigation";
             bindings = <
-&none   &none  &none      &none      &none      &none  &bootloader     &bt BT_SEL 0  &kp LC(H)       &kp LC(J)       &kp LC(K)     &kp LC(L)        &none  &none
-&tog 2  &none  &none      &none      &none      &none  &studio_unlock  &bt BT_SEL 1  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &none  &none
-&none   &none  &kp LC(X)  &kp LC(C)  &kp LC(V)  &none                                &kp LC(Z)       &kp LC(LS(Z))   &none         &none            &none  &none
-                          &none      &none      &none                                &none           &none           &none
+&trans  &trans  &trans     &trans     &trans     &trans  &bootloader     &bt BT_SEL 0  &kp LC(H)       &kp LC(J)       &kp LC(K)     &kp LC(L)        &trans  &trans
+&tog 2  &trans  &trans     &trans     &trans     &trans  &studio_unlock  &bt BT_SEL 1  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &trans  &trans
+&trans  &trans  &kp LC(X)  &kp LC(C)  &kp LC(V)  &trans                                &kp LC(Z)       &kp LC(LS(Z))   &trans        &trans           &trans  &trans
+                           &trans     &trans     &trans                                &trans          &trans          &trans
             >;
         };
 
