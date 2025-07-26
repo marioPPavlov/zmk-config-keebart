@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: MIT
  */
 
-#define ZMK_POINTING_DEFAULT_MOVE_VAL 2000  // default: 600
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 1000  // default: 600
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 20    // default: 10
 
 #include <behaviors.dtsi>
@@ -361,16 +361,6 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             flavor = "tap-preferred";
-        };
-
-        td_mmv_x_negative: td_mmv_x_negative {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_MMV_X_NEGATIVE";
-            #binding-cells = <0>;
-            bindings =
-                <&mmv MOVE_X(-150000)>,
-                <&mmv MOVE_X(-50000)>,
-                <&mmv MOVE_X(-150000)>;
         };
     };
 
