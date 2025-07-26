@@ -225,6 +225,11 @@
             bindings = <&kp RIGHT_PARENTHESIS>;
             key-positions = <22 23>;
         };
+
+        combo_tog_mouse {
+            bindings = <&none>;
+            key-positions = <16 3>;
+        };
     };
 
     behaviors {
@@ -241,7 +246,7 @@
         my_mouse_color_tab: my_mouse_color_tab {
             compatible = "zmk,behavior-hold-tap";
             label = "MY_MOUSE_COLOR_TAB";
-            bindings = <&mo>, <&mouse_mode_color>;
+            bindings = <&kp>, <&mouse_mode_color>;
 
             #binding-cells = <2>;
             tapping-term-ms = <150>;
@@ -335,7 +340,7 @@
             bindings = <
 &kp GRAVE                         &kp Q  &kp W  &kp E             &kp R                 &kp T                             &rgb_ug RGB_TOG  &kp C_VOLUME_UP    &kp Y                     &kp U              &kp I          &kp O    &kp P     &kp DELETE
 &mt LS(LA(LC(LG(LCTRL)))) ESCAPE  &kp A  &kp S  &kp D             &kp F                 &kp G                             &rgb_ug RGB_EFF  &kp C_VOLUME_DOWN  &kp H                     &kp J              &kp K          &kp L    &kp SEMI  &kp SQT
-&my_mouse_color_tab 6 0           &kp Z  &kp X  &kp C             &kp V                 &kp B                                                                 &kp N                     &kp M              &kp COMMA      &kp DOT  &kp FSLH  &key_repeat
+&my_mouse_color_tab LSHIFT 0      &kp Z  &kp X  &kp C             &kp V                 &kp B                                                                 &kp N                     &kp M              &kp COMMA      &kp DOT  &kp FSLH  &key_repeat
                                                 &thd_tog_5_2 2 0  &mt LEFT_SHIFT SPACE  &thd_td_shift_sl4_capsw_tog4 4 0                                      &my_smart_mod_lalt 0 TAB  &mt LSHIFT RETURN  &kp BACKSPACE
             >;
         };
