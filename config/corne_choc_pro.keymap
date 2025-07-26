@@ -363,7 +363,7 @@
             label = "TD_MMV_X_NEGATIVE";
             #binding-cells = <0>;
             bindings =
-                <&mmv MOVE_X(-600)>,
+                <&mmv MOVE_X(-150000)>,
                 <&mmv MOVE_X(-50000)>,
                 <&mmv MOVE_X(-150000)>;
         };
