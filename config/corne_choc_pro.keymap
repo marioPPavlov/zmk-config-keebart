@@ -17,7 +17,6 @@
 
 &mmv {
     time-to-max-speed-ms = <50>;
-    trigger-period-ms = <0>;
     x-input-code = <INPUT_REL_X>;
     acceleration-exponent = <3>;
 };
