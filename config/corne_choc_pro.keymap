@@ -371,25 +371,23 @@
         speed_mod: speed_mod {
             compatible = "zmk,behavior-mod-morph";
             label = "SPEED MOD";
+            #binding-cells = <0>;
             bindings = <&mmv_fast>, <&mmv_norm>;
-
             mods = <(MOD_LSFT)>; /* Hold Shift for speed boost */
         };
-
-        /* Normal mouse move */
-
-        mmv_norm: mmv_norm {
-            compatible = "zmk,behavior-mouse-move";
-            label = "NORMAL MOVE";
-            move = <5 5>; /* Normal speed */
-        };
-
-        /* Fast mouse move */
 
         mmv_fast: mmv_fast {
             compatible = "zmk,behavior-mouse-move";
             label = "FAST MOVE";
+            #binding-cells = <0>;
             move = <15 15>; /* Boost speed */
+        };
+
+        mmv_norm: mmv_norm {
+            compatible = "zmk,behavior-mouse-move";
+            label = "NORMAL MOVE";
+            #binding-cells = <0>;
+            move = <5 5>; /* Normal speed */
         };
     };
 
