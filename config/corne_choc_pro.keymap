@@ -227,13 +227,18 @@
         };
 
         combo_tog_mouse {
-            bindings = <&my_mouse_color_tab UNDER 0>;
-            key-positions = <16 3 18>;
+            bindings = <&mouse_mode_color>;
+            key-positions = <3 18>;
         };
 
         combo_minus {
             bindings = <&kp MINUS>;
             key-positions = <32 31>;
+        };
+
+        mouse_combo_tog_2 {
+            bindings = <&mouse_mode_color>;
+            key-positions = <3 10>;
         };
     };
 
