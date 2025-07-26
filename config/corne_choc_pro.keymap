@@ -350,6 +350,16 @@
             tapping-term-ms = <200>;
             flavor = "tap-preferred";
         };
+
+        td_mmv_x_negative: td_mmv_x_negative {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_MMV_X_NEGATIVE";
+            #binding-cells = <0>;
+            bindings =
+                <&mmv MOVE_X(-400)>,
+                <&mmv MOVE_X(-500)>,
+                <&mmv MOVE_X(-600)>;
+        };
     };
 
     keymap {
@@ -421,10 +431,10 @@
 
         mouse1 {
             bindings = <
-&none                        &none  &msc SCRL_LEFT     &mmv MOVE_Y(-600)            &msc SCRL_RIGHT              &none                        &none  &none  &none                        &msc SCRL_UP                 &mmv MOVE_UP                 &msc SCRL_DOWN   &none  &none
-&my_mouse_color_tab_off 6 0  &none  &mmv MOVE_X(-600)  &mmv MOVE_Y(600)             &mmv MOVE_X(600)             &none                        &none  &none  &none                        &mmv MOVE_LEFT               &mmv MOVE_DOWN               &mmv MOVE_RIGHT  &none  &none
-&none                        &none  &none              &mkp MB4                     &mkp MB5                     &none                                      &none                        &mkp MB1                     &mkp MB2                     &mkp MB3         &none  &none
-                                                       &my_mouse_color_tab_off 6 0  &my_mouse_color_tab_off 6 0  &my_mouse_color_tab_off 6 0                &my_mouse_color_tab_off 6 0  &my_mouse_color_tab_off 6 0  &my_mouse_color_tab_off 6 0
+&none                        &none  &msc SCRL_LEFT      &mmv MOVE_Y(-600)            &msc SCRL_RIGHT              &none                        &none  &none  &none                        &msc SCRL_UP                 &mmv MOVE_UP                 &msc SCRL_DOWN   &none  &none
+&my_mouse_color_tab_off 6 0  &none  &td_mmv_x_negative  &mmv MOVE_Y(600)             &mmv MOVE_X(600)             &none                        &none  &none  &none                        &mmv MOVE_LEFT               &mmv MOVE_DOWN               &mmv MOVE_RIGHT  &none  &none
+&none                        &none  &none               &mkp MB4                     &mkp MB5                     &none                                      &none                        &mkp MB1                     &mkp MB2                     &mkp MB3         &none  &none
+                                                        &my_mouse_color_tab_off 6 0  &my_mouse_color_tab_off 6 0  &my_mouse_color_tab_off 6 0                &my_mouse_color_tab_off 6 0  &my_mouse_color_tab_off 6 0  &my_mouse_color_tab_off 6 0
             >;
         };
 
