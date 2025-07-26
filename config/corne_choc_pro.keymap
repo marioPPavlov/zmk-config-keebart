@@ -288,23 +288,42 @@
             tapping-term-ms = <150>;
         };
 
-        th_tog_5_2: th_tog_5_2 {
+        thd_tog_5_2: thd_tog_5_2 {
             compatible = "zmk,behavior-hold-tap";
-            label = "TH_TOG_5_2";
-            bindings = <&sl>, <&sl_tog_5_2>;
+            label = "THD_TOG_5_2";
+            bindings = <&sl>, <&td_sl_tog_5_2>;
 
             #binding-cells = <2>;
             tapping-term-ms = <300>;
             flavor = "tap-preferred";
         };
 
-        sl_tog_5_2: sl_tog_5_2 {
+        td_sl_tog_5_2: td_sl_tog_5_2 {
             compatible = "zmk,behavior-tap-dance";
-            label = "SL_TOG_5_2";
+            label = "TD_SL_TOG_5_2";
             #binding-cells = <0>;
             bindings = <&sl 5>, <&tog 2>;
 
             tapping-term-ms = <300>;
+        };
+
+        td_shift_sl4_capsw_tog4: td_shift_sl4_capsw_tog4 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_SHIFT_SL4_CAPSW_TOG4";
+            #binding-cells = <0>;
+            bindings = <&sk LSHIFT>, <&sl 4>, <&caps_word>, <&tog 4>;
+
+            tapping-term-ms = <300>;
+        };
+
+        thd_td_shift_sl4_capsw_tog4: thd_td_shift_sl4_capsw_tog4 {
+            compatible = "zmk,behavior-hold-tap";
+            label = "THD_TD_SHIFT_SL4_CAPSW_TOG4";
+            bindings = <&sl>, <&td_shift_sl4_capsw_tog4>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <300>;
+            flavor = "tap-preferred";
         };
     };
 
@@ -314,10 +333,10 @@
         BASE {
             display-name = "Base";
             bindings = <
-&kp GRAVE                         &kp Q  &kp W  &kp E            &kp R                 &kp T                &rgb_ug RGB_TOG  &kp C_VOLUME_UP    &kp Y                     &kp U              &kp I          &kp O    &kp P     &kp DELETE
-&mt LS(LA(LC(LG(LCTRL)))) ESCAPE  &kp A  &kp S  &kp D            &kp F                 &kp G                &rgb_ug RGB_EFF  &kp C_VOLUME_DOWN  &kp H                     &kp J              &kp K          &kp L    &kp SEMI  &kp SQT
-&my_mouse_color_tab 6 0           &kp Z  &kp X  &kp C            &kp V                 &kp B                                                    &kp N                     &kp M              &kp COMMA      &kp DOT  &kp FSLH  &key_repeat
-                                                &th_tog_5_2 2 0  &mt LEFT_SHIFT SPACE  &mo_sk 4 LEFT_SHIFT                                      &my_smart_mod_lalt 0 TAB  &mt LSHIFT RETURN  &kp BACKSPACE
+&kp GRAVE                         &kp Q  &kp W  &kp E             &kp R                 &kp T                             &rgb_ug RGB_TOG  &kp C_VOLUME_UP    &kp Y                     &kp U              &kp I          &kp O    &kp P     &kp DELETE
+&mt LS(LA(LC(LG(LCTRL)))) ESCAPE  &kp A  &kp S  &kp D             &kp F                 &kp G                             &rgb_ug RGB_EFF  &kp C_VOLUME_DOWN  &kp H                     &kp J              &kp K          &kp L    &kp SEMI  &kp SQT
+&my_mouse_color_tab 6 0           &kp Z  &kp X  &kp C             &kp V                 &kp B                                                                 &kp N                     &kp M              &kp COMMA      &kp DOT  &kp FSLH  &key_repeat
+                                                &thd_tog_5_2 2 0  &mt LEFT_SHIFT SPACE  &thd_td_shift_sl4_capsw_tog4 4 0                                      &my_smart_mod_lalt 0 TAB  &mt LSHIFT RETURN  &kp BACKSPACE
             >;
         };
 
