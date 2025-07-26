@@ -267,66 +267,10 @@
             flavor = "tap-preferred";
         };
 
-        caps_word_mod_tap: caps_word_mod_tap {
-            compatible = "zmk,behavior-hold-tap";
-            label = "CAPS_WORD_MOD_TAP";
-            bindings = <&caps_word>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <150>;
-            flavor = "tap-preferred";
-        };
-
-        tap_unless_interrupted_by_right: tap_unless_interrupted_by_right {
-            compatible = "zmk,behavior-hold-tap";
-            label = "TAP_UNLESS_INTERRUPTED_BY_RIGHT";
-            bindings = <&kp>, <&kp>;
-
-            #binding-cells = <2>;
-            hold-trigger-key-positions = <8 9 10 11 12 22 23 24 25 26 34 35 36 37 38 7 21 27 39 13>;
-            flavor = "tap-unless-interrupted";
-            tapping-term-ms = <300>;
-        };
-
-        tap_unless_interrupted_by_left: tap_unless_interrupted_by_left {
-            compatible = "zmk,behavior-hold-tap";
-            label = "TAP_UNLESS_INTERRUPTED_BY_LEFT";
-            bindings = <&kp>, <&kp>;
-
-            #binding-cells = <2>;
-            flavor = "tap-unless-interrupted";
-            tapping-term-ms = <200>;
-            hold-trigger-key-positions = <0 1 2 4 5 14 15 16 17 18 19 28 29 30 31 32 33 3 6 20>;
-        };
-
-        smart_tab_shift: smart_tab_shift {
-            compatible = "zmk,behavior-hold-tap";
-            label = "SMART_TAB_SHIFT";
-            bindings = <&mo>, <&smart_tab_shifttt>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            flavor = "hold-preferred";
-            hold-while-undecided;
-            hold-while-undecided-linger;
-        };
-
         mo_sk: mo_sk {
             compatible = "zmk,behavior-hold-tap";
             label = "MO_SK";
             bindings = <&mo>, <&sk>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            hold-while-undecided;
-            hold-while-undecided-linger;
-            hold-trigger-key-positions = <7 8 9 10 11 12 13 21 22 23 24 25 26 27 34 35 36 37 38 39 43 44 45>;
-        };
-
-        mo_sl: mo_sl {
-            compatible = "zmk,behavior-hold-tap";
-            label = "MO_SL";
-            bindings = <&mo>, <&sl>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -344,25 +288,9 @@
             tapping-term-ms = <150>;
         };
 
-        tfdt_binding: tfdt_binding {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TFDT_BINDING";
-            #binding-cells = <0>;
-            bindings = <&kp B>, <&kp C>;
-        };
-
-        tap_gr_gr: tap_gr_gr {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAP_GR_GR";
-            #binding-cells = <0>;
-            bindings = <&kp R>, <&kp G>;
-
-            tapping-term-ms = <300>;
-        };
-
-        tap_hold_dancb: tap_hold_dancb {
+        th_tog_5_2: th_tog_5_2 {
             compatible = "zmk,behavior-hold-tap";
-            label = "TAP_HOLD_DANCB";
+            label = "TH_TOG_5_2";
             bindings = <&sl>, <&sl_tog_5_2>;
 
             #binding-cells = <2>;
@@ -386,10 +314,10 @@
         BASE {
             display-name = "Base";
             bindings = <
-&kp GRAVE                         &kp Q  &kp W  &kp E                &kp R                 &kp T                &rgb_ug RGB_TOG  &kp C_VOLUME_UP    &kp Y                     &kp U              &kp I          &kp O    &kp P     &kp DELETE
-&mt LS(LA(LC(LG(LCTRL)))) ESCAPE  &kp A  &kp S  &kp D                &kp F                 &kp G                &rgb_ug RGB_EFF  &kp C_VOLUME_DOWN  &kp H                     &kp J              &kp K          &kp L    &kp SEMI  &kp SQT
-&my_mouse_color_tab 6 0           &kp Z  &kp X  &kp C                &kp V                 &kp B                                                    &kp N                     &kp M              &kp COMMA      &kp DOT  &kp FSLH  &key_repeat
-                                                &tap_hold_dancb 2 0  &mt LEFT_SHIFT SPACE  &mo_sk 4 LEFT_SHIFT                                      &my_smart_mod_lalt 0 TAB  &mt LSHIFT RETURN  &kp BACKSPACE
+&kp GRAVE                         &kp Q  &kp W  &kp E            &kp R                 &kp T                &rgb_ug RGB_TOG  &kp C_VOLUME_UP    &kp Y                     &kp U              &kp I          &kp O    &kp P     &kp DELETE
+&mt LS(LA(LC(LG(LCTRL)))) ESCAPE  &kp A  &kp S  &kp D            &kp F                 &kp G                &rgb_ug RGB_EFF  &kp C_VOLUME_DOWN  &kp H                     &kp J              &kp K          &kp L    &kp SEMI  &kp SQT
+&my_mouse_color_tab 6 0           &kp Z  &kp X  &kp C            &kp V                 &kp B                                                    &kp N                     &kp M              &kp COMMA      &kp DOT  &kp FSLH  &key_repeat
+                                                &th_tog_5_2 2 0  &mt LEFT_SHIFT SPACE  &mo_sk 4 LEFT_SHIFT                                      &my_smart_mod_lalt 0 TAB  &mt LSHIFT RETURN  &kp BACKSPACE
             >;
         };
 
