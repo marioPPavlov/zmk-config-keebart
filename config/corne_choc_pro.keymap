@@ -16,8 +16,7 @@
 &sk { release-after-ms = <2500>; };
 
 &mmv {
-    time-to-max-speed-ms = <50>;
-    x-input-code = <INPUT_REL_X>;
+    time-to-max-speed-ms = <2>;
     acceleration-exponent = <3>;
 };
 
