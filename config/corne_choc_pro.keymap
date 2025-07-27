@@ -235,6 +235,7 @@
         combo_tog_mouse {
             bindings = <&mouse_mode_color>;
             key-positions = <10 23>;
+            layers = <0 2 1 3 4 5 6 7>;
         };
 
         combo_minus {
@@ -398,8 +399,8 @@
 
         NAV_MAC {
             bindings = <
-&trans  &trans  &kp LC(BACKSPACE)  &kp LA(BACKSPACE)  &kp LA(DELETE)       &kp LC(DELETE)  &trans  &trans  &kp LC(H)    &trans         &trans  &kp LC(L)  &trans  &trans
-&trans  &trans  &kp LC(LEFT)       &kp LA(LEFT)       &sk LA(RIGHT_ARROW)  &kp LC(RIGHT)   &trans  &trans  &trans       &trans         &trans  &trans     &trans  &trans
+&trans  &trans  &kp LG(BACKSPACE)  &kp LA(BACKSPACE)  &kp LA(DELETE)       &kp LG(DELETE)  &trans  &trans  &kp LC(H)    &trans         &trans  &kp LC(L)  &trans  &trans
+&trans  &trans  &kp LG(LEFT)       &kp LA(LEFT)       &sk LA(RIGHT_ARROW)  &kp LG(RIGHT)   &trans  &trans  &trans       &trans         &trans  &trans     &trans  &trans
 &trans  &trans  &kp LG(X)          &kp LG(C)          &kp LG(V)            &trans                          &kp LG(Z)    &kp LS(LG(Z))  &trans  &trans     &trans  &trans
                                    &trans             &trans               &trans                          &kp LG(TAB)  &trans         &trans
             >;
