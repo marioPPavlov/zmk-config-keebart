@@ -256,25 +256,6 @@
     };
 
     behaviors {
-        tab_mod_behavior: tab_mod_behavior {
-            compatible = "zmk,behavior-mod-morph";
-            label = "TAB_MOD_BEHAVIOR";
-            bindings = <&lt 4 TAB>, <&kp TAB>;
-
-            #binding-cells = <0>;
-            keep-mods = <(MOD_RALT|MOD_RCTL)>;
-            mods = <(MOD_RALT|MOD_RCTL)>;
-        };
-
-        my_mouse_color_tab: my_mouse_color_tab {
-            compatible = "zmk,behavior-hold-tap";
-            label = "MY_MOUSE_COLOR_TAB";
-            bindings = <&kp>, <&mouse_mode_color>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <150>;
-        };
-
         my_smart_mod_lalt: my_smart_mod_lalt {
             compatible = "zmk,behavior-hold-tap";
             label = "MY_SMART_MOD_LALT";
@@ -293,18 +274,6 @@
             #binding-cells = <2>;
             tapping-term-ms = <150>;
             flavor = "tap-preferred";
-        };
-
-        mo_sk: mo_sk {
-            compatible = "zmk,behavior-hold-tap";
-            label = "MO_SK";
-            bindings = <&mo>, <&sk>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            hold-while-undecided;
-            hold-while-undecided-linger;
-            hold-trigger-key-positions = <7 8 9 10 11 12 13 21 22 23 24 25 26 27 34 35 36 37 38 39 43 44 45>;
         };
 
         my_mouse_color_tab_off: my_mouse_color_tab_off {
@@ -335,19 +304,19 @@
             tapping-term-ms = <300>;
         };
 
-        td_shift_sl4_capsw_tog4: td_shift_sl4_capsw_tog4 {
+        td_shift_sl4_tog4: td_shift_sl4_tog4 {
             compatible = "zmk,behavior-tap-dance";
-            label = "TD_SHIFT_SL4_CAPSW_TOG4";
+            label = "TD_SHIFT_SL4_TOG4";
             #binding-cells = <0>;
-            bindings = <&sk LSHIFT>, <&sl 4>, <&caps_word>, <&tog 4>;
+            bindings = <&sk LSHIFT>, <&sl 4>, <&tog 4>;
 
             tapping-term-ms = <300>;
         };
 
-        thd_td_shift_sl4_capsw_tog4: thd_td_shift_sl4_capsw_tog4 {
+        thd_td_shift_sl4_tog4: thd_td_shift_sl4_tog4 {
             compatible = "zmk,behavior-hold-tap";
-            label = "THD_TD_SHIFT_SL4_CAPSW_TOG4";
-            bindings = <&sl>, <&td_shift_sl4_capsw_tog4>;
+            label = "THD_TD_SHIFT_SL4_TOG4";
+            bindings = <&sl>, <&td_shift_sl4_tog4>;
 
             #binding-cells = <2>;
             tapping-term-ms = <300>;
@@ -371,10 +340,10 @@
         BASE {
             display-name = "Base";
             bindings = <
-&mt LALT GRAVE                    &kp Q  &kp W  &kp E             &kp R      &kp T                             &rgb_ug RGB_TOG  &kp C_VOLUME_UP    &kp Y                     &kp U              &kp I          &kp O    &kp P     &kp DELETE
-&mt LS(LA(LC(LG(LCTRL)))) ESCAPE  &kp A  &kp S  &kp D             &kp F      &kp G                             &rgb_ug RGB_EFF  &kp C_VOLUME_DOWN  &kp H                     &kp J              &kp K          &kp L    &kp SEMI  &kp SQT
-&th_sk_sk LCTRL LSHIFT            &kp Z  &kp X  &kp C             &kp V      &kp B                                                                 &kp N                     &kp M              &kp COMMA      &kp DOT  &kp FSLH  &key_repeat
-                                                &thd_tog_5_2 2 0  &kp SPACE  &thd_td_shift_sl4_capsw_tog4 4 0                                      &my_smart_mod_lalt 0 TAB  &mt LSHIFT RETURN  &kp BACKSPACE
+&mt LALT GRAVE                    &kp Q  &kp W  &kp E             &kp R      &kp T                       &rgb_ug RGB_TOG  &kp C_VOLUME_UP    &kp Y                     &kp U              &kp I          &kp O    &kp P     &kp DELETE
+&mt LS(LA(LC(LG(LCTRL)))) ESCAPE  &kp A  &kp S  &kp D             &kp F      &kp G                       &rgb_ug RGB_EFF  &kp C_VOLUME_DOWN  &kp H                     &kp J              &kp K          &kp L    &kp SEMI  &kp SQT
+&th_sk_sk LCTRL LSHIFT            &kp Z  &kp X  &kp C             &kp V      &kp B                                                           &kp N                     &kp M              &kp COMMA      &kp DOT  &kp FSLH  &key_repeat
+                                                &thd_tog_5_2 2 0  &kp SPACE  &thd_td_shift_sl4_tog4 4 0                                      &my_smart_mod_lalt 0 TAB  &mt LSHIFT RETURN  &kp BACKSPACE
             >;
         };
 
