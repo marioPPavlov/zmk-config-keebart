@@ -420,10 +420,10 @@
 
         mouse {
             bindings = <
-&none                        &none  &msc SCRL_LEFT      &mmv MOVE_Y(-1000)           &msc SCRL_RIGHT              &none                        &none  &none  &none                        &msc SCRL_UP                 &mmv MOVE_Y(-333)            &msc SCRL_DOWN    &none  &none
-&my_mouse_color_tab_off 6 0  &none  &mmv MOVE_X(-1000)  &mmv MOVE_Y(1000)            &mmv MOVE_X(1000)            &mkp MB5                     &none  &none  &mkp MB4                     &mmv MOVE_X(-333)            &mmv MOVE_Y(333)             &mmv MOVE_X(333)  &none  &none
-&none                        &none  &trans              &trans                       &trans                       &none                                      &none                        &mkp MB1                     &mkp MB2                     &mkp MB3          &none  &none
-                                                        &my_mouse_color_tab_off 6 0  &my_mouse_color_tab_off 6 0  &my_mouse_color_tab_off 6 0                &my_mouse_color_tab_off 6 0  &my_mouse_color_tab_off 6 0  &my_mouse_color_tab_off 6 0
+&none                        &none     &msc SCRL_LEFT      &mmv MOVE_Y(-1000)           &msc SCRL_RIGHT              &none                        &none  &none  &none                        &msc SCRL_UP                 &mmv MOVE_Y(-333)            &msc SCRL_DOWN    &none  &none
+&my_mouse_color_tab_off 6 0  &mkp MB1  &mmv MOVE_X(-1000)  &mmv MOVE_Y(1000)            &mmv MOVE_X(1000)            &mkp MB5                     &none  &none  &mkp MB4                     &mmv MOVE_X(-333)            &mmv MOVE_Y(333)             &mmv MOVE_X(333)  &none  &none
+&none                        &none     &trans              &trans                       &trans                       &none                                      &none                        &mkp MB1                     &mkp MB2                     &mkp MB3          &none  &none
+                                                           &my_mouse_color_tab_off 6 0  &my_mouse_color_tab_off 6 0  &my_mouse_color_tab_off 6 0                &my_mouse_color_tab_off 6 0  &my_mouse_color_tab_off 6 0  &my_mouse_color_tab_off 6 0
             >;
         };
 
