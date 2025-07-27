@@ -100,6 +100,14 @@
 
             label = "MACRO_TOG_4";
         };
+
+        macro_tog_2: macro_tog_2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap>, <&tog 4 &rgb_ug RGB_EFF>;
+
+            label = "MACRO_TOG_2";
+        };
     };
 
     combos {
@@ -307,7 +315,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TD_SL_TOG_5_2";
             #binding-cells = <0>;
-            bindings = <&sl 5>, <&tog 2>;
+            bindings = <&sl 5>, <&macro_tog_2>;
 
             tapping-term-ms = <300>;
         };
@@ -370,7 +378,7 @@
 &trans  &trans  &trans     &trans     &trans     &trans  &bootloader     &bt BT_SEL 0  &kp LC(H)       &kp LC(J)       &kp LC(K)     &kp LC(L)        &trans  &trans
 &tog 2  &trans  &trans     &trans     &trans     &trans  &studio_unlock  &bt BT_SEL 1  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &trans  &trans
 &trans  &trans  &kp LC(X)  &kp LC(C)  &kp LC(V)  &trans                                &kp LC(Z)       &kp LC(LS(Z))   &trans        &trans           &trans  &trans
-                           &trans     &trans     &trans                                &trans          &trans          &trans
+                           &trans     &kp ENTER  &trans                                &trans          &trans          &trans
             >;
         };
 
