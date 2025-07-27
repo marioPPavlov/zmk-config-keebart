@@ -104,7 +104,7 @@
         macro_tog_2: macro_tog_2 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap>, <&tog 4 &rgb_ug RGB_EFF>;
+            bindings = <&macro_tap>, <&tog 2 &rgb_ug RGB_EFF>;
 
             label = "MACRO_TOG_2";
         };
