@@ -92,6 +92,14 @@
 
             label = "MOUSE_MODE_COLOR";
         };
+
+        macro_tog_4: macro_tog_4 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap>, <&tog 4 &rgb_ug RGB_EFF>;
+
+            label = "MACRO_TOG_4";
+        };
     };
 
     combos {
@@ -308,7 +316,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TD_SHIFT_SL4_TOG4";
             #binding-cells = <0>;
-            bindings = <&sk LSHIFT>, <&sl 4>, <&tog 4>;
+            bindings = <&sk LSHIFT>, <&sl 4>, <&macro_tog_4>;
 
             tapping-term-ms = <300>;
         };
