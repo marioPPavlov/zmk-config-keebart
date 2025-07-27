@@ -362,6 +362,23 @@
             tapping-term-ms = <200>;
             flavor = "tap-preferred";
         };
+
+        td_mouse: tap_dance {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            bindings = <&mouse_move_small>, <&mouse_move_large>;
+            tapping-term-ms = <200>; /* adjust as needed */
+        };
+
+        mouse_move_small: behavior-mouse-move {
+            x = <10>; /* Move 10px right */
+            y = <0>;
+        };
+
+        mouse_move_large: behavior-mouse-move {
+            x = <50>; /* Move 50px right */
+            y = <0>;
+        };
     };
 
     keymap {
