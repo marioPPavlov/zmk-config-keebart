@@ -356,9 +356,9 @@
         BASE {
             display-name = "Base";
             bindings = <
-&mt LALT GRAVE                    &kp Q  &kp W  &kp E             &kp R      &kp T                       &rgb_ug RGB_TOG  &kp C_VOLUME_UP    &kp Y                     &kp U              &kp I          &kp O    &kp P     &kp DELETE
+&mt LALT GRAVE                    &kp Q  &kp W  &kp E             &kp R      &kp T                       &key_repeat      &kp C_VOLUME_UP    &kp Y                     &kp U              &kp I          &kp O    &kp P     &kp DELETE
 &mt LS(LA(LC(LG(LCTRL)))) ESCAPE  &kp A  &kp S  &kp D             &kp F      &kp G                       &rgb_ug RGB_EFF  &kp C_VOLUME_DOWN  &kp H                     &kp J              &kp K          &kp L    &kp SEMI  &kp SQT
-&th_sk_sk LCTRL LSHIFT            &kp Z  &kp X  &kp C             &kp V      &kp B                                                           &kp N                     &kp M              &kp COMMA      &kp DOT  &kp FSLH  &key_repeat
+&th_sk_sk LCTRL LSHIFT            &kp Z  &kp X  &kp C             &kp V      &kp B                                                           &kp N                     &kp M              &kp COMMA      &kp DOT  &kp FSLH  &caps_word
                                                 &thd_tog_5_2 2 0  &kp SPACE  &thd_td_shift_sl4_tog4 4 0                                      &my_smart_mod_lalt 0 TAB  &mt LSHIFT RETURN  &kp BACKSPACE
             >;
         };
@@ -375,10 +375,10 @@
         NAV {
             display-name = "Navigation";
             bindings = <
-&trans  &trans  &trans     &trans     &trans     &trans  &bootloader     &bt BT_SEL 0  &kp LC(H)       &kp LC(J)       &kp LC(K)     &kp LC(L)        &trans  &trans
-&tog 2  &trans  &trans     &trans     &trans     &trans  &studio_unlock  &bt BT_SEL 1  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &trans  &trans
-&trans  &trans  &kp LC(X)  &kp LC(C)  &kp LC(V)  &trans                                &kp LC(Z)       &kp LC(LS(Z))   &trans        &trans           &trans  &trans
-                           &trans     &kp ENTER  &trans                                &trans          &trans          &trans
+&trans        &trans  &trans     &trans     &trans     &trans  &bootloader     &bt BT_SEL 0  &kp LC(H)       &kp LC(J)       &kp LC(K)     &kp LC(L)        &trans  &trans
+&macro_tog_2  &trans  &trans     &trans     &trans     &trans  &studio_unlock  &bt BT_SEL 1  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &trans  &trans
+&trans        &trans  &kp LC(X)  &kp LC(C)  &kp LC(V)  &trans                                &kp LC(Z)       &kp LC(LS(Z))   &trans        &trans           &trans  &trans
+                                 &trans     &kp ENTER  &trans                                &trans          &trans          &trans
             >;
         };
 
@@ -401,10 +401,10 @@
             //                    | GUI |     | SPC |               | ENT |     | ALT |
 
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &rgb_ug RGB_ON   &none   &kp N0         &kp N7  &kp N8  &kp N9  &kp LBKT              &kp RBKT
-&tog 4  &trans  &trans  &trans  &trans  &trans  &rgb_ug RGB_OFF  &tog 1  &kp EQUAL      &kp N4  &kp N5  &kp N6  &kp N0                &kp BACKSLASH
-&trans  &trans  &trans  &trans  &trans  &trans                           &kp MINUS      &kp N1  &kp N2  &kp N3  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
-                        &trans  &trans  &trans                           &kp LC(SPACE)  &trans  &trans
+&trans        &trans  &trans  &trans  &trans  &trans  &rgb_ug RGB_ON   &none   &kp N0         &kp N7  &kp N8  &kp N9  &kp LBKT              &kp RBKT
+&macro_tog_4  &trans  &trans  &trans  &trans  &trans  &rgb_ug RGB_OFF  &tog 1  &kp EQUAL      &kp N4  &kp N5  &kp N6  &kp N0                &kp BACKSLASH
+&trans        &trans  &trans  &trans  &trans  &trans                           &kp MINUS      &kp N1  &kp N2  &kp N3  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
+                              &trans  &trans  &trans                           &kp LC(SPACE)  &trans  &trans
             >;
         };
 
