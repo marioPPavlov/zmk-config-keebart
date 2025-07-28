@@ -429,8 +429,8 @@
 
         mouse_mac {
             bindings = <
-&trans  &trans  &trans             &mmv MOVE_Y(-400)  &trans            &trans  &trans  &trans  &trans  &trans             &mmv MOVE_Y(-200)  &trans            &trans  &trans
-&trans  &trans  &mmv MOVE_X(-400)  &mmv MOVE_Y(400)   &mmv MOVE_X(400)  &trans  &trans  &trans  &trans  &mmv MOVE_X(-200)  &mmv MOVE_Y(200)   &mmv MOVE_X(200)  &trans  &trans
+&trans  &trans  &trans             &mmv MOVE_Y(-600)  &trans            &trans  &trans  &trans  &trans  &trans             &mmv MOVE_Y(-300)  &trans            &trans  &trans
+&trans  &trans  &mmv MOVE_X(-600)  &mmv MOVE_Y(600)   &mmv MOVE_X(600)  &trans  &trans  &trans  &trans  &mmv MOVE_X(-300)  &mmv MOVE_Y(300)   &mmv MOVE_X(300)  &trans  &trans
 &trans  &trans  &trans             &trans             &trans            &trans                  &trans  &trans             &trans             &trans            &trans  &trans
                                    &trans             &trans            &trans                  &trans  &trans             &trans
             >;
