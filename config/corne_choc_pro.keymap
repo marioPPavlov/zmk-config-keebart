@@ -424,7 +424,7 @@
         NAV_MAC {
             bindings = <
 &trans  &trans  &kp LG(BACKSPACE)  &kp LA(BACKSPACE)  &kp LA(DELETE)       &kp LG(DELETE)  &trans  &trans  &kp LC(H)    &trans         &trans  &kp LC(L)  &trans  &trans
-&trans  &trans  &kp LG(LEFT)       &kp LA(LEFT)       &sk LA(RIGHT_ARROW)  &kp LG(RIGHT)   &trans  &trans  &trans       &trans         &trans  &trans     &trans  &trans
+&trans  &trans  &kp LG(LEFT)       &kp LA(LEFT)       &kp LA(RIGHT_ARROW)  &kp LG(RIGHT)   &trans  &trans  &trans       &trans         &trans  &trans     &trans  &trans
 &trans  &trans  &kp LG(X)          &kp LG(C)          &kp LG(V)            &trans                          &kp LG(Z)    &kp LS(LG(Z))  &trans  &trans     &trans  &trans
                                    &trans             &trans               &trans                          &kp LG(TAB)  &trans         &trans
             >;
