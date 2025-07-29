@@ -205,7 +205,7 @@
 
         color {
             bindings = <&rgb_ug RGB_COLOR_HSB(0,94,48)>;
-            key-positions = <13 27>;
+            key-positions = <38 26>;
         };
 
         color_on {
@@ -215,7 +215,7 @@
 
         color_off {
             bindings = <&rgb_ug RGB_OFF>;
-            key-positions = <38 39>;
+            key-positions = <13 27>;
         };
 
         combo_bootloader {
