@@ -312,19 +312,19 @@
             tapping-term-ms = <150>;
         };
 
-        thd_skshift_tog2: thd_skshift_tog2 {
+        thd_lalt_tog2: thd_lalt_tog2 {
             compatible = "zmk,behavior-hold-tap";
-            label = "THD_SKSHIFT_TOG2";
-            bindings = <&sl>, <&td_skshift_tog2>;
+            label = "THD_LALT_TOG2";
+            bindings = <&sl>, <&td_sklalt_tog2>;
 
             #binding-cells = <2>;
             tapping-term-ms = <300>;
             flavor = "tap-preferred";
         };
 
-        td_skshift_tog2: td_skshift_tog2 {
+        td_sklalt_tog2: td_sklalt_tog2 {
             compatible = "zmk,behavior-tap-dance";
-            label = "TD_SKSHIFT_TOG2";
+            label = "TD_SKLALT_TOG2";
             #binding-cells = <0>;
             bindings = <&sk LEFT_ALT>, <&macro_tog_2>;
 
@@ -376,6 +376,25 @@
             tapping-term-ms = <200>;
             bindings = <&sk LCTRL>, <&sk LEFT_ALT>;
         };
+
+        td_skctrl_tog2: td_skctrl_tog2 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_SKCTRL_TOG2";
+            #binding-cells = <0>;
+            bindings = <&sk LCTRL>, <&macro_tog_2>;
+
+            tapping-term-ms = <300>;
+        };
+
+        thd_skctrl_tog2: thd_skctrl_tog2 {
+            compatible = "zmk,behavior-hold-tap";
+            label = "THD_SKCTRL_TOG2";
+            bindings = <&sl>, <&td_skctrl_tog2>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <300>;
+            flavor = "tap-preferred";
+        };
     };
 
     keymap {
@@ -384,19 +403,19 @@
         BASE {
             display-name = "Base";
             bindings = <
-&mt LALT GRAVE                          &kp Q  &kp W  &kp E                  &kp R                  &kp T                       &key_repeat      &kp C_VOLUME_UP    &kp Y                     &kp U              &kp I          &kp O    &kp P     &kp DELETE
-&ht_sk_kp LS(LA(LC(LG(LCTRL)))) ESCAPE  &kp A  &kp S  &kp D                  &kp F                  &kp G                       &rgb_ug RGB_EFF  &kp C_VOLUME_DOWN  &kp H                     &kp J              &kp K          &kp L    &kp SEMI  &kp SQT
-&td_sklalt_sklgui                       &kp Z  &kp X  &kp C                  &kp V                  &kp B                                                           &kp N                     &kp M              &kp COMMA      &kp DOT  &kp FSLH  &caps_word
-                                                      &thd_skshift_tog2 2 0  &ht_sk_kp LCTRL SPACE  &thd_td_shift_sl4_tog4 4 0                                      &my_smart_mod_lalt 0 TAB  &mt LSHIFT RETURN  &kp BACKSPACE
+&mt LALT GRAVE                          &kp Q  &kp W  &kp E               &kp R                  &kp T                       &key_repeat      &kp C_VOLUME_UP    &kp Y                     &kp U              &kp I          &kp O    &kp P     &kp DELETE
+&ht_sk_kp LS(LA(LC(LG(LCTRL)))) ESCAPE  &kp A  &kp S  &kp D               &kp F                  &kp G                       &rgb_ug RGB_EFF  &kp C_VOLUME_DOWN  &kp H                     &kp J              &kp K          &kp L    &kp SEMI  &kp SQT
+&td_sklalt_sklgui                       &kp Z  &kp X  &kp C               &kp V                  &kp B                                                           &kp N                     &kp M              &kp COMMA      &kp DOT  &kp FSLH  &caps_word
+                                                      &thd_lalt_tog2 2 0  &ht_sk_kp LCTRL SPACE  &thd_td_shift_sl4_tog4 4 0                                      &my_smart_mod_lalt 0 TAB  &mt LSHIFT RETURN  &kp BACKSPACE
             >;
         };
 
         mac_base {
             bindings = <
-&trans             &trans  &trans  &trans  &trans                &trans  &trans  &trans  &trans                        &trans  &trans  &trans  &trans  &trans
-&trans             &trans  &trans  &trans  &trans                &trans  &trans  &trans  &trans                        &trans  &trans  &trans  &trans  &trans
-&td_skctrl_sklalt  &trans  &trans  &trans  &trans                &trans                  &trans                        &trans  &trans  &trans  &trans  &trans
-                                   &trans  &ht_sk_kp LGUI SPACE  &trans                  &my_smart_mod_tab_lgui 0 TAB  &trans  &trans
+&trans             &trans  &trans  &trans           &trans                &trans  &trans  &trans  &trans                        &trans  &trans  &trans  &trans  &trans
+&trans             &trans  &trans  &trans           &trans                &trans  &trans  &trans  &trans                        &trans  &trans  &trans  &trans  &trans
+&td_skctrl_sklalt  &trans  &trans  &trans           &trans                &trans                  &trans                        &trans  &trans  &trans  &trans  &trans
+                                   &td_skctrl_tog2  &ht_sk_kp LGUI SPACE  &trans                  &my_smart_mod_tab_lgui 0 TAB  &trans  &trans
             >;
         };
 
