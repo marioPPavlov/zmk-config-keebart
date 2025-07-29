@@ -74,7 +74,7 @@
         mouse_mode_color: mouse_mode_color {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap>, <&tog 6 &rgb_ug RGB_ON>;
+            bindings = <&macro_tap>, <&rgb_ug RGB_ON &tog 6>;
 
             label = "MOUSE_MODE_COLOR";
         };
@@ -94,7 +94,7 @@
         mouse_mode_color_off: mouse_mode_color_off {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap>, <&tog 6 &rgb_ug RGB_OFF>;
+            bindings = <&macro_tap>, <&rgb_ug RGB_OFF &tog 6>;
 
             label = "MOUSE_MODE_COLOR";
         };
@@ -102,7 +102,7 @@
         macro_tog_4: macro_tog_4 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap>, <&tog 4 &rgb_ug RGB_EFF>;
+            bindings = <&macro_tap>, <&rgb_ug RGB_EFF &tog 4>;
 
             label = "MACRO_TOG_4";
         };
@@ -110,7 +110,7 @@
         macro_tog_2: macro_tog_2 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap>, <&tog 2 &rgb_ug RGB_EFF>;
+            bindings = <&macro_tap>, <&rgb_ug RGB_EFF &tog 2>;
 
             label = "MACRO_TOG_2";
         };
@@ -272,7 +272,7 @@
         };
 
         mac_screenshot_image {
-            bindings = <&kp LS(LC(LG(NUMBER_3)))>;
+            bindings = <&kp LS(LG(NUMBER_4))>;
             key-positions = <14 0>;
         };
 
