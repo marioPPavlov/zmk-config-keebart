@@ -286,6 +286,16 @@
             key-positions = <10 25>;
             layers = <0 2 1 3 4 5 8>;
         };
+
+        combo_minus_2 {
+            bindings = <&kp MINUS>;
+            key-positions = <16 18>;
+        };
+
+        combo_underscore_2 {
+            bindings = <&kp UNDER>;
+            key-positions = <23 25>;
+        };
     };
 
     behaviors {
