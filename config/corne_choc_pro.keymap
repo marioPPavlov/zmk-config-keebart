@@ -421,6 +421,8 @@
             label = "TD_BRACKETS";
             #binding-cells = <0>;
             bindings = <&kp LEFT_BRACKET>, <&kp RIGHT_BRACKET>;
+
+            tapping-term-ms = <350>;
         };
     };
 
