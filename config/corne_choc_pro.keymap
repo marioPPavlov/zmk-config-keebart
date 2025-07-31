@@ -122,8 +122,9 @@
                 <&macro_press>,
                 <&kp LEFT_GUI>,
                 <&macro_tap>,
-                <&kp TAB &kp LG(LS(LC(LA(LEFT_GUI))))>,
+                <&kp TAB>,
                 <&macro_release>,
+                <&kp LEFT_GUI>,
                 <&macro_tap>,
                 <&sk LS(LA(LC(LG(LGUI))))>;
 
