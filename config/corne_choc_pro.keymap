@@ -122,7 +122,7 @@
                 <&macro_press>,
                 <&kp LEFT_GUI>,
                 <&macro_tap>,
-                <&kp TAB>,
+                <&kp H>,
                 <&macro_release>,
                 <&kp LEFT_GUI>,
                 <&macro_tap>,
