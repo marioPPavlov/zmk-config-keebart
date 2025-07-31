@@ -505,7 +505,7 @@
             bindings = <
 &trans        &trans  &kp PERCENT  &kp STAR         &kp AMPS  &trans    &rgb_ug RGB_ON   &none   &trans         &kp N7  &kp N8  &kp N9  &trans   &trans
 &macro_tog_4  &trans  &kp CARET    &kp EXCLAMATION  &kp AT    &kp PLUS  &rgb_ug RGB_OFF  &tog 1  &kp EQUAL      &kp N4  &kp N5  &kp N6  &kp N0   &kp BACKSLASH
-&trans        &trans  &kp HASH     &trans           &trans    &trans                             &kp MINUS      &kp N1  &kp N2  &kp N3  &kp DOT  &trans
+&trans        &trans  &kp HASH     &trans           &kp F18   &trans                             &kp MINUS      &kp N1  &kp N2  &kp N3  &kp DOT  &trans
                                    &trans           &trans    &trans                             &kp LC(SPACE)  &trans  &trans
             >;
         };
