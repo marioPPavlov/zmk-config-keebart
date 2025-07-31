@@ -122,11 +122,10 @@
                 <&macro_press>,
                 <&kp LEFT_GUI>,
                 <&macro_tap>,
-                <&kp TAB>,
-                <&macro_press>,
-                <&kp LG(LA(LS(LC(LCTRL))))>,
+                <&kp TAB &kp LG(LS(LC(LA(LEFT_GUI))))>,
                 <&macro_release>,
-                <&kp LS(LA(LC(LG(LGUI))))>;
+                <&macro_tap>,
+                <&sk LS(LA(LC(LG(LGUI))))>;
 
             label = "TEST_MACRO";
         };
