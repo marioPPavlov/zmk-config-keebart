@@ -377,12 +377,12 @@
 
         combo_minus_2 {
             bindings = <&kp MINUS>;
-            key-positions = <16 18>;
+            key-positions = <17 32>;
         };
 
         combo_underscore_2 {
             bindings = <&kp UNDER>;
-            key-positions = <23 25>;
+            key-positions = <35 24>;
         };
     };
 
