@@ -176,6 +176,20 @@
 
             label = "MAC_CHANGE_LANGUAGE";
         };
+
+        macro_open_clipboard: macro_open_clipboard {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL &kp LGUI>,
+                <&macro_tap>,
+                <&kp C>,
+                <&macro_release>,
+                <&kp LCTRL &kp LGUI>;
+
+            label = "MACRO_OPEN_CLIPBOARD";
+        };
     };
 
     combos {
@@ -586,10 +600,10 @@
 
         macro_layer {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans         &trans                &trans                 &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &mac_lgui_tab  &mac_lgui_tab_double  &mac_lgui_tab_tripple  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans         &trans                &trans                 &trans  &trans
-                        &trans  &trans  &trans                  &trans  &trans         &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans                 &trans         &trans                &trans                 &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &macro_open_clipboard  &mac_lgui_tab  &mac_lgui_tab_double  &mac_lgui_tab_tripple  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans                 &trans         &trans                &trans                 &trans  &trans
+                        &trans  &trans  &trans                  &trans                 &trans         &trans
             >;
         };
     };
