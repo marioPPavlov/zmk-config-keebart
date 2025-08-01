@@ -115,7 +115,7 @@
             label = "MACRO_TOG_2";
         };
 
-        test_macro: test_macro {
+        mac_hyperkey: test_macro {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -442,13 +442,14 @@
             flavor = "tap-preferred";
         };
 
-        td_brackets: td_brackets {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_BRACKETS";
-            #binding-cells = <0>;
-            bindings = <&kp LEFT_BRACKET>, <&kp RIGHT_BRACKET>;
+        th_mac_hyperkey: th_mac_hyperkey {
+            compatible = "zmk,behavior-hold-tap";
+            label = "TH_MAC_HYPERKEY";
+            bindings = <&mac_hyperkey>, <&kp>;
 
-            tapping-term-ms = <350>;
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <200>;
         };
     };
 
@@ -460,17 +461,17 @@
             bindings = <
 &mt LEFT_GUI GRAVE                      &kp Q  &kp W               &kp E               &kp R                  &kp T                       &key_repeat      &kp C_VOLUME_UP    &kp Y                     &kp U              &kp I          &kp O    &kp P     &kp DELETE
 &ht_sk_kp LS(LA(LC(LG(LCTRL)))) ESCAPE  &kp A  &long_th_kp LALT S  &kp D               &long_mo_tp 5 F        &kp G                       &rgb_ug RGB_EFF  &kp C_VOLUME_DOWN  &kp H                     &kp J              &kp K          &kp L    &kp SEMI  &kp SQT
-&test_macro                             &kp Z  &kp X               &kp C               &kp V                  &kp B                                                           &kp N                     &kp M              &kp COMMA      &kp DOT  &kp FSLH  &caps_word
+&caps_word                              &kp Z  &kp X               &kp C               &kp V                  &kp B                                                           &kp N                     &kp M              &kp COMMA      &kp DOT  &kp FSLH  &caps_word
                                                                    &thd_lalt_tog2 2 0  &ht_sk_kp LCTRL SPACE  &thd_td_shift_sl4_tog4 4 0                                      &my_smart_mod_lalt 0 TAB  &mt LSHIFT RETURN  &kp BACKSPACE
             >;
         };
 
         mac_base {
             bindings = <
-&trans  &trans  &trans               &trans                &trans                &trans  &trans  &trans  &trans                        &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &long_th_kp LCTRL S  &trans                &trans                &trans  &trans  &trans  &trans                        &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans               &trans                &trans                &trans                  &trans                        &trans  &trans  &trans  &trans  &trans
-                                     &thd_skctrl_tog2 2 0  &ht_sk_kp LGUI SPACE  &trans                  &my_smart_mod_tab_lgui 0 TAB  &trans  &trans
+&trans                  &trans  &trans               &trans                &trans                &trans  &trans  &trans  &trans                        &trans  &trans  &trans  &trans  &trans
+&th_mac_hyperkey 0 ESC  &trans  &long_th_kp LCTRL S  &trans                &trans                &trans  &trans  &trans  &trans                        &trans  &trans  &trans  &trans  &trans
+&trans                  &trans  &trans               &trans                &trans                &trans                  &trans                        &trans  &trans  &trans  &trans  &trans
+                                                     &thd_skctrl_tog2 2 0  &ht_sk_kp LGUI SPACE  &trans                  &my_smart_mod_tab_lgui 0 TAB  &trans  &trans
             >;
         };
 
