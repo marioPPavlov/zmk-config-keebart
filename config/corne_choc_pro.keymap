@@ -115,20 +115,34 @@
             label = "MACRO_TOG_2";
         };
 
-        mac_hyperkey: test_macro {
+        mac_lgui_tab: test_macro {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
                 <&kp LEFT_GUI>,
                 <&macro_tap>,
-                <&kp H>,
+                <&kp TAB>,
                 <&macro_release>,
-                <&kp LEFT_GUI>,
-                <&macro_tap>,
-                <&sk LS(LA(LC(LG(LGUI))))>;
+                <&kp LEFT_GUI>;
 
             label = "TEST_MACRO";
+        };
+
+        mac_lgui_tab_double: mac_lgui_tab_double {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_GUI>,
+                <&macro_tap>,
+                <&kp TAB>,
+                <&macro_tap>,
+                <&kp TAB>,
+                <&macro_release>,
+                <&kp LEFT_GUI>;
+
+            label = "MAC_LGUI_TAB_DOUBLE";
         };
     };
 
@@ -442,13 +456,13 @@
             flavor = "tap-preferred";
         };
 
-        th_mac_hyperkey: th_mac_hyperkey {
+        th_mac_lgui_tab: th_mac_lgui_tab {
             compatible = "zmk,behavior-hold-tap";
-            label = "TH_MAC_HYPERKEY";
-            bindings = <&mac_hyperkey>, <&kp>;
+            label = "TH_MAC_LGUI_TAB";
+            bindings = <&mac_lgui_tab_double>, <&mac_lgui_tab>;
 
             #binding-cells = <2>;
-            flavor = "balanced";
+            flavor = "tap-preferred";
             tapping-term-ms = <200>;
         };
     };
@@ -468,10 +482,10 @@
 
         mac_base {
             bindings = <
-&trans                  &trans  &trans               &trans                &trans                &trans  &trans  &trans  &trans                        &trans  &trans  &trans  &trans  &trans
-&th_mac_hyperkey 0 ESC  &trans  &long_th_kp LCTRL S  &trans                &trans                &trans  &trans  &trans  &trans                        &trans  &trans  &trans  &trans  &trans
-&trans                  &trans  &trans               &trans                &trans                &trans                  &trans                        &trans  &trans  &trans  &trans  &trans
-                                                     &thd_skctrl_tog2 2 0  &ht_sk_kp LGUI SPACE  &trans                  &my_smart_mod_tab_lgui 0 TAB  &trans  &trans
+&trans  &trans  &trans               &trans                &trans                &trans  &trans  &trans  &trans                        &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &long_th_kp LCTRL S  &trans                &trans                &trans  &trans  &trans  &trans                        &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans               &trans                &trans                &trans                  &trans                        &trans  &trans  &trans  &trans  &trans
+                                     &thd_skctrl_tog2 2 0  &ht_sk_kp LGUI SPACE  &trans                  &my_smart_mod_tab_lgui 0 TAB  &trans  &trans
             >;
         };
 
