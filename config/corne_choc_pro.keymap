@@ -94,7 +94,11 @@
         mouse_mode_color_off: mouse_mode_color_off {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap>, <&rgb_ug RGB_OFF>, <&macro_tap>, <&tog 6>;
+            bindings =
+                <&macro_tap>,
+                <&rgb_ug RGB_OFF>,
+                <&macro_tap>,
+                <&tog 6 &mkp MB1>;
 
             label = "MOUSE_MODE_COLOR";
         };
@@ -189,6 +193,14 @@
                 <&kp LCTRL &kp LGUI>;
 
             label = "MACRO_OPEN_CLIPBOARD";
+        };
+
+        mouse_click_and_off: mouse_click_and_off {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap>, <&rgb_ug RGB_OFF>, <&macro_tap>, <&tog 6>;
+
+            label = "MOUSE_CLICK_AND_OFF";
         };
     };
 
@@ -401,7 +413,7 @@
             bindings = <&sl>, <&td_sklalt_tog2>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <300>;
+            tapping-term-ms = <200>;
             flavor = "tap-preferred";
         };
 
@@ -538,10 +550,10 @@
 
         NAV_MAC {
             bindings = <
-&trans  &trans  &kp LG(BACKSPACE)  &kp LA(BACKSPACE)  &kp LA(DELETE)       &kp LG(DELETE)  &trans  &trans  &kp LC(H)    &trans         &trans  &kp LC(L)  &trans  &trans
-&trans  &trans  &kp LG(LEFT)       &kp LA(LEFT)       &kp LA(RIGHT_ARROW)  &kp LG(RIGHT)   &trans  &trans  &trans       &trans         &trans  &trans     &trans  &trans
-&trans  &trans  &kp LG(X)          &kp LG(C)          &kp LG(V)            &trans                          &kp LG(Z)    &kp LS(LG(Z))  &trans  &trans     &trans  &trans
-                                   &trans             &trans               &trans                          &kp LG(TAB)  &trans         &trans
+&trans  &trans  &kp LG(BACKSPACE)  &kp LA(BACKSPACE)  &kp LA(DELETE)       &kp LG(DELETE)  &trans  &trans  &kp LC(H)  &trans         &trans  &kp LC(L)  &trans  &trans
+&trans  &trans  &kp LG(LEFT)       &kp LA(LEFT)       &kp LA(RIGHT_ARROW)  &kp LG(RIGHT)   &trans  &trans  &trans     &trans         &trans  &trans     &trans  &trans
+&trans  &trans  &kp LG(X)          &kp LG(C)          &kp LG(V)            &trans                          &kp LG(Z)  &kp LS(LG(Z))  &trans  &trans     &trans  &trans
+                                   &trans             &trans               &trans                          &trans     &trans         &trans
             >;
         };
 
@@ -573,10 +585,10 @@
 
         mouse {
             bindings = <
-&none                  &none  &msc SCRL_LEFT      &mmv MOVE_Y(-1000)     &msc SCRL_RIGHT    &none                  &none  &none  &mkp MB5               &msc SCRL_UP           &mmv MOVE_Y(-333)      &msc SCRL_DOWN    &trans  &none
-&mouse_mode_color_off  &none  &mmv MOVE_X(-1000)  &mmv MOVE_Y(1000)      &mmv MOVE_X(1000)  &none                  &none  &none  &mkp MB4               &mmv MOVE_X(-333)      &mmv MOVE_Y(333)       &mmv MOVE_X(333)  &none   &none
-&none                  &none  &kp LC(X)           &kp LC(C)              &kp LC(V)          &none                                &none                  &mkp MB1               &mkp MB2               &mkp MB3          &none   &none
-                                                  &mouse_mode_color_off  &mkp MB1           &mouse_mode_color_off                &mouse_mode_color_off  &mouse_mode_color_off  &mouse_mode_color_off
+&none                  &none  &msc SCRL_LEFT      &mmv MOVE_Y(-1000)     &msc SCRL_RIGHT    &none                  &none  &none  &mkp MB5               &msc SCRL_UP          &mmv MOVE_Y(-333)      &msc SCRL_DOWN    &trans  &none
+&mouse_mode_color_off  &none  &mmv MOVE_X(-1000)  &mmv MOVE_Y(1000)      &mmv MOVE_X(1000)  &none                  &none  &none  &mkp MB4               &mmv MOVE_X(-333)     &mmv MOVE_Y(333)       &mmv MOVE_X(333)  &none   &none
+&none                  &none  &kp LC(X)           &kp LC(C)              &kp LC(V)          &none                                &none                  &none                 &mkp MB2               &mkp MB3          &none   &none
+                                                  &mouse_mode_color_off  &mkp MB1           &mouse_mode_color_off                &mouse_mode_color_off  &mouse_click_and_off  &mouse_mode_color_off
             >;
         };
 
@@ -591,10 +603,10 @@
 
         tab {
             bindings = <
-&trans  &trans  &trans         &kp LBKT     &kp RBKT   &trans         &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &kp LS(GRAVE)  &kp LS(TAB)  &kp TAB    &kp GRAVE      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans         &kp LC(K)    &kp LC(J)  &trans                         &trans  &trans  &trans  &trans  &trans  &trans
-                               &trans       &trans     &kp LC(SPACE)                  &trans  &trans  &trans
+&trans  &trans  &trans         &kp LBKT     &kp RBKT   &trans     &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &kp LS(GRAVE)  &kp LS(TAB)  &kp TAB    &kp GRAVE  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans         &kp LC(K)    &kp LC(J)  &trans                     &trans  &trans  &trans  &trans  &trans  &trans
+                               &trans       &trans     &trans                     &trans  &trans  &trans
             >;
         };
 
