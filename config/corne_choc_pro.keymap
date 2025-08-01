@@ -162,6 +162,20 @@
 
             label = "MAC_LGUI_TAB_TRIPPLE";
         };
+
+        mac_change_language: mac_change_language {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL>,
+                <&macro_tap>,
+                <&kp SPACE>,
+                <&macro_release>,
+                <&kp LCTRL>;
+
+            label = "MAC_CHANGE_LANGUAGE";
+        };
     };
 
     combos {
@@ -493,7 +507,7 @@
             bindings = <
 &trans                &trans  &trans               &trans                &trans                &trans  &trans  &trans  &trans                        &trans  &trans  &trans  &trans  &trans
 &trans                &trans  &long_th_kp LCTRL S  &trans                &trans                &trans  &trans  &trans  &trans                        &trans  &trans  &trans  &trans  &trans
-&th_mac_lgui_tab 0 0  &trans  &trans               &trans                &trans                &trans                  &trans                        &trans  &trans  &trans  &trans  &trans
+&mac_change_language  &trans  &trans               &trans                &trans                &trans                  &trans                        &trans  &trans  &trans  &trans  &trans
                                                    &thd_skctrl_tog2 2 0  &ht_sk_kp LGUI SPACE  &trans                  &my_smart_mod_tab_lgui 0 TAB  &trans  &trans
             >;
         };
