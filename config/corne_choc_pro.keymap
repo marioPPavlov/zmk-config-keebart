@@ -77,11 +77,15 @@
             bindings =
                 <&macro_press>,
                 <&rgb_ug RGB_ON>,
-                <&macro_pause_for_release>,
+                <&macro_wait_time 20>,
                 <&macro_release>,
                 <&rgb_ug RGB_ON>,
                 <&macro_tap>,
-                <&tog 6>;
+                <&tog 6>,
+                <&macro_press>,
+                <&mmv MOVE_UP>,
+                <&macro_wait_time 80>,
+                <&macro_release>;
 
             label = "MOUSE_MODE_COLOR";
         };
