@@ -565,9 +565,9 @@
         NAV {
             display-name = "Navigation";
             bindings = <
-&trans        &trans  &trans     &trans     &trans     &trans  &bootloader     &bt BT_SEL 0  &trans          &kp LC(J)       &kp LC(K)     &trans           &trans  &trans
-&macro_tog_2  &trans  &trans     &trans     &trans     &trans  &studio_unlock  &bt BT_SEL 1  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &trans  &trans
-&trans        &trans  &kp LC(X)  &kp LC(C)  &kp LC(V)  &trans                                &kp LC(Z)       &kp LC(LS(Z))   &trans        &trans           &trans  &trans
+&trans        &trans  &trans     &trans     &trans     &trans  &bootloader     &bt BT_SEL 0  &trans          &kp LC(J)       &kp LC(K)      &trans           &trans  &trans
+&macro_tog_2  &trans  &trans     &trans     &trans     &trans  &studio_unlock  &bt BT_SEL 1  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW   &kp RIGHT_ARROW  &trans  &trans
+&trans        &trans  &kp LC(X)  &kp LC(C)  &kp LC(V)  &trans                                &trans          &kp LC(Z)       &kp LC(LS(Z))  &trans           &trans  &trans
                                  &trans     &trans     &trans                                &kp TAB         &trans          &trans
             >;
         };
