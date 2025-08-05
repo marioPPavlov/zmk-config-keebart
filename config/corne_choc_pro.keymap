@@ -528,6 +528,15 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
         };
+
+        mm_spacecmd_cmdctrl: mm_spacecmd_cmdctrl {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MM_SPACECMD_CMDCTRL";
+            bindings = <&ht_sk_kp LGUI SPACE>, <&sk LC(LGUI)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL)>;
+        };
     };
 
     keymap {
