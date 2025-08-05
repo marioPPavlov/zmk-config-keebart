@@ -554,10 +554,10 @@
 
         mac_base {
             bindings = <
-&trans                &trans  &trans               &trans                &trans                &trans  &trans  &trans  &trans                        &trans  &trans  &trans  &trans  &trans
-&trans                &trans  &long_th_kp LCTRL S  &trans                &trans                &trans  &trans  &trans  &trans                        &trans  &trans  &trans  &trans  &trans
-&mac_change_language  &trans  &trans               &trans                &trans                &trans                  &trans                        &trans  &trans  &trans  &trans  &trans
-                                                   &thd_skctrl_tog2 2 0  &ht_sk_kp LGUI SPACE  &trans                  &my_smart_mod_tab_lgui 0 TAB  &trans  &trans
+&trans                &trans  &trans               &trans                &trans                &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans                &trans  &long_th_kp LCTRL S  &trans                &trans                &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&mac_change_language  &trans  &trans               &trans                &trans                &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+                                                   &thd_skctrl_tog2 2 0  &mm_spacecmd_cmdctrl  &trans                  &trans  &trans  &trans
             >;
         };
 
