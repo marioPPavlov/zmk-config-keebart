@@ -388,26 +388,6 @@
     };
 
     behaviors {
-        my_smart_mod_lalt: my_smart_mod_lalt {
-            compatible = "zmk,behavior-hold-tap";
-            label = "MY_SMART_MOD_LALT";
-            bindings = <&smart_tab_lalt>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <150>;
-            flavor = "tap-preferred";
-        };
-
-        my_smart_mod_tab_lgui: my_smart_mod_tab_lgui {
-            compatible = "zmk,behavior-hold-tap";
-            label = "MY_SMART_MOD_TAB_LGUI";
-            bindings = <&smart_tab_lgui>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <150>;
-            flavor = "tap-preferred";
-        };
-
         thd_lalt_tog2: thd_lalt_tog2 {
             compatible = "zmk,behavior-hold-tap";
             label = "THD_LALT_TOG2";
@@ -455,14 +435,6 @@
             require-prior-idle-ms = <200>;
             flavor = "tap-preferred";
             tapping-term-ms = <200>;
-        };
-
-        td_sl5_capsw: td_sl5_capsw {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_SL5_CAPSW";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&sl 5>, <&caps_word>;
         };
 
         td_skctrl_tog2: td_skctrl_tog2 {
