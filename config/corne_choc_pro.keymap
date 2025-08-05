@@ -180,6 +180,7 @@
             bindings =
                 <&macro_press>,
                 <&kp LCTRL>,
+                <&macro_wait_time 20>,
                 <&macro_tap>,
                 <&kp SPACE>,
                 <&macro_release>,
