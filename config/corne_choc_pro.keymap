@@ -222,6 +222,18 @@
 
             label = "MACRO_HYPER";
         };
+
+       hyper_delayed: hyper_delayed {
+            compatible = "zmk,behavior-macro";
+            label = "HYPER_DELAYED";
+            #binding-cells = <0>;
+            bindings = <
+                &macro_tap_delay 10 &kp LCTRL
+                &macro_tap_delay 10 &kp LS
+                &macro_tap_delay 10 &kp LA
+                &macro_tap_delay 10 &kp LGUI
+            >;
+        };
     };
 
     combos {
