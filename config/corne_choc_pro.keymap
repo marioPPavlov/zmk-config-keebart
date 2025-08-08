@@ -242,6 +242,17 @@
                 <&macro_release>,
                 <&kp LCTRL &kp LSHIFT &kp LALT &kp LGUI>;
         };
+
+        macro_beginning_backspace: macro_beginning_backspace {
+            compatible = "zmk,behavior-macro";
+            label = "MACRO_BEGINNING_BACKSPACE";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_tap>,
+                <&kp LS(LGUI) &kp LEFT_ARROW>,
+                <&macro_wait_time 20>,
+                <&kp BACKSPACE>;
+        };
     };
 
     combos {
@@ -592,6 +603,15 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
         };
+
+        mm_backspace_mac: mm_backspace_mac {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MM_BACKSPACE_MAC";
+            bindings = <&kp BACKSPACE>, <&macro_beginning_backspace>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LGUI)>;
+        };
     };
 
     keymap {
@@ -609,10 +629,10 @@
 
         mac_base {
             bindings = <
-&trans                &trans  &trans               &trans  &trans                &trans  &trans  &trans  &trans  &trans           &trans  &trans  &trans  &trans
-&trans                &trans  &long_th_kp LCTRL S  &trans  &trans                &trans  &trans  &trans  &trans  &trans           &trans  &trans  &trans  &trans
-&mac_change_language  &trans  &trans               &trans  &trans                &trans                  &trans  &trans           &trans  &trans  &trans  &trans
-                                                   &trans  &mm_spacecmd_cmdctrl  &trans                  &trans  &mt LCTRL ENTER  &trans
+&trans                &trans  &trans               &trans  &trans                &trans  &trans  &trans  &trans  &trans           &trans             &trans  &trans  &trans
+&trans                &trans  &long_th_kp LCTRL S  &trans  &trans                &trans  &trans  &trans  &trans  &trans           &trans             &trans  &trans  &trans
+&mac_change_language  &trans  &trans               &trans  &trans                &trans                  &trans  &trans           &trans             &trans  &trans  &trans
+                                                   &trans  &mm_spacecmd_cmdctrl  &trans                  &trans  &mt LCTRL ENTER  &mm_backspace_mac
             >;
         };
 
