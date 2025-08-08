@@ -218,14 +218,6 @@
             label = "MOUSE_CLICK_AND_OFF";
         };
 
-        macro_hyper: macro_hyper {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_press>, <&kp LGUI>;
-
-            label = "MACRO_HYPER";
-        };
-
         hyper_delayed: hyper_delayed {
             compatible = "zmk,behavior-macro";
             label = "HYPER_DELAYED";
@@ -414,16 +406,6 @@
         color_2 {
             bindings = <&rgb_ug RGB_COLOR_HSB(149,82,50)>;
             key-positions = <27 39>;
-        };
-
-        combo_minus_2 {
-            bindings = <&kp MINUS>;
-            key-positions = <17 32>;
-        };
-
-        combo_underscore_2 {
-            bindings = <&kp UNDER>;
-            key-positions = <35 24>;
         };
     };
 
