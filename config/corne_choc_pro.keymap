@@ -539,10 +539,10 @@
             label = "NUM_WORD";
         };
 
-        mm_numworsd_lshfttab: mm_numworsd_lshfttab {
+        mm_numword: mm_numword {
             compatible = "zmk,behavior-mod-morph";
-            label = "MM_NUMWORSD_LSHFTTAB";
-            bindings = <&th_numWord_and_shift 0 0>, <&kp LS(TAB)>;
+            label = "MM_NUMWORD";
+            bindings = <&th_num_word 0 0>, <&kp LS(TAB)>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
@@ -557,9 +557,9 @@
             mods = <(MOD_LGUI)>;
         };
 
-        th_numWord_and_shift: th_numWord_and_shift {
+        th_num_word: th_num_word {
             compatible = "zmk,behavior-hold-tap";
-            label = "TH_NUMWORD_AND_SHIFT";
+            label = "TH_NUM_WORD";
             bindings = <&macro_mo2AndLshft>, <&num_word>;
 
             #binding-cells = <2>;
@@ -573,10 +573,10 @@
         BASE {
             display-name = "Base";
             bindings = <
-&mt LEFT_GUI GRAVE     &kp Q  &kp W               &kp E               &kp R                  &kp T                  &key_repeat      &kp C_VOLUME_UP    &kp Y               &kp U           &kp I          &kp O    &kp P     &kp DELETE
-&ht_hyper_kp 0 ESCAPE  &kp A  &long_th_kp LALT S  &kp D               &long_mo_tp 8 F        &long_mo_tp 5 G        &rgb_ug RGB_EFF  &kp C_VOLUME_DOWN  &kp H               &kp J           &kp K          &kp L    &kp SEMI  &kp SQT
-&caps_word             &kp Z  &kp X               &kp C               &kp V                  &kp B                                                      &kp N               &kp M           &kp COMMA      &kp DOT  &kp FSLH  &key_repeat
-                                                  &ht_sk_navword 3 0  &ht_sk_kp LCTRL SPACE  &mm_numworsd_lshfttab                                      &mm_shift_capsword  &mt LALT ENTER  &kp BACKSPACE
+&mt LEFT_GUI GRAVE     &kp Q  &kp W               &kp E               &kp R                  &kp T            &key_repeat      &kp C_VOLUME_UP    &kp Y               &kp U           &kp I          &kp O    &kp P     &kp DELETE
+&ht_hyper_kp 0 ESCAPE  &kp A  &long_th_kp LALT S  &kp D               &long_mo_tp 8 F        &long_mo_tp 5 G  &rgb_ug RGB_EFF  &kp C_VOLUME_DOWN  &kp H               &kp J           &kp K          &kp L    &kp SEMI  &kp SQT
+&caps_word             &kp Z  &kp X               &kp C               &kp V                  &kp B                                                &kp N               &kp M           &kp COMMA      &kp DOT  &kp FSLH  &key_repeat
+                                                  &ht_sk_navword 3 0  &ht_sk_kp LCTRL SPACE  &mm_numword                                          &mm_shift_capsword  &mt LALT ENTER  &kp BACKSPACE
             >;
         };
 
