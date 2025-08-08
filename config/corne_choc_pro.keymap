@@ -515,7 +515,7 @@
             #binding-cells = <0>;
             compatible = "zmk,behavior-nav-word";
             layers = <NAV>;
-            continue-list = <LEFT DOWN UP RIGHT>;
+            continue-list = <LEFT DOWN UP RIGHT LSHIFT LGUI LALT ENTER>;
             ignore-numbers;
         };
 
