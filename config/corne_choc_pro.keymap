@@ -516,7 +516,7 @@
             compatible = "zmk,behavior-nav-word";
             #binding-cells = <0>;
             layers = <NUM>;
-            continue-list = <N1 N2 N3 N4 N5 N6 N7 N8 N9>;
+            continue-list = <N1 N2 N3 N4 N5 N6 N7 N8 N9 LSHIFT LGUI LALT>;
             ignore-numbers;
             label = "NUM_WORD";
         };
