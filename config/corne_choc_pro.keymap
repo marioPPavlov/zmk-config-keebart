@@ -92,14 +92,15 @@
             label = "MOUSE_MODE_COLOR";
         };
 
-        smart_tab_shifttt: smart_tab_shift {
+        macro_mo2AndLshft: smart_tab_shift {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&sl 2 &sk LSHIFT>,
+                <&mo 2 &kp LSHIFT>,
+                <&macro_pause_for_release>,
                 <&macro_release>,
-                <&sl 2 &sk LEFT_SHIFT>;
+                <&mo 2 &kp LEFT_SHIFT>;
 
             label = "SMART_TAB_SHIFT";
         };
@@ -430,20 +431,11 @@
         thd_lalt_tog2: thd_lalt_tog2 {
             compatible = "zmk,behavior-hold-tap";
             label = "THD_LALT_TOG2";
-            bindings = <&sl>, <&td_sklalt_tog2>;
+            bindings = <&sl>, <&none>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             flavor = "tap-preferred";
-        };
-
-        td_sklalt_tog2: td_sklalt_tog2 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_SKLALT_TOG2";
-            #binding-cells = <0>;
-            bindings = <&sk LEFT_ALT>, <&macro_tog_2>;
-
-            tapping-term-ms = <300>;
         };
 
         td_sl4_tog4: td_sl4_tog4 {
@@ -455,16 +447,6 @@
             tapping-term-ms = <300>;
         };
 
-        thd_td_sl4_tog4: thd_td_sl4_tog4 {
-            compatible = "zmk,behavior-hold-tap";
-            label = "THD_TD_SL4_TOG4";
-            bindings = <&sl>, <&td_sl4_tog4>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <300>;
-            flavor = "tap-preferred";
-        };
-
         ht_sk_kp: ht_sk_kp {
             compatible = "zmk,behavior-hold-tap";
             label = "HT_SK_KP";
@@ -474,25 +456,6 @@
             require-prior-idle-ms = <200>;
             flavor = "tap-preferred";
             tapping-term-ms = <200>;
-        };
-
-        td_skctrl_tog2: td_skctrl_tog2 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_SKCTRL_TOG2";
-            #binding-cells = <0>;
-            bindings = <&sk LCTRL>, <&macro_tog_2>;
-
-            tapping-term-ms = <300>;
-        };
-
-        thd_skctrl_tog2: thd_skctrl_tog2 {
-            compatible = "zmk,behavior-hold-tap";
-            label = "THD_SKCTRL_TOG2";
-            bindings = <&sl>, <&td_skctrl_tog2>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <300>;
-            flavor = "tap-preferred";
         };
 
         long_mo_tp: long_mo_tp {
