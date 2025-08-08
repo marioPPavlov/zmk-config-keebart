@@ -428,25 +428,6 @@
     };
 
     behaviors {
-        thd_lalt_tog2: thd_lalt_tog2 {
-            compatible = "zmk,behavior-hold-tap";
-            label = "THD_LALT_TOG2";
-            bindings = <&sl>, <&none>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            flavor = "tap-preferred";
-        };
-
-        td_sl4_tog4: td_sl4_tog4 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_SL4_TOG4";
-            #binding-cells = <0>;
-            bindings = <&sl 2>, <&macro_tog_4>;
-
-            tapping-term-ms = <300>;
-        };
-
         ht_sk_kp: ht_sk_kp {
             compatible = "zmk,behavior-hold-tap";
             label = "HT_SK_KP";
@@ -561,7 +542,7 @@
         mm_numworsd_lshfttab: mm_numworsd_lshfttab {
             compatible = "zmk,behavior-mod-morph";
             label = "MM_NUMWORSD_LSHFTTAB";
-            bindings = <&num_word>, <&kp LS(TAB)>;
+            bindings = <&th_numWord_and_shift 0 0>, <&kp LS(TAB)>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
@@ -574,6 +555,15 @@
 
             #binding-cells = <0>;
             mods = <(MOD_LGUI)>;
+        };
+
+        th_numWord_and_shift: th_numWord_and_shift {
+            compatible = "zmk,behavior-hold-tap";
+            label = "TH_NUMWORD_AND_SHIFT";
+            bindings = <&macro_mo2AndLshft>, <&num_word>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
         };
     };
 
