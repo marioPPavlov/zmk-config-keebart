@@ -39,10 +39,10 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&mo 8 &kp LEFT_ALT>,
+                <&mo 9 &kp LEFT_ALT>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
-                <&kp LEFT_ALT &mo 8>;
+                <&kp LEFT_ALT &mo 9>;
 
             label = "SMART_TAB";
         };
@@ -52,10 +52,10 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&mo 8 &kp LGUI>,
+                <&mo 9 &kp LGUI>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
-                <&kp LGUI &mo 8>;
+                <&kp LGUI &mo 9>;
 
             label = "SMART_TAB_MAC";
         };
@@ -65,10 +65,10 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&mo 8 &kp LEFT_CONTROL>,
+                <&mo 9 &kp LEFT_CONTROL>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
-                <&kp LEFT_CONTROL &mo 8>;
+                <&kp LEFT_CONTROL &mo 9>;
 
             label = "SMART_CTRL_TAB";
         };
@@ -97,9 +97,9 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&sl 4 &sk LSHIFT>,
+                <&sl 2 &sk LSHIFT>,
                 <&macro_release>,
-                <&sl 4 &sk LEFT_SHIFT>;
+                <&sl 2 &sk LEFT_SHIFT>;
 
             label = "SMART_TAB_SHIFT";
         };
@@ -115,7 +115,7 @@
         macro_tog_4: macro_tog_4 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap>, <&rgb_ug RGB_EFF &tog 4>;
+            bindings = <&macro_tap>, <&rgb_ug RGB_EFF &tog 2>;
 
             label = "MACRO_TOG_4";
         };
@@ -123,7 +123,7 @@
         macro_tog_2: macro_tog_2 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap>, <&rgb_ug RGB_EFF &tog 2>;
+            bindings = <&macro_tap>, <&rgb_ug RGB_EFF &tog 3>;
 
             label = "MACRO_TOG_2";
         };
@@ -261,85 +261,85 @@
         combo_lctrl_linux {
             bindings = <&sk LCTRL>;
             key-positions = <18 4>;
-            layers = <0 2 6 7>;
+            layers = <0 3 6 7>;
         };
 
         combo_rctrl_linux {
             bindings = <&sk LCTRL>;
             key-positions = <23 9>;
-            layers = <0 2 6 7>;
+            layers = <0 3 6 7>;
         };
 
         combo_lctrl_mac {
             bindings = <&sk LGUI>;
             key-positions = <18 4>;
-            layers = <1 3>;
+            layers = <1 4>;
         };
 
         combo_rctrl_mac {
             bindings = <&sk LGUI>;
             key-positions = <9 23>;
-            layers = <1 3>;
+            layers = <1 4>;
         };
 
         combo_lalt_linux {
             bindings = <&sk LALT>;
             key-positions = <17 3>;
-            layers = <0 2 6 7>;
+            layers = <0 3 6 7>;
         };
 
         combo_ralt_linux {
             bindings = <&sk LALT>;
             key-positions = <24 10>;
-            layers = <0 2 6 7>;
+            layers = <0 3 6 7>;
         };
 
         combo_lalt_mac {
             bindings = <&sk LCTRL>;
             key-positions = <17 3>;
-            layers = <1 3>;
+            layers = <1 4>;
         };
 
         combo_ralt_mac {
             bindings = <&sk LCTRL>;
             key-positions = <10 24>;
-            layers = <1 3>;
+            layers = <1 4>;
         };
 
         combo_lgui_linux {
             bindings = <&sk LGUI>;
             key-positions = <16 2>;
-            layers = <0 2 6 7>;
+            layers = <0 3 6 7>;
         };
 
         combo_rgui_linux {
             bindings = <&sk LGUI>;
             key-positions = <25 11>;
-            layers = <0 2 6 7>;
+            layers = <0 3 6 7>;
         };
 
         combo_lgui_mac {
             bindings = <&sk LALT>;
             key-positions = <16 2>;
-            layers = <1 3>;
+            layers = <1 4>;
         };
 
         combo_rgui_mac {
             bindings = <&sk LALT>;
             key-positions = <25 11>;
-            layers = <1 3>;
+            layers = <1 4>;
         };
 
         combo_toggle_base_mac {
             bindings = <&tog 1>;
             key-positions = <7 21>;
-            layers = <0 2 3 6 1 3 7>;
+            layers = <0 3 4 6 1 4 7>;
         };
 
         grave_combo {
             bindings = <&mt LGUI GRAVE>;
             key-positions = <0>;
-            layers = <0 2>;
+            layers = <0 3>;
         };
 
         color {
@@ -360,7 +360,7 @@
         combo_bootloader {
             bindings = <&bootloader>;
             key-positions = <6 20>;
-            layers = <1 3>;
+            layers = <1 4>;
         };
 
         mac_screenshot_clipboard {
@@ -391,7 +391,7 @@
         combo_tog_mouse {
             bindings = <&mouse_mode_color_on>;
             key-positions = <10 23>;
-            layers = <0 2 1 3 4 5 8>;
+            layers = <0 3 1 4 2 5 9>;
         };
 
         combo_minus {
@@ -402,7 +402,7 @@
         combo_grave_mac {
             bindings = <&mt LEFT_ALT GRAVE>;
             key-positions = <0>;
-            layers = <1 3>;
+            layers = <1 4>;
         };
 
         mac_screenshot_image {
@@ -450,7 +450,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TD_SL4_TOG4";
             #binding-cells = <0>;
-            bindings = <&sl 4>, <&macro_tog_4>;
+            bindings = <&sl 2>, <&macro_tog_4>;
 
             tapping-term-ms = <300>;
         };
@@ -621,9 +621,9 @@
             display-name = "Base";
             bindings = <
 &mt LEFT_GUI GRAVE     &kp Q  &kp W               &kp E               &kp R                  &kp T                  &key_repeat      &kp C_VOLUME_UP    &kp Y               &kp U           &kp I          &kp O    &kp P     &kp DELETE
-&ht_hyper_kp 0 ESCAPE  &kp A  &long_th_kp LALT S  &kp D               &long_mo_tp 9 F        &long_mo_tp 5 G        &rgb_ug RGB_EFF  &kp C_VOLUME_DOWN  &kp H               &kp J           &kp K          &kp L    &kp SEMI  &kp SQT
+&ht_hyper_kp 0 ESCAPE  &kp A  &long_th_kp LALT S  &kp D               &long_mo_tp 8 F        &long_mo_tp 5 G        &rgb_ug RGB_EFF  &kp C_VOLUME_DOWN  &kp H               &kp J           &kp K          &kp L    &kp SEMI  &kp SQT
 &caps_word             &kp Z  &kp X               &kp C               &kp V                  &kp B                                                      &kp N               &kp M           &kp COMMA      &kp DOT  &kp FSLH  &key_repeat
-                                                  &ht_sk_navword 2 0  &ht_sk_kp LCTRL SPACE  &mm_numworsd_lshfttab                                      &mm_shift_capsword  &mt LALT ENTER  &kp BACKSPACE
+                                                  &ht_sk_navword 3 0  &ht_sk_kp LCTRL SPACE  &mm_numworsd_lshfttab                                      &mm_shift_capsword  &mt LALT ENTER  &kp BACKSPACE
             >;
         };
 
@@ -633,6 +633,23 @@
 &trans                &trans  &long_th_kp LCTRL S  &trans  &trans                &trans  &trans  &trans  &trans  &trans           &trans             &trans  &trans  &trans
 &mac_change_language  &trans  &trans               &trans  &trans                &trans                  &trans  &trans           &trans             &trans  &trans  &trans
                                                    &trans  &mm_spacecmd_cmdctrl  &trans                  &trans  &mt LCTRL ENTER  &mm_backspace_mac
+            >;
+        };
+
+        NUM {
+            display-name = "Numbers";
+
+            // -----------------------------------------------------------------------------------------
+            // |  TAB |  !  |  @  |  #  |  $  |  %  | LCTRL | RCTRL |  ^  |  &  |  *  |  (  |  )  | BSPC |
+            // | CTRL |     |     |     |     |     |  LALT | RALT  |  -  |  =  |  [  |  ]  |  \  |  `   |
+            // | SHFT |     |     |     |     |     |               |  _  |  +  |  {  |  }  | "|" |  ~   |
+            //                    | GUI |     | SPC |               | ENT |     | ALT |
+
+            bindings = <
+&trans        &trans  &trans  &trans  &trans       &trans  &rgb_ug RGB_ON   &none  &kp PLUS   &kp N7  &kp N8  &kp N9  &trans   &trans
+&macro_tog_4  &trans  &trans  &trans  &kp AT_SIGN  &trans  &rgb_ug RGB_OFF  &none  &kp EQUAL  &kp N4  &kp N5  &kp N6  &kp N0   &kp BACKSLASH
+&trans        &trans  &trans  &trans  &trans       &trans                          &kp MINUS  &kp N1  &kp N2  &kp N3  &kp DOT  &trans
+                              &trans  &trans       &trans                          &kp TAB    &trans  &trans
             >;
         };
 
@@ -652,23 +669,6 @@
 &trans  &trans  &kp LG(LEFT)  &kp LA(LEFT)  &kp LA(RIGHT_ARROW)  &kp LG(RIGHT)  &trans  &trans  &trans        &trans     &trans         &trans         &trans  &trans
 &trans  &trans  &kp LG(X)     &kp LG(C)     &kp LG(V)            &trans                         &trans        &kp LG(Z)  &kp LS(LG(Z))  &trans         &trans  &trans
                               &trans        &trans               &trans                         &trans        &trans     &trans
-            >;
-        };
-
-        NUM {
-            display-name = "Numbers";
-
-            // -----------------------------------------------------------------------------------------
-            // |  TAB |  !  |  @  |  #  |  $  |  %  | LCTRL | RCTRL |  ^  |  &  |  *  |  (  |  )  | BSPC |
-            // | CTRL |     |     |     |     |     |  LALT | RALT  |  -  |  =  |  [  |  ]  |  \  |  `   |
-            // | SHFT |     |     |     |     |     |               |  _  |  +  |  {  |  }  | "|" |  ~   |
-            //                    | GUI |     | SPC |               | ENT |     | ALT |
-
-            bindings = <
-&trans        &trans  &trans  &trans  &trans       &trans  &rgb_ug RGB_ON   &none  &kp PLUS   &kp N7  &kp N8  &kp N9  &trans   &trans
-&macro_tog_4  &trans  &trans  &trans  &kp AT_SIGN  &trans  &rgb_ug RGB_OFF  &none  &kp EQUAL  &kp N4  &kp N5  &kp N6  &kp N0   &kp BACKSLASH
-&trans        &trans  &trans  &trans  &trans       &trans                          &kp MINUS  &kp N1  &kp N2  &kp N3  &kp DOT  &trans
-                              &trans  &trans       &trans                          &kp TAB    &trans  &trans
             >;
         };
 
@@ -699,15 +699,6 @@
             >;
         };
 
-        tab {
-            bindings = <
-&trans  &trans  &trans         &kp LBKT     &kp RBKT  &trans     &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &kp LS(GRAVE)  &kp LS(TAB)  &kp TAB   &kp GRAVE  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans         &trans       &trans    &trans                     &trans  &trans  &trans  &trans  &trans  &trans
-                               &trans       &trans    &trans                     &trans  &trans  &trans
-            >;
-        };
-
         macro_layer {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans                 &trans         &trans                &trans                 &trans  &trans
@@ -716,14 +707,23 @@
                         &trans  &trans  &trans                  &trans                 &trans         &trans
             >;
         };
+
+        tab {
+            bindings = <
+&trans  &trans  &trans         &kp LBKT     &kp RBKT  &trans     &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &kp LS(GRAVE)  &kp LS(TAB)  &kp TAB   &kp GRAVE  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans         &trans       &trans    &trans                     &trans  &trans  &trans  &trans  &trans  &trans
+                               &trans       &trans    &trans                     &trans  &trans  &trans
+            >;
+        };
     };
 
     conditional_layers {
         compatible = "zmk,conditional-layers";
 
         nav_mac_activate_nav {
-            if-layers = <1 2>;
-            then-layer = <3>;
+            if-layers = <1 3>;
+            then-layer = <4>;
         };
 
         mouse_mac_activate_mouse {
