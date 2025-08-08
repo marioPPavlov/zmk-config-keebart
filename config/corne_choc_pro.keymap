@@ -560,7 +560,7 @@
             #binding-cells = <0>;
             compatible = "zmk,behavior-nav-word";
             layers = <NAV>;
-            continue-list = <LEFT DOWN UP RIGHT PG_DN PG_UP>;
+            continue-list = <LEFT DOWN UP RIGHT>;
             ignore-numbers;
         };
 
@@ -573,6 +573,15 @@
             tapping-term-ms = <200>;
             flavor = "balanced";
             hold-trigger-key-positions = <0 1 2 3 4 5 6 14 15 16 17 18 19 20 28 29 30 31 32 33 7 8 9 10 11 12 13>;
+        };
+
+        num_word: num_word {
+            compatible = "zmk,behavior-nav-word";
+            #binding-cells = <0>;
+            layers = <NUM>;
+            continue-list = <N1 N2 N3 N4 N5 N6 N7 N8 N9>;
+            ignore-numbers;
+            label = "NUM_WORD";
         };
     };
 
