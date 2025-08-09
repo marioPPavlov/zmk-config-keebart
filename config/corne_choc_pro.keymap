@@ -588,7 +588,7 @@
 
         mac_base {
             bindings = <
-&trans                &trans  &trans               &trans  &trans                &trans  &trans  &trans  &trans  &trans           &trans             &trans  &trans  &trans
+&trans                &trans  &trans               &trans  &trans                &trans  &trans  &trans  &trans  &trans           &trans             &trans  &trans  &macro_end_delete
 &trans                &trans  &long_th_kp LCTRL S  &trans  &trans                &trans  &trans  &trans  &trans  &trans           &trans             &trans  &trans  &trans
 &mac_change_language  &trans  &trans               &trans  &trans                &trans                  &trans  &trans           &trans             &trans  &trans  &trans
                                                    &trans  &mm_spacecmd_cmdctrl  &trans                  &trans  &mt LCTRL ENTER  &mm_backspace_mac
