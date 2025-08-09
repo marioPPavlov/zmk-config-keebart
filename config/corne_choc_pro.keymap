@@ -220,6 +220,14 @@
                 <&macro_release>,
                 <&kp LS(LGUI)>;
         };
+
+        macro_color_off: macro_color_off {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&rgb_ug RGB_OFF>, <&macro_press>;
+
+            label = "MACRO_COLOR_OFF";
+        };
     };
 
     combos {
