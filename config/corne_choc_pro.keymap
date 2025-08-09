@@ -535,15 +535,6 @@
             mods = <(MOD_LGUI)>;
         };
 
-        mm_tab: mm_tab {
-            compatible = "zmk,behavior-mod-morph";
-            label = "MM_TAB";
-            bindings = <&kp TAB>, <&kp TAB>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
-        };
-
         tab_swap: tab_swap {
             compatible = "zmk,behavior-tri-state";
             label = "TAB_SWAPPER";
