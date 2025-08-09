@@ -246,7 +246,7 @@
                 <&macro_tap>,
                 <&kp LEFT_ARROW &kp BACKSPACE>,
                 <&macro_release>,
-                <&kp LGUI>;
+                <&kp LS(LGUI)>;
         };
     };
 
