@@ -241,10 +241,12 @@
             label = "MACRO_BEGINNING_BACKSPACE";
             #binding-cells = <0>;
             bindings =
+                <&macro_press>,
+                <&kp LS(LGUI)>,
                 <&macro_tap>,
-                <&kp LS(LGUI) &kp LEFT_ARROW>,
-                <&macro_wait_time 20>,
-                <&kp BACKSPACE>;
+                <&kp LEFT_ARROW &kp BACKSPACE>,
+                <&macro_release>,
+                <&kp LGUI>;
         };
     };
 
