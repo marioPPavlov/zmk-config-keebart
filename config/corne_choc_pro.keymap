@@ -495,7 +495,7 @@
 
         nav_word: nav_word {
             #binding-cells = <0>;
-            compatible = "zmk,behavior-nav-word";
+            compatible = "zmk,behavior-num-word";
             layers = <NAV>;
             continue-list = <LEFT DOWN UP RIGHT LSHIFT LGUI LALT ENTER>;
             ignore-numbers;
@@ -513,7 +513,7 @@
         };
 
         num_word: num_word {
-            compatible = "zmk,behavior-nav-word";
+            compatible = "zmk,behavior-num-word";
             #binding-cells = <0>;
             layers = <NUM>;
             continue-list = <N1 N2 N3 N4 N5 N6 N7 N8 N9 LSHIFT LGUI LALT>;
@@ -530,15 +530,6 @@
             mods = <(MOD_LSFT)>;
         };
 
-        mm_backspace_mac: mm_backspace_mac {
-            compatible = "zmk,behavior-mod-morph";
-            label = "MM_BACKSPACE_MAC";
-            bindings = <&kp BACKSPACE>, <&macro_beginning_backspace>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LGUI)>;
-        };
-
         th_num_word: th_num_word {
             compatible = "zmk,behavior-hold-tap";
             label = "TH_NUM_WORD";
@@ -547,6 +538,15 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             flavor = "tap-preferred";
+        };
+
+        mm_backspace_mac: mm_backspace_mac {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MM_BACKSPACE_MAC";
+            bindings = <&kp BACKSPACE>, <&macro_beginning_backspace>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LGUI)>;
         };
     };
 
