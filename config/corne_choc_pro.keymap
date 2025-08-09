@@ -550,7 +550,7 @@
             bindings = <&macro_mo2AndLshft>, <&num_word>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <75>;
+            tapping-term-ms = <200>;
             flavor = "tap-preferred";
         };
 
@@ -578,7 +578,16 @@
             #binding-cells = <0>;
             bindings = <&kt LGUI>, <&kp TAB>, <&kt LGUI>;
 
-            ignored-key-positions = <1>;
+            ignored-key-positions = <43>;
+        };
+
+        grave_swap: grave_swap {
+            compatible = "zmk,behavior-tri-state";
+            label = "GRAVE_SWAPPER";
+            #binding-cells = <0>;
+            bindings = <&kt LGUI>, <&kp GRAVE>, <&kt LGUI>;
+
+            ignored-key-positions = <43>;
         };
     };
 
@@ -606,12 +615,6 @@
 
         NUM {
             display-name = "Numbers";
-
-            // -----------------------------------------------------------------------------------------
-            // |  TAB |  !  |  @  |  #  |  $  |  %  | LCTRL | RCTRL |  ^  |  &  |  *  |  (  |  )  | BSPC |
-            // | CTRL |     |     |     |     |     |  LALT | RALT  |  -  |  =  |  [  |  ]  |  \  |  `   |
-            // | SHFT |     |     |     |     |     |               |  _  |  +  |  {  |  }  | "|" |  ~   |
-            //                    | GUI |     | SPC |               | ENT |     | ALT |
 
             bindings = <
 &trans        &trans  &trans  &trans  &trans       &trans  &rgb_ug RGB_ON   &none  &kp PLUS      &kp N7  &kp N8  &kp N9  &trans   &trans
@@ -669,7 +672,7 @@
 
         macro_layer {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &mkp MB4       &mkp MB5              &trans                 &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &grave_swap     &mkp MB4       &mkp MB5              &trans                 &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &tab_swap  &mac_lgui_tab  &mac_lgui_tab_double  &mac_lgui_tab_tripple  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                  &trans     &trans         &trans                &trans                 &trans  &trans
                         &trans  &trans  &trans                  &trans     &trans         &trans
