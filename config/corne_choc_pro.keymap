@@ -34,45 +34,6 @@
 
 / {
     macros {
-        smart_tab_lalt: smart_tab {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&mo 9 &kp LEFT_ALT>,
-                <&macro_pause_for_release>,
-                <&macro_release>,
-                <&kp LEFT_ALT &mo 9>;
-
-            label = "SMART_TAB";
-        };
-
-        smart_tab_lgui: smart_tab_mac {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&mo 9 &kp LGUI>,
-                <&macro_pause_for_release>,
-                <&macro_release>,
-                <&kp LGUI &mo 9>;
-
-            label = "SMART_TAB_MAC";
-        };
-
-        smart_tab_ctrl: smart_ctrl_tab {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&mo 9 &kp LEFT_CONTROL>,
-                <&macro_pause_for_release>,
-                <&macro_release>,
-                <&kp LEFT_CONTROL &mo 9>;
-
-            label = "SMART_CTRL_TAB";
-        };
-
         mouse_mode_color_on: mouse_mode_color {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -399,7 +360,7 @@
         combo_tog_mouse {
             bindings = <&mouse_mode_color_on>;
             key-positions = <10 23>;
-            layers = <0 3 1 4 2 5 9>;
+            layers = <0 3 1 4 2 5>;
         };
 
         combo_minus {
@@ -424,7 +385,7 @@
         };
 
         combo_underscore {
-            bindings = <&kp MINUS>;
+            bindings = <&kp UNDER>;
             key-positions = <35 36>;
         };
     };
@@ -689,15 +650,6 @@
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &tab_swap  &mac_lgui_tab      &mac_lgui_tab_double  &mac_lgui_tab_tripple  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                  &trans     &mkp MB4           &mkp MB5              &trans                 &trans  &trans
                         &trans  &trans  &trans                  &trans     &trans             &trans
-            >;
-        };
-
-        tab {
-            bindings = <
-&trans  &trans  &trans         &kp LBKT     &kp RBKT  &trans     &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &kp LS(GRAVE)  &kp LS(TAB)  &kp TAB   &kp GRAVE  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans         &trans       &trans    &trans                     &trans  &trans  &trans  &trans  &trans  &trans
-                               &trans       &trans    &trans                     &trans  &trans  &trans
             >;
         };
     };
