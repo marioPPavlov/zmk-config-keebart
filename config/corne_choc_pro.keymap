@@ -466,7 +466,7 @@
         mm_shift_capsword: mm_shift_capsword {
             compatible = "zmk,behavior-mod-morph";
             label = "MM_SHIFT_CAPSWORD";
-            bindings = <&none>, <&none>;
+            bindings = <&sk LSHIFT>, <&caps_word>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
