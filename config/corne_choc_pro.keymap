@@ -242,11 +242,11 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&kp LS(LGUI)>,
+                <&kp LGUI &kp LSHIFT>,
                 <&macro_tap>,
                 <&kp LEFT_ARROW &kp BACKSPACE>,
                 <&macro_release>,
-                <&kp LS(LGUI)>;
+                <&kp LGUI &kp LSHIFT>;
         };
 
         macro_end_delete: macro_end_delete {
@@ -577,6 +577,7 @@
             label = "TAB_SWAPPER";
             #binding-cells = <0>;
             bindings = <&kt LGUI>, <&kp TAB>, <&kt LGUI>;
+
             ignored-key-positions = <1>;
         };
     };
@@ -668,10 +669,10 @@
 
         macro_layer {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &mkp MB4       &mkp MB5              &trans                 &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &mkp MB4       &mkp MB5              &trans                 &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &tab_swap  &mac_lgui_tab  &mac_lgui_tab_double  &mac_lgui_tab_tripple  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans         &trans                &trans                 &trans  &trans
-                        &trans  &trans  &trans                  &trans  &trans         &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans     &trans         &trans                &trans                 &trans  &trans
+                        &trans  &trans  &trans                  &trans     &trans         &trans
             >;
         };
 
