@@ -599,7 +599,7 @@
             compatible = "zmk,behavior-tri-state";
             label = "GRAVE_SWAP_SHIFT";
             #binding-cells = <0>;
-            bindings = <&kt LGUI>, <&kp LC(GRAVE)>, <&kt LGUI>;
+            bindings = <&kt LGUI>, <&kp LS(GRAVE)>, <&kt LGUI>;
 
             ignored-key-positions = <43>;
         };
@@ -685,9 +685,9 @@
 
         macro_layer {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &grave_swap_shift &grave_swap                         &trans                 &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &grave_swap_shift  &grave_swap           &trans                 &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &tab_swap  &mac_lgui_tab      &mac_lgui_tab_double  &mac_lgui_tab_tripple  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans     &mkp MB4 &mkp MB5           &trans                 &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans     &mkp MB4           &mkp MB5              &trans                 &trans  &trans
                         &trans  &trans  &trans                  &trans     &trans             &trans
             >;
         };
