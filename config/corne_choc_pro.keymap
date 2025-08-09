@@ -39,7 +39,7 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_tap>,
-                <&rgb_ug RGB_ON>,
+                <&rgb_ug RGB_OFF>,
                 <&macro_wait_time 20>,
                 <&macro_tap>,
                 <&tog 6>,
@@ -67,7 +67,7 @@
         mouse_mode_color_off: mouse_mode_color_off {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap>, <&rgb_ug RGB_OFF>, <&macro_tap>, <&tog 6>;
+            bindings = <&macro_tap>, <&rgb_ug RGB_ON>, <&macro_tap>, <&tog 6>;
 
             label = "MOUSE_MODE_COLOR";
         };
