@@ -38,11 +38,9 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&macro_press>,
+                <&macro_tap>,
                 <&rgb_ug RGB_ON>,
                 <&macro_wait_time 20>,
-                <&macro_release>,
-                <&rgb_ug RGB_ON>,
                 <&macro_tap>,
                 <&tog 6>,
                 <&macro_press>,
@@ -569,11 +567,13 @@
             compatible = "zmk,behavior-tri-state";
             label = "MOUSE_SWAPPER";
             #binding-cells = <0>;
-            bindings = <&mmv MOVE_Y(-100)>, <&mmv MOVE_Y(-700)>, <&mmv MOVE_Y(-1700)>;
+            bindings =
+                <&mmv MOVE_Y(-100)>,
+                <&mmv MOVE_Y(-700)>,
+                <&mmv MOVE_Y(-1700)>;
 
             ignored-key-positions = <43>;
         };
-
     };
 
     keymap {
@@ -656,9 +656,9 @@
 
         macro_layer {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &grave_swap_shift  &grave_swap           &trans                 &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &tab_swap  &mac_lgui_tab      &mac_lgui_tab_double  &mac_lgui_tab_tripple  &mouse_swap_test &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans     &mkp MB4           &mkp MB5              &trans                 &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &grave_swap_shift  &grave_swap           &trans                 &trans            &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &tab_swap  &mac_lgui_tab      &mac_lgui_tab_double  &mac_lgui_tab_tripple  &mouse_swap_test  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans     &mkp MB4           &mkp MB5              &trans                 &trans            &trans
                         &trans  &trans  &trans                  &trans     &trans             &trans
             >;
         };
