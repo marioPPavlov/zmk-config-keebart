@@ -420,7 +420,7 @@
 
         color_2 {
             bindings = <&rgb_ug RGB_COLOR_HSB(149,82,50)>;
-            key-positions = <43>;
+            key-positions = <39 27>;
         };
     };
 
