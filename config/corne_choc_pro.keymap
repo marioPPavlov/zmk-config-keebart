@@ -589,6 +589,15 @@
 
             ignored-key-positions = <43>;
         };
+
+        grave_swap_shift: grave_swap_shift {
+            compatible = "zmk,behavior-tri-state";
+            label = "GRAVE_SWAP_SHIFT";
+            #binding-cells = <0>;
+            bindings = <&kt LGUI>, <&kp GRAVE>, <&kt LS(LGUI)>;
+
+            ignored-key-positions = <43>;
+        };
     };
 
     keymap {
@@ -615,7 +624,6 @@
 
         NUM {
             display-name = "Numbers";
-
             bindings = <
 &trans        &trans  &trans  &trans  &trans       &trans  &rgb_ug RGB_ON   &none  &kp PLUS      &kp N7  &kp N8  &kp N9  &trans   &trans
 &macro_tog_4  &trans  &trans  &trans  &kp AT_SIGN  &trans  &rgb_ug RGB_OFF  &none  &kp KP_EQUAL  &kp N4  &kp N5  &kp N6  &kp N0   &kp BACKSLASH
@@ -672,10 +680,10 @@
 
         macro_layer {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &grave_swap     &mkp MB4       &mkp MB5              &trans                 &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &tab_swap  &mac_lgui_tab  &mac_lgui_tab_double  &mac_lgui_tab_tripple  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans     &trans         &trans                &trans                 &trans  &trans
-                        &trans  &trans  &trans                  &trans     &trans         &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &mkp MB4           &mkp MB5              &trans                 &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &tab_swap  &mac_lgui_tab      &mac_lgui_tab_double  &mac_lgui_tab_tripple  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans     &grave_swap_shift  &grave_swap           &trans                 &trans  &trans
+                        &trans  &trans  &trans                  &trans     &trans             &trans
             >;
         };
 
