@@ -664,9 +664,9 @@
 
         macro_layer {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &grave_swap_shift  &grave_swap           &trans                 &trans            &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &tab_swap  &mac_lgui_tab      &mac_lgui_tab_double  &mac_lgui_tab_tripple  &mouse_swap_test  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans     &mkp MB4           &mkp MB5              &trans                 &trans            &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &grave_swap_shift  &grave_swap           &trans                 &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &tab_swap  &mac_lgui_tab      &mac_lgui_tab_double  &mac_lgui_tab_tripple  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans     &mkp MB4           &mkp MB5              &trans                 &trans  &trans
                         &trans  &trans  &trans                  &trans     &trans             &trans
             >;
         };
