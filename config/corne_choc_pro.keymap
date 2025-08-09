@@ -594,7 +594,7 @@
             compatible = "zmk,behavior-tri-state";
             label = "GRAVE_SWAP_SHIFT";
             #binding-cells = <0>;
-            bindings = <&kt LGUI>, <&kp GRAVE>, <&kt LS(LGUI)>;
+            bindings = <&kt LGUI>, <&kp LC(GRAVE)>, <&kt LGUI>;
 
             ignored-key-positions = <43>;
         };
