@@ -610,10 +610,10 @@
 
         NAV_MAC {
             bindings = <
-&trans  &trans  &trans        &trans        &trans               &trans         &trans  &trans  &kp LA(LEFT)  &trans     &trans         &kp LA(RIGHT)  &trans  &trans
-&trans  &trans  &kp LG(LEFT)  &kp LA(LEFT)  &kp LA(RIGHT_ARROW)  &kp LG(RIGHT)  &trans  &trans  &trans        &trans     &trans         &trans         &trans  &trans
-&trans  &trans  &kp LG(X)     &kp LG(C)     &kp LG(V)            &trans                         &trans        &kp LG(Z)  &kp LS(LG(Z))  &trans         &trans  &trans
-                              &trans        &trans               &trans                         &trans        &trans     &trans
+&trans  &trans  &trans     &trans     &trans     &trans  &trans  &trans  &kp LA(LEFT)  &trans     &trans         &kp LA(RIGHT)  &trans  &trans
+&trans  &trans  &trans     &trans     &trans     &trans  &trans  &trans  &trans        &trans     &trans         &trans         &trans  &trans
+&trans  &trans  &kp LG(X)  &kp LG(C)  &kp LG(V)  &trans                  &trans        &kp LG(Z)  &kp LS(LG(Z))  &trans         &trans  &trans
+                           &trans     &trans     &trans                  &trans        &trans     &trans
             >;
         };
 
