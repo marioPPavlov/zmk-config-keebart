@@ -39,7 +39,7 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_tap>,
-                <&rgb_ug RGB_OFF>,
+                <&rgb_ug RGB_ON>,
                 <&macro_wait_time 20>,
                 <&macro_tap>,
                 <&tog 6>,
@@ -67,7 +67,7 @@
         mouse_mode_color_off: mouse_mode_color_off {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap>, <&rgb_ug RGB_ON>, <&macro_tap>, <&tog 6>;
+            bindings = <&macro_tap>, <&macro_color_off>, <&macro_tap>, <&tog 6>;
 
             label = "MOUSE_MODE_COLOR";
         };
@@ -170,7 +170,7 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_tap>,
-                <&rgb_ug RGB_OFF>,
+                <&macro_color_off>,
                 <&macro_tap>,
                 <&tog 6 &mkp MB1>;
 
@@ -224,7 +224,7 @@
         macro_color_off: macro_color_off {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&rgb_ug RGB_OFF>, <&macro_press>;
+            bindings = <&macro_tap>, <&rgb_ug RGB_OFF>;
 
             label = "MACRO_COLOR_OFF";
         };
@@ -567,18 +567,6 @@
             label = "GRAVE_SWAP_SHIFT";
             #binding-cells = <0>;
             bindings = <&kt LGUI>, <&kp LS(GRAVE)>, <&kt LGUI>;
-
-            ignored-key-positions = <43>;
-        };
-
-        mouse_swap_test: mouse_swap_test {
-            compatible = "zmk,behavior-tri-state";
-            label = "MOUSE_SWAPPER";
-            #binding-cells = <0>;
-            bindings =
-                <&mmv MOVE_Y(-100)>,
-                <&mmv MOVE_Y(-700)>,
-                <&mmv MOVE_Y(-1700)>;
 
             ignored-key-positions = <43>;
         };
