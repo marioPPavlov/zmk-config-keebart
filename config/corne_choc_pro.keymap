@@ -46,7 +46,7 @@
                 <&macro_tap>,
                 <&tog 6>,
                 <&macro_press>,
-                <&mmv MOVE_UP>,
+                <&mmv MOVE_Y(-100)>,
                 <&macro_wait_time 80>,
                 <&macro_release>;
 
