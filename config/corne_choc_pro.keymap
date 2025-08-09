@@ -549,6 +549,15 @@
             #binding-cells = <0>;
             mods = <(MOD_LGUI)>;
         };
+
+        mm_tab: mm_tab {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MM_TAB";
+            bindings = <&kp TAB>, <&kp TAB>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
     };
 
     keymap {
@@ -586,7 +595,7 @@
 &trans        &trans  &trans  &trans  &trans       &trans  &rgb_ug RGB_ON   &none  &kp PLUS   &kp N7  &kp N8  &kp N9  &trans   &trans
 &macro_tog_4  &trans  &trans  &trans  &kp AT_SIGN  &trans  &rgb_ug RGB_OFF  &none  &kp EQUAL  &kp N4  &kp N5  &kp N6  &kp N0   &kp BACKSLASH
 &trans        &trans  &trans  &trans  &trans       &trans                          &kp MINUS  &kp N1  &kp N2  &kp N3  &kp DOT  &trans
-                              &trans  &trans       &trans                          &kp TAB    &trans  &trans
+                              &trans  &trans       &trans                          &mm_tab    &trans  &trans
             >;
         };
 
