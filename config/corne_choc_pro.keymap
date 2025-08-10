@@ -579,7 +579,7 @@
             display-name = "Base";
             bindings = <
 &mt LEFT_GUI GRAVE     &kp Q  &kp W               &kp E               &kp R                  &kp T              &key_repeat      &kp C_VOLUME_UP    &kp Y               &kp U           &kp I          &kp O    &kp P     &kp DELETE
-&ht_hyper_kp 0 ESCAPE  &kp A  &long_th_kp LALT S  &kp D               &long_mo_tp 8 F        &long_mo_tp 5 G    &rgb_ug RGB_EFF  &kp C_VOLUME_DOWN  &kp H               &kp J           &kp K          &kp L    &kp SEMI  &kp SQT
+&ht_hyper_kp 0 ESCAPE  &kp A  &long_th_kp LALT S  &kp D               &long_mo_tp 9 F        &long_mo_tp 5 G    &rgb_ug RGB_EFF  &kp C_VOLUME_DOWN  &kp H               &kp J           &kp K          &kp L    &kp SEMI  &kp SQT
 &caps_word             &kp Z  &kp X               &kp C               &kp V                  &kp B                                                  &kp N               &kp M           &kp COMMA      &kp DOT  &kp FSLH  &key_repeat
                                                   &ht_sk_navword 3 0  &ht_sk_kp LCTRL SPACE  &mm_numword_linux                                      &mm_shift_capsword  &mt LALT ENTER  &kp BACKSPACE
             >;
@@ -650,7 +650,16 @@
             >;
         };
 
-        macro_layer {
+        macro_layer_linux {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &grave_swap_shift  &grave_swap           &trans                 &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &tab_swap  &mac_lgui_tab      &mac_lgui_tab_double  &mac_lgui_tab_tripple  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans     &mkp MB4           &mkp MB5              &trans                 &trans  &trans
+                        &trans  &trans  &trans                  &trans     &trans             &trans
+            >;
+        };
+
+        macro_layer_mac {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &grave_swap_shift  &grave_swap           &trans                 &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &tab_swap  &mac_lgui_tab      &mac_lgui_tab_double  &mac_lgui_tab_tripple  &trans  &trans
