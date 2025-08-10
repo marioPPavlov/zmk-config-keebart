@@ -161,7 +161,7 @@
                 <&macro_tap>,
                 <&kp TAB>,
                 <&macro_release>,
-                <&kp LALT>,;
+                <&kp LALT>;
 
             label = "LINUX_LGUI_TAB_DOUBLE";
         };
@@ -612,7 +612,7 @@
 
         linux_grave_swap: linux_grave_swap {
             compatible = "zmk,behavior-tri-state";
-            label = "GRAVE_SWAPPER";
+            label = "LINUX_GRAVE_SWAPPER";
             #binding-cells = <0>;
             bindings = <&kt LALT>, <&kp GRAVE>, <&kt LALT>;
 
@@ -621,14 +621,12 @@
 
         linux_grave_swap_shift: linux_grave_swap_shift {
             compatible = "zmk,behavior-tri-state";
-            label = "GRAVE_SWAP_SHIFT";
+            label = "LINUX_GRAVE_SWAP_SHIFT";
             #binding-cells = <0>;
             bindings = <&kt LALT>, <&kp LS(GRAVE)>, <&kt LALT>;
 
             ignored-key-positions = <43>;
         };
-
-
 
         mm_numword_mac: mm_numword_mac {
             compatible = "zmk,behavior-mod-morph";
@@ -729,10 +727,10 @@
 
         macro_layer_mac {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &linux_grave_swap_shift  &linux_grave_swap           &trans                 &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &tab_swap  &linux_lgui_tab      &linux_lgui_tab_double  &linux_lgui_tab_tripple  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans     &mkp MB4           &mkp MB5              &trans                 &trans  &trans
-                        &trans  &trans  &trans                  &trans     &trans             &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &linux_grave_swap_shift  &linux_grave_swap       &trans                   &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &tab_swap  &linux_lgui_tab          &linux_lgui_tab_double  &linux_lgui_tab_tripple  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans     &mkp MB4                 &mkp MB5                &trans                   &trans  &trans
+                        &trans  &trans  &trans                  &trans     &trans                   &trans
             >;
         };
     };
