@@ -756,5 +756,10 @@
             if-layers = <1 6>;
             then-layer = <7>;
         };
+
+        macro_layer_mac_active_mac_macro_layer {
+            if-layers = <1 8>;
+            then-layer = <9>;
+        };
     };
 };
