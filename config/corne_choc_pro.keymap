@@ -725,7 +725,7 @@
             >;
         };
 
-        macro_layer_mac {
+        macro_layer_linux {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans           &linux_grave_swap_shift  &linux_grave_swap       &trans                   &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &linux_tab_swap  &linux_lgui_tab          &linux_lgui_tab_double  &linux_lgui_tab_tripple  &trans  &trans
@@ -734,7 +734,7 @@
             >;
         };
 
-        linux_macro_layer {
+        macro_layer_mac {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &grave_swap_shift  &grave_swap           &trans                 &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &tab_swap  &mac_lgui_tab      &mac_lgui_tab_double  &mac_lgui_tab_tripple  &trans  &trans
