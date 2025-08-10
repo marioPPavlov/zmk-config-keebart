@@ -88,7 +88,7 @@
             label = "MACRO_TOG_2";
         };
 
-        mac_lgui_tab: test_macro {
+        mac_lgui_tab: mac_lgui_tab {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -136,17 +136,65 @@
             label = "MAC_LGUI_TAB_TRIPPLE";
         };
 
+        linux_lgui_tab: test_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp TAB>,
+                <&macro_release>,
+                <&kp LALT>;
+
+            label = "TEST_MACRO";
+        };
+
+        linux_lgui_tab_double: linux_lgui_tab_double {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp TAB>,
+                <&macro_tap>,
+                <&kp TAB>,
+                <&macro_release>,
+                <&kp LALT>,;
+
+            label = "LINUX_LGUI_TAB_DOUBLE";
+        };
+
+        linux_lgui_tab_tripple: linux_lgui_tab_tripple {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp TAB>,
+                <&macro_tap>,
+                <&kp TAB>,
+                <&macro_tap>,
+                <&kp TAB>,
+                <&macro_release>,
+                <&kp LALT>;
+
+            label = "LINUX_LGUI_TAB_TRIPPLE";
+        };
+
         mac_change_language: mac_change_language {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&kp LCTRL>,
+                <&kt LCTRL>,
                 <&macro_wait_time 20>,
                 <&macro_tap>,
                 <&kp SPACE>,
                 <&macro_release>,
-                <&kp LCTRL>;
+                <&kt LCTRL>;
 
             label = "MAC_CHANGE_LANGUAGE";
         };
@@ -562,6 +610,26 @@
             ignored-key-positions = <43>;
         };
 
+        linux_grave_swap: linux_grave_swap {
+            compatible = "zmk,behavior-tri-state";
+            label = "GRAVE_SWAPPER";
+            #binding-cells = <0>;
+            bindings = <&kt LALT>, <&kp GRAVE>, <&kt LALT>;
+
+            ignored-key-positions = <43>;
+        };
+
+        linux_grave_swap_shift: linux_grave_swap_shift {
+            compatible = "zmk,behavior-tri-state";
+            label = "GRAVE_SWAP_SHIFT";
+            #binding-cells = <0>;
+            bindings = <&kt LALT>, <&kp LS(GRAVE)>, <&kt LALT>;
+
+            ignored-key-positions = <43>;
+        };
+
+
+
         mm_numword_mac: mm_numword_mac {
             compatible = "zmk,behavior-mod-morph";
             label = "MM_NUMWORD_MAC";
@@ -661,8 +729,8 @@
 
         macro_layer_mac {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &grave_swap_shift  &grave_swap           &trans                 &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &tab_swap  &mac_lgui_tab      &mac_lgui_tab_double  &mac_lgui_tab_tripple  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &linux_grave_swap_shift  &linux_grave_swap           &trans                 &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &tab_swap  &linux_lgui_tab      &linux_lgui_tab_double  &linux_lgui_tab_tripple  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                  &trans     &mkp MB4           &mkp MB5              &trans                 &trans  &trans
                         &trans  &trans  &trans                  &trans     &trans             &trans
             >;
