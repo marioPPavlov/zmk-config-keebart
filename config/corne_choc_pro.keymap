@@ -201,11 +201,11 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&sk LGUI &kp LSHIFT>,
+                <&kt LGUI &kt LSHIFT>,
                 <&macro_tap>,
                 <&kp LEFT_ARROW &kp BACKSPACE>,
                 <&macro_release>,
-                <&sk LGUI &kp LSHIFT>;
+                <&kt LGUI &kt LSHIFT>;
         };
 
         macro_end_delete: macro_end_delete {
