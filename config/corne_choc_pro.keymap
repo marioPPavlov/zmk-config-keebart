@@ -636,10 +636,10 @@
 
         mac_base {
             bindings = <
-&trans                &trans  &trans               &trans  &trans            &trans           &trans  &trans  &trans  &trans           &trans             &trans  &trans  &macro_end_delete
-&trans                &trans  &long_th_kp LCTRL S  &trans  &trans            &trans           &trans  &trans  &trans  &trans           &trans             &trans  &trans  &trans
-&mac_change_language  &trans  &trans               &trans  &trans            &trans                           &trans  &trans           &trans             &trans  &trans  &trans
-                                                   &trans  &mm_space_htlgui  &mm_numword_mac                  &trans  &mt LCTRL ENTER  &mm_backspace_mac
+&trans                &trans  &trans               &trans  &trans            &trans  &trans  &trans  &trans           &trans           &trans             &trans  &trans  &macro_end_delete
+&trans                &trans  &long_th_kp LCTRL S  &trans  &trans            &trans  &trans  &trans  &trans           &trans           &trans             &trans  &trans  &trans
+&mac_change_language  &trans  &trans               &trans  &trans            &trans                  &trans           &trans           &trans             &trans  &trans  &trans
+                                                   &trans  &mm_space_htlgui  &trans                  &mm_numword_mac  &mt LCTRL ENTER  &mm_backspace_mac
             >;
         };
 
