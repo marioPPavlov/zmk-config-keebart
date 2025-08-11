@@ -169,10 +169,7 @@
         mac_change_language: mac_change_language {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <
-                &kp LC(SPC)
-            >;
-
+            bindings = <&kp LC(SPC)>;
             label = "MAC_CHANGE_LANGUAGE";
         };
 
@@ -602,6 +599,16 @@
 
             ignored-key-positions = <43>;
         };
+
+        mm_space_htctrl: mm_space_htctrl {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MM_SPACE_HTCTRL";
+            bindings = <&ht_sk_kp LCTRL SPACE>, <&kp LCTRL>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+            keep-mods = <(MOD_LSFT)>;
+        };
     };
 
     keymap {
@@ -610,10 +617,10 @@
         BASE {
             display-name = "Base";
             bindings = <
-&mt LEFT_GUI GRAVE     &kp Q  &kp W               &kp E               &kp R                  &kp T              &key_repeat      &kp C_VOLUME_UP    &kp Y               &kp U           &kp I          &kp O    &kp P     &kp DELETE
-&ht_hyper_kp 0 ESCAPE  &kp A  &long_th_kp LALT S  &kp D               &long_mo_tp 8 F        &long_mo_tp 5 G    &rgb_ug RGB_EFF  &kp C_VOLUME_DOWN  &kp H               &kp J           &kp K          &kp L    &kp SEMI  &kp SQT
-&caps_word             &kp Z  &kp X               &kp C               &kp V                  &kp B                                                  &kp N               &kp M           &kp COMMA      &kp DOT  &kp FSLH  &key_repeat
-                                                  &ht_sk_navword 3 0  &ht_sk_kp LCTRL SPACE  &mm_numword_linux                                      &mm_shift_capsword  &mt LALT ENTER  &kp BACKSPACE
+&mt LEFT_GUI GRAVE     &kp Q  &kp W               &kp E               &kp R                  &kp T               &key_repeat      &kp C_VOLUME_UP    &kp Y              &kp U           &kp I          &kp O    &kp P     &kp DELETE
+&ht_hyper_kp 0 ESCAPE  &kp A  &long_th_kp LALT S  &kp D               &long_mo_tp 8 F        &long_mo_tp 5 G     &rgb_ug RGB_EFF  &kp C_VOLUME_DOWN  &kp H              &kp J           &kp K          &kp L    &kp SEMI  &kp SQT
+&caps_word             &kp Z  &kp X               &kp C               &kp V                  &kp B                                                   &kp N              &kp M           &kp COMMA      &kp DOT  &kp FSLH  &key_repeat
+                                                  &ht_sk_navword 3 0  &ht_sk_kp LCTRL SPACE  &mm_shift_capsword                                      &mm_numword_linux  &mt LALT ENTER  &kp BACKSPACE
             >;
         };
 
@@ -629,20 +636,20 @@
         NUM {
             display-name = "Numbers";
             bindings = <
-&trans        &trans  &trans  &trans  &trans  &trans   &rgb_ug RGB_ON   &none  &kp PLUS      &kp N7  &kp N8  &kp N9  &trans   &trans
-&kp F20 &trans  &trans  &trans  &trans  &trans   &rgb_ug RGB_OFF  &none  &kp KP_EQUAL  &kp N4  &kp N5  &kp N6  &kp N0   &kp BACKSLASH
-&trans        &trans  &trans  &trans  &trans  &trans                           &kp MINUS     &kp N1  &kp N2  &kp N3  &kp DOT  &trans
-                              &trans  &trans  &kp TAB                          &trans        &trans  &trans
+&trans   &trans  &trans  &trans  &trans  &trans   &rgb_ug RGB_ON   &none  &kp PLUS      &kp N7  &kp N8  &kp N9  &trans   &trans
+&kp F20  &trans  &trans  &trans  &trans  &trans   &rgb_ug RGB_OFF  &none  &kp KP_EQUAL  &kp N4  &kp N5  &kp N6  &kp N0   &kp BACKSLASH
+&trans   &trans  &trans  &trans  &trans  &trans                           &kp MINUS     &kp N1  &kp N2  &kp N3  &kp DOT  &trans
+                         &trans  &trans  &kp TAB                          &trans        &trans  &trans
             >;
         };
 
         NAV {
             display-name = "Navigation";
             bindings = <
-&trans        &trans  &trans     &trans     &trans     &trans  &bootloader     &bt BT_SEL 0  &trans          &kp LC(J)       &kp LC(K)      &trans           &trans                 &trans
+&trans   &trans  &trans     &trans     &trans     &trans  &bootloader     &bt BT_SEL 0  &trans          &kp LC(J)       &kp LC(K)      &trans           &trans                 &trans
 &kp F20  &trans  &trans     &trans     &trans     &trans  &studio_unlock  &bt BT_SEL 1  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW   &kp RIGHT_ARROW  &macro_open_clipboard  &trans
-&trans        &trans  &kp LC(X)  &kp LC(C)  &kp LC(V)  &trans                                &trans          &kp LC(Z)       &kp LC(LS(Z))  &trans           &trans                 &trans
-                                 &trans     &trans     &trans                                &trans          &trans          &trans
+&trans   &trans  &kp LC(X)  &kp LC(C)  &kp LC(V)  &trans                                &trans          &kp LC(Z)       &kp LC(LS(Z))  &trans           &trans                 &trans
+                            &trans     &trans     &trans                                &trans          &trans          &trans
             >;
         };
 
