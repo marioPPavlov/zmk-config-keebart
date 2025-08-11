@@ -609,6 +609,16 @@
             mods = <(MOD_LSFT)>;
             keep-mods = <(MOD_LSFT)>;
         };
+
+        mm_space_htlgui: mm_space_htlgui {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MM_SPACE_HTLGUI";
+            bindings = <&ht_sk_kp LGUI SPACE>, <&kp LGUI>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+            keep-mods = <(MOD_LSFT)>;
+        };
     };
 
     keymap {
