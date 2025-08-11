@@ -39,7 +39,7 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_tap>,
-                <&rgb_ug RGB_ON>,
+                <&rgb_ug RGB_OFF>,
                 <&macro_wait_time 20>,
                 <&macro_tap>,
                 <&tog 6>,
