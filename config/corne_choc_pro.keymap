@@ -81,7 +81,7 @@
                 <&macro_release>,
                 <&kp LEFT_GUI>;
 
-            label = "TEST_MACRO";
+            label = "MAC_LGUI_TAB";
         };
 
         mac_lgui_tab_double: mac_lgui_tab_double {
@@ -118,7 +118,7 @@
             label = "MAC_LGUI_TAB_TRIPPLE";
         };
 
-        linux_lgui_tab: test_macro {
+        linux_lgui_tab: linux_lgui_tab {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -129,7 +129,7 @@
                 <&macro_release>,
                 <&kp LALT>;
 
-            label = "TEST_MACRO";
+            label = "LINUX_LGUI_TAB";
         };
 
         linux_lgui_tab_double: linux_lgui_tab_double {
@@ -169,14 +169,9 @@
         mac_change_language: mac_change_language {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kt LCTRL>,
-                <&macro_wait_time 20>,
-                <&macro_tap>,
-                <&kp SPACE>,
-                <&macro_release>,
-                <&kt LCTRL>;
+            bindings = <
+                &kp LC(SPC)
+            >;
 
             label = "MAC_CHANGE_LANGUAGE";
         };
