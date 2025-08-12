@@ -364,6 +364,16 @@
             bindings = <&kp PLUS>;
             key-positions = <11 25>;
         };
+
+        combo_at_sign {
+            bindings = <&kp AT>;
+            key-positions = <3 17>;
+        };
+
+        combo_excl {
+            bindings = <&kp EXCL>;
+            key-positions = <2 16>;
+        };
     };
 
     behaviors {
