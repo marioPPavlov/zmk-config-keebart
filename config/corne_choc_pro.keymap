@@ -254,7 +254,13 @@
         macro_mouse_up: macro_mouse_up {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&mmv MOVE_Y(-600) &sl 8>;
+            bindings =
+                <&macro_press>,
+                <&mmv MOVE_Y(-600) &sl 8>,
+                <&macro_pause_for_release>,
+                <&macro_release>,
+                <&mmv MOVE_Y(-600) &sl 8>;
+
             label = "MACRO_MOUSE_UP";
         };
     };
