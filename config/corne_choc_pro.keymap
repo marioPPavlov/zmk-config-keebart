@@ -675,10 +675,10 @@
 
         mouse {
             bindings = <
-&none                  &none  &msc SCRL_LEFT      &mmv MOVE_Y(-1000)     &msc SCRL_RIGHT       &none                  &none  &none  &none                  &msc SCRL_UP       &mmv MOVE_Y(-333)      &msc SCRL_DOWN    &trans  &none
-&mouse_mode_color_off  &none  &mmv MOVE_X(-1000)  &mmv MOVE_Y(1000)      &mmv MOVE_X(1000)     &mkp MB2               &none  &none  &none                  &mmv MOVE_X(-333)  &mmv MOVE_Y(333)       &mmv MOVE_X(333)  &none   &none
-&none                  &none  &kp LC(X)           &kp LC(C)              &kp LC(V)             &none                                &none                  &mkp MB4           &mkp MB5               &mkp MB3          &none   &none
-                                                  &mouse_mode_color_off  &ht_kp_mkp LCTRL MB1  &mouse_mode_color_off                &mouse_mode_color_off  &mm_mouse_off_mac  &mouse_mode_color_off
+&none                  &none   &msc SCRL_LEFT      &mmv MOVE_Y(-1000)     &msc SCRL_RIGHT       &none                  &none  &none  &none                  &msc SCRL_UP       &mmv MOVE_Y(-333)      &msc SCRL_DOWN    &none  &none
+&mouse_mode_color_off  &trans  &mmv MOVE_X(-1000)  &mmv MOVE_Y(1000)      &mmv MOVE_X(1000)     &mkp MB2               &none  &none  &none                  &mmv MOVE_X(-333)  &mmv MOVE_Y(333)       &mmv MOVE_X(333)  &none  &none
+&none                  &none   &kp LC(X)           &kp LC(C)              &kp LC(V)             &none                                &none                  &mkp MB4           &mkp MB5               &mkp MB3          &none  &none
+                                                   &mouse_mode_color_off  &ht_kp_mkp LCTRL MB1  &mouse_mode_color_off                &mouse_mode_color_off  &mm_mouse_off_mac  &mouse_mode_color_off
             >;
         };
 
