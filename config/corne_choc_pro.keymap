@@ -684,8 +684,8 @@
 
         mouse_fast {
             bindings = <
-&trans  &trans  &trans     &trans     &trans     &trans  &trans  &trans  &trans  &trans             &mmv MOVE_Y(-600)  &trans            &trans  &trans
-&trans  &trans  &trans     &trans     &trans     &trans  &trans  &trans  &trans  &mmv MOVE_X(-600)  &mmv MOVE_Y(600)   &mmv MOVE_X(600)  &trans  &trans
+&trans  &trans  &trans     &trans     &trans     &trans  &trans  &trans  &trans  &trans             &mmv MOVE_Y(-900)  &trans            &trans  &trans
+&trans  &trans  &trans     &trans     &trans     &trans  &trans  &trans  &trans  &mmv MOVE_X(-900)  &mmv MOVE_Y(900)   &mmv MOVE_X(900)  &trans  &trans
 &trans  &trans  &kp LG(X)  &kp LG(C)  &kp LG(V)  &trans                  &trans  &trans             &trans             &trans            &trans  &trans
                            &trans     &trans     &trans                  &trans  &trans             &trans
             >;
