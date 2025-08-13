@@ -629,7 +629,7 @@
         mac_base {
             bindings = <
 &trans                &trans  &trans               &trans  &trans            &trans  &trans  &trans  &trans  &trans           &trans             &trans  &trans  &kp DELETE
-&trans                &trans  &long_th_kp LCTRL S  &trans  &trans            &trans  &trans  &trans  &trans  &trans           &trans             &trans  &trans  &trans
+&trans                &trans  &long_th_kp LCTRL S  &trans  &long_mo_tp 10 F  &trans  &trans  &trans  &trans  &trans           &trans             &trans  &trans  &trans
 &mac_change_language  &trans  &trans               &trans  &trans            &trans                  &trans  &trans           &trans             &trans  &trans  &trans
                                                    &trans  &mm_space_htlgui  &trans                  &trans  &mt LCTRL ENTER  &mm_backspace_mac
             >;
@@ -685,7 +685,7 @@
         mouse_mac {
             bindings = <
 &trans  &trans  &trans     &trans     &trans               &trans  &trans  &trans  &trans  &trans             &mmv MOVE_Y(-300)  &trans            &trans  &trans
-&trans  &trans  &trans     &mo 8      &trans               &trans  &trans  &trans  &trans  &mmv MOVE_X(-300)  &mmv MOVE_Y(300)   &mmv MOVE_X(300)  &trans  &trans
+&trans  &trans  &trans     &mo 8      &long_mo_tp 10 F     &trans  &trans  &trans  &trans  &mmv MOVE_X(-300)  &mmv MOVE_Y(300)   &mmv MOVE_X(300)  &trans  &trans
 &trans  &trans  &kp LG(X)  &kp LG(C)  &kp LG(V)            &trans                  &trans  &trans             &trans             &trans            &trans  &trans
                            &trans     &ht_kp_mkp LGUI MB1  &trans                  &trans  &trans             &trans
             >;
