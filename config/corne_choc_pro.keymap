@@ -387,6 +387,16 @@
             bindings = <&kp EXCL>;
             key-positions = <2 16>;
         };
+
+        tab_combo {
+            bindings = <&kp TAB>;
+            key-positions = <8 22>;
+        };
+
+        combo_tab_shift {
+            bindings = <&kp LS(TAB)>;
+            key-positions = <5 19>;
+        };
     };
 
     behaviors {
