@@ -675,19 +675,19 @@
 
         mouse_mac {
             bindings = <
-&trans  &trans  &trans             &mmv MOVE_Y(-800)  &trans               &trans  &trans  &trans  &trans  &trans             &macro_mouse_up   &trans            &trans  &trans
-&trans  &trans  &mmv MOVE_X(-800)  &mmv MOVE_Y(800)   &mmv MOVE_X(800)     &trans  &trans  &trans  &trans  &mmv MOVE_X(-300)  &mmv MOVE_Y(300)  &mmv MOVE_X(300)  &trans  &trans
-&trans  &trans  &kp LG(X)          &kp LG(C)          &kp LG(V)            &trans                  &trans  &trans             &trans            &trans            &trans  &trans
-                                   &trans             &ht_kp_mkp LGUI MB1  &trans                  &trans  &trans             &trans
+&trans  &trans  &trans     &trans     &trans               &trans  &trans  &trans  &trans  &trans             &mmv MOVE_Y(-300)  &trans            &trans  &trans
+&trans  &trans  &trans     &mo 8      &trans               &trans  &trans  &trans  &trans  &mmv MOVE_X(-300)  &mmv MOVE_Y(300)   &mmv MOVE_X(300)  &trans  &trans
+&trans  &trans  &kp LG(X)  &kp LG(C)  &kp LG(V)            &trans                  &trans  &trans             &trans             &trans            &trans  &trans
+                           &trans     &ht_kp_mkp LGUI MB1  &trans                  &trans  &trans             &trans
             >;
         };
 
         mouse_fast {
             bindings = <
-&trans  &trans  &trans             &mmv MOVE_Y(-800)  &trans            &trans  &trans  &trans  &trans  &trans             &mmv MOVE_Y(-600)  &trans            &trans  &trans
-&trans  &trans  &mmv MOVE_X(-800)  &mmv MOVE_Y(800)   &mmv MOVE_X(800)  &trans  &trans  &trans  &trans  &mmv MOVE_X(-300)  &mmv MOVE_Y(300)   &mmv MOVE_X(300)  &trans  &trans
-&trans  &trans  &kp LG(X)          &kp LG(C)          &kp LG(V)         &trans                  &trans  &trans             &trans             &trans            &trans  &trans
-                                   &trans             &trans            &trans                  &trans  &trans             &trans
+&trans  &trans  &trans     &trans     &trans     &trans  &trans  &trans  &trans  &trans             &mmv MOVE_Y(-600)  &trans            &trans  &trans
+&trans  &trans  &trans     &trans     &trans     &trans  &trans  &trans  &trans  &mmv MOVE_X(-600)  &mmv MOVE_Y(600)   &mmv MOVE_X(600)  &trans  &trans
+&trans  &trans  &kp LG(X)  &kp LG(C)  &kp LG(V)  &trans                  &trans  &trans             &trans             &trans            &trans  &trans
+                           &trans     &trans     &trans                  &trans  &trans             &trans
             >;
         };
 
