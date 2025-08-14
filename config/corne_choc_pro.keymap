@@ -397,6 +397,11 @@
             bindings = <&kp LS(TAB)>;
             key-positions = <5 19>;
         };
+
+        combo_sl_macro_layer {
+            bindings = <&sl 8>;
+            key-positions = <18 32>;
+        };
     };
 
     behaviors {
