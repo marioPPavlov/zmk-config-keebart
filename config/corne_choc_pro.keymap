@@ -370,12 +370,12 @@
 
         combo_equal {
             bindings = <&kp EQUAL>;
-            key-positions = <10 24>;
+            key-positions = <11 25>;
         };
 
         combo_plus {
             bindings = <&kp PLUS>;
-            key-positions = <11 25>;
+            key-positions = <10 24>;
         };
 
         combo_at_sign {
