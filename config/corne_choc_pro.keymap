@@ -643,7 +643,7 @@
 
         mac_base {
             bindings = <
-&trans                &trans  &trans               &trans  &trans            &trans  &trans  &trans  &trans  &trans           &trans  &trans  &trans  &kp DELETE
+&trans                &trans  &trans               &trans  &trans            &trans  &trans  &trans  &trans  &trans           &trans  &trans  &trans  &trans
 &trans                &trans  &long_th_kp LCTRL S  &trans  &trans            &trans  &trans  &trans  &trans  &trans           &trans  &trans  &trans  &trans
 &mac_change_language  &trans  &trans               &trans  &trans            &trans                  &trans  &trans           &trans  &trans  &trans  &trans
                                                    &trans  &mm_space_htlgui  &trans                  &trans  &mt LCTRL ENTER  &trans
