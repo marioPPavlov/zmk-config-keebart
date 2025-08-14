@@ -407,6 +407,11 @@
             bindings = <&mac_change_language>;
             key-positions = <23 35>;
         };
+
+        combo_inverted_slash {
+            bindings = <&kp BACKSLASH>;
+            key-positions = <24 36>;
+        };
     };
 
     behaviors {
