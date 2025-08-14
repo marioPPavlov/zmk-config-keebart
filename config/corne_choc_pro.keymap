@@ -402,6 +402,11 @@
             bindings = <&sl 8>;
             key-positions = <18 32>;
         };
+
+        combo_change_language {
+            bindings = <&mac_change_language>;
+            key-positions = <23 35>;
+        };
     };
 
     behaviors {
