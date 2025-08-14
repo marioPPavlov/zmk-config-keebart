@@ -360,12 +360,12 @@
 
         combo_brace {
             bindings = <&kp LEFT_BRACE>;
-            key-positions = <4 18>;
+            key-positions = <5 19>;
         };
 
         rugh {
             bindings = <&kp RIGHT_BRACE>;
-            key-positions = <9 23>;
+            key-positions = <8 22>;
         };
 
         combo_equal {
@@ -390,12 +390,12 @@
 
         tab_combo {
             bindings = <&kp TAB>;
-            key-positions = <8 22>;
+            key-positions = <23 9>;
         };
 
         combo_tab_shift {
             bindings = <&kp LS(TAB)>;
-            key-positions = <5 19>;
+            key-positions = <4 18>;
         };
 
         combo_sl_macro_layer {
