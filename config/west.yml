@@ -4,6 +4,8 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: dhruvinsh
       url-base: https://github.com/dhruvinsh
+    - name: caksoylar  # <-- new entry
+      url-base: https://github.com/caksoylar
   projects:
     - name: zmk
       remote: zmkfirmware
@@ -17,3 +19,4 @@ manifest:
       revision: main
   self:
     path: config
+  
