@@ -613,20 +613,20 @@
             keep-mods = <(MOD_LSFT)>;
         };
 
-        ht_kp_mkp: ht_kp_mkp {
+        ht_kp_mb1_and_off: ht_kp_mb1_and_off {
             compatible = "zmk,behavior-hold-tap";
-            label = "HT_KP_MKP";
-            bindings = <&kp>, <&mkp>;
+            label = "HT_KP_MB1_AND_OFF";
+            bindings = <&kp>, <&mouse_click_and_off>;
 
             #binding-cells = <2>;
             quick-tap-ms = <0>;
             tapping-term-ms = <200>;
         };
 
-        mm_mouse_off_mac: mm_mouse_off_mac {
+        mm_mouse_click: mm_mouse_click {
             compatible = "zmk,behavior-mod-morph";
-            label = "MM_MOUSE_OFF_MAC";
-            bindings = <&mouse_click_and_off>, <&kp LG(ENTER)>;
+            label = "MM_MOUSE_CLICK";
+            bindings = <&mkp MB1>, <&kp LG(ENTER)>;
 
             #binding-cells = <0>;
             mods = <(MOD_LGUI)>;
@@ -695,19 +695,19 @@
 
         mouse {
             bindings = <
-&none                  &none   &msc SCRL_LEFT      &mmv MOVE_Y(-1000)  &msc SCRL_RIGHT       &none                  &none  &none  &none     &msc SCRL_UP       &mmv MOVE_Y(-333)      &msc SCRL_DOWN    &none  &none
-&mouse_mode_color_off  &trans  &mmv MOVE_X(-1000)  &mmv MOVE_Y(1000)   &mmv MOVE_X(1000)     &mkp MB2               &none  &none  &none     &mmv MOVE_X(-333)  &mmv MOVE_Y(333)       &mmv MOVE_X(333)  &none  &none
-&none                  &none   &kp LC(X)           &kp LC(C)           &kp LC(V)             &none                                &none     &mkp MB4           &mkp MB5               &mkp MB3          &none  &trans
-                                                   &trans              &ht_kp_mkp LCTRL MB1  &mouse_mode_color_off                &mkp MB1  &mm_mouse_off_mac  &mouse_mode_color_off
+&none                  &none   &msc SCRL_LEFT      &mmv MOVE_Y(-1000)  &msc SCRL_RIGHT               &none                  &none  &none  &none     &msc SCRL_UP       &mmv MOVE_Y(-333)      &msc SCRL_DOWN    &none  &none
+&mouse_mode_color_off  &trans  &mmv MOVE_X(-1000)  &mmv MOVE_Y(1000)   &mmv MOVE_X(1000)             &mkp MB2               &none  &none  &none     &mmv MOVE_X(-333)  &mmv MOVE_Y(333)       &mmv MOVE_X(333)  &none  &none
+&none                  &none   &kp LC(X)           &kp LC(C)           &kp LC(V)                     &none                                &none     &mkp MB4           &mkp MB5               &mkp MB3          &none  &trans
+                                                   &trans              &ht_kp_mb1_and_off LCTRL MB1  &mouse_mode_color_off                &mkp MB1  &mm_mouse_click    &mouse_mode_color_off
             >;
         };
 
         mouse_mac {
             bindings = <
-&trans  &trans  &trans             &mmv MOVE_Y(-900)  &trans               &trans  &trans  &trans  &trans  &trans             &mmv MOVE_Y(-300)  &trans            &trans  &trans
-&trans  &trans  &mmv MOVE_X(-900)  &mmv MOVE_Y(900)   &mmv MOVE_X(900)     &trans  &trans  &trans  &trans  &mmv MOVE_X(-300)  &mmv MOVE_Y(300)   &mmv MOVE_X(300)  &trans  &trans
-&trans  &trans  &kp LG(X)          &kp LG(C)          &kp LG(V)            &trans                  &trans  &trans             &trans             &trans            &trans  &trans
-                                   &trans             &ht_kp_mkp LGUI MB1  &trans                  &trans  &mm_mouse_off_mac  &trans
+&trans  &trans  &trans             &mmv MOVE_Y(-900)  &trans                       &trans  &trans  &trans  &trans  &trans             &mmv MOVE_Y(-300)  &trans            &trans  &trans
+&trans  &trans  &mmv MOVE_X(-900)  &mmv MOVE_Y(900)   &mmv MOVE_X(900)             &trans  &trans  &trans  &trans  &mmv MOVE_X(-300)  &mmv MOVE_Y(300)   &mmv MOVE_X(300)  &trans  &trans
+&trans  &trans  &kp LG(X)          &kp LG(C)          &kp LG(V)                    &trans                  &trans  &trans             &trans             &trans            &trans  &trans
+                                   &trans             &ht_kp_mb1_and_off LGUI MB1  &trans                  &trans  &mm_mouse_click    &trans
             >;
         };
 
