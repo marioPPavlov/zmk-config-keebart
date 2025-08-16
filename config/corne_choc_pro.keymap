@@ -696,7 +696,7 @@
         mouse {
             bindings = <
 &none                  &none   &msc SCRL_LEFT      &mmv MOVE_Y(-1000)  &msc SCRL_RIGHT               &none                  &none  &none  &none     &msc SCRL_UP       &mmv MOVE_Y(-333)      &msc SCRL_DOWN    &none  &none
-&mouse_mode_color_off  &trans  &mmv MOVE_X(-1000)  &mmv MOVE_Y(1000)   &mmv MOVE_X(1000)             &mkp MB2               &none  &none  &none     &mmv MOVE_X(-333)  &mmv MOVE_Y(333)       &mmv MOVE_X(333)  &none  &none
+&mouse_mode_color_off  &trans  &mmv MOVE_X(-1000)  &mmv MOVE_Y(1000)   &mmv MOVE_X(1000)             &trans                 &none  &none  &none     &mmv MOVE_X(-333)  &mmv MOVE_Y(333)       &mmv MOVE_X(333)  &none  &none
 &none                  &none   &kp LC(X)           &kp LC(C)           &kp LC(V)                     &none                                &none     &mkp MB4           &mkp MB5               &mkp MB3          &none  &trans
                                                    &trans              &ht_kp_mb1_and_off LCTRL MB1  &mouse_mode_color_off                &mkp MB2  &mm_mouse_click    &mouse_mode_color_off
             >;
