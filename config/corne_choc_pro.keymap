@@ -39,7 +39,7 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_tap>,
-                <&rgb_ug RGB_OFF>,
+                <&macro_color_on>,
                 <&macro_wait_time 20>,
                 <&macro_tap>,
                 <&tog 6>,
@@ -246,8 +246,7 @@
         macro_color_off: macro_color_off {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap>, <&rgb_ug RGB_OFF>;
-
+            bindings = <&macro_tap>;
             label = "MACRO_COLOR_OFF";
         };
 
@@ -262,6 +261,14 @@
                 <&mmv MOVE_Y(-300) &sl 0>;
 
             label = "MACRO_MOUSE_UP";
+        };
+
+        macro_color_on: macro_color_on {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap>, <&rgb_ug RGB_ON>;
+
+            label = "MACRO_COLOR_ON";
         };
     };
 
