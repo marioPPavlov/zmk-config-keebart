@@ -704,7 +704,7 @@
             bindings = <
 &none                  &none   &msc SCRL_LEFT      &mmv MOVE_Y(-1000)  &msc SCRL_RIGHT               &none                  &none  &none  &none     &msc SCRL_UP       &mmv MOVE_Y(-333)      &msc SCRL_DOWN    &none  &none
 &mouse_mode_color_off  &trans  &mmv MOVE_X(-1000)  &mmv MOVE_Y(1000)   &mmv MOVE_X(1000)             &trans                 &none  &none  &none     &mmv MOVE_X(-333)  &mmv MOVE_Y(333)       &mmv MOVE_X(333)  &none  &none
-&none                  &none   &kp LC(X)           &kp LC(C)           &kp LC(V)                     &none                                &none     &mkp MB4           &mkp MB5               &mkp MB3          &none  &trans
+&none                  &none   &none               &none               &none                         &none                                &none     &mkp MB4           &mkp MB5               &mkp MB3          &none  &trans
                                                    &trans              &ht_kp_mb1_and_off LCTRL MB1  &mouse_mode_color_off                &mkp MB2  &mm_mouse_click    &mouse_mode_color_off
             >;
         };
@@ -713,7 +713,7 @@
             bindings = <
 &trans  &trans  &trans             &mmv MOVE_Y(-900)  &trans                       &trans  &trans  &trans  &trans  &trans             &mmv MOVE_Y(-300)  &trans            &trans  &trans
 &trans  &trans  &mmv MOVE_X(-900)  &mmv MOVE_Y(900)   &mmv MOVE_X(900)             &trans  &trans  &trans  &trans  &mmv MOVE_X(-300)  &mmv MOVE_Y(300)   &mmv MOVE_X(300)  &trans  &trans
-&trans  &trans  &kp LG(X)          &kp LG(C)          &kp LG(V)                    &trans                  &trans  &trans             &trans             &trans            &trans  &trans
+&trans  &trans  &trans             &trans             &trans                       &trans                  &trans  &trans             &trans             &trans            &trans  &trans
                                    &trans             &ht_kp_mb1_and_off LGUI MB1  &trans                  &trans  &mm_mouse_click    &trans
             >;
         };
