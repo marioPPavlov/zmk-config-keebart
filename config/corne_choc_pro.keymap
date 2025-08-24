@@ -194,7 +194,7 @@
                 <&macro_tap>,
                 <&macro_color_off>,
                 <&macro_tap>,
-                <&tog 6 &mkp MB1>;
+                <&mkp MB1 &tog 6>;
 
             label = "MOUSE_CLICK_AND_OFF";
         };
@@ -628,6 +628,7 @@
             #binding-cells = <2>;
             quick-tap-ms = <0>;
             tapping-term-ms = <200>;
+            flavor = "tap-preferred";
         };
 
         mm_mouse_click: mm_mouse_click {
