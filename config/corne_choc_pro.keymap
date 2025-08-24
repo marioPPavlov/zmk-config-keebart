@@ -421,7 +421,7 @@
         };
 
         combo_colon {
-            bindings = <&kp COLON>;
+            bindings = <&kp DOLLAR>;
             key-positions = <25 37>;
         };
     };
