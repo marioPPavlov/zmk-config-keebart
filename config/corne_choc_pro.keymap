@@ -270,6 +270,23 @@
 
             label = "MACRO_COLOR_ON";
         };
+
+        flush_stuck: flush_stuck {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings = <
+        &macro_release &kp LEFT_CTRL
+        &macro_release &kp LEFT_SHIFT
+        &macro_release &kp LEFT_ALT
+        &macro_release &kp LEFT_GUI
+        &macro_release &kp RIGHT_CTRL
+        &macro_release &kp RIGHT_SHIFT
+        &macro_release &kp RIGHT_ALT
+        &macro_release &kp RIGHT_GUI
+    >;
+    label = "FLUSH_STUCK";
+};
+
     };
 
     combos {
