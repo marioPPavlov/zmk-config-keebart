@@ -74,10 +74,12 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&macro_press &kp LEFT_GUI>,
+                <&macro_press>,
+                <&kp LEFT_GUI>,
                 <&macro_tap>,
                 <&kp TAB>,
-                <&macro_release &kp LEFT_GUI>;
+                <&macro_release>,
+                <&kp LEFT_GUI>;
 
             label = "MAC_LGUI_TAB";
         };
@@ -86,13 +88,14 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&macro_press &kp LEFT_GUI>,
+                <&macro_press>,
+                <&kp LEFT_GUI>,
                 <&macro_tap>,
                 <&kp TAB>,
                 <&macro_tap>,
                 <&kp TAB>,
-                <&macro_release &kp LEFT_GUI>;
-
+                <&macro_release>,
+                <&kp LEFT_GUI>;
 
             label = "MAC_LGUI_TAB_DOUBLE";
         };
@@ -101,14 +104,16 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&macro_press &kp LEFT_GUI>,
+                <&macro_press>,
+                <&kp LEFT_GUI>,
                 <&macro_tap>,
                 <&kp TAB>,
                 <&macro_tap>,
                 <&kp TAB>,
                 <&macro_tap>,
                 <&kp TAB>,
-                <&macro_release &kp LEFT_GUI>;
+                <&macro_release>,
+                <&kp LEFT_GUI>;
 
             label = "MAC_LGUI_TAB_TRIPPLE";
         };
@@ -117,10 +122,12 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&macro_press &kp LALT>,
+                <&macro_press>,
+                <&kp LALT>,
                 <&macro_tap>,
                 <&kp TAB>,
-                <&macro_release &kp LALT>;
+                <&macro_release>,
+                <&kp LALT>;
 
             label = "LINUX_LGUI_TAB";
         };
@@ -129,12 +136,14 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&macro_press &kp LALT>,
+                <&macro_press>,
+                <&kp LALT>,
                 <&macro_tap>,
                 <&kp TAB>,
                 <&macro_tap>,
                 <&kp TAB>,
-                <&macro_release &kp LALT>;
+                <&macro_release>,
+                <&kp LALT>;
 
             label = "LINUX_LGUI_TAB_DOUBLE";
         };
@@ -143,14 +152,16 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&macro_press &kp LALT>,
+                <&macro_press>,
+                <&kp LALT>,
                 <&macro_tap>,
                 <&kp TAB>,
                 <&macro_tap>,
                 <&kp TAB>,
                 <&macro_tap>,
                 <&kp TAB>,
-                <&macro_release &kp LALT>;
+                <&macro_release>,
+                <&kp LALT>;
 
             label = "LINUX_LGUI_TAB_TRIPPLE";
         };
@@ -692,10 +703,10 @@
 
         mouse {
             bindings = <
-&none                  &none   &msc SCRL_LEFT      &mmv MOVE_Y(-1000)  &msc SCRL_RIGHT               &none                  &none  &none  &none     &msc SCRL_UP       &mmv MOVE_Y(-333)      &msc SCRL_DOWN    &none  &none
-&mouse_mode_color_off  &trans  &mmv MOVE_X(-1000)  &mmv MOVE_Y(1000)   &mmv MOVE_X(1000)             &trans                 &none  &none  &none     &mmv MOVE_X(-333)  &mmv MOVE_Y(333)       &mmv MOVE_X(333)  &none  &none
-&trans                 &none   &none               &none               &none                         &none                                &none     &mkp MB4           &mkp MB5               &mkp MB3          &none  &trans
-                                                   &ht_sk_navword 3 0  &ht_kp_mb1_and_off LCTRL MB1  &mouse_mode_color_off                &mkp MB2  &mm_mouse_click    &mouse_mode_color_off
+&trans                 &trans  &msc SCRL_LEFT      &mmv MOVE_Y(-1000)  &msc SCRL_RIGHT               &trans                 &trans  &trans  &trans    &msc SCRL_UP       &mmv MOVE_Y(-333)      &msc SCRL_DOWN    &trans  &trans
+&mouse_mode_color_off  &trans  &mmv MOVE_X(-1000)  &mmv MOVE_Y(1000)   &mmv MOVE_X(1000)             &trans                 &trans  &trans  &trans    &mmv MOVE_X(-333)  &mmv MOVE_Y(333)       &mmv MOVE_X(333)  &trans  &trans
+&trans                 &trans  &trans              &trans              &trans                        &trans                                 &trans    &mkp MB4           &mkp MB5               &mkp MB3          &trans  &trans
+                                                   &ht_sk_navword 3 0  &ht_kp_mb1_and_off LCTRL MB1  &mouse_mode_color_off                  &mkp MB2  &mm_mouse_click    &mouse_mode_color_off
             >;
         };
 
