@@ -721,7 +721,7 @@
 
         macro_layer_linux {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans           &linux_grave_swap_shift  &linux_grave_swap       &trans                   &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans           &linux_grave_swap_shift  &linux_grave_swap       &kp K_PP                 &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &linux_tab_swap  &linux_lgui_tab          &linux_lgui_tab_double  &linux_lgui_tab_tripple  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                  &trans           &mkp MB4                 &mkp MB5                &trans                   &trans  &trans
                         &trans  &trans  &trans                  &trans           &trans                   &trans
