@@ -280,7 +280,7 @@
         navword_mouse_off: test {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap>, <&tog 5 &nav_word>;
+            bindings = <&macro_tap>, <&tog 5>, <&macro_tap>, <&nav_word>;
 
             label = "TEST";
         };
