@@ -700,10 +700,10 @@
         NUM {
             display-name = "Numbers";
             bindings = <
-&trans   &trans  &trans  &trans  &trans  &trans  &rgb_ug RGB_ON   &none  &trans  &trans  &trans  &trans                &trans  &trans
-&kp F20  &kp N4  &kp N3  &kp N2  &kp N1  &kp N0  &rgb_ug RGB_OFF  &none  &kp N5  &kp N6  &kp N7  &ht_hyper_kp STAR N8  &kp N9  &kp BACKSLASH
-&trans   &trans  &trans  &trans  &trans  &trans                          &trans  &trans  &trans  &trans                &trans  &trans
-                         &trans  &trans  &trans                          &trans  &trans  &trans
+&trans   &trans               &trans             &trans           &trans                    &trans  &rgb_ug RGB_ON   &none  &trans                &trans              &trans                  &trans             &trans  &trans
+&kp F20  &ht_kp_kp DOLLAR N4  &ht_kp_kp HASH N3  &ht_kp_kp AT N2  &ht_kp_kp EXCLAMATION N1  &kp N0  &rgb_ug RGB_OFF  &none  &ht_kp_kp PERCENT N5  &ht_kp_kp CARET N6  &ht_kp_kp AMPERSAND N7  &ht_kp_kp STAR N8  &kp N9  &kp BACKSLASH
+&trans   &trans               &trans             &trans           &trans                    &trans                          &trans                &trans              &trans                  &trans             &trans  &trans
+                                                 &trans           &trans                    &trans                          &trans                &trans              &trans
             >;
         };
 
