@@ -37,14 +37,7 @@
         mouse_mode_color_on: mouse_mode_color {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_tap>,
-                <&macro_color_on>,
-                <&macro_wait_time 20>,
-                <&macro_tap>,
-                <&tog 5>,
-                <&macro_tap>,
-                <&mmv MOVE_Y(-50000)>;
+            bindings = <&macro_tap>, <&tog 5>;
 
             label = "MOUSE_MODE_COLOR";
         };
@@ -652,16 +645,6 @@
 
             #binding-cells = <0>;
             mods = <(MOD_LGUI)>;
-        };
-
-        ht_kp_kp: ht_kp_kp {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HT_KP_KP";
-            bindings = <&kp>, <&kp>;
-
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <200>;
         };
     };
 
