@@ -663,6 +663,16 @@
             #binding-cells = <0>;
             mods = <(MOD_LGUI)>;
         };
+
+        ht_kp_kp: ht_kp_kp {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HT_KP_KP";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+        };
     };
 
     keymap {
@@ -690,9 +700,9 @@
         NUM {
             display-name = "Numbers";
             bindings = <
-&trans   &trans  &trans  &trans  &trans  &trans  &rgb_ug RGB_ON   &none  &trans  &trans  &trans  &trans  &trans  &trans
-&kp F20  &kp N4  &kp N3  &kp N2  &kp N1  &kp N0  &rgb_ug RGB_OFF  &none  &kp N5  &kp N6  &kp N7  &kp N8  &kp N9  &kp BACKSLASH
-&trans   &trans  &trans  &trans  &trans  &trans                          &trans  &trans  &trans  &trans  &trans  &trans
+&trans   &trans  &trans  &trans  &trans  &trans  &rgb_ug RGB_ON   &none  &trans  &trans  &trans  &trans                &trans  &trans
+&kp F20  &kp N4  &kp N3  &kp N2  &kp N1  &kp N0  &rgb_ug RGB_OFF  &none  &kp N5  &kp N6  &kp N7  &ht_hyper_kp STAR N8  &kp N9  &kp BACKSLASH
+&trans   &trans  &trans  &trans  &trans  &trans                          &trans  &trans  &trans  &trans                &trans  &trans
                          &trans  &trans  &trans                          &trans  &trans  &trans
             >;
         };
