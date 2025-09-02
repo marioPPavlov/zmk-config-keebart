@@ -199,24 +199,6 @@
             label = "MOUSE_CLICK_AND_OFF";
         };
 
-        hyper_delayed: hyper_delayed {
-            compatible = "zmk,behavior-macro";
-            label = "HYPER_DELAYED";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LCTRL>,
-                <&macro_wait_time 20>,
-                <&kp LSHIFT>,
-                <&macro_wait_time 20>,
-                <&kp LEFT_ALT>,
-                <&macro_wait_time 20>,
-                <&kp LGUI>,
-                <&macro_pause_for_release>,
-                <&macro_release>,
-                <&kp LCTRL &kp LSHIFT &kp LALT &kp LGUI>;
-        };
-
         macro_beginning_backspace: macro_beginning_backspace {
             compatible = "zmk,behavior-macro";
             label = "MACRO_BEGINNING_BACKSPACE";
