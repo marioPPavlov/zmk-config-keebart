@@ -646,6 +646,17 @@
             #binding-cells = <0>;
             mods = <(MOD_LGUI)>;
         };
+
+        ht_kp_kp: ht_kp_kp {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HT_KP_KP";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            require-prior-idle-ms = <200>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+        };
     };
 
     keymap {
