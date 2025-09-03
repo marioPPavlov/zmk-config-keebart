@@ -275,7 +275,15 @@
             #binding-cells = <0>;
             bindings = <&macro_tap>, <&tog 5>, <&macro_tap>, <&nav_word>;
 
-            label = "TEST";
+            label = "NAVWORD_NOUSE_OFF";
+        };
+
+        numword_mouse_off: numword_mouse_off {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap>, <&tog 5>, <&macro_tap>, <&num_word>;
+
+            label = "NUMWORD_MOUSE_OFF";
         };
     };
 
@@ -715,7 +723,7 @@
 &trans                 &trans  &msc SCRL_LEFT      &mmv MOVE_Y(-1000)  &msc SCRL_RIGHT               &trans                 &trans  &trans  &trans              &msc SCRL_UP       &mmv MOVE_Y(-333)      &msc SCRL_DOWN    &trans  &trans
 &mouse_mode_color_off  &trans  &mmv MOVE_X(-1000)  &mmv MOVE_Y(1000)   &mmv MOVE_X(1000)             &trans                 &trans  &trans  &mkp MB2            &mmv MOVE_X(-333)  &mmv MOVE_Y(333)       &mmv MOVE_X(333)  &trans  &trans
 &trans                 &trans  &trans              &trans              &trans                        &trans                                 &trans              &mkp MB4           &mkp MB5               &mkp MB3          &trans  &trans
-                                                   &ht_sk_navword 3 0  &ht_kp_mb1_and_off LCTRL MB1  &mouse_mode_color_off                  &navword_mouse_off  &mm_mouse_click    &mouse_mode_color_off
+                                                   &navword_mouse_off  &ht_kp_mb1_and_off LCTRL MB1  &mouse_mode_color_off                  &numword_mouse_off  &mm_mouse_click    &mouse_mode_color_off
             >;
         };
 
