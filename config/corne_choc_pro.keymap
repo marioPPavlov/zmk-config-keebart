@@ -666,10 +666,10 @@
             tapping-term-ms = <200>;
         };
 
-        new_behavior: new_behavior {
+        mm_backspace_delete: mm_backspace_delete {
             compatible = "zmk,behavior-mod-morph";
-            label = "NEW_BEHAVIOR";
-            bindings = <&kp BACKSPACE>, <&macro_end_delete>;
+            label = "MM_BACKSPACE_DELETE";
+            bindings = <&kp BACKSPACE>, <&kp DELETE>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
