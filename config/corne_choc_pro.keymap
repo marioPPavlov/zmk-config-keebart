@@ -665,6 +665,15 @@
             flavor = "tap-preferred";
             tapping-term-ms = <200>;
         };
+
+        new_behavior: new_behavior {
+            compatible = "zmk,behavior-mod-morph";
+            label = "NEW_BEHAVIOR";
+            bindings = <&kp BACKSPACE>, <&macro_end_delete>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
     };
 
     keymap {
@@ -729,10 +738,10 @@
 
         mouse_mac {
             bindings = <
-&trans  &trans  &trans             &mmv MOVE_Y(-1000)  &trans                       &trans  &trans  &trans  &trans  &trans             &mmv MOVE_Y(-300)  &trans            &trans  &trans
-&trans  &trans  &mmv MOVE_X(-1000)  &mmv MOVE_Y(1000)   &mmv MOVE_X(1000)             &trans  &trans  &trans  &trans  &mmv MOVE_X(-300)  &mmv MOVE_Y(300)   &mmv MOVE_X(300)  &trans  &trans
-&trans  &trans  &trans             &trans             &trans                       &trans                  &trans  &trans             &trans             &trans            &trans  &trans
-                                   &trans             &ht_kp_mb1_and_off LGUI MB1  &trans                  &trans  &mm_mouse_click    &trans
+&trans  &trans  &trans              &mmv MOVE_Y(-1000)  &trans                       &trans  &trans  &trans  &trans  &trans             &mmv MOVE_Y(-300)  &trans            &trans  &trans
+&trans  &trans  &mmv MOVE_X(-1000)  &mmv MOVE_Y(1000)   &mmv MOVE_X(1000)            &trans  &trans  &trans  &trans  &mmv MOVE_X(-300)  &mmv MOVE_Y(300)   &mmv MOVE_X(300)  &trans  &trans
+&trans  &trans  &trans              &trans              &trans                       &trans                  &trans  &trans             &trans             &trans            &trans  &trans
+                                    &trans              &ht_kp_mb1_and_off LGUI MB1  &trans                  &trans  &mm_mouse_click    &trans
             >;
         };
 
