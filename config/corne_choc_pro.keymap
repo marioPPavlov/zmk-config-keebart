@@ -292,7 +292,8 @@
             bindings =
                 <&macro_param_1to1>,
                 <&macro_tap>,
-                <&kp MACRO_PLACEHOLDER>;
+                <&kp MACRO_PLACEHOLDER>,
+                <&macro_wait_time 200>;
 
             label = "HT_SINGLE_TAP";
         };
