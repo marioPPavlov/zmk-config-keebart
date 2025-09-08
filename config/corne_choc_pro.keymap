@@ -723,10 +723,10 @@
         NUM {
             display-name = "Numbers";
             bindings = <
-&trans   &trans                    &trans                  &trans                &trans                         &trans  &rgb_ug RGB_ON   &none  &trans                &trans              &trans                  &trans             &trans  &trans
-&kp F20  &ht_signle_tap DOLLAR N4  &ht_signle_tap HASH N3  &ht_signle_tap AT N2  &ht_signle_tap EXCLAMATION N1  &kp N0  &rgb_ug RGB_OFF  &none  &ht_kp_kp PERCENT N5  &ht_kp_kp CARET N6  &ht_kp_kp AMPERSAND N7  &ht_kp_kp STAR N8  &kp N9  &kp BACKSLASH
-&trans   &trans                    &trans                  &trans                &trans                         &trans                          &trans                &trans              &trans                  &trans             &trans  &trans
-                                                           &trans                &trans                         &trans                          &trans                &trans              &trans
+&trans   &trans                    &trans                  &trans                &trans                         &trans  &rgb_ug RGB_ON   &none  &trans                     &trans                   &trans                       &trans                  &trans                   &trans
+&kp F20  &ht_signle_tap DOLLAR N4  &ht_signle_tap HASH N3  &ht_signle_tap AT N2  &ht_signle_tap EXCLAMATION N1  &kp N0  &rgb_ug RGB_OFF  &none  &ht_signle_tap PERCENT N5  &ht_signle_tap CARET N6  &ht_signle_tap AMPERSAND N7  &ht_signle_tap STAR N8  &ht_signle_tap COLON N9  &kp BACKSLASH
+&trans   &trans                    &trans                  &trans                &trans                         &trans                          &trans                     &trans                   &trans                       &trans                  &trans                   &trans
+                                                           &trans                &trans                         &trans                          &trans                     &trans                   &trans
             >;
         };
 
