@@ -704,8 +704,8 @@
         BASE {
             display-name = "Base";
             bindings = <
-&mt LEFT_GUI GRAVE                     &kp Q            &kp W               &kp E               &kp R             &kp T               &flush_stuck     &kp C_VOLUME_UP    &kp Y             &kp U           &kp I                 &kp O    &kp P                        &kp DELETE
-&ht_hyper_kp LS(LA(LG(LCTRL))) ESCAPE  &long_mo_tp 7 A  &long_th_kp LALT S  &kp D               &kp F             &long_mo_tp 9 G     &rgb_ug RGB_EFF  &kp C_VOLUME_DOWN  &kp H             &kp J           &kp K                 &kp L    &ht_kp_kp SINGLE_QUOTE SEMI  &kp SQT
+&trans                                 &mt LGUI Q       &kp W               &kp E               &kp R             &kp T               &flush_stuck     &kp C_VOLUME_UP    &kp Y             &kp U           &kp I                 &kp O    &kp P                        &kp DELETE
+&ht_hyper_kp LS(LA(LG(LCTRL))) ESCAPE  &long_mo_tp 7 A  &long_th_kp LALT S  &kp D               &kp F             &long_mo_tp 9 G     &rgb_ug RGB_EFF  &kp C_VOLUME_DOWN  &kp H             &kp J           &kp K                 &kp L    &ht_kp_kp SINGLE_QUOTE SEMI  &trans
 &caps_word                             &kp Z            &kp X               &kp C               &kp V             &kp B                                                   &kp N             &kp M           &kp COMMA             &kp DOT  &kp FSLH                     &key_repeat
                                                                             &ht_sk_navword 3 0  &mm_space_htctrl  &mm_shift_capsword                                      &th_num_word 2 0  &mt LALT ENTER  &mm_backspace_delete
             >;
@@ -713,18 +713,18 @@
 
         mac_base {
             bindings = <
-&trans                &trans  &trans               &trans  &trans            &trans  &trans  &trans  &trans  &trans           &trans  &trans  &trans  &trans
-&trans                &trans  &long_th_kp LCTRL S  &trans  &trans            &trans  &trans  &trans  &trans  &trans           &trans  &trans  &trans  &trans
-&mac_change_language  &trans  &trans               &trans  &trans            &trans                  &trans  &trans           &trans  &trans  &trans  &trans
-                                                   &trans  &mm_space_htlgui  &trans                  &trans  &mt LCTRL ENTER  &trans
+&trans                &mt LEFT_ALT Q  &trans               &trans  &trans            &trans  &trans  &trans  &trans  &trans           &trans  &trans  &trans  &trans
+&trans                &trans          &long_th_kp LCTRL S  &trans  &trans            &trans  &trans  &trans  &trans  &trans           &trans  &trans  &trans  &trans
+&mac_change_language  &trans          &trans               &trans  &trans            &trans                  &trans  &trans           &trans  &trans  &trans  &trans
+                                                           &trans  &mm_space_htlgui  &trans                  &trans  &mt LCTRL ENTER  &trans
             >;
         };
 
         NUM {
             display-name = "Numbers";
             bindings = <
-&trans   &trans                    &trans                  &trans                &trans                         &trans  &rgb_ug RGB_ON   &none  &trans                     &trans                   &trans                       &trans                  &trans                   &trans
-&kp F20  &ht_signle_tap DOLLAR N4  &ht_signle_tap HASH N3  &ht_signle_tap AT N2  &ht_signle_tap EXCLAMATION N1  &kp N0  &rgb_ug RGB_OFF  &none  &ht_signle_tap PERCENT N5  &ht_signle_tap CARET N6  &ht_signle_tap AMPERSAND N7  &ht_signle_tap STAR N8  &ht_signle_tap COLON N9  &kp BACKSLASH
+&trans   &kp GRAVE                 &trans                  &trans                &trans                         &trans  &rgb_ug RGB_ON   &none  &trans                     &trans                   &trans                       &trans                  &trans                   &trans
+&kp F20  &ht_signle_tap DOLLAR N4  &ht_signle_tap HASH N3  &ht_signle_tap AT N2  &ht_signle_tap EXCLAMATION N1  &kp N0  &rgb_ug RGB_OFF  &none  &ht_signle_tap PERCENT N5  &ht_signle_tap CARET N6  &ht_signle_tap AMPERSAND N7  &ht_signle_tap STAR N8  &ht_signle_tap COLON N9  &trans
 &trans   &trans                    &trans                  &trans                &trans                         &trans                          &trans                     &trans                   &trans                       &trans                  &trans                   &trans
                                                            &trans                &trans                         &trans                          &trans                     &trans                   &trans
             >;
