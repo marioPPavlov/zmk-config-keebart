@@ -433,7 +433,7 @@
         };
 
         combo_sl_macro_layer {
-            bindings = <&sl 7>;
+            bindings = <&num_word>;
             key-positions = <18 32>;
         };
 
