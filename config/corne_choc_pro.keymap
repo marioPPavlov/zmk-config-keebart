@@ -323,12 +323,6 @@
             key-positions = <13 27>;
         };
 
-        combo_bootloader {
-            bindings = <&bootloader>;
-            key-positions = <6 20>;
-            layers = <1 4>;
-        };
-
         mac_screenshot_clipboard {
             bindings = <&kp LS(LC(LG(NUMBER_4)))>;
             key-positions = <15 29>;
@@ -395,11 +389,6 @@
             key-positions = <3 17>;
         };
 
-        combo_excl {
-            bindings = <&kp EXCL>;
-            key-positions = <2 16>;
-        };
-
         tab_combo {
             bindings = <&kp TAB>;
             key-positions = <23 9>;
@@ -410,24 +399,14 @@
             key-positions = <18 32>;
         };
 
-        combo_sl_macro_layer {
-            bindings = <&num_word>;
-            key-positions = <18 4>;
-        };
-
         combo_change_language {
             bindings = <&mac_change_language>;
-            key-positions = <23 35>;
+            key-positions = <4 18>;
         };
 
         combo_inverted_slash {
             bindings = <&kp BACKSLASH>;
             key-positions = <24 36>;
-        };
-
-        combo_colon {
-            bindings = <&kp DOLLAR>;
-            key-positions = <25 37>;
         };
     };
 
@@ -729,9 +708,9 @@
 
         mouse {
             bindings = <
-&trans  &trans  &msc SCRL_LEFT      &mmv MOVE_Y(-1000)  &msc SCRL_RIGHT               &trans                 &trans  &trans  &trans              &msc SCRL_UP       &mmv MOVE_Y(-333)      &msc SCRL_DOWN    &trans  &trans
-&trans  &trans  &mmv MOVE_X(-1000)  &mmv MOVE_Y(1000)   &mmv MOVE_X(1000)             &trans                 &trans  &trans  &mkp MB2            &mmv MOVE_X(-333)  &mmv MOVE_Y(333)       &mmv MOVE_X(333)  &trans  &trans
-&trans  &trans  &trans              &trans              &trans                        &trans                                 &trans              &trans             &trans                 &mkp MB3          &trans  &trans
+&trans  &trans  &msc SCRL_LEFT      &mmv MOVE_Y(-1000)  &msc SCRL_RIGHT               &trans                 &trans  &trans  &trans              &msc SCRL_UP       &mmv MOVE_Y(-333)      &msc SCRL_DOWN    &trans         &trans
+&trans  &trans  &mmv MOVE_X(-1000)  &mmv MOVE_Y(1000)   &mmv MOVE_X(1000)             &trans                 &trans  &trans  &mkp MB2            &mmv MOVE_X(-333)  &mmv MOVE_Y(333)       &mmv MOVE_X(333)  &kp LG(ENTER)  &trans
+&trans  &trans  &trans              &trans              &trans                        &trans                                 &trans              &trans             &trans                 &mkp MB3          &trans         &trans
                                     &navword_mouse_off  &ht_kp_mb1_and_off LCTRL MB1  &mouse_mode_color_off                  &numword_mouse_off  &mm_mouse_click    &mouse_mode_color_off
             >;
         };
