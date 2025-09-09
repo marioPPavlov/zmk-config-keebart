@@ -540,15 +540,6 @@
             ignored-key-positions = <43>;
         };
 
-        mm_numword: mm_numword {
-            compatible = "zmk,behavior-mod-morph";
-            label = "MM_NUMWORD";
-            bindings = <&th_num_word 2 0>, <&kp LS(TAB)>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
-        };
-
         linux_tab_swap: linux_tab_swap {
             compatible = "zmk,behavior-tri-state";
             label = "LINUX_TAB_SWAP";
