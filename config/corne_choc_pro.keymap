@@ -682,10 +682,10 @@
         BASE {
             display-name = "Base";
             bindings = <
-&trans                                 &mt LGUI Q       &kp W               &kp E               &kp R             &kp T               &flush_stuck     &kp C_VOLUME_UP    &kp Y             &kp U           &kp I              &kp O    &kp P                             &trans
-&ht_hyper_kp LS(LA(LG(LCTRL))) ESCAPE  &long_mo_tp 7 A  &long_th_kp LALT S  &kp D               &kp F             &long_mo_tp 9 G     &rgb_ug RGB_EFF  &kp C_VOLUME_DOWN  &kp H             &kp J           &kp K              &kp L    &ht_signle_tap SINGLE_QUOTE SEMI  &trans
-&trans                                 &kp Z            &kp X               &kp C               &kp V             &kp B                                                   &kp N             &kp M           &kp COMMA          &kp DOT  &kp FSLH                          &trans
-                                                                            &ht_sk_navword 3 0  &mm_space_htctrl  &mm_shift_capsword                                      &th_num_word 2 0  &mt LALT ENTER  &mm_esc_backspace
+&trans  &mt LGUI Q       &kp W               &kp E               &kp R                               &kp T               &flush_stuck     &kp C_VOLUME_UP    &kp Y             &kp U           &kp I              &kp O    &kp P                             &trans
+&trans  &long_mo_tp 7 A  &long_th_kp LALT S  &kp D               &long_th_kp LC(LA(LS(LG(LGUI)))) F  &long_mo_tp 9 G     &rgb_ug RGB_EFF  &kp C_VOLUME_DOWN  &kp H             &kp J           &kp K              &kp L    &ht_signle_tap SINGLE_QUOTE SEMI  &trans
+&trans  &kp Z            &kp X               &kp C               &kp V                               &kp B                                                   &kp N             &kp M           &kp COMMA          &kp DOT  &kp FSLH                          &trans
+                                             &ht_sk_navword 3 0  &mm_space_htctrl                    &mm_shift_capsword                                      &th_num_word 2 0  &mt LALT ENTER  &mm_esc_backspace
             >;
         };
 
@@ -701,20 +701,20 @@
         NUM {
             display-name = "Numbers";
             bindings = <
-&trans   &kp GRAVE                 &trans                  &trans                &trans                         &trans  &rgb_ug RGB_ON   &none  &trans                     &trans                   &trans                       &trans                  &trans                   &trans
-&kp F20  &ht_signle_tap DOLLAR N4  &ht_signle_tap HASH N3  &ht_signle_tap AT N2  &ht_signle_tap EXCLAMATION N1  &kp N0  &rgb_ug RGB_OFF  &none  &ht_signle_tap PERCENT N5  &ht_signle_tap CARET N6  &ht_signle_tap AMPERSAND N7  &ht_signle_tap STAR N8  &ht_signle_tap COLON N9  &trans
-&trans   &trans                    &trans                  &trans                &trans                         &trans                          &trans                     &trans                   &trans                       &trans                  &trans                   &trans
-                                                           &trans                &trans                         &trans                          &trans                     &trans                   &kp F24
+&trans  &kp GRAVE                 &trans                  &trans                &trans                         &trans  &rgb_ug RGB_ON   &none  &trans                     &trans                   &trans                       &trans                  &trans                   &trans
+&trans  &ht_signle_tap DOLLAR N4  &ht_signle_tap HASH N3  &ht_signle_tap AT N2  &ht_signle_tap EXCLAMATION N1  &kp N0  &rgb_ug RGB_OFF  &none  &ht_signle_tap PERCENT N5  &ht_signle_tap CARET N6  &ht_signle_tap AMPERSAND N7  &ht_signle_tap STAR N8  &ht_signle_tap COLON N9  &trans
+&trans  &trans                    &trans                  &trans                &trans                         &trans                          &trans                     &trans                   &trans                       &trans                  &trans                   &trans
+                                                          &trans                &trans                         &trans                          &trans                     &trans                   &kp F24
             >;
         };
 
         NAV {
             display-name = "Navigation";
             bindings = <
-&trans   &trans  &trans     &trans     &trans     &trans  &bootloader     &bt BT_SEL 0  &trans          &kp LC(J)       &kp LC(K)      &trans           &kp DELETE             &trans
-&kp F20  &trans  &trans     &trans     &trans     &trans  &studio_unlock  &bt BT_SEL 1  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW   &kp RIGHT_ARROW  &macro_open_clipboard  &trans
-&trans   &trans  &kp LC(X)  &kp LC(C)  &kp LC(V)  &trans                                &trans          &kp LC(Z)       &kp LC(LS(Z))  &trans           &trans                 &trans
-                            &none      &trans     &trans                                &trans          &trans          &trans
+&trans  &trans  &trans     &trans     &trans     &trans  &bootloader     &bt BT_SEL 0  &trans          &kp LC(J)       &kp LC(K)      &trans           &kp DELETE             &trans
+&trans  &trans  &trans     &trans     &trans     &trans  &studio_unlock  &bt BT_SEL 1  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW   &kp RIGHT_ARROW  &macro_open_clipboard  &trans
+&trans  &trans  &kp LC(X)  &kp LC(C)  &kp LC(V)  &trans                                &trans          &kp LC(Z)       &kp LC(LS(Z))  &trans           &trans                 &trans
+                           &none      &trans     &trans                                &trans          &trans          &trans
             >;
         };
 
@@ -729,10 +729,10 @@
 
         mouse {
             bindings = <
-&trans                 &trans  &msc SCRL_LEFT      &mmv MOVE_Y(-1000)  &msc SCRL_RIGHT               &trans                 &trans  &trans  &trans              &msc SCRL_UP       &mmv MOVE_Y(-333)      &msc SCRL_DOWN    &trans  &trans
-&mouse_mode_color_off  &trans  &mmv MOVE_X(-1000)  &mmv MOVE_Y(1000)   &mmv MOVE_X(1000)             &trans                 &trans  &trans  &mkp MB2            &mmv MOVE_X(-333)  &mmv MOVE_Y(333)       &mmv MOVE_X(333)  &trans  &trans
-&trans                 &trans  &trans              &trans              &trans                        &trans                                 &trans              &trans             &trans                 &mkp MB3          &trans  &trans
-                                                   &navword_mouse_off  &ht_kp_mb1_and_off LCTRL MB1  &mouse_mode_color_off                  &numword_mouse_off  &mm_mouse_click    &mouse_mode_color_off
+&trans  &trans  &msc SCRL_LEFT      &mmv MOVE_Y(-1000)  &msc SCRL_RIGHT               &trans                 &trans  &trans  &trans              &msc SCRL_UP       &mmv MOVE_Y(-333)      &msc SCRL_DOWN    &trans  &trans
+&trans  &trans  &mmv MOVE_X(-1000)  &mmv MOVE_Y(1000)   &mmv MOVE_X(1000)             &trans                 &trans  &trans  &mkp MB2            &mmv MOVE_X(-333)  &mmv MOVE_Y(333)       &mmv MOVE_X(333)  &trans  &trans
+&trans  &trans  &trans              &trans              &trans                        &trans                                 &trans              &trans             &trans                 &mkp MB3          &trans  &trans
+                                    &navword_mouse_off  &ht_kp_mb1_and_off LCTRL MB1  &mouse_mode_color_off                  &numword_mouse_off  &mm_mouse_click    &mouse_mode_color_off
             >;
         };
 
