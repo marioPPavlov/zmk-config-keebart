@@ -704,7 +704,7 @@
 &trans   &kp GRAVE                 &trans                  &trans                &trans                         &trans  &rgb_ug RGB_ON   &none  &trans                     &trans                   &trans                       &trans                  &trans                   &trans
 &kp F20  &ht_signle_tap DOLLAR N4  &ht_signle_tap HASH N3  &ht_signle_tap AT N2  &ht_signle_tap EXCLAMATION N1  &kp N0  &rgb_ug RGB_OFF  &none  &ht_signle_tap PERCENT N5  &ht_signle_tap CARET N6  &ht_signle_tap AMPERSAND N7  &ht_signle_tap STAR N8  &ht_signle_tap COLON N9  &trans
 &trans   &trans                    &trans                  &trans                &trans                         &trans                          &trans                     &trans                   &trans                       &trans                  &trans                   &trans
-                                                           &trans                &trans                         &trans                          &trans                     &trans                   &trans
+                                                           &trans                &trans                         &trans                          &trans                     &trans                   &kp F24
             >;
         };
 
@@ -750,7 +750,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans           &linux_grave_swap_shift  &linux_grave_swap       &kp K_PP                 &trans        &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &linux_tab_swap  &linux_lgui_tab          &linux_lgui_tab_double  &linux_lgui_tab_tripple  &flush_stuck  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                  &trans           &trans                   &trans                  &trans                   &trans        &trans
-                        &trans  &trans  &trans                  &trans           &trans                   &trans
+                        &trans  &trans  &trans                  &trans           &trans                   &mm_esc_backspace
             >;
         };
 
