@@ -192,32 +192,6 @@
             label = "MOUSE_CLICK_AND_OFF";
         };
 
-        macro_beginning_backspace: macro_beginning_backspace {
-            compatible = "zmk,behavior-macro";
-            label = "MACRO_BEGINNING_BACKSPACE";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LGUI &kp LSHIFT>,
-                <&macro_tap>,
-                <&kp LEFT_ARROW &kp BACKSPACE>,
-                <&macro_release>,
-                <&kp LGUI &kp LSHIFT>;
-        };
-
-        macro_end_delete: macro_end_delete {
-            compatible = "zmk,behavior-macro";
-            label = "MACRO_END_DELETE";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LS(LGUI)>,
-                <&macro_tap>,
-                <&kp RIGHT_ARROW &kp DELETE>,
-                <&macro_release>,
-                <&kp LS(LGUI)>;
-        };
-
         macro_color_off: macro_color_off {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
