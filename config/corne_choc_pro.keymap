@@ -486,15 +486,6 @@
             hold-trigger-key-positions = <9 10 11 23 24 25 35 36 37 27>;
         };
 
-        mm_backspace_mac: mm_backspace_mac {
-            compatible = "zmk,behavior-mod-morph";
-            label = "MM_BACKSPACE_MAC";
-            bindings = <&kp BACKSPACE>, <&macro_beginning_backspace>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LGUI)>;
-        };
-
         tab_swap: tab_swap {
             compatible = "zmk,behavior-tri-state";
             label = "TAB_SWAPPER";
