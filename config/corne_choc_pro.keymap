@@ -275,7 +275,14 @@
         hyper_and_mouse_off: hyper_and_mouse_off {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap>, <&tog 5>, <&macro_tap>, <&num_word>;
+            bindings =
+                <&macro_tap>,
+                <&tog 5>,
+                <&macro_tap>,
+                <&kp LS(LA(LC(LG(LGUI))))>,
+                <&macro_pause_for_release>,
+                <&macro_tap>,
+                <&tog 5>;
 
             label = "HYPER_AND_MOUSE_OFF";
         };
