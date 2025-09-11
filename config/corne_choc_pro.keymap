@@ -294,7 +294,7 @@
 
         color_off {
             bindings = <&rgb_ug RGB_OFF>;
-            key-positions = <13 27>;
+            key-positions = <38 26>;
         };
 
         mac_screenshot_clipboard {
@@ -358,9 +358,9 @@
             key-positions = <10 24>;
         };
 
-        combo_at_sign {
-            bindings = <&kp AT>;
-            key-positions = <3 17>;
+        combo_esc_hyper {
+            bindings = <&ht_kp_kp LS(LA(LC(LG(LGUI)))) ESCAPE>;
+            key-positions = <18 4>;
         };
 
         tab_combo {
@@ -375,7 +375,7 @@
 
         combo_change_language {
             bindings = <&mac_change_language>;
-            key-positions = <4 18>;
+            key-positions = <17 3>;
         };
 
         combo_inverted_slash {
