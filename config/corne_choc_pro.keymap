@@ -665,20 +665,20 @@
         NUM {
             display-name = "Numbers";
             bindings = <
-&trans  &kp GRAVE                 &trans                  &trans                &trans                         &trans  &rgb_ug RGB_ON   &none  &trans                     &trans                   &trans                       &trans                  &trans                   &trans
-&trans  &ht_signle_tap DOLLAR N4  &ht_signle_tap HASH N3  &ht_signle_tap AT N2  &ht_signle_tap EXCLAMATION N1  &kp N0  &rgb_ug RGB_OFF  &none  &ht_signle_tap PERCENT N5  &ht_signle_tap CARET N6  &ht_signle_tap AMPERSAND N7  &ht_signle_tap STAR N8  &ht_signle_tap COLON N9  &trans
-&trans  &trans                    &trans                  &trans                &trans                         &trans                          &trans                     &trans                   &trans                       &trans                  &trans                   &trans
-                                                          &trans                &trans                         &trans                          &trans                     &trans                   &kp F24
+&trans  &kp GRAVE                 &trans                  &trans                &trans                         &trans   &rgb_ug RGB_ON   &none  &trans                     &trans                   &trans                       &trans                  &trans                   &trans
+&trans  &ht_signle_tap DOLLAR N4  &ht_signle_tap HASH N3  &ht_signle_tap AT N2  &ht_signle_tap EXCLAMATION N1  &kp N0   &rgb_ug RGB_OFF  &none  &ht_signle_tap PERCENT N5  &ht_signle_tap CARET N6  &ht_signle_tap AMPERSAND N7  &ht_signle_tap STAR N8  &ht_signle_tap COLON N9  &trans
+&trans  &trans                    &trans                  &trans                &trans                         &trans                           &trans                     &trans                   &trans                       &trans                  &trans                   &trans
+                                                          &trans                &trans                         &kp F24                          &trans                     &trans                   &trans
             >;
         };
 
         NAV {
             display-name = "Navigation";
             bindings = <
-&trans  &trans  &trans     &trans     &trans     &trans  &bootloader     &bt BT_SEL 0  &trans          &kp LC(J)       &kp LC(K)      &trans           &kp DELETE             &trans
-&trans  &trans  &trans     &trans     &trans     &trans  &studio_unlock  &bt BT_SEL 1  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW   &kp RIGHT_ARROW  &macro_open_clipboard  &trans
-&trans  &trans  &kp LC(X)  &kp LC(C)  &kp LC(V)  &trans                                &trans          &kp LC(Z)       &kp LC(LS(Z))  &trans           &trans                 &trans
-                           &none      &trans     &trans                                &trans          &trans          &trans
+&trans  &trans  &trans     &trans     &trans     &trans   &bootloader     &bt BT_SEL 0  &trans          &kp LC(J)       &kp LC(K)      &trans           &kp DELETE             &trans
+&trans  &trans  &trans     &trans     &trans     &trans   &studio_unlock  &bt BT_SEL 1  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW   &kp RIGHT_ARROW  &macro_open_clipboard  &trans
+&trans  &trans  &kp LC(X)  &kp LC(C)  &kp LC(V)  &trans                                 &trans          &kp LC(Z)       &kp LC(LS(Z))  &trans           &trans                 &trans
+                           &none      &trans     &kp F24                                &trans          &trans          &trans
             >;
         };
 
