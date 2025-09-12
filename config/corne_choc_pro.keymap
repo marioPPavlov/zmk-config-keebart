@@ -302,6 +302,18 @@
 
             label = "HT_MOUSE_OFF";
         };
+
+        macro_shift_mouse_off: macro_sticky_and_mouse_off {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_tap>,
+                <&tog 5>,
+                <&macro_tap>,
+                <&mm_shift_capsword>;
+
+            label = "MACRO_STICKY_AND_MOUSE_OFF";
+        };
     };
 
     combos {
@@ -717,10 +729,10 @@
 
         mouse {
             bindings = <
-&trans  &trans  &msc SCRL_LEFT      &mmv MOVE_Y(-1000)  &msc SCRL_RIGHT               &trans                                      &trans  &trans  &trans             &msc SCRL_UP       &mmv MOVE_Y(-333)  &msc SCRL_DOWN    &trans         &trans
-&trans  &trans  &mmv MOVE_X(-1000)  &mmv MOVE_Y(1000)   &mmv MOVE_X(1000)             &trans                                      &trans  &trans  &mkp MB2           &mmv MOVE_X(-333)  &mmv MOVE_Y(333)   &mmv MOVE_X(333)  &kp LG(ENTER)  &trans
-&trans  &trans  &trans              &trans              &trans                        &trans                                                      &trans             &trans             &trans             &mkp MB3          &trans         &trans
-                                    &navword_mouse_off  &ht_kp_mb1_and_off LCTRL MB1  &ht_hyper_and_mouse LS(LA(LC(LG(LGUI)))) 5                  &delete_mouse_off  &mm_mouse_click    &delete_mouse_off
+&trans  &trans  &msc SCRL_LEFT      &mmv MOVE_Y(-1000)  &msc SCRL_RIGHT               &trans                                      &trans  &trans  &trans                  &msc SCRL_UP       &mmv MOVE_Y(-333)  &msc SCRL_DOWN    &trans         &trans
+&trans  &trans  &mmv MOVE_X(-1000)  &mmv MOVE_Y(1000)   &mmv MOVE_X(1000)             &trans                                      &trans  &trans  &mkp MB2                &mmv MOVE_X(-333)  &mmv MOVE_Y(333)   &mmv MOVE_X(333)  &kp LG(ENTER)  &trans
+&trans  &trans  &trans              &trans              &trans                        &trans                                                      &trans                  &trans             &trans             &mkp MB3          &trans         &trans
+                                    &navword_mouse_off  &ht_kp_mb1_and_off LCTRL MB1  &ht_hyper_and_mouse LS(LA(LC(LG(LGUI)))) 5                  &macro_shift_mouse_off  &mm_mouse_click    &delete_mouse_off
             >;
         };
 
