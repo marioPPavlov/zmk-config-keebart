@@ -633,6 +633,16 @@
             hold-while-undecided;
             tapping-term-ms = <175>;
         };
+
+        ht_maclanguage_r: ht_maclanguage_r {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HT_MACLANGUAGE_R";
+            bindings = <&mac_change_language>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <175>;
+            flavor = "tap-preferred";
+        };
     };
 
     keymap {
@@ -650,10 +660,10 @@
 
         mac_base {
             bindings = <
-&trans  &trans  &trans              &trans  &trans            &trans  &trans  &trans  &trans  &trans           &trans  &trans  &trans  &trans
-&trans  &trans  &long_th_kp LALT S  &trans  &trans            &trans  &trans  &trans  &trans  &trans           &trans  &trans  &trans  &trans
-&trans  &trans  &trans              &trans  &trans            &trans                  &trans  &trans           &trans  &trans  &trans  &trans
-                                    &trans  &mm_space_htlgui  &trans                  &trans  &mt LCTRL ENTER  &trans
+&trans  &trans  &trans              &trans  &ht_maclanguage_r 0 R  &trans  &trans  &trans  &trans  &trans           &trans  &trans  &trans  &trans
+&trans  &trans  &long_th_kp LALT S  &trans  &trans                 &trans  &trans  &trans  &trans  &trans           &trans  &trans  &trans  &trans
+&trans  &trans  &trans              &trans  &trans                 &trans                  &trans  &trans           &trans  &trans  &trans  &trans
+                                    &trans  &mm_space_htlgui       &trans                  &trans  &mt LCTRL ENTER  &trans
             >;
         };
 
