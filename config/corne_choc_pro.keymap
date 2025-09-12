@@ -650,7 +650,7 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <175>;
-            flavor = "tap-preferred";
+            flavor = "balanced";
         };
 
         ht_hyper_and_mouse: ht_hyper_and_mouse {
