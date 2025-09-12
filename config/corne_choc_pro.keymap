@@ -594,7 +594,7 @@
         ht_kp_mb1_and_off: ht_kp_mb1_and_off {
             compatible = "zmk,behavior-hold-tap";
             label = "HT_KP_MB1_AND_OFF";
-            bindings = <&kp>, <&mouse_click_and_off>;
+            bindings = <&ht_mouse_off>, <&mouse_click_and_off>;
 
             #binding-cells = <2>;
             quick-tap-ms = <0>;
