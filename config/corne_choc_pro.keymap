@@ -320,12 +320,12 @@
         };
 
         combo_left_bracket {
-            bindings = <&ht_signle_tap LEFT_BRACE LEFT_BRACKET>;
+            bindings = <&ht_single_tap LEFT_BRACE LEFT_BRACKET>;
             key-positions = <18 17>;
         };
 
         combo_right_bracket {
-            bindings = <&ht_signle_tap RIGHT_BRACE RIGHT_BRACKET>;
+            bindings = <&ht_single_tap RIGHT_BRACE RIGHT_BRACKET>;
             key-positions = <23 24>;
         };
 
@@ -612,9 +612,9 @@
             mods = <(MOD_LSFT)>;
         };
 
-        ht_signle_tap: ht_signle_tap {
+        ht_single_tap: ht_single_tap {
             compatible = "zmk,behavior-hold-tap";
-            label = "HT_SIGNLE_TAP";
+            label = "HT_SINGLE_TAP";
             bindings = <&single_tap>, <&kp>;
 
             #binding-cells = <2>;
@@ -652,8 +652,8 @@
             display-name = "Base";
             bindings = <
 &trans  &mt GRAVE Q          &kp W                &kp E                &kp R                &kp T                                 &flush_stuck     &kp C_VOLUME_UP    &kp Y                &kp U                &kp I                    &kp O                  &kp P                             &trans
-&trans  &long_mo_tp 7 A      &long_th_kp LGUI S   &kp D                &kp F                &long_mo_tp 9 G                       &rgb_ug RGB_EFF  &kp C_VOLUME_DOWN  &kp H                &kp J                &kp K                    &kp L                  &ht_signle_tap SINGLE_QUOTE SEMI  &trans
-&trans  &ht_signle_tap N4 Z  &ht_signle_tap N3 X  &ht_signle_tap N2 C  &ht_signle_tap N1 V  &ht_signle_tap N0 B                                                       &ht_signle_tap N5 N  &ht_signle_tap N6 M  &ht_signle_tap N7 COMMA  &ht_signle_tap N8 DOT  &ht_signle_tap N9 FSLH            &trans
+&trans  &long_mo_tp 7 A      &long_th_kp LGUI S   &kp D                &kp F                &long_mo_tp 9 G                       &rgb_ug RGB_EFF  &kp C_VOLUME_DOWN  &kp H                &kp J                &kp K                    &kp L                  &ht_single_tap SINGLE_QUOTE SEMI  &trans
+&trans  &ht_single_tap N4 Z  &ht_single_tap N3 X  &ht_single_tap N2 C  &ht_single_tap N1 V  &ht_single_tap N0 B                                                       &ht_single_tap N5 N  &ht_single_tap N6 M  &ht_single_tap N7 COMMA  &ht_single_tap N8 DOT  &ht_single_tap N9 FSLH            &trans
                                                   &ht_sk_navword 3 0   &mm_space_htctrl     &long_th_kp LC(LA(LS(LG(LGUI)))) ESC                                      &mm_shift_capsword   &mt LALT ENTER       &mm_esc_backspace
             >;
         };
@@ -671,7 +671,7 @@
             display-name = "Numbers";
             bindings = <
 &trans  &kp GRAVE                 &trans                  &trans                &trans                         &trans   &rgb_ug RGB_ON   &none  &trans                     &trans                   &trans                       &trans                  &trans                   &trans
-&trans  &ht_signle_tap DOLLAR N4  &ht_signle_tap HASH N3  &ht_signle_tap AT N2  &ht_signle_tap EXCLAMATION N1  &kp N0   &rgb_ug RGB_OFF  &none  &ht_signle_tap PERCENT N5  &ht_signle_tap CARET N6  &ht_signle_tap AMPERSAND N7  &ht_signle_tap STAR N8  &ht_signle_tap COLON N9  &trans
+&trans  &ht_single_tap DOLLAR N4  &ht_single_tap HASH N3  &ht_single_tap AT N2  &ht_single_tap EXCLAMATION N1  &kp N0   &rgb_ug RGB_OFF  &none  &ht_single_tap PERCENT N5  &ht_single_tap CARET N6  &ht_single_tap AMPERSAND N7  &ht_single_tap STAR N8  &ht_single_tap COLON N9  &trans
 &trans  &trans                    &trans                  &trans                &trans                         &trans                           &trans                     &trans                   &trans                       &trans                  &trans                   &trans
                                                           &trans                &trans                         &kp F24                          &trans                     &trans                   &trans
             >;
