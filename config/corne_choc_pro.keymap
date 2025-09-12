@@ -675,10 +675,10 @@
         NUM {
             display-name = "Numbers";
             bindings = <
-&trans  &kp GRAVE                 &trans                  &trans                &trans                         &trans   &rgb_ug RGB_ON   &none  &trans                     &trans                   &trans                       &trans                  &trans                   &trans
-&trans  &ht_single_tap DOLLAR N4  &ht_single_tap HASH N3  &ht_single_tap AT N2  &ht_single_tap EXCLAMATION N1  &kp N0   &rgb_ug RGB_OFF  &none  &ht_single_tap PERCENT N5  &ht_single_tap CARET N6  &ht_single_tap AMPERSAND N7  &ht_single_tap STAR N8  &ht_single_tap COLON N9  &trans
-&trans  &trans                    &trans                  &trans                &trans                         &trans                           &trans                     &trans                   &trans                       &trans                  &trans                   &trans
-                                                          &trans                &trans                         &kp F24                          &trans                     &trans                   &trans
+&trans  &kp GRAVE                 &trans                  &trans                &trans                         &trans                                 &rgb_ug RGB_ON   &none  &trans                     &trans                   &trans                       &trans                  &trans                   &trans
+&trans  &ht_single_tap DOLLAR N4  &ht_single_tap HASH N3  &ht_single_tap AT N2  &ht_single_tap EXCLAMATION N1  &kp N0                                 &rgb_ug RGB_OFF  &none  &ht_single_tap PERCENT N5  &ht_single_tap CARET N6  &ht_single_tap AMPERSAND N7  &ht_single_tap STAR N8  &ht_single_tap COLON N9  &trans
+&trans  &trans                    &trans                  &trans                &trans                         &trans                                                         &trans                     &trans                   &trans                       &trans                  &trans                   &trans
+                                                          &trans                &trans                         &ht_hyper_kp F24 LG(LS(LA(LC(LGUI))))                          &trans                     &trans                   &trans
             >;
         };
 
