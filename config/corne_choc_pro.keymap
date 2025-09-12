@@ -260,7 +260,7 @@
             label = "DELETE_MOUSE_OFF";
         };
 
-        single_tap: ht_single_tap {
+        single_tap: single_tap {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings =
@@ -269,7 +269,7 @@
                 <&kp MACRO_PLACEHOLDER>,
                 <&macro_wait_time 200>;
 
-            label = "HT_SINGLE_TAP";
+            label = "SINGLE_TAP";
         };
 
         hyper_and_mouse_off: hyper_and_mouse_off {
