@@ -394,6 +394,11 @@
             bindings = <&kp BACKSLASH>;
             key-positions = <24 36>;
         };
+
+        combo_numword {
+            bindings = <&num_word>;
+            key-positions = <16 2>;
+        };
     };
 
     behaviors {
