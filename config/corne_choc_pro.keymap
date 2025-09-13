@@ -15,7 +15,10 @@
 #include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/rgb.h>
 
-&sk { release-after-ms = <1500>; quick-release; };
+&sk {
+    release-after-ms = <1500>;
+    quick-release;
+};
 
 &mmv {
     time-to-max-speed-ms = <2>;
@@ -631,7 +634,7 @@
             #binding-cells = <2>;
             require-prior-idle-ms = <200>;
             flavor = "tap-preferred";
-            tapping-term-ms = <200>;
+            tapping-term-ms = <175>;
         };
 
         mm_esc_backspace: mm_esc_backspace {
@@ -682,10 +685,10 @@
         BASE {
             display-name = "Base";
             bindings = <
-&trans  &ht_single_tap GRAVE Q  &kp W                &kp E                &kp R                &kp T                                 &flush_stuck     &kp C_VOLUME_UP    &kp Y                &kp U                &kp I                    &kp O                  &kp P                             &trans
-&trans  &long_mo_tp 7 A         &long_th_kp LGUI S   &kp D                &kp F                &long_mo_tp 9 G                       &rgb_ug RGB_EFF  &kp C_VOLUME_DOWN  &kp H                &kp J                &kp K                    &kp L                  &ht_single_tap SINGLE_QUOTE SEMI  &trans
-&trans  &ht_single_tap N4 Z     &ht_single_tap N3 X  &ht_single_tap N2 C  &ht_single_tap N1 V  &ht_single_tap N0 B                                                       &ht_single_tap N5 N  &ht_single_tap N6 M  &ht_single_tap N7 COMMA  &ht_single_tap N8 DOT  &ht_single_tap N9 FSLH            &trans
-                                                     &ht_sk_navword 3 0   &mm_space_htctrl     &long_th_kp LC(LA(LS(LG(LGUI)))) ESC                                      &mm_shift_capsword   &mt LALT ENTER       &mm_esc_backspace
+&trans  &ht_single_tap GRAVE Q  &kp W                &kp E                &ht_kp_kp LS(LEFT_ALT) R  &kp T                                 &flush_stuck     &kp C_VOLUME_UP    &kp Y                &kp U                &kp I                    &kp O                  &kp P                             &trans
+&trans  &long_mo_tp 7 A         &long_th_kp LGUI S   &kp D                &kp F                     &long_mo_tp 9 G                       &rgb_ug RGB_EFF  &kp C_VOLUME_DOWN  &kp H                &kp J                &kp K                    &kp L                  &ht_single_tap SINGLE_QUOTE SEMI  &trans
+&trans  &ht_single_tap N4 Z     &ht_single_tap N3 X  &ht_single_tap N2 C  &ht_single_tap N1 V       &ht_single_tap N0 B                                                       &ht_single_tap N5 N  &ht_single_tap N6 M  &ht_single_tap N7 COMMA  &ht_single_tap N8 DOT  &ht_single_tap N9 FSLH            &trans
+                                                     &ht_sk_navword 3 0   &mm_space_htctrl          &long_th_kp LC(LA(LS(LG(LGUI)))) ESC                                      &mm_shift_capsword   &mt LALT ENTER       &mm_esc_backspace
             >;
         };
 
