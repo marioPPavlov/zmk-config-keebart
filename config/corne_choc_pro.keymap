@@ -428,6 +428,11 @@
             bindings = <&num_word>;
             key-positions = <16 2>;
         };
+
+        combo_sl_bluetooh {
+            bindings = <&sl 10>;
+            key-positions = <1 2 3>;
+        };
     };
 
     behaviors {
