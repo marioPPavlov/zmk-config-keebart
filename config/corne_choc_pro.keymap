@@ -677,6 +677,16 @@
             tapping-term-ms = <175>;
             flavor = "tap-preferred";
         };
+
+        ht_bluetooth: ht_bluetooth {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HT_BLUETOOTH";
+            bindings = <&bt>, <&bt>;
+
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <300>;
+        };
     };
 
     keymap {
@@ -768,10 +778,10 @@
 
         Function {
             bindings = <
-&trans  &trans        &trans        &kp C_VOLUME_UP     &kp C_VOLUME_DOWN  &trans        &trans  &trans  &kp F10  &kp F7  &kp F8  &kp F9  &trans  &trans
-&trans  &bt BT_CLR    &trans        &trans              &trans             &trans        &trans  &trans  &kp F11  &kp F4  &kp F5  &kp F6  &trans  &trans
-&trans  &bt BT_SEL 4  &bt BT_SEL 3  &bt BT_SEL 2        &bt BT_SEL 1       &bt BT_SEL 0                  &kp F12  &kp F1  &kp F2  &kp F3  &trans  &trans
-                                    &ht_sk_navword 3 0  &trans             &trans                        &trans   &trans  &trans
+&trans  &bt BT_CLR     &trans         &kp C_VOLUME_UP  &kp C_VOLUME_DOWN  &trans  &trans  &trans  &kp F10  &kp F7  &kp F8  &kp F9  &trans  &trans
+&trans  &bt BT_DISC 4  &bt BT_DISC 3  &bt BT_DISC 2    &bt BT_DISC 1      &trans  &trans  &trans  &kp F11  &kp F4  &kp F5  &kp F6  &trans  &trans
+&trans  &bt BT_SEL 4   &bt BT_SEL 3   &bt BT_SEL 2     &bt BT_SEL 1       &trans                  &kp F12  &kp F1  &kp F2  &kp F3  &trans  &trans
+                                      &trans           &trans             &trans                  &trans   &trans  &trans
             >;
         };
     };
