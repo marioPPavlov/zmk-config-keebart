@@ -360,12 +360,12 @@
         };
 
         combo_paren_left {
-            bindings = <&kp LEFT_PARENTHESIS>;
+            bindings = <&ht_single_tap AMPERSAND LEFT_PARENTHESIS>;
             key-positions = <19 18>;
         };
 
         combo_parent_right {
-            bindings = <&kp RIGHT_PARENTHESIS>;
+            bindings = <&ht_single_tap ASTERISK RIGHT_PARENTHESIS>;
             key-positions = <22 23>;
         };
 
