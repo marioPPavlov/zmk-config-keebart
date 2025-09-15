@@ -365,7 +365,7 @@
         };
 
         combo_parent_right {
-            bindings = <&ht_single_tap ASTERISK RIGHT_PARENTHESIS>;
+            bindings = <&ht_single_tap RIGHT_PARENTHESIS ASTERISK>;
             key-positions = <22 23>;
         };
 
@@ -391,7 +391,7 @@
         };
 
         combo_underscore {
-            bindings = <&ht_single_tap UNDER EXCL>;
+            bindings = <&ht_single_tap EXCL UNDERSCORE>;
             key-positions = <35 36>;
         };
 
