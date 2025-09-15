@@ -508,15 +508,15 @@
             ignore-numbers;
         };
 
-        ht_sk_navword: ht_sk_navword {
+        ht_shift_navword: ht_shift_navword {
             compatible = "zmk,behavior-hold-tap";
-            label = "HT_SK_NAVWORD";
-            bindings = <&sl>, <&nav_word>;
+            label = "HT_SHIFT_NAVWORD";
+            bindings = <&kp>, <&nav_word>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-            flavor = "balanced";
-            hold-trigger-key-positions = <0 1 2 3 4 5 6 14 15 16 17 18 19 20 28 29 30 31 32 33 7 8 9 10 11 12 13>;
+            flavor = "tap-preferred";
+            hold-trigger-key-positions = <7 8 9 10 11 12 13 21 26 27 34 35 36 37 38 39 25 24 23 22 45>;
         };
 
         num_word: num_word {
@@ -643,9 +643,9 @@
             tapping-term-ms = <175>;
         };
 
-        mm_esc_backspace: mm_esc_backspace {
+        mm_backspace_delete: mm_backspace_delete {
             compatible = "zmk,behavior-mod-morph";
-            label = "MM_ESC_BACKSPACE";
+            label = "MM_BACKSPACE_DELETE";
             bindings = <&kp BACKSPACE>, <&kp DELETE>;
 
             #binding-cells = <0>;
@@ -693,6 +693,15 @@
             flavor = "balanced";
             tapping-term-ms = <300>;
         };
+
+        mm_shift_navword: mm_shift_navword {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MM_SHIFT_NAVWORD";
+            bindings = <&ht_shift_navword LEFT_SHIFT 0>, <&mo 3>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
     };
 
     keymap {
@@ -704,7 +713,7 @@
 &trans  &ht_single_tap GRAVE Q  &kp W                &kp E                &ht_kp_kp LS(LEFT_ALT) R  &kp T                                 &flush_stuck     &kp C_VOLUME_UP    &kp Y                &kp U                &kp I                    &kp O                  &kp P                             &trans
 &trans  &long_mo_tp 7 A         &long_th_kp LGUI S   &kp D                &kp F                     &long_mo_tp 9 G                       &rgb_ug RGB_EFF  &kp C_VOLUME_DOWN  &kp H                &kp J                &kp K                    &kp L                  &ht_single_tap SINGLE_QUOTE SEMI  &trans
 &trans  &ht_single_tap N4 Z     &ht_single_tap N3 X  &ht_single_tap N2 C  &ht_single_tap N1 V       &ht_single_tap N0 B                                                       &ht_single_tap N5 N  &ht_single_tap N6 M  &ht_single_tap N7 COMMA  &ht_single_tap N8 DOT  &ht_single_tap N9 FSLH            &trans
-                                                     &ht_sk_navword 3 0   &mm_space_htctrl          &long_th_kp LC(LA(LS(LG(LGUI)))) ESC                                      &mm_shift_capsword   &mt LALT ENTER       &mm_esc_backspace
+                                                     &mm_shift_navword    &mm_space_htctrl          &long_th_kp LC(LA(LS(LG(LGUI)))) ESC                                      &mm_shift_capsword   &mt LALT ENTER       &mm_backspace_delete
             >;
         };
 
@@ -730,7 +739,7 @@
         NAV {
             display-name = "Navigation";
             bindings = <
-&trans  &trans  &trans     &trans     &trans     &trans  &bootloader     &bt BT_SEL 0  &trans          &kp LC(J)       &kp LC(K)      &trans           &kp DELETE             &trans
+&trans  &trans  &trans     &trans     &trans     &trans  &bootloader     &bt BT_SEL 0  &trans          &kp LC(J)       &kp LC(K)      &trans           &trans                 &trans
 &trans  &trans  &trans     &trans     &trans     &trans  &studio_unlock  &bt BT_SEL 1  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW   &kp RIGHT_ARROW  &macro_open_clipboard  &trans
 &trans  &trans  &kp LC(X)  &kp LC(C)  &kp LC(V)  &trans                                &trans          &kp LC(Z)       &kp LC(LS(Z))  &trans           &trans                 &trans
                            &none      &trans     &trans                                &trans          &trans          &trans
@@ -769,7 +778,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans           &linux_grave_swap_shift  &linux_grave_swap       &kp K_PP                 &trans        &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &linux_tab_swap  &linux_lgui_tab          &linux_lgui_tab_double  &linux_lgui_tab_tripple  &flush_stuck  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                  &trans           &trans                   &trans                  &trans                   &trans        &trans
-                        &trans  &trans  &trans                  &trans           &trans                   &mm_esc_backspace
+                        &trans  &trans  &trans                  &trans           &trans                   &mm_backspace_delete
             >;
         };
 
@@ -797,6 +806,15 @@
 &trans  &bt BT_DISC 4  &bt BT_DISC 3  &bt BT_DISC 2  &bt BT_DISC 1  &out OUT_USB  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &bt BT_SEL 4   &bt BT_SEL 3   &bt BT_SEL 2   &bt BT_SEL 1   &out OUT_BLE                  &trans  &trans  &trans  &trans  &trans  &trans
                                       &trans         &trans         &trans                        &trans  &trans  &trans
+            >;
+        };
+
+        layer_11 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans    &kp C_REWIND       &kp C_FAST_FORWARD  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp C_PP  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP     &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans    &trans             &trans              &trans  &trans  &trans
+                        &trans  &trans  &trans                  &trans    &trans             &trans
             >;
         };
     };
