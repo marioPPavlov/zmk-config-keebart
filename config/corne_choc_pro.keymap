@@ -504,7 +504,7 @@
             #binding-cells = <0>;
             compatible = "zmk,behavior-num-word";
             layers = <NAV>;
-            continue-list = <LEFT DOWN UP RIGHT LSHIFT LGUI LALT ENTER J K Z>;
+            continue-list = <LEFT DON UP RIGHT LSHIFT LGUI LALT ENTER J K Z BACKSPACE>;
             ignore-numbers;
         };
 
@@ -523,7 +523,7 @@
             compatible = "zmk,behavior-num-word";
             #binding-cells = <0>;
             layers = <NUM>;
-            continue-list = <N1 N2 N3 N4 N5 N6 N7 N8 N9 LSHIFT LGUI LALT COLON MINUS PLUS KP_EQUAL DOT>;
+            continue-list = <N1 N2 N3 N4 N5 N6 N7 N8 N9 LSHIFT LGUI LALT COLON MINUS PLUS KP_EQUAL DOT BACKSPACE>;
             ignore-numbers;
         };
 
