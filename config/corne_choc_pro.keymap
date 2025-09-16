@@ -702,6 +702,15 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
         };
+
+        mm_esc_hyperkey: mm_esc_hyperkey {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MM_ESC_HYPERKEY";
+            bindings = <&long_th_kp LS(LA(LC(LG(LGUI)))) ESCAPE>, <&kp F24>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
     };
 
     keymap {
