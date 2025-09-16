@@ -697,7 +697,7 @@
         mm_shift_navword: mm_shift_navword {
             compatible = "zmk,behavior-mod-morph";
             label = "MM_SHIFT_NAVWORD";
-            bindings = <&ht_shift_navword LEFT_SHIFT 0>, <&mo 3>;
+            bindings = <&ht_shift_navword LEFT_SHIFT 0>, <&num_word>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
