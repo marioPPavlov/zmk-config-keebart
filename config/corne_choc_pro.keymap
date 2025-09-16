@@ -504,7 +504,7 @@
             #binding-cells = <0>;
             compatible = "zmk,behavior-num-word";
             layers = <NAV>;
-            continue-list = <LEFT DON UP RIGHT LSHIFT LGUI LALT ENTER J K Z BACKSPACE>;
+            continue-list = <LEFT DOWN UP RIGHT LSHIFT LGUI LALT ENTER J K Z>;
             ignore-numbers;
         };
 
