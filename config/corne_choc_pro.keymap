@@ -738,10 +738,10 @@
         NUM {
             display-name = "Numbers";
             bindings = <
-&trans  &kp GRAVE                 &trans                  &trans                &trans                         &trans                                 &rgb_ug RGB_ON   &none  &trans                     &trans                   &trans                       &trans                  &trans                   &trans
-&trans  &kp N4  &kp N3  &kp N2  &kp N1  &kp N0                                 &rgb_ug RGB_OFF  &none  &kp N5  &kp N6  &kp N7  &ht_single_tap STAR N8  &ht_single_tap COLON N9  &trans
-&trans  &trans                    &trans                  &trans                &trans                         &trans                                                         &trans                     &trans                   &trans                       &trans                  &trans                   &trans
-                                                          &trans                &trans                         &ht_hyper_kp F24 LG(LS(LA(LC(LGUI))))                          &trans                     &trans                   &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &rgb_ug RGB_ON   &none  &trans  &trans  &trans  &trans                  &trans                   &trans
+&trans  &kp N4  &kp N3  &kp N2  &kp N1  &kp N0  &rgb_ug RGB_OFF  &none  &kp N5  &kp N6  &kp N7  &ht_single_tap STAR N8  &ht_single_tap COLON N9  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                          &trans  &trans  &trans  &trans                  &trans                   &trans
+                        &trans  &trans  &trans                          &trans  &trans  &trans
             >;
         };
 
