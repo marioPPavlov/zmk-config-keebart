@@ -706,7 +706,7 @@
         mm_esc_hyperkey: mm_esc_hyperkey {
             compatible = "zmk,behavior-mod-morph";
             label = "MM_ESC_HYPERKEY";
-            bindings = <&long_th_kp LS(LA(LC(LG(LGUI)))) ESCAPE>, <&kp F24>;
+            bindings = <&long_th_kp LS(LA(LC(LG(LGUI)))) ESCAPE>, <&kp F20>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
@@ -738,10 +738,10 @@
         NUM {
             display-name = "Numbers";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &rgb_ug RGB_ON   &none  &trans  &trans  &trans  &trans                  &trans                   &trans
-&trans  &kp N4  &kp N3  &kp N2  &kp N1  &kp N0  &rgb_ug RGB_OFF  &none  &kp N5  &kp N6  &kp N7  &ht_single_tap STAR N8  &ht_single_tap COLON N9  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                          &trans  &trans  &trans  &trans                  &trans                   &trans
-                        &trans  &trans  &trans                          &trans  &trans  &trans
+&trans  &trans           &trans           &trans           &trans           &trans           &rgb_ug RGB_ON   &none  &trans           &trans           &trans           &trans                           &trans                            &trans
+&trans  &kp KP_NUMBER_4  &kp KP_NUMBER_3  &kp KP_NUMBER_2  &kp KP_NUMBER_1  &kp KP_NUMBER_0  &rgb_ug RGB_OFF  &none  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_NUMBER_7  &ht_single_tap STAR KP_NUMBER_8  &ht_single_tap COLON KP_NUMBER_9  &trans
+&trans  &trans           &trans           &trans           &trans           &trans                                   &trans           &trans           &trans           &trans                           &trans                            &trans
+                                          &trans           &trans           &trans                                   &trans           &trans           &trans
             >;
         };
 
