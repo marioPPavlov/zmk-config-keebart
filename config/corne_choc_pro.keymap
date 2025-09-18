@@ -452,6 +452,16 @@
             bindings = <&kp AT>;
             key-positions = <32 17>;
         };
+
+        combo_dollar {
+            bindings = <&kp DOLLAR>;
+            key-positions = <18 33>;
+        };
+
+        combo_hash {
+            bindings = <&kp HASH>;
+            key-positions = <23 34>;
+        };
     };
 
     behaviors {
