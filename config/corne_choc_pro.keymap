@@ -462,6 +462,21 @@
             bindings = <&kp HASH>;
             key-positions = <23 34>;
         };
+
+        combo_caret {
+            bindings = <&kp CARET>;
+            key-positions = <3 16 18>;
+        };
+
+        combo_ampersand {
+            bindings = <&kp AMPERSAND>;
+            key-positions = <34 22>;
+        };
+
+        combo_percent {
+            bindings = <&kp PERCENT>;
+            key-positions = <33 19>;
+        };
     };
 
     behaviors {
