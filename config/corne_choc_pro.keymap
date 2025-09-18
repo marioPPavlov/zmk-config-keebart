@@ -389,7 +389,7 @@
         };
 
         combo_minus {
-            bindings = <&ht_single_tap AT MINUS>;
+            bindings = <&kp MINUS>;
             key-positions = <32 31>;
         };
 
@@ -404,7 +404,7 @@
         };
 
         combo_underscore {
-            bindings = <&ht_single_tap EXCL UNDERSCORE>;
+            bindings = <&kp UNDER>;
             key-positions = <35 36>;
         };
 
@@ -434,8 +434,8 @@
         };
 
         combo_inverted_slash {
-            bindings = <&kp BACKSLASH>;
-            key-positions = <24 36>;
+            bindings = <&kp EXCL>;
+            key-positions = <24 35>;
         };
 
         combo_numword {
@@ -446,6 +446,11 @@
         combo_sl_bluetooh {
             bindings = <&sl 10>;
             key-positions = <1 2 3>;
+        };
+
+        combo_at {
+            bindings = <&kp AT>;
+            key-positions = <32 17>;
         };
     };
 
