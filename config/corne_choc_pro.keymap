@@ -433,7 +433,7 @@
             key-positions = <4 18>;
         };
 
-        combo_inverted_slash {
+        combo_excl {
             bindings = <&kp EXCL>;
             key-positions = <24 35>;
         };
