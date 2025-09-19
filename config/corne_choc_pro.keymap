@@ -534,7 +534,6 @@
             flavor = "tap-preferred";
         };
 
-
         ht_hyper_kp: ht_hyper_kp {
             compatible = "zmk,behavior-hold-tap";
             label = "HT_HYPER_KP";
@@ -890,6 +889,15 @@
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp C_PREV  &kp C_REWIND       &kp C_FAST_FORWARD  &kp C_NEXT  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                  &trans      &kp C_PP           &trans              &trans      &trans  &trans
                         &trans  &trans  &trans                  &trans      &trans             &trans
+            >;
+        };
+
+        hyper_one_hand {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans     &trans  &trans  &trans  &kp Y   &kp U   &kp I      &kp O    &kp P     &kp P
+&trans  &trans  &trans  &trans  &kp ENTER  &trans  &trans  &trans  &kp H   &kp J   &kp K      &kp L    &kp SEMI  &trans
+&trans  &trans  &trans  &trans  &trans     &trans                  &kp N   &kp M   &kp COMMA  &kp DOT  &kp FSLH  &trans
+                        &trans  &trans     &trans                  &trans  &trans  &trans
             >;
         };
     };
