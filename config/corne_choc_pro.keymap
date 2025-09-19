@@ -307,6 +307,16 @@
             label = "HT_MOUSE_OFF";
         };
 
+        mm_shift_capsword: mm_shift_capsword {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MM_SHIFT_CAPSWORD";
+            bindings = <&ht_shift_navword LEFT_SHIFT 0>, <&nav_word>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+            keep-mods = <(MOD_LSFT)>;
+        };
+
         macro_shift_mouse_off: macro_sticky_and_mouse_off {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -330,21 +340,6 @@
                 <&macro_wait_time 200>;
 
             label = "NUM_SINGLE_TAP";
-        };
-
-        macro_hyperkey: macro_hyperkey {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings =
-                <&macro_press>,
-                <&kp LS(LA(LC(LG(LEFT_GUI)))) &macro_param_1to1>,
-                <&macro_tap>,
-                <&kp MACRO_PLACEHOLDER>,
-                <&macro_pause_for_release>,
-                <&macro_release>,
-                <&kp LS(LA(LG(LC(LEFT_GUI))))>;
-
-            label = "MACRO_HYPERKEY";
         };
     };
 
@@ -539,27 +534,6 @@
             flavor = "tap-preferred";
         };
 
-        mm_shift_capsword_cmd: mm_shift_capsword_cmd {
-            compatible = "zmk,behavior-mod-morph";
-            label = "MM_SHIFT_CAPSWORD_CMD";
-            #binding-cells = <0>;
-            bindings = <
-                &sk LSHIFT   // default
-                &caps_word   // when Shift is held
-                &kp ESC      // when Cmd/GUI is held (example)
-            >;
-
-            mods = <(MOD_LSFT) (MOD_LGUI)>;
-        };
-
-        mm_spacecmd_cmdctrl: mm_spacecmd_cmdctrl {
-            compatible = "zmk,behavior-mod-morph";
-            label = "MM_SPACECMD_CMDCTRL";
-            bindings = <&ht_sk_kp LGUI SPACE>, <&sk LC(LGUI)>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LCTL)>;
-        };
 
         ht_hyper_kp: ht_hyper_kp {
             compatible = "zmk,behavior-hold-tap";
