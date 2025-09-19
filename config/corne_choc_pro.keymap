@@ -524,13 +524,18 @@
             flavor = "tap-preferred";
         };
 
-        mm_shift_capsword: mm_shift_capsword {
+        mm_shift_capsword_cmd: mm_shift_capsword_cmd {
             compatible = "zmk,behavior-mod-morph";
-            label = "MM_SHIFT_CAPSWORD";
-            bindings = <&sk LSHIFT>, <&caps_word>;
-
+            label = "MM_SHIFT_CAPSWORD_CMD";
             #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
+
+            bindings = <
+                &sk LSHIFT   // default
+                &caps_word   // when Shift is held
+                &kp ESC      // when Cmd/GUI is held (example)
+            >;
+
+            mods = <(MOD_LSFT) (MOD_LGUI)>;
         };
 
         mm_spacecmd_cmdctrl: mm_spacecmd_cmdctrl {
