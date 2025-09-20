@@ -871,7 +871,7 @@
         };
 
         macro_layer_hyper_one_hand {
-            if-layers = <1 7 10>;
+            if-layers = <1 10>;
             then-layer = <11>;
         };
     };
