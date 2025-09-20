@@ -410,7 +410,7 @@
         combo_tog_mouse {
             bindings = <&mouse_mode_color_on>;
             key-positions = <10 23>;
-            layers = <0 3 1 4 2 9>;
+            layers = <0 3 1 4 2 7>;
         };
 
         combo_minus {
@@ -469,7 +469,7 @@
         };
 
         combo_sl_bluetooh {
-            bindings = <&sl 10>;
+            bindings = <&sl 8>;
             key-positions = <1 2 3>;
         };
 
@@ -799,8 +799,8 @@
         BASE {
             display-name = "Base";
             bindings = <
-&trans  &ht_single_tap GRAVE Q   &kp W                    &kp E                    &ht_kp_kp LS(LEFT_ALT) R  &long_mo_tp 11 T         &flush_stuck     &trans  &ht_single_tap BACKSLASH Y  &kp U                    &kp I                        &kp O                      &kp P                             &trans
-&trans  &long_mo_tp 7 A          &long_th_kp LGUI S       &kp D                    &long_th_kp LSHFT F       &long_mo_tp 9 G          &rgb_ug RGB_EFF  &trans  &kp H                       &kp J                    &kp K                        &kp L                      &ht_single_tap SINGLE_QUOTE SEMI  &trans
+&trans  &ht_single_tap GRAVE Q   &kp W                    &kp E                    &ht_kp_kp LS(LEFT_ALT) R  &long_mo_tp 9 T          &flush_stuck     &trans  &ht_single_tap BACKSLASH Y  &kp U                    &kp I                        &kp O                      &kp P                             &trans
+&trans  &kp A                    &long_th_kp LGUI S       &kp D                    &long_th_kp LSHFT F       &long_mo_tp 7 G          &rgb_ug RGB_EFF  &trans  &kp H                       &kp J                    &kp K                        &kp L                      &ht_single_tap SINGLE_QUOTE SEMI  &trans
 &trans  &ht_num_single_tap N4 Z  &ht_num_single_tap N3 X  &ht_num_single_tap N2 C  &ht_num_single_tap N1 V   &ht_num_single_tap N0 B                           &ht_num_single_tap N5 N     &ht_num_single_tap N6 M  &ht_num_single_tap N7 COMMA  &ht_num_single_tap N8 DOT  &ht_num_single_tap N9 FSLH        &trans
                                                           &ht_sk_navword 3 0       &mm_space_htctrl          &mm_esc_hyperkey                                  &mm_shift_capsword          &mt LALT ENTER           &mm_backspace_delete
             >;
@@ -859,24 +859,6 @@
 &trans  &trans  &mmv MOVE_X(-1000)  &mmv MOVE_Y(1000)   &mmv MOVE_X(1000)            &trans  &trans  &trans  &trans  &mmv MOVE_X(-300)  &mmv MOVE_Y(300)   &mmv MOVE_X(300)  &trans  &trans
 &trans  &trans  &trans              &trans              &trans                       &trans                  &trans  &trans             &trans             &trans            &trans  &trans
                                     &trans              &ht_kp_mb1_and_off LGUI MB1  &trans                  &trans  &mm_mouse_click    &trans
-            >;
-        };
-
-        macro_layer_linux {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans           &linux_grave_swap_shift  &linux_grave_swap       &kp K_PP                 &trans        &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &linux_tab_swap  &linux_lgui_tab          &linux_lgui_tab_double  &linux_lgui_tab_tripple  &flush_stuck  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans           &trans                   &trans                  &trans                   &trans        &trans
-                        &trans  &trans  &trans                  &trans           &trans                   &mm_backspace_delete
-            >;
-        };
-
-        macro_layer_mac {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &grave_swap_shift  &grave_swap           &kp K_PLAY_PAUSE       &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &tab_swap  &mac_lgui_tab      &mac_lgui_tab_double  &mac_lgui_tab_tripple  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans     &mkp MB4           &mkp MB5              &trans                 &trans  &trans
-                        &trans  &trans  &trans                  &trans     &trans             &trans
             >;
         };
 
@@ -940,8 +922,8 @@
         };
 
         macro_layer_hyper_one_hand {
-            if-layers = <1 7 12>;
-            then-layer = <13>;
+            if-layers = <1 7 10>;
+            then-layer = <11>;
         };
     };
 };
