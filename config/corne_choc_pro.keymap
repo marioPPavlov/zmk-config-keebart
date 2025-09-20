@@ -703,7 +703,7 @@
         ht_hyper_and_mouse: ht_hyper_and_mouse {
             compatible = "zmk,behavior-hold-tap";
             label = "HT_HYPER_AND_MOUSE";
-            bindings = <&hyper_and_mouse_off>, <&tog>;
+            bindings = <&mo>, <&tog>;
 
             #binding-cells = <2>;
             hold-trigger-key-positions = <7 8 9 10 11 12 13 21 22 23 24 25 26 27 34 35 36 37 38 39>;
@@ -795,10 +795,10 @@
 
         mouse {
             bindings = <
-&trans  &trans  &msc SCRL_LEFT      &mmv MOVE_Y(-1000)  &msc SCRL_RIGHT               &trans                                      &trans  &trans  &trans                  &msc SCRL_UP       &mmv MOVE_Y(-333)  &msc SCRL_DOWN    &trans         &trans
-&trans  &trans  &mmv MOVE_X(-1000)  &mmv MOVE_Y(1000)   &mmv MOVE_X(1000)             &trans                                      &trans  &trans  &mkp MB2                &mmv MOVE_X(-333)  &mmv MOVE_Y(333)   &mmv MOVE_X(333)  &kp LG(ENTER)  &trans
-&trans  &trans  &trans              &trans              &trans                        &trans                                                      &trans                  &trans             &trans             &mkp MB3          &trans         &trans
-                                    &navword_mouse_off  &ht_kp_mb1_and_off LCTRL MB1  &ht_hyper_and_mouse LS(LA(LC(LG(LGUI)))) 5                  &macro_shift_mouse_off  &mm_mouse_click    &delete_mouse_off
+&trans  &trans  &msc SCRL_LEFT      &mmv MOVE_Y(-1000)  &msc SCRL_RIGHT               &trans                    &trans  &trans  &trans                  &msc SCRL_UP       &mmv MOVE_Y(-333)  &msc SCRL_DOWN    &trans         &trans
+&trans  &trans  &mmv MOVE_X(-1000)  &mmv MOVE_Y(1000)   &mmv MOVE_X(1000)             &trans                    &trans  &trans  &mkp MB2                &mmv MOVE_X(-333)  &mmv MOVE_Y(333)   &mmv MOVE_X(333)  &kp LG(ENTER)  &trans
+&trans  &trans  &trans              &trans              &trans                        &trans                                    &trans                  &trans             &trans             &mkp MB3          &trans         &trans
+                                    &navword_mouse_off  &ht_kp_mb1_and_off LCTRL MB1  &ht_hyper_and_mouse 10 5                  &macro_shift_mouse_off  &mm_mouse_click    &delete_mouse_off
             >;
         };
 
