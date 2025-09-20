@@ -893,7 +893,7 @@
             bindings = <
 &trans  &trans  &trans     &linux_grave_swap_shift  &linux_grave_swap  &linux_tab_swap  &trans  &trans  &macro_hyperkey Y  &macro_hyperkey U  &macro_hyperkey I  &macro_hyperkey O  &macro_hyperkey P     &trans
 &trans  &trans  &trans     &trans                   &trans             &kp ENTER        &trans  &trans  &macro_hyperkey H  &macro_hyperkey J  &macro_hyperkey K  &macro_hyperkey L  &macro_hyperkey SEMI  &trans
-&trans  &trans  &kp LC(X)  &kp LC(C)                &kp LC(V)          &trans                           &kp N              &mkp MB4           &mkp MB5           &kp DOT            &flush_stuck          &trans
+&trans  &trans  &kp LC(X)  &kp LC(C)                &kp LC(V)          &tog 10                          &kp N              &mkp MB4           &mkp MB5           &kp DOT            &flush_stuck          &trans
                            &trans                   &trans             &trans                           &linux_lgui_tab    &trans             &kp DELETE
             >;
         };
