@@ -909,10 +909,10 @@
 
         hyper_one_hand {
             bindings = <
-&trans  &trans  &trans  &linux_grave_swap_shift  &linux_grave_swap  &trans  &trans  &trans  &kp Y            &kp U   &kp I      &kp O    &kp P     &trans
-&trans  &trans  &trans  &trans                   &trans             &trans  &trans  &trans  &kp H            &kp J   &kp K      &kp L    &kp SEMI  &trans
-&trans  &trans  &trans  &trans                   &trans             &trans                  &kp N            &kp M   &kp COMMA  &kp DOT  &kp FSLH  &trans
-                        &trans                   &trans             &trans                  &linux_lgui_tab  &trans  &trans
+&trans  &trans  &trans  &linux_grave_swap_shift  &linux_grave_swap  &trans  &trans  &trans  &macro_hyperkey Y  &macro_hyperkey U  &macro_hyperkey I  &macro_hyperkey O  &macro_hyperkey P     &trans
+&trans  &trans  &trans  &trans                   &trans             &trans  &trans  &trans  &macro_hyperkey H  &macro_hyperkey J  &macro_hyperkey K  &macro_hyperkey L  &macro_hyperkey SEMI  &trans
+&trans  &trans  &trans  &trans                   &trans             &trans                  &kp N              &kp M              &kp COMMA          &kp DOT            &kp FSLH              &trans
+                        &trans                   &trans             &trans                  &linux_lgui_tab    &trans             &trans
             >;
         };
 
