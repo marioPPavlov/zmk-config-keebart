@@ -909,19 +909,19 @@
 
         hyper_one_hand {
             bindings = <
-&trans  &trans  &trans  &linux_grave_swap_shift  &linux_grave_swap  &linux_tab_swap  &trans  &trans  &macro_hyperkey Y  &macro_hyperkey U  &macro_hyperkey I  &macro_hyperkey O  &macro_hyperkey P     &trans
-&trans  &trans  &trans  &trans                   &trans             &kp ENTER        &trans  &trans  &macro_hyperkey H  &macro_hyperkey J  &macro_hyperkey K  &macro_hyperkey L  &macro_hyperkey SEMI  &trans
-&trans  &trans  &kp LC(X)  &kp LC(C)  &kp LC(V)             &trans                           &kp N              &mkp MB4           &mkp MB5           &kp DOT            &flush_stuck          &trans
-                        &trans                   &trans             &trans                           &linux_lgui_tab    &trans             &kp DELETE
+&trans  &trans  &trans     &linux_grave_swap_shift  &linux_grave_swap  &linux_tab_swap  &trans  &trans  &macro_hyperkey Y  &macro_hyperkey U  &macro_hyperkey I  &macro_hyperkey O  &macro_hyperkey P     &trans
+&trans  &trans  &trans     &trans                   &trans             &kp ENTER        &trans  &trans  &macro_hyperkey H  &macro_hyperkey J  &macro_hyperkey K  &macro_hyperkey L  &macro_hyperkey SEMI  &trans
+&trans  &trans  &kp LC(X)  &kp LC(C)                &kp LC(V)          &trans                           &kp N              &mkp MB4           &mkp MB5           &kp DOT            &flush_stuck          &trans
+                           &trans                   &trans             &trans                           &linux_lgui_tab    &trans             &kp DELETE
             >;
         };
 
         hyper_one_hand_mac {
             bindings = <
-&trans  &trans  &trans  &grave_swap_shift  &grave_swap  &tab_swap  &trans  &trans  &trans         &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans             &trans       &trans     &trans  &trans  &trans         &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &kp LG(X)  &kp LG(C)  &kp LG(V)       &trans                     &trans         &trans  &trans  &trans  &trans  &trans
-                        &trans             &trans       &trans                     &mac_lgui_tab  &trans  &trans
+&trans  &trans  &trans     &grave_swap_shift  &grave_swap  &tab_swap  &trans  &trans  &trans         &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans     &trans             &trans       &trans     &trans  &trans  &trans         &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &kp LG(X)  &kp LG(C)          &kp LG(V)    &trans                     &trans         &trans  &trans  &trans  &trans  &trans
+                           &trans             &trans       &trans                     &mac_lgui_tab  &trans  &trans
             >;
         };
     };
@@ -939,9 +939,9 @@
             then-layer = <6>;
         };
 
-        macro_layer_mac_active_mac_macro_layer {
-            if-layers = <1 7>;
-            then-layer = <8>;
+        macro_layer_hyper_one_hand {
+            if-layers = <1 7 12>;
+            then-layer = <13>;
         };
     };
 };
