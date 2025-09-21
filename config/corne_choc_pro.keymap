@@ -388,12 +388,12 @@
         };
 
         combo_left_bracket {
-            bindings = <&ht_single_tap LEFT_BRACE LEFT_BRACKET>;
+            bindings = <&single_tap LEFT_BRACKET>;
             key-positions = <18 17>;
         };
 
         combo_right_bracket {
-            bindings = <&ht_single_tap RIGHT_BRACE RIGHT_BRACKET>;
+            bindings = <&single_tap RIGHT_BRACKET>;
             key-positions = <23 24>;
         };
 
@@ -501,6 +501,16 @@
         combo_percent {
             bindings = <&kp PERCENT>;
             key-positions = <33 19>;
+        };
+
+        combo_left_brace {
+            bindings = <&single_tap LEFT_BRACE>;
+            key-positions = <5 19>;
+        };
+
+        combo_right_brace {
+            bindings = <&single_tap RIGHT_BRACE>;
+            key-positions = <22 8>;
         };
     };
 
