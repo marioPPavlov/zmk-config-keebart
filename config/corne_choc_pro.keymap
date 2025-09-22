@@ -513,16 +513,6 @@
             bindings = <&single_tap RIGHT_BRACE>;
             key-positions = <22 8>;
         };
-
-        combo_single_quote {
-            bindings = <&kp SINGLE_QUOTE>;
-            key-positions = <19 4>;
-        };
-
-        combo_double_quote {
-            bindings = <&kp DOUBLE_QUOTES>;
-            key-positions = <9 22>;
-        };
     };
 
     behaviors {
@@ -872,9 +862,9 @@
 
         hyper_one_hand {
             bindings = <
-&trans  &to 10     &trans  &linux_grave_swap_shift  &linux_grave_swap  &linux_tab_swap  &trans  &trans  &macro_hyperkey Y  &macro_hyperkey U  &macro_hyperkey I  &macro_hyperkey O  &macro_hyperkey P     &trans
-&trans  &trans     &trans  &trans                   &trans             &kp ENTER        &trans  &trans  &macro_hyperkey H  &macro_hyperkey J  &macro_hyperkey K  &macro_hyperkey L  &macro_hyperkey SEMI  &trans
-&trans  &kp LC(Z)  &trans  &trans                   &trans             &kp BACKSPACE                    &kp LC(C)          &mkp MB4           &mkp MB5           &kp LC(Z)          &kp LS(LC(Z))         &trans
+&trans  &to 10     &trans  &linux_grave_swap_shift  &linux_grave_swap  &linux_tab_swap  &trans  &trans  &macro_hyperkey Y  &macro_hyperkey U  &macro_hyperkey I  &macro_hyperkey O  &macro_hyperkey P                          &trans
+&trans  &trans     &trans  &trans                   &trans             &kp ENTER        &trans  &trans  &macro_hyperkey H  &macro_hyperkey J  &macro_hyperkey K  &macro_hyperkey L  &ht_single_tap DOUBLE_QUOTES SINGLE_QUOTE  &trans
+&trans  &kp LC(Z)  &trans  &trans                   &trans             &kp BACKSPACE                    &kp LC(C)          &mkp MB4           &mkp MB5           &kp LC(Z)          &kp LS(LC(Z))                              &trans
                            &trans                   &flush_stuck       &trans                           &linux_lgui_tab    &kp LC(V)          &kp DELETE
             >;
         };
