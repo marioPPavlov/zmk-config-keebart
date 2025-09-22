@@ -357,6 +357,17 @@
 
             label = "MACRO_HYPERKEY";
         };
+
+        macro_tap_release: macro_tap_release {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings =
+                <&macro_param_1to1 &none MACRO_PLACEHOLDER>,
+                <&macro_press>,
+                <&kp>;
+
+            label = "MACRO_TAP_RELEASE";
+        };
     };
 
     combos {
