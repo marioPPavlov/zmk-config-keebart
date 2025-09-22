@@ -513,6 +513,16 @@
             bindings = <&single_tap RIGHT_BRACE>;
             key-positions = <22 8>;
         };
+
+        combo_single_quote {
+            bindings = <&kp SINGLE_QUOTE>;
+            key-positions = <19 4>;
+        };
+
+        combo_double_quote {
+            bindings = <&kp DOUBLE_QUOTES>;
+            key-positions = <9 22>;
+        };
     };
 
     behaviors {
