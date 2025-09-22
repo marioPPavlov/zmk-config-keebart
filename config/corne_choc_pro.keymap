@@ -789,9 +789,9 @@
         NUM {
             display-name = "Numbers";
             bindings = <
-&trans  &trans                   &trans                   &trans                   &trans                   &trans                   &rgb_ug RGB_ON   &none  &trans                   &trans             &trans             &trans                   &trans                   &trans
-&trans  &trans                   &trans                   &trans                   &trans                   &trans                   &rgb_ug RGB_OFF  &none  &trans                   &trans             &trans             &trans                   &trans                   &trans
-&trans  &single_tap KP_NUMBER_4  &single_tap KP_NUMBER_3  &single_tap KP_NUMBER_2  &single_tap KP_NUMBER_1  &single_tap KP_NUMBER_0                          &single_tap KP_NUMBER_5  &single_tap KP_N6  &single_tap KP_N7  &single_tap KP_NUMBER_8  &single_tap KP_NUMBER_9  &trans
+&trans  &trans                   &trans                   &trans                   &trans                   &trans                   &rgb_ug RGB_ON   &none  &trans                   &trans             &trans                            &trans                          &trans                   &trans
+&trans  &trans                   &trans                   &trans                   &trans                   &trans                   &rgb_ug RGB_OFF  &none  &trans                   &trans             &trans                            &trans                          &trans                   &trans
+&trans  &single_tap KP_NUMBER_4  &single_tap KP_NUMBER_3  &single_tap KP_NUMBER_2  &single_tap KP_NUMBER_1  &single_tap KP_NUMBER_0                          &single_tap KP_NUMBER_5  &single_tap KP_N6  &ht_single_tap COMMA KP_NUMBER_7  &ht_single_tap DOT KP_NUMBER_8  &single_tap KP_NUMBER_9  &trans
                                                           &trans                   &trans                   &trans                                           &trans                   &trans             &trans
             >;
         };
