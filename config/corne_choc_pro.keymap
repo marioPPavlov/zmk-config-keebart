@@ -821,10 +821,10 @@
         NAV {
             display-name = "Navigation";
             bindings = <
-&trans  &trans  &trans     &trans     &trans     &trans  &trans  &trans  &trans          &kp LC(J)       &kp LC(K)     &trans           &trans                 &trans
-&trans  &trans  &trans     &trans     &trans     &trans  &trans  &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &macro_open_clipboard  &trans
-&trans  &trans  &kp LC(X)  &kp LC(C)  &kp LC(V)  &trans                  &trans          &trans          &trans        &trans           &trans                 &trans
-                           &trans     &trans     &trans                  &trans          &trans          &trans
+&trans  &trans  &trans     &trans                   &trans     &trans  &trans  &trans  &trans          &kp LC(J)       &kp LC(K)     &trans           &trans                 &trans
+&trans  &trans  &trans     &trans                   &trans     &trans  &trans  &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &macro_open_clipboard  &trans
+&trans  &trans  &kp LC(X)  &kp LC(C)                &kp LC(V)  &trans                  &trans          &trans          &trans        &trans           &trans                 &trans
+                           &ht_fake_capsword F20 0  &trans     &trans                  &trans          &trans          &trans
             >;
         };
 
