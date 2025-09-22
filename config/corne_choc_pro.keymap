@@ -310,11 +310,12 @@
         mm_shift_capsword: mm_shift_capsword {
             compatible = "zmk,behavior-mod-morph";
             label = "MM_SHIFT_CAPSWORD";
-            bindings = <&ht_shift_navword LEFT_SHIFT 0>, <&nav_word>;
+            bindings =
+                <&ht_sk_shift_capsword LEFT_SHIFT LEFT_SHIFT>,
+                <&caps_word>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
-            keep-mods = <(MOD_LSFT)>;
         };
 
         macro_shift_mouse_off: macro_sticky_and_mouse_off {
@@ -749,6 +750,17 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             flavor = "tap-preferred";
+        };
+
+        ht_sk_shift_capsword: ht_sk_shift_capsword {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HT_SK_SHIFT_CAPSWORD";
+            bindings = <&kp>, <&sk>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "tap-preferred";
+            hold-trigger-key-positions = <1 2 3 4 5 15 16 17 18 19 29 30 31 32 33>;
         };
     };
 
