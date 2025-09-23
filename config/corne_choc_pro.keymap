@@ -918,7 +918,7 @@
         hyper_one_hand {
             bindings = <
 &trans  &to 10     &trans  &linux_grave_swap_shift  &linux_grave_swap  &linux_tab_swap                 &trans  &trans  &macro_hyperkey Y  &macro_hyperkey U  &macro_hyperkey I  &macro_hyperkey O  &macro_hyperkey P                          &trans
-&trans  &trans     &trans  &trans                   &trans             &ht_single_tap ENTER LC(ENTER)  &trans  &trans  &macro_hyperkey H  &macro_hyperkey J  &macro_hyperkey K  &macro_hyperkey L  &ht_single_tap DOUBLE_QUOTES SINGLE_QUOTE  &trans
+&trans  &trans     &kp LC(X)  &kp LC(C)       &kp LC(V)             &ht_single_tap ENTER LC(ENTER)  &trans  &trans  &macro_hyperkey H  &macro_hyperkey J  &macro_hyperkey K  &macro_hyperkey L  &ht_single_tap DOUBLE_QUOTES SINGLE_QUOTE  &trans
 &trans  &kp LC(Z)  &trans  &trans                   &trans             &kp BACKSPACE                                   &kp LC(C)          &mkp MB4           &mkp MB5           &kp LC(Z)          &kp LS(LC(Z))                              &trans
                            &trans                   &flush_stuck       &trans                                          &linux_lgui_tab    &kp QUESTION       &kp DELETE
             >;
@@ -927,9 +927,10 @@
         hyper_one_hand_mac {
             bindings = <
 &trans  &trans     &trans  &grave_swap_shift  &grave_swap  &tab_swap                       &trans  &trans  &trans         &trans  &trans  &trans     &trans         &trans
-&trans  &trans     &trans  &trans             &trans       &ht_single_tap LG(ENTER) ENTER  &trans  &trans  &trans         &trans  &trans  &trans     &trans         &trans
+&trans  &trans     &kp LG(X)  &kp LG(C)       &kp LG(V)       &ht_single_tap LG(ENTER) ENTER  &trans  &trans  &trans         &trans  &trans  &trans     &trans         &trans
 &trans  &kp LG(Z)  &trans  &trans             &trans       &trans                                          &kp LG(C)      &trans  &trans  &kp LG(Z)  &kp LG(LS(Z))  &trans
                            &trans             &trans       &trans                                          &mac_lgui_tab  &trans  &trans
+
             >;
         };
     };
