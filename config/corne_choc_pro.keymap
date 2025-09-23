@@ -749,7 +749,7 @@
         mm_esc_hyperlayer: mm_esc_hyperlayer {
             compatible = "zmk,behavior-mod-morph";
             label = "MM_ESC_HYPERLAYER";
-            bindings = <&long_mo_tp 10 ESCAPE>, <&kp F20>;
+            bindings = <&ht_mo_eagor_trigger 10 ESCAPE>, <&kp F20>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
@@ -804,6 +804,18 @@
             #binding-cells = <2>;
             tapping-term-ms = <275>;
             flavor = "tap-preferred";
+        };
+
+        ht_mo_eagor_trigger: ht_mo_eagor_trigger {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HT_MO_EAGOR_TRIGGER";
+            bindings = <&mo>, <&kp>;
+
+            #binding-cells = <2>;
+            hold-trigger-key-positions = <7 8 9 10 11 12 13 21 22 23 24 25 26 27 34 35 36 37 38 39 43 44 45 0 1 2 3 4 5 6 14 15 16 17 18 19 20 28 29 30 31 32 33 41 40>;
+            hold-while-undecided;
+            flavor = "balanced";
+            tapping-term-ms = <200>;
         };
     };
 
