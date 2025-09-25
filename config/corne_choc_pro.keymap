@@ -817,6 +817,16 @@
             flavor = "balanced";
             tapping-term-ms = <200>;
         };
+
+        ht_clipboard: ht_clipboard {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HT_CLIPBOARD";
+            bindings = <&macro_open_clipboard>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "balanced";
+        };
     };
 
     keymap {
@@ -917,19 +927,19 @@
 
         hyper_one_hand {
             bindings = <
-&trans  &ht_single_tap TILDE GRAVE  &trans     &linux_grave_swap_shift  &linux_grave_swap  &linux_tab_swap                 &trans  &trans  &macro_hyperkey Y           &macro_hyperkey U         &macro_hyperkey I  &macro_hyperkey O                           &macro_hyperkey P                          &trans
-&trans  &trans                      &kp LC(X)  &kp LC(C)                &kp LC(V)          &ht_single_tap LC(ENTER) ENTER  &trans  &trans  &macro_hyperkey H           &macro_hyperkey J         &macro_hyperkey K  &macro_hyperkey L                           &ht_single_tap DOUBLE_QUOTES SINGLE_QUOTE  &trans
-&trans  &trans                      &trans     &kp LC(Z)                &kp LS(LC(Z))      &kp BACKSPACE                                   &ht_single_tap TILDE GRAVE  &mkp MB4                  &mkp MB5           &ht_single_tap_weak LESS_THAN GREATER_THAN  &single_tap QUESTION                       &trans
-                                               &trans                   &flush_stuck       &trans                                          &linux_lgui_tab             &ht_single_tap COMMA DOT  &kp DELETE
+&trans  &ht_single_tap TILDE GRAVE  &trans     &linux_grave_swap_shift  &linux_grave_swap      &linux_tab_swap                 &trans  &trans  &macro_hyperkey Y           &macro_hyperkey U         &macro_hyperkey I  &macro_hyperkey O                           &macro_hyperkey P                          &trans
+&trans  &trans                      &kp LC(X)  &kp LC(C)                &ht_clipboard 0 LC(V)  &ht_single_tap LC(ENTER) ENTER  &trans  &trans  &macro_hyperkey H           &macro_hyperkey J         &macro_hyperkey K  &macro_hyperkey L                           &ht_single_tap DOUBLE_QUOTES SINGLE_QUOTE  &trans
+&trans  &trans                      &trans     &kp LC(Z)                &kp LS(LC(Z))          &kp BACKSPACE                                   &ht_single_tap TILDE GRAVE  &mkp MB4                  &mkp MB5           &ht_single_tap_weak LESS_THAN GREATER_THAN  &single_tap QUESTION                       &trans
+                                               &trans                   &flush_stuck           &trans                                          &linux_lgui_tab             &ht_single_tap COMMA DOT  &kp DELETE
             >;
         };
 
         hyper_one_hand_mac {
             bindings = <
-&trans  &trans  &trans     &grave_swap_shift  &grave_swap    &tab_swap                       &trans  &trans  &trans         &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &kp LG(X)  &kp LG(C)          &kp LG(V)      &ht_single_tap LG(ENTER) ENTER  &trans  &trans  &trans         &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans     &kp LG(Z)          &kp LS(LG(Z))  &trans                                          &trans         &trans  &trans  &trans  &trans  &trans
-                           &trans             &trans         &trans                                          &mac_lgui_tab  &trans  &trans
+&trans  &trans  &trans     &grave_swap_shift  &grave_swap            &tab_swap                       &trans  &trans  &trans         &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &kp LG(X)  &kp LG(C)          &ht_clipboard 0 LG(V)  &ht_single_tap LG(ENTER) ENTER  &trans  &trans  &trans         &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans     &kp LG(Z)          &kp LS(LG(Z))          &trans                                          &trans         &trans  &trans  &trans  &trans  &trans
+                           &trans             &trans                 &trans                                          &mac_lgui_tab  &trans  &trans
             >;
         };
     };
