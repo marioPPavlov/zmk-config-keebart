@@ -836,10 +836,10 @@
         BASE {
             display-name = "Base";
             bindings = <
-&trans  &kp Q                         &kp W                         &kp E                    &ht_kp_kp LS(LEFT_ALT) R  &long_mo_tp 9 T          &trans  &trans  &ht_single_tap BACKSLASH Y  &kp U                    &kp I                        &kp O                           &kp P                            &bl BL_OFF
-&trans  &long_th_kp LALT A            &long_th_kp LGUI S            &long_th_kp LCTRL D      &long_th_kp LSHFT F       &long_mo_tp 7 G          &trans  &trans  &kp H                       &kp J                    &kp K                        &kp L                           &ht_single_tap COLON SEMI        &bl BL_OFF
-&trans  &ht_num_single_tap_weak N4 Z  &ht_num_single_tap_weak N3 X  &ht_num_single_tap N2 C  &ht_num_single_tap N1 V   &ht_num_single_tap N0 B                  &ht_num_single_tap N5 N     &ht_num_single_tap N6 M  &ht_num_single_tap N7 COMMA  &ht_num_single_tap_weak N8 DOT  &ht_num_single_tap_weak N9 FSLH  &trans
-                                                                    &ht_sk_navword 3 0       &mm_space_htctrl          &mm_esc_hyperlayer                       &mm_shift_capsword          &mt LALT ENTER           &mm_backspace_delete
+&trans  &kp Q                         &kp W                         &kp E                    &ht_kp_kp LS(LEFT_ALT) R  &long_mo_tp 9 T          &bl BL_ON   &trans  &ht_single_tap BACKSLASH Y  &kp U                    &kp I                        &kp O                           &kp P                            &bl BL_OFF
+&trans  &long_th_kp LALT A            &long_th_kp LGUI S            &long_th_kp LCTRL D      &long_th_kp LSHFT F       &long_mo_tp 7 G          &bl BL_OFF  &trans  &kp H                       &kp J                    &kp K                        &kp L                           &ht_single_tap COLON SEMI        &bl BL_OFF
+&trans  &ht_num_single_tap_weak N4 Z  &ht_num_single_tap_weak N3 X  &ht_num_single_tap N2 C  &ht_num_single_tap N1 V   &ht_num_single_tap N0 B                      &ht_num_single_tap N5 N     &ht_num_single_tap N6 M  &ht_num_single_tap N7 COMMA  &ht_num_single_tap_weak N8 DOT  &ht_num_single_tap_weak N9 FSLH  &trans
+                                                                    &ht_sk_navword 3 0       &mm_space_htctrl          &mm_esc_hyperlayer                           &mm_shift_capsword          &mt LALT ENTER           &mm_backspace_delete
             >;
         };
 
