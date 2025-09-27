@@ -10,7 +10,6 @@
 #define NAV 3
 
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/backlight.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
@@ -836,8 +835,8 @@
         BASE {
             display-name = "Base";
             bindings = <
-&trans  &kp Q                         &kp W                         &kp E                    &ht_kp_kp LS(LEFT_ALT) R  &long_mo_tp 9 T          &rgb_ug RGB_ON   &trans  &ht_single_tap BACKSLASH Y  &kp U                    &kp I                        &kp O                           &kp P                            &bl BL_OFF
-&trans  &long_th_kp LALT A            &long_th_kp LGUI S            &long_th_kp LCTRL D      &long_th_kp LSHFT F       &long_mo_tp 7 G          &rgb_ug RGB_OFF  &trans  &kp H                       &kp J                    &kp K                        &kp L                           &ht_single_tap COLON SEMI        &bl BL_OFF
+&trans  &kp Q                         &kp W                         &kp E                    &ht_kp_kp LS(LEFT_ALT) R  &long_mo_tp 9 T          &rgb_ug RGB_ON   &trans  &ht_single_tap BACKSLASH Y  &kp U                    &kp I                        &kp O                           &kp P                            &trans
+&trans  &long_th_kp LALT A            &long_th_kp LGUI S            &long_th_kp LCTRL D      &long_th_kp LSHFT F       &long_mo_tp 7 G          &rgb_ug RGB_OFF  &trans  &kp H                       &kp J                    &kp K                        &kp L                           &ht_single_tap COLON SEMI        &trans
 &trans  &ht_num_single_tap_weak N4 Z  &ht_num_single_tap_weak N3 X  &ht_num_single_tap N2 C  &ht_num_single_tap N1 V   &ht_num_single_tap N0 B                           &ht_num_single_tap N5 N     &ht_num_single_tap N6 M  &ht_num_single_tap N7 COMMA  &ht_num_single_tap_weak N8 DOT  &ht_num_single_tap_weak N9 FSLH  &trans
                                                                     &ht_sk_navword 3 0       &mm_space_htctrl          &mm_esc_hyperlayer                                &mm_shift_capsword          &mt LALT ENTER           &mm_backspace_delete
             >;
@@ -930,7 +929,7 @@
             bindings = <
 &trans  &ht_single_tap TILDE GRAVE  &trans     &linux_grave_swap_shift  &linux_grave_swap      &linux_tab_swap                 &trans  &trans  &macro_hyperkey Y           &macro_hyperkey U         &macro_hyperkey I  &macro_hyperkey O                           &macro_hyperkey P                          &trans
 &trans  &trans                      &kp LC(X)  &kp LC(C)                &ht_clipboard 0 LC(V)  &ht_single_tap LC(ENTER) ENTER  &trans  &trans  &ht_single_tap TILDE GRAVE  &macro_hyperkey J         &macro_hyperkey K  &macro_hyperkey L                           &ht_single_tap DOUBLE_QUOTES SINGLE_QUOTE  &trans
-&trans  &trans                      &trans     &kp LC(Z)                &kp LS(LC(Z))          &kp BACKSPACE                                   &trans                      &mkp MB4                  &mkp MB5           &ht_single_tap_weak LESS_THAN GREATER_THAN  &single_tap QUESTION                       &trans
+&trans  &trans                      &trans     &kp LC(Z)                &kp LS(LC(Z))          &kp BACKSPACE                                   &kp STAR                    &mkp MB4                  &mkp MB5           &ht_single_tap_weak LESS_THAN GREATER_THAN  &single_tap QUESTION                       &trans
                                                &trans                   &flush_stuck           &trans                                          &linux_lgui_tab             &ht_single_tap COMMA DOT  &kp DELETE
             >;
         };
