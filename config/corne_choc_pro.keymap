@@ -827,6 +827,16 @@
             tapping-term-ms = <200>;
             flavor = "balanced";
         };
+
+        ht_macro_hyperkey: ht_macro_hyperkey {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HT_MACRO_HYPERKEY";
+            bindings = <&single_tap>, <&macro_hyperkey>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "tap-preferred";
+        };
     };
 
     keymap {
@@ -927,7 +937,7 @@
 
         hyper_one_hand {
             bindings = <
-&trans  &ht_single_tap TILDE GRAVE  &trans     &linux_grave_swap_shift  &linux_grave_swap      &linux_tab_swap                 &trans  &trans  &macro_hyperkey Y           &macro_hyperkey U         &macro_hyperkey I  &macro_hyperkey O                           &macro_hyperkey P                          &trans
+&trans  &ht_single_tap TILDE GRAVE  &trans     &linux_grave_swap_shift  &linux_grave_swap      &linux_tab_swap                 &trans  &trans  &ht_macro_hyperkey PIPE Y   &macro_hyperkey U         &macro_hyperkey I  &macro_hyperkey O                           &macro_hyperkey P                          &trans
 &trans  &trans                      &kp LC(X)  &kp LC(C)                &ht_clipboard 0 LC(V)  &ht_single_tap LC(ENTER) ENTER  &trans  &trans  &ht_single_tap TILDE GRAVE  &macro_hyperkey J         &macro_hyperkey K  &macro_hyperkey L                           &ht_single_tap DOUBLE_QUOTES SINGLE_QUOTE  &trans
 &trans  &trans                      &trans     &kp LC(Z)                &kp LS(LC(Z))          &kp BACKSPACE                                   &kp STAR                    &mkp MB4                  &mkp MB5           &ht_single_tap_weak LESS_THAN GREATER_THAN  &single_tap QUESTION                       &trans
                                                &trans                   &flush_stuck           &trans                                          &linux_lgui_tab             &ht_single_tap COMMA DOT  &kp DELETE
