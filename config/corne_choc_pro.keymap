@@ -454,7 +454,7 @@
 
         combo_tab_shift {
             bindings = <&kp LS(TAB)>;
-            key-positions = <18 32>;
+            key-positions = <18 4>;
         };
 
         combo_excl {
