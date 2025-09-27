@@ -386,16 +386,6 @@
             key-positions = <38 26>;
         };
 
-        color_on {
-            bindings = <&rgb_ug RGB_ON>;
-            key-positions = <26 12>;
-        };
-
-        color_off {
-            bindings = <&rgb_ug RGB_OFF>;
-            key-positions = <38 26>;
-        };
-
         mac_screenshot_clipboard {
             bindings = <&kp LS(LC(LG(NUMBER_4)))>;
             key-positions = <15 29>;
