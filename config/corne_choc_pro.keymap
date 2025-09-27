@@ -506,6 +506,16 @@
             bindings = <&single_tap RIGHT_BRACE>;
             key-positions = <22 8>;
         };
+
+        combo_zero {
+            bindings = <&kp KP_NUMBER_0>;
+            key-positions = <33 19>;
+        };
+
+        combo_one {
+            bindings = <&kp KP_NUMBER_1>;
+            key-positions = <18 32>;
+        };
     };
 
     behaviors {
