@@ -453,7 +453,7 @@
         };
 
         combo_plus {
-            bindings = <&ht_single_tap ASTERISK PLUS>;
+            bindings = <&kp PLUS>;
             key-positions = <10 24>;
         };
 
@@ -465,11 +465,6 @@
         combo_tab_shift {
             bindings = <&kp LS(TAB)>;
             key-positions = <18 32>;
-        };
-
-        combo_change_language {
-            bindings = <&mac_change_language>;
-            key-positions = <4 18>;
         };
 
         combo_excl {
