@@ -516,6 +516,21 @@
             bindings = <&kp KP_NUMBER_1>;
             key-positions = <18 32>;
         };
+
+        combo_two {
+            bindings = <&kp KP_NUMBER_2>;
+            key-positions = <17 31>;
+        };
+
+        combo_three {
+            bindings = <&kp KP_NUMBER_3>;
+            key-positions = <30 16>;
+        };
+
+        combo_four {
+            bindings = <&kp KP_NUMBER_4>;
+            key-positions = <29 15>;
+        };
     };
 
     behaviors {
