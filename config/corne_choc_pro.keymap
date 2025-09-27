@@ -462,11 +462,6 @@
             key-positions = <24 35>;
         };
 
-        combo_numword {
-            bindings = <&num_word>;
-            key-positions = <16 2>;
-        };
-
         combo_sl_bluetooh {
             bindings = <&sl 8>;
             key-positions = <1 2 3>;
