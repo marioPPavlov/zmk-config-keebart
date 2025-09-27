@@ -383,12 +383,12 @@
 
         color {
             bindings = <&rgb_ug RGB_COLOR_HSB(0,94,48)>;
-            key-positions = <38 26>;
+            key-positions = <39 27>;
         };
 
         mac_screenshot_clipboard {
             bindings = <&kp LS(LC(LG(NUMBER_4)))>;
-            key-positions = <15 29>;
+            key-positions = <29 16>;
         };
 
         combo_left_bracket {
