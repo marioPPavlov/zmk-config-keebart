@@ -379,11 +379,15 @@
                 <&kp LGUI>,
                 <&macro_tap>,
                 <&kp LEFT>,
+                <&macro_press>,
+                <&kp LSHIFT>,
                 <&macro_tap>,
-                <&kp LSHIFT &kp RIGHT>,
+                <&kp RIGHT>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
-                <&kp LEFT_GUI>;
+                <&kp LEFT_GUI &kp LSHIFT>,
+                <&macro_tap>,
+                <&kp LG(C)>;
 
             label = "MACRO_SELECT_LINE";
         };
