@@ -884,6 +884,16 @@
             tapping-term-ms = <200>;
             flavor = "tap-preferred";
         };
+
+        ht_select_line_mac: ht_select_line_mac {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HT_SELECT_LINE_MAC";
+            bindings = <&macro_select_line>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "tap-preferred";
+        };
     };
 
     keymap {
