@@ -1056,5 +1056,10 @@
             if-layers = <1 11>;
             then-layer = <12>;
         };
+
+        nav_heavy {
+            if-layers = <5>;
+            then-layer = <3>;
+        };
     };
 };
