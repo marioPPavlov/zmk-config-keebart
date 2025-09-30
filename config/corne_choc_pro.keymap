@@ -1055,10 +1055,5 @@
             if-layers = <1 11>;
             then-layer = <12>;
         };
-
-        nav_heavy_mac_activates_nav_mac {
-            if-layers = <5>;
-            then-layer = <3>;
-        };
     };
 };
