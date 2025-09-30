@@ -968,10 +968,10 @@
 
         nav_heavy {
             bindings = <
-&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans              &trans  &trans  &trans         &trans  &trans
-&trans  &trans  &trans  &trans  &kp LEFT_SHIFT  &trans  &trans  &trans  &kp LA(LEFT_ARROW)  &trans  &trans  &kp LA(RIGHT)  &trans  &trans
-&trans  &trans  &trans  &trans  &trans          &trans                  &trans              &trans  &trans  &trans         &trans  &trans
-                        &trans  &trans          &trans                  &trans              &trans  &trans
+&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans              &trans    &trans  &trans         &trans  &trans
+&trans  &trans  &trans  &trans  &kp LEFT_SHIFT  &trans  &trans  &trans  &kp LA(LEFT_ARROW)  &kp DOWN  &kp UP  &kp LA(RIGHT)  &trans  &trans
+&trans  &trans  &trans  &trans  &trans          &trans                  &trans              &trans    &trans  &trans         &trans  &trans
+                        &trans  &trans          &trans                  &trans              &trans    &trans
             >;
         };
 
