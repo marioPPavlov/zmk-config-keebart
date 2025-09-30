@@ -841,10 +841,10 @@
             hold-trigger-key-positions = <1 2 3 4 5 15 16 17 18 19 29 30 31 32 33>;
         };
 
-        ht_noop_and_tap_on_release: ht_noop_and_tap_on_release {
+        ht_navheavy_and_tap_on_release: ht_navheavy_and_tap_on_release {
             compatible = "zmk,behavior-hold-tap";
-            label = "HT_NOOP_AND_TAP_ON_RELEASE";
-            bindings = <&macro_tap_on_release>, <&none>;
+            label = "HT_NAVHEAVY_AND_TAP_ON_RELEASE";
+            bindings = <&macro_mo_nav_heavy_and_tap>, <&none>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -949,10 +949,10 @@
         NAV {
             display-name = "Navigation";
             bindings = <
-&trans  &trans  &trans  &trans                             &trans  &trans  &trans  &trans  &trans          &kp LC(J)       &kp LC(K)     &trans           &trans                 &trans
-&trans  &trans  &trans  &trans                             &trans  &trans  &trans  &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &macro_open_clipboard  &trans
-&trans  &trans  &trans  &trans                             &trans  &trans                  &trans          &trans          &trans        &trans           &trans                 &trans
-                        &ht_noop_and_tap_on_release F20 0  &trans  &trans                  &trans          &trans          &trans
+&trans  &trans  &trans  &trans                                 &trans  &trans  &trans  &trans  &trans          &kp LC(J)       &kp LC(K)     &trans           &trans                 &trans
+&trans  &trans  &trans  &trans                                 &trans  &trans  &trans  &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &macro_open_clipboard  &trans
+&trans  &trans  &trans  &trans                                 &trans  &trans                  &trans          &trans          &trans        &trans           &trans                 &trans
+                        &ht_navheavy_and_tap_on_release F20 0  &trans  &trans                  &trans          &trans          &trans
             >;
         };
 
@@ -1058,7 +1058,7 @@
 
         nav_heavy_mac_activates_nav_mac {
             if-layers = <5>;
-            then-layer = <4>;
+            then-layer = <3>;
         };
     };
 };
