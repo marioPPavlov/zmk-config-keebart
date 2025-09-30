@@ -1007,10 +1007,10 @@
 
         hyper_one_hand_mac {
             bindings = <
-&trans  &trans  &trans     &grave_swap_shift            &grave_swap            &tab_swap                       &trans  &trans  &trans                             &trans                         &trans                             &trans                          &trans  &trans
-&trans  &trans  &kp LG(X)  &ht_select_line_mac 0 LG(C)  &ht_clipboard 0 LG(V)  &ht_single_tap LG(ENTER) ENTER  &trans  &trans  &ht_single_tap LG(LS(LEFT)) GRAVE  &ht_single_tap LS(LG(DOWN)) J  &ht_single_tap LS(LG(UP_ARROW)) K  &ht_single_tap LS(LG(RIGHT)) L  &trans  &trans
-&trans  &trans  &trans     &kp LG(Z)                    &kp LS(LG(Z))          &trans                                          &trans                             &trans                         &trans                             &trans                          &trans  &trans
-                           &trans                       &trans                 &trans                                          &mac_lgui_tab                      &trans                         &trans
+&trans  &trans  &trans     &grave_swap_shift            &grave_swap            &tab_swap                       &trans  &trans  &trans                             &trans                             &trans                             &trans                          &trans  &trans
+&trans  &trans  &kp LG(X)  &ht_select_line_mac 0 LG(C)  &ht_clipboard 0 LG(V)  &ht_single_tap LG(ENTER) ENTER  &trans  &trans  &ht_single_tap LG(LS(LEFT)) GRAVE  &ht_macro_hyperkey LS(LG(DOWN)) J  &ht_single_tap LS(LG(UP_ARROW)) K  &ht_single_tap LS(LG(RIGHT)) L  &trans  &trans
+&trans  &trans  &trans     &kp LG(Z)                    &kp LS(LG(Z))          &trans                                          &trans                             &trans                             &trans                             &trans                          &trans  &trans
+                           &trans                       &trans                 &trans                                          &mac_lgui_tab                      &trans                             &trans
             >;
         };
     };
