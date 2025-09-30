@@ -827,9 +827,9 @@
             hold-trigger-key-positions = <1 2 3 4 5 15 16 17 18 19 29 30 31 32 33>;
         };
 
-        ht_fake_capsword: ht_fake_capsword {
+        ht_noop_and_tap_on_release: ht_noop_and_tap_on_release {
             compatible = "zmk,behavior-hold-tap";
-            label = "HT_FAKE_CAPSWORD";
+            label = "HT_NOOP_AND_TAP_ON_RELEASE";
             bindings = <&macro_tap_on_release>, <&none>;
 
             #binding-cells = <2>;
@@ -935,10 +935,10 @@
         NAV {
             display-name = "Navigation";
             bindings = <
-&trans  &trans  &trans  &trans                   &trans  &trans  &trans  &trans  &trans          &kp LC(J)       &kp LC(K)     &trans           &trans                 &trans
-&trans  &trans  &trans  &trans                   &trans  &trans  &trans  &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &macro_open_clipboard  &trans
-&trans  &trans  &trans  &trans                   &trans  &trans                  &trans          &trans          &trans        &trans           &trans                 &trans
-                        &ht_fake_capsword F20 0  &trans  &trans                  &trans          &trans          &trans
+&trans  &trans  &trans  &trans                             &trans  &trans  &trans  &trans  &trans          &kp LC(J)       &kp LC(K)     &trans           &trans                 &trans
+&trans  &trans  &trans  &trans                             &trans  &trans  &trans  &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &macro_open_clipboard  &trans
+&trans  &trans  &trans  &trans                             &trans  &trans                  &trans          &trans          &trans        &trans           &trans                 &trans
+                        &ht_noop_and_tap_on_release F20 0  &trans  &trans                  &trans          &trans          &trans
             >;
         };
 
