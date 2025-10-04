@@ -73,28 +73,48 @@ function rebuildLineWithTokens(originalLine, tokens) {
   return indent + tokens.join('  ');
 }
 
+function ensureTwoTransBetweenHalves(tokens) {
+  // Insert exactly two '&trans' at the midpoint based on total columns
+  const insertIndex = Math.floor(tokens.length / 2);
+  const newTokens = tokens.slice();
+  newTokens.splice(insertIndex, 0, '&trans', '&trans');
+  return newTokens;
+}
+
 function insertTransInFirstTwoRows(bindingsBody) {
   // bindingsBody is everything between '<' and '>;' (can be multi-line)
   const lines = bindingsBody.split('\n');
   let modifiedRows = 0;
+  let verificationFailures = [];
 
   const out = lines.map((line) => {
     if (modifiedRows < 2 && line.includes('&')) {
-      // Consider this a row with bindings
       const tokens = parseBindingsTokensFromLine(line);
 
-      // Determine insertion index based on counted columns: after the midpoint
-      const insertIndex = Math.floor(tokens.length / 2);
+      // If already 12 columns, leave as-is and count it as modified
+      if (tokens.length === 12) {
+        modifiedRows++;
+        return line;
+      }
 
-      // Avoid duplicating if already present in the middle positions
-      const already = tokens[insertIndex] === '&trans' && tokens[insertIndex + 1] === '&trans';
-      if (!already) tokens.splice(insertIndex, 0, '&trans', '&trans');
+      const beforeLen = tokens.length;
+      const newTokens = ensureTwoTransBetweenHalves(tokens);
+
+      // Verify this row has exactly 12 columns after insertion
+      if (newTokens.length !== 12) {
+        const preview = line.trim().slice(0, 200);
+        verificationFailures.push(`Row ${modifiedRows} has ${newTokens.length} columns after insertion (expected 12). Before: ${beforeLen}. Content: ${preview}`);
+      }
 
       modifiedRows++;
-      return rebuildLineWithTokens(line, tokens);
+      return rebuildLineWithTokens(line, newTokens);
     }
     return line; // leave other lines as-is
   });
+
+  if (verificationFailures.length) {
+    throw new Error(`Verification failed for bindings block. First two rows must have 12 columns each.\n- ${verificationFailures.join('\n- ')}`);
+  }
 
   return out.join('\n');
 }
