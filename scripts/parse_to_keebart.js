@@ -49,7 +49,7 @@ function findKeymapSection(text) {
 }
 
 function parseBindingsTokensFromLine(line) {
-  // Extract bindings that start with '&' until the next '&' or end of line
+  // A column starts with '&' and continues until the next '&' or EOL
   const s = line.trim();
   const tokens = [];
   let i = 0;
@@ -83,8 +83,8 @@ function insertTransInFirstTwoRows(bindingsBody) {
       // Consider this a row with bindings
       const tokens = parseBindingsTokensFromLine(line);
 
-      // Determine insertion index: after the 5th binding (0-based index 5)
-      const insertIndex = Math.min(5, tokens.length);
+      // Determine insertion index based on counted columns: after the midpoint
+      const insertIndex = Math.floor(tokens.length / 2);
 
       // Avoid duplicating if already present in the middle positions
       const already = tokens[insertIndex] === '&trans' && tokens[insertIndex + 1] === '&trans';
