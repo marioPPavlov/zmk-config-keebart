@@ -413,79 +413,79 @@
 
         combo_toggle_base_mac {
             bindings = <&tog 1>;
-            key-positions = <6 7 8>;
+            key-positions = <8 9 10>;
             layers = <0 3 6 1 7>;
         };
 
         mac_screenshot_clipboard {
             bindings = <&kp LS(LC(LG(NUMBER_4)))>;
-            key-positions = <10 20>;
+            key-positions = <12 24>;
         };
 
         combo_left_bracket {
             bindings = <&single_tap LEFT_BRACKET>;
-            key-positions = <12 13>;
+            key-positions = <14 15>;
         };
 
         combo_right_bracket {
             bindings = <&single_tap RIGHT_BRACKET>;
-            key-positions = <16 17>;
+            key-positions = <20 21>;
         };
 
         combo_paren_left {
             bindings = <&single_tap LEFT_PARENTHESIS>;
-            key-positions = <13 14>;
+            key-positions = <15 16>;
         };
 
         combo_parent_right {
             bindings = <&single_tap RIGHT_PARENTHESIS>;
-            key-positions = <15 16>;
+            key-positions = <19 20>;
         };
 
         combo_tog_mouse {
             bindings = <&mouse_mode_color_on>;
-            key-positions = <16 7>;
+            key-positions = <20 9>;
             layers = <0 3 1 2 8>;
         };
 
         combo_minus {
             bindings = <&kp MINUS>;
-            key-positions = <23 22>;
+            key-positions = <27 26>;
         };
 
         mac_screenshot_image {
             bindings = <&kp LS(LG(NUMBER_4))>;
-            key-positions = <10 21>;
+            key-positions = <12 25>;
         };
 
         combo_underscore {
             bindings = <&kp UNDER>;
-            key-positions = <26 27>;
+            key-positions = <30 31>;
         };
 
         combo_equal {
             bindings = <&kp EQUAL>;
-            key-positions = <18 28>;
+            key-positions = <22 32>;
         };
 
         combo_plus {
             bindings = <&kp PLUS>;
-            key-positions = <17 27>;
+            key-positions = <21 31>;
         };
 
         tab_combo {
             bindings = <&kp TAB>;
-            key-positions = <13 23>;
+            key-positions = <15 27>;
         };
 
         combo_tab_shift {
             bindings = <&kp LS(TAB)>;
-            key-positions = <16 26>;
+            key-positions = <20 30>;
         };
 
         combo_excl {
             bindings = <&kp EXCL>;
-            key-positions = <26 17>;
+            key-positions = <30 21>;
         };
 
         combo_sl_bluetooh {
@@ -495,101 +495,101 @@
 
         combo_at {
             bindings = <&kp AT>;
-            key-positions = <23 12>;
+            key-positions = <27 14>;
         };
 
         combo_left_brace {
             bindings = <&single_tap LEFT_BRACE>;
-            key-positions = <14 24>;
+            key-positions = <16 28>;
         };
 
         combo_right_brace {
             bindings = <&single_tap RIGHT_BRACE>;
-            key-positions = <15 25>;
+            key-positions = <19 29>;
         };
 
         combo_zero {
             bindings = <&kp KP_NUMBER_0>;
-            key-positions = <14 4>;
+            key-positions = <16 4>;
         };
 
         combo_one {
             bindings = <&kp NUMBER_1>;
-            key-positions = <13 3>;
+            key-positions = <15 3>;
         };
 
         combo_two {
             bindings = <&kp NUMBER_2>;
-            key-positions = <12 2>;
+            key-positions = <14 2>;
         };
 
         combo_three {
             bindings = <&kp NUMBER_3>;
-            key-positions = <11 1>;
+            key-positions = <13 1>;
         };
 
         combo_four {
             bindings = <&kp NUMBER_4>;
-            key-positions = <10 0>;
+            key-positions = <12 0>;
         };
 
         combo_five {
             bindings = <&kp KP_NUMBER_5>;
-            key-positions = <15 5>;
+            key-positions = <19 7>;
             layers = <0 1 2 3 4>;
         };
 
         combo_six {
             bindings = <&kp KP_NUMBER_6>;
-            key-positions = <16 6>;
+            key-positions = <20 8>;
             layers = <0 1 2 3 4>;
         };
 
         combo_seven {
             bindings = <&kp KP_N7>;
-            key-positions = <17 7>;
+            key-positions = <21 9>;
             layers = <0 1 2 3 4>;
         };
 
         combo_8 {
             bindings = <&kp KP_NUMBER_8>;
-            key-positions = <18 8>;
+            key-positions = <22 10>;
             layers = <0 2 3 4 1>;
         };
 
         combo_nine {
             bindings = <&kp KP_NUMBER_9>;
-            key-positions = <19 9>;
+            key-positions = <23 11>;
             layers = <0 1 2 4 3>;
         };
 
         combo_star {
             bindings = <&kp STAR>;
-            key-positions = <18 8>;
+            key-positions = <22 10>;
             layers = <11 12>;
         };
 
         combo_ampersand {
             bindings = <&kp AMPERSAND>;
-            key-positions = <17 7>;
+            key-positions = <21 9>;
             layers = <11 12>;
         };
 
         combo_caret {
             bindings = <&kp CARET>;
-            key-positions = <16 6>;
+            key-positions = <20 8>;
             layers = <11 12>;
         };
 
         combo_percent {
             bindings = <&kp PERCENT>;
-            key-positions = <15 5>;
+            key-positions = <19 7>;
             layers = <11 12>;
         };
 
         combo_nav_word {
             bindings = <&num_word>;
-            key-positions = <13 2>;
+            key-positions = <15 2>;
             layers = <0 3 1 2 8 4 5 11>;
         };
     };

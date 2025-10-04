@@ -143,6 +143,65 @@ function normalizePhysicalLayout(text) {
   return text.replace(/(zmk,physical-layout\s*=\s*)&?foostan_corne_5col_layout(\s*;)/g, '$1&default_layout$2');
 }
 
+function adjustKeyPositionNumber(n) {
+  const num = parseInt(n, 10);
+  if (isNaN(num)) return n;
+  if (num < 5) return String(num);
+  if (num < 15) return String(num + 2);
+  return String(num + 4);
+}
+
+function findAllCombosBlocks(text) {
+  const blocks = [];
+  const re = /combos\s*\{/g;
+  let m;
+  while ((m = re.exec(text)) !== null) {
+    const openIdx = m.index + m[0].lastIndexOf('{');
+    // Brace match from openIdx
+    let depth = 0;
+    for (let i = openIdx; i < text.length; i++) {
+      const ch = text[i];
+      if (ch === '{') depth++;
+      else if (ch === '}') {
+        depth--;
+        if (depth === 0) {
+          blocks.push({ openBrace: openIdx, closeBrace: i });
+          break;
+        }
+      }
+    }
+  }
+  return blocks;
+}
+
+function transformKeyPositionsBody(body) {
+  // Replace all integers in the captured body using the provided rules
+  return body.replace(/\d+/g, (match) => adjustKeyPositionNumber(match));
+}
+
+function processCombos(text) {
+  const blocks = findAllCombosBlocks(text);
+  if (!blocks.length) return text;
+
+  let result = text;
+  // Process from the end to preserve indices while slicing
+  for (let b = blocks.length - 1; b >= 0; b--) {
+    const { openBrace, closeBrace } = blocks[b];
+    const before = result.slice(0, openBrace + 1);
+    const inside = result.slice(openBrace + 1, closeBrace);
+    const after = result.slice(closeBrace);
+
+    // Only update key-positions entries inside this combos block
+    const newInside = inside.replace(/(key-positions\s*=\s*<)([\s\S]*?)(>)/g, (full, start, body, end) => {
+      const newBody = transformKeyPositionsBody(body);
+      return `${start}${newBody}${end}`;
+    });
+
+    result = before + newInside + after;
+  }
+  return result;
+}
+
 function main() {
   if (!fs.existsSync(keymapPath)) {
     console.error(`❌ File not found: ${keymapPath}`);
@@ -155,11 +214,15 @@ function main() {
   const layoutUpdated = normalizePhysicalLayout(original);
 
   // Then, update keymap layers
-  const updated = processKeymap(layoutUpdated);
+  const keymapUpdated = processKeymap(layoutUpdated);
+
+  // Finally, update combos key-positions per rules
+  const updated = processCombos(keymapUpdated);
   writeFile(keymapPath, updated);
 
   console.log(`✓ Normalized physical layout to &default_layout (if needed)`);
-  console.log(`✓ Updated first two rows with &trans &trans in middle for all keymap layers in: ${keymapPath}`);
+  console.log(`✓ Updated first two rows with &trans &trans in middle for all keymap layers`);
+  console.log(`✓ Updated combos key-positions per rules (<5 same, 5-14 +2, >=15 +4) in: ${keymapPath}`);
 }
 
 if (require.main === module) {
