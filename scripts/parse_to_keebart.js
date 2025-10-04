@@ -140,7 +140,7 @@ function processKeymap(text) {
 
 function normalizePhysicalLayout(text) {
   // Replace any foostan layout reference to default_layout, preserving spacing and semicolon
-  return text.replace(/(zmk,physical-layout\s*=\s*)&?foostan_corne_5col_layout(\s*;)/g, '$1&default_layout$2');
+  return text.replace(/(zmk,physical-layout\s*=\s*)&?foostan_corne_5col_layout(\s*;)/g, '$1&five_col_layout$2');
 }
 
 function adjustKeyPositionNumber(n) {
