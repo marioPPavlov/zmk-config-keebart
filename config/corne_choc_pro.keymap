@@ -33,7 +33,7 @@
 };
 
 / {
-    chosen { zmk,physical-layout = &foostan_corne_5col_layout; };
+    chosen { zmk,physical-layout = &five_col_layout; };
 };
 
 / {
@@ -413,73 +413,73 @@
 
         combo_toggle_base_mac {
             bindings = <&tog 1>;
-            key-positions = <6 7 8>;
+            key-positions = <8 9 10>;
             layers = <0 6 1 7>;
         };
 
         mac_screenshot_clipboard {
             bindings = <&kp LS(LC(LG(NUMBER_4)))>;
-            key-positions = <10 20>;
+            key-positions = <12 24>;
         };
 
         combo_left_bracket {
             bindings = <&single_tap LEFT_BRACKET>;
-            key-positions = <12 13>;
+            key-positions = <14 15>;
             layers = <0 1>;
         };
 
         combo_right_bracket {
             bindings = <&single_tap RIGHT_BRACKET>;
-            key-positions = <16 17>;
+            key-positions = <20 21>;
             layers = <0 1 3 4>;
         };
 
         combo_paren_left {
             bindings = <&single_tap LEFT_PARENTHESIS>;
-            key-positions = <13 14>;
+            key-positions = <15 16>;
             layers = <0 1>;
         };
 
         combo_parent_right {
             bindings = <&single_tap RIGHT_PARENTHESIS>;
-            key-positions = <15 16>;
+            key-positions = <19 20>;
             layers = <0 1>;
         };
 
         combo_tog_mouse {
             bindings = <&mouse_mode_color_on>;
-            key-positions = <16 7>;
+            key-positions = <20 9>;
             layers = <0 1 2 8>;
         };
 
         combo_minus {
             bindings = <&kp MINUS>;
-            key-positions = <23 22>;
+            key-positions = <27 26>;
         };
 
         mac_screenshot_image {
             bindings = <&kp LS(LG(NUMBER_4))>;
-            key-positions = <10 21>;
+            key-positions = <12 25>;
         };
 
         combo_underscore {
             bindings = <&kp UNDER>;
-            key-positions = <26 27>;
+            key-positions = <30 31>;
         };
 
         combo_plus {
             bindings = <&kp PLUS>;
-            key-positions = <17 27>;
+            key-positions = <21 31>;
         };
 
         tab_combo {
             bindings = <&kp TAB>;
-            key-positions = <13 23>;
+            key-positions = <15 27>;
         };
 
         combo_tab_shift {
             bindings = <&kp LS(TAB)>;
-            key-positions = <16 26>;
+            key-positions = <20 30>;
         };
 
         combo_sl_bluetooh {
@@ -489,131 +489,131 @@
 
         combo_left_brace {
             bindings = <&single_tap LEFT_BRACE>;
-            key-positions = <14 24>;
+            key-positions = <16 28>;
         };
 
         combo_right_brace {
             bindings = <&single_tap RIGHT_BRACE>;
-            key-positions = <15 25>;
+            key-positions = <19 29>;
         };
 
         combo_zero {
             bindings = <&kp KP_NUMBER_0>;
-            key-positions = <14 4>;
+            key-positions = <16 4>;
             layers = <0 1 3 4>;
         };
 
         combo_one {
             bindings = <&long_combo_th EXCL NUMBER_1>;
-            key-positions = <13 3>;
+            key-positions = <15 3>;
             layers = <0 1 3 4>;
         };
 
         combo_two {
             bindings = <&long_combo_th AT_SIGN NUMBER_2>;
-            key-positions = <12 2>;
+            key-positions = <14 2>;
             layers = <0 1 3 4>;
         };
 
         combo_three {
             bindings = <&kp NUMBER_3>;
-            key-positions = <11 1>;
+            key-positions = <13 1>;
             layers = <0 1 3 4>;
         };
 
         combo_four {
             bindings = <&kp NUMBER_4>;
-            key-positions = <10 0>;
+            key-positions = <12 0>;
             layers = <0 1 3 4>;
         };
 
         combo_five {
             bindings = <&kp KP_NUMBER_5>;
-            key-positions = <15 5>;
+            key-positions = <19 7>;
             layers = <0 1 2 4>;
         };
 
         combo_six {
             bindings = <&kp KP_NUMBER_6>;
-            key-positions = <16 6>;
+            key-positions = <20 8>;
             layers = <0 1 2 4>;
         };
 
         combo_seven {
             bindings = <&kp KP_N7>;
-            key-positions = <17 7>;
+            key-positions = <21 9>;
             layers = <0 1 2 4>;
         };
 
         combo_8 {
             bindings = <&kp KP_NUMBER_8>;
-            key-positions = <18 8>;
+            key-positions = <22 10>;
             layers = <0 2 4 1>;
         };
 
         combo_nine {
             bindings = <&kp KP_NUMBER_9>;
-            key-positions = <19 9>;
+            key-positions = <23 11>;
             layers = <0 1 2 4>;
         };
 
         combo_star {
             bindings = <&kp STAR>;
-            key-positions = <18 8>;
+            key-positions = <22 10>;
             layers = <11 12>;
         };
 
         combo_ampersand {
             bindings = <&kp AMPERSAND>;
-            key-positions = <17 7>;
+            key-positions = <21 9>;
             layers = <11 12>;
         };
 
         combo_caret {
             bindings = <&kp CARET>;
-            key-positions = <16 6>;
+            key-positions = <20 8>;
             layers = <11 12>;
         };
 
         combo_percent {
             bindings = <&kp PERCENT>;
-            key-positions = <15 5>;
+            key-positions = <19 7>;
             layers = <11 12>;
         };
 
         combo_num_word {
             bindings = <&num_word>;
-            key-positions = <13 2>;
+            key-positions = <15 2>;
             layers = <0 1 2 8 4 6 11>;
         };
 
         combo_five_hand {
             bindings = <&kp KP_NUMBER_5>;
-            key-positions = <14 4>;
+            key-positions = <16 4>;
             layers = <11 12>;
         };
 
         combo_six_hand {
             bindings = <&kp KP_N6>;
-            key-positions = <13 3>;
+            key-positions = <15 3>;
             layers = <11 12>;
         };
 
         combo_seven_hand {
             bindings = <&kp KP_NUMBER_7>;
-            key-positions = <2 12>;
+            key-positions = <2 14>;
             layers = <11 12>;
         };
 
         combo_eight_hand {
             bindings = <&kp KP_N8>;
-            key-positions = <11 1>;
+            key-positions = <13 1>;
             layers = <11 12>;
         };
 
         combo_nine_hand {
             bindings = <&kp N9>;
-            key-positions = <10 0>;
+            key-positions = <12 0>;
             layers = <11 12>;
         };
     };
@@ -993,8 +993,8 @@
         BASE {
             display-name = "Base";
             bindings = <
-  &kp Q               &kp W               &kp E                &ht_kp_kp LS(LEFT_ALT) R  &long_mo_tp 10 T        &ht_single_tap BACKSLASH Y  &kp U            &kp I                           &kp O                                 &kp P
-  &long_th_kp LALT A  &long_th_kp LGUI S  &long_th_kp LCTRL D  &long_th_kp LSHFT F       &long_mo_tp 8 G         &kp H                       &kp J            &kp K                           &kp L                                 &ht_single_tap COLON SEMI
+  &kp Q  &kp W  &kp E  &ht_kp_kp LS(LEFT_ALT) R  &long_mo_tp 10 T  &trans  &trans  &ht_single_tap BACKSLASH Y  &kp U  &kp I  &kp O  &kp P
+  &long_th_kp LALT A  &long_th_kp LGUI S  &long_th_kp LCTRL D  &long_th_kp LSHFT F  &long_mo_tp 8 G  &trans  &trans  &kp H  &kp J  &kp K  &kp L  &ht_single_tap COLON SEMI
   &kp Z               &kp X               &kp C                &kp V                     &kp B                   &kp N                       &long_mo_tp 9 M  &ht_single_tap LESS_THAN COMMA  &ht_single_tap_weak GREATER_THAN DOT  &ht_num_single_tap_weak QUESTION FSLH
                                           &ht_mo_navword 5 0   &mm_space_htctrl          &mm_esc_hyperlayer      &mm_shift_capsword          &mt LALT ENTER   &mm_backspace_delete
             >;
@@ -1002,8 +1002,8 @@
 
         MAC {
             bindings = <
-  &trans               &trans              &trans              &ht_maclanguage_r 0 R  &trans      &trans  &trans           &trans  &trans  &trans
-  &long_th_kp LCTRL A  &long_th_kp LALT S  &long_th_kp LGUI D  &trans                 &trans      &trans  &trans           &trans  &trans  &trans
+  &trans  &trans  &trans  &ht_maclanguage_r 0 R  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+  &long_th_kp LCTRL A  &long_th_kp LALT S  &long_th_kp LGUI D  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
   &trans               &trans              &trans              &trans                 &trans      &trans  &trans           &trans  &trans  &trans
                                            &trans              &mm_space_htlgui       &trans      &trans  &mt LCTRL ENTER  &trans
             >;
@@ -1014,8 +1014,8 @@
         NUM {
             display-name = "NUM";
             bindings = <
-  &trans                   &trans                   &trans                   &trans                   &trans                       &trans                   &trans             &trans             &trans                   &trans
-  &single_tap KP_NUMBER_4  &single_tap KP_NUMBER_3  &single_tap KP_NUMBER_2  &single_tap KP_NUMBER_1  &single_tap KP_NUMBER_0      &single_tap KP_NUMBER_5  &single_tap KP_N6  &single_tap KP_N7  &single_tap KP_NUMBER_8  &ht_single_tap_weak COLON KP_NUMBER_9
+  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+  &single_tap KP_NUMBER_4  &single_tap KP_NUMBER_3  &single_tap KP_NUMBER_2  &single_tap KP_NUMBER_1  &single_tap KP_NUMBER_0  &trans  &trans  &single_tap KP_NUMBER_5  &single_tap KP_N6  &single_tap KP_N7  &single_tap KP_NUMBER_8  &ht_single_tap_weak COLON KP_NUMBER_9
   &trans                   &trans                   &trans                   &trans                   &trans                       &trans                   &trans             &trans             &trans                   &trans
                                                     &trans                   &trans                   &trans                       &trans                   &trans             &trans
             >;
@@ -1024,8 +1024,8 @@
         NAV {
             display-name = "NAV";
             bindings = <
-  &trans    &trans        &trans           &trans          &trans      &trans         &trans         &trans       &trans          &trans
-  &kp LGUI  &kp LEFT_ALT  &kp LCTRL        &kp LEFT_SHIFT  &trans      &mm_left_page  &mm_down_page  &mm_up_page  &mm_right_page  &trans
+  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+  &kp LGUI  &kp LEFT_ALT  &kp LCTRL  &kp LEFT_SHIFT  &trans  &trans  &trans  &mm_left_page  &mm_down_page  &mm_up_page  &mm_right_page  &trans
   &trans    &trans        &trans           &trans          &trans      &trans         &trans         &trans       &trans          &trans
                           &mm_mo_hold 5 0  &trans          &trans      &trans         &trans         &trans
             >;
@@ -1033,8 +1033,8 @@
 
         NAV_MAC {
             bindings = <
-  &trans     &trans        &trans    &trans  &trans      &trans    &trans    &trans        &trans     &trans
-  &kp LCTRL  &kp LEFT_ALT  &kp LGUI  &trans  &trans      &kp LEFT  &kp DOWN  &kp UP_ARROW  &kp RIGHT  &trans
+  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+  &kp LCTRL  &kp LEFT_ALT  &kp LGUI  &trans  &trans  &trans  &trans  &kp LEFT  &kp DOWN  &kp UP_ARROW  &kp RIGHT  &trans
   &trans     &trans        &trans    &trans  &trans      &trans    &trans    &trans        &trans     &trans
                            &trans    &trans  &trans      &trans    &trans    &trans
             >;
@@ -1045,8 +1045,8 @@
         NAV_ALT {
             label = "NAV_Alt";
             bindings = <
-  &trans  &trans    &kp UP_ARROW  &trans     &trans      &trans  &kp LC(J)  &kp LC(K)  &trans  &trans
-  &trans  &kp LEFT  &kp DOWN      &kp RIGHT  &trans      &trans  &trans     &trans     &trans  &trans
+  &trans  &trans  &kp UP_ARROW  &trans  &trans  &trans  &trans  &trans  &kp LC(J)  &kp LC(K)  &trans  &trans
+  &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
   &trans  &trans    &trans        &trans     &trans      &trans  &trans     &trans     &trans  &trans
                     &trans        &trans     &trans      &trans  &trans     &trans
             >;
@@ -1054,8 +1054,8 @@
 
         mouse {
             bindings = <
-  &trans  &msc SCRL_LEFT      &mmv MOVE_Y(-1000)  &msc SCRL_RIGHT               &trans                        &trans                  &msc SCRL_UP       &mmv MOVE_Y(-333)  &msc SCRL_DOWN    &trans
-  &trans  &mmv MOVE_X(-1000)  &mmv MOVE_Y(1000)   &mmv MOVE_X(1000)             &trans                        &mkp MB2                &mmv MOVE_X(-333)  &mmv MOVE_Y(333)   &mmv MOVE_X(333)  &trans
+  &trans  &msc SCRL_LEFT  &mmv MOVE_Y(-1000)  &msc SCRL_RIGHT  &trans  &trans  &trans  &trans  &msc SCRL_UP  &mmv MOVE_Y(-333)  &msc SCRL_DOWN  &trans
+  &trans  &mmv MOVE_X(-1000)  &mmv MOVE_Y(1000)  &mmv MOVE_X(1000)  &trans  &trans  &trans  &mkp MB2  &mmv MOVE_X(-333)  &mmv MOVE_Y(333)  &mmv MOVE_X(333)  &trans
   &trans  &trans              &trans              &trans                        &trans                        &trans                  &trans             &trans             &mkp MB3          &trans
                               &navword_mouse_off  &ht_kp_mb1_and_off LCTRL MB1  &ht_hyper_and_mouse 11 6      &macro_shift_mouse_off  &mm_mouse_click    &delete_mouse_off
             >;
@@ -1065,8 +1065,8 @@
 
         mouse_mac {
             bindings = <
-  &trans  &trans              &mmv MOVE_Y(-1000)  &trans                       &trans      &trans  &trans             &mmv MOVE_Y(-300)  &trans            &trans
-  &trans  &mmv MOVE_X(-1000)  &mmv MOVE_Y(1000)   &mmv MOVE_X(1000)            &trans      &trans  &mmv MOVE_X(-300)  &mmv MOVE_Y(300)   &mmv MOVE_X(300)  &trans
+  &trans  &trans  &mmv MOVE_Y(-1000)  &trans  &trans  &trans  &trans  &trans  &trans  &mmv MOVE_Y(-300)  &trans  &trans
+  &trans  &mmv MOVE_X(-1000)  &mmv MOVE_Y(1000)  &mmv MOVE_X(1000)  &trans  &trans  &trans  &trans  &mmv MOVE_X(-300)  &mmv MOVE_Y(300)  &mmv MOVE_X(300)  &trans
   &trans  &trans              &trans              &trans                       &trans      &trans  &trans             &trans             &trans            &trans
                               &trans              &ht_kp_mb1_and_off LGUI MB1  &trans      &trans  &mm_mouse_click    &trans
             >;
@@ -1076,8 +1076,8 @@
 
         Function {
             bindings = <
-  &trans  &trans  &trans  &trans  &trans      &kp F10  &kp F7  &kp F8  &kp F9  &trans
-  &trans  &trans  &trans  &trans  &trans      &kp F11  &kp F4  &kp F5  &kp F6  &trans
+  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp F10  &kp F7  &kp F8  &kp F9  &trans
+  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp F11  &kp F4  &kp F5  &kp F6  &trans
   &trans  &trans  &trans  &trans  &trans      &kp F12  &kp F1  &kp F2  &kp F3  &trans
                   &trans  &trans  &trans      &trans   &trans  &trans
             >;
@@ -1087,8 +1087,8 @@
 
         BLUE {
             bindings = <
-  &bt BT_CLR     &trans         &trans         &bootloader    &sys_reset        &trans  &trans  &trans  &trans  &trans
-  &bt BT_DISC 4  &bt BT_DISC 3  &bt BT_DISC 2  &bt BT_DISC 1  &out OUT_USB      &trans  &trans  &trans  &trans  &trans
+  &bt BT_CLR  &trans  &trans  &bootloader  &sys_reset  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+  &bt BT_DISC 4  &bt BT_DISC 3  &bt BT_DISC 2  &bt BT_DISC 1  &out OUT_USB  &trans  &trans  &trans  &trans  &trans  &trans  &trans
   &bt BT_SEL 4   &bt BT_SEL 3   &bt BT_SEL 2   &bt BT_SEL 1   &out OUT_BLE      &trans  &trans  &trans  &trans  &trans
                                 &trans         &trans         &trans            &trans  &trans  &trans
             >;
@@ -1098,8 +1098,8 @@
 
         MEDIA {
             bindings = <
-  &trans  &trans  &trans  &trans  &trans      &trans  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &trans  &trans
-  &trans  &trans  &trans  &trans  &trans      &trans  &kp C_PP           &trans           &trans  &trans
+  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &trans  &trans
+  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp C_PP  &trans  &trans  &trans
   &trans  &trans  &trans  &trans  &trans      &trans  &trans             &trans           &trans  &trans
                   &trans  &trans  &trans      &trans  &trans             &trans
             >;
@@ -1109,8 +1109,8 @@
 
         HYPER {
             bindings = <
-  &ht_single_tap TILDE GRAVE  &trans         &linux_grave_swap_shift  &linux_grave_swap      &linux_tab_swap                     &ht_macro_hyperkey PIPE Y      &macro_hyperkey U                   &macro_hyperkey I               &macro_hyperkey O             &macro_hyperkey P
-  &kp DOUBLE_QUOTES           &kp LC(X)      &kp LC(C)                &ht_clipboard 0 LC(V)  &ht_single_tap LC(ENTER) ENTER      &ht_single_tap LS(HOME) GRAVE  &ht_macro_hyperkey LS(PAGE_DOWN) J  &ht_macro_hyperkey LS(PG_UP) K  &ht_macro_hyperkey LS(END) L  &single_tap SINGLE_QUOTE
+  &ht_single_tap TILDE GRAVE  &trans  &linux_grave_swap_shift  &linux_grave_swap  &linux_tab_swap  &trans  &trans  &ht_macro_hyperkey PIPE Y  &macro_hyperkey U  &macro_hyperkey I  &macro_hyperkey O  &macro_hyperkey P
+  &kp DOUBLE_QUOTES  &kp LC(X)  &kp LC(C)  &ht_clipboard 0 LC(V)  &ht_single_tap LC(ENTER) ENTER  &trans  &trans  &ht_single_tap LS(HOME) GRAVE  &ht_macro_hyperkey LS(PAGE_DOWN) J  &ht_macro_hyperkey LS(PG_UP) K  &ht_macro_hyperkey LS(END) L  &single_tap SINGLE_QUOTE
   &trans                      &kp LESS_THAN  &kp LC(Z)                &kp LS(LC(Z))          &kp BACKSPACE                       &kp STAR                       &mkp MB4                            &mkp MB5                        &single_tap EQUAL             &single_tap DOUBLE_QUOTES
                                              &trans                   &flush_stuck           &trans                              &linux_lgui_tab                &kp LS(ENTER)                       &kp DELETE
             >;
@@ -1120,8 +1120,8 @@
 
         HYPER_MAC {
             bindings = <
-  &trans  &trans     &grave_swap_shift            &grave_swap            &tab_swap                           &trans                             &trans                             &trans                                 &trans                              &trans
-  &trans  &kp LG(X)  &ht_select_line_mac 0 LG(C)  &ht_clipboard 0 LG(V)  &ht_single_tap LG(ENTER) ENTER      &ht_single_tap LG(LS(LEFT)) GRAVE  &ht_macro_hyperkey LS(LG(DOWN)) J  &ht_macro_hyperkey LS(LG(UP_ARROW)) K  &ht_macro_hyperkey LS(LG(RIGHT)) L  &trans
+  &trans  &trans  &grave_swap_shift  &grave_swap  &tab_swap  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+  &trans  &kp LG(X)  &ht_select_line_mac 0 LG(C)  &ht_clipboard 0 LG(V)  &ht_single_tap LG(ENTER) ENTER  &trans  &trans  &ht_single_tap LG(LS(LEFT)) GRAVE  &ht_macro_hyperkey LS(LG(DOWN)) J  &ht_macro_hyperkey LS(LG(UP_ARROW)) K  &ht_macro_hyperkey LS(LG(RIGHT)) L  &trans
   &trans  &trans     &kp LG(Z)                    &kp LS(LG(Z))          &trans                              &trans                             &trans                             &trans                                 &trans                              &trans
                      &trans                       &trans                 &trans                              &mac_lgui_tab                      &trans                             &trans
             >;
